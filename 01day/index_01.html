@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>주소</title>
+	<style type="text/css">
+		img{width: 200px;}
+
+		/*리스트 스타일 꾸미기*/
+		/*list{style:값;		 float:방향(시작점); margin: 값(px)}*/
+						   /*(블럭을 인라인처럼 만들어줌)*/
+		ul li{list-style: none; float: left; margin-right: 30px;}
+	</style>
+
+</head>
+<body>
+	<h1>작성자 주소</h1>
+	<address>
+	 경기도 고양시 덕양구 관산동 연락처 : 010-9351-7495 <br>
+	 COPYRIGHT &copy; All Rights Reserved
+	</address>
+
+	<br><hr>
+
+	<h1>구분선 긋기</h1>
+	<hr>
+	<p> 첫 번째 줄 </p>
+	<hr>
+	<p> 두 번째 줄 </p>
+
+	<br> <hr>
+
+	<h1> &lt;blockquote&gt;요소와 &lt;q&gt;요소</h1>
+	<h2> &lt;blockquote&gt;요소 </h2>
+		<p>공자는 이렇게 말씀하셨습니다.</p>
+		<!-- 들여쓰기 -->
+		<blockquote cite="http://..." title="공자의 명언">
+			<p>배우고 때로 익히면 또한 기쁘지 아니한가!</p>
+		</blockquote>
+
+	<h2> &lt;q&gt;요소</h2>
+		<p>공자는 이렇게 말씀하셨습니다. 
+		<!-- " "표시 -->
+		<q cite="http://..."> 배우고 때로 익히면 또한 기쁘지 아니한가! </q>
+		</p>
+
+		<br><hr>
+	<h1> 
+		<img src="images/img_brand3.png" alt="서울시청 로고">
+	</h1>
+
+	<p>
+		<img src="images/img_brand3.png" alt="서울시청 로고">
+	</p>
+
+	<br><hr>
+
+	<h1>a요소</h1>
+	<p>
+		<a href="https://validator.w3.org/"> w3c 유효성 검사</a>
+	</p>
+
+	<p>
+		<a href="https://www.nia.or.kr/site/nia_kor/main.do">한국정보화진흥원</a>
+	</p>
+
+	<p>
+		<a href="https://www.seoul.go.kr/main/index.jsp"> 
+			<img src="images/img_brand3.png" alt="서울시청 로고">
+		</a>
+	</p>
+
+	<br><hr>
+	<h1>순차적 목록</h1>
+	<h2>신입직원 채용절차</h2>
+	<!-- 번호매기기 순서(order list) -->
+	<ol>
+		<li>입사지원</li>
+		<li>서류전형</li>
+		<li>1차면접</li>
+		<li>적성검사</li>
+		<li>최종면접</li>
+		<li>신체검사</li>
+	</ol>
+
+	<br><hr>
+	<h1>비순차적 목록</h1>
+	<h2>주메뉴</h2>
+	<!-- 번호없는 리스트(unorder list) -->
+	<ul>
+		<li><a href="#"> 기업소개</a></li>
+		<li><a href="#"> 사업영역</a></li>
+		<li><a href="#"> 채용소개</a></li>
+		<li><a href="#"> 고객센터</a></li>
+		<li><a href="#"> 홍보자료실</a></li>
+		<li><a href="#"> 인재채용</a></li>
+	</ul>
+
+	<!-- list.html로 다시만듬 -->
+	<br><hr>
+	<h1>비순차적 목록</h1>
+	<h2>주메뉴</h2>
+	<ul>
+		<li><a href="#">회사소개</a></li>
+			<ul>
+				<li><a href="#">ceo인사말</a></li>
+				<li><a href="#">연혁</a></li>
+				<li><a href="#">조직도</a></li>
+				<li><a href="#">연혁</a></li>
+			</ul>
+		<li><a href="#">제품소개</a></li>
+			<ul>
+				<li><a href="#">KP계열</a></li>
+				<li><a href="#">GR계열</a></li>
+				<li><a href="#">OU계열</a></li>
+				<li><a href="#">CR계열</a></li>
+			</ul>
+	</ul>
+</body>
+</html>

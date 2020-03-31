@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+</head>
+<body>
+
+	<h1>textarea요소와 select요소</h1>
+
+	<form>
+		<fieldset>
+			<legend>여러 줄 글상자와 목록상자</legend>
+			<p>답글
+				<br>
+				<textarea rows="3" cols="30"></textarea>
+			</p>
+			<p>과목 선택 
+				<select>
+					<option value="html5">html5</option>
+					<option value="css3">css3</option>
+					<option value="javascript">javascript</option>
+					<option value="jQuery">jQuery</option>
+				</select>
+			</p>
+
+			<p>스터디 지역
+				<select>
+					<optgroup label="은평구">
+						<option vlaue="갈현동">갈현동</option>
+						<option value="불광동">불광동</option>
+						<option vlaue="대조동">대조동</option>
+					</optgroup>
+					<optgroup label="덕양구">
+						<option value="관산동">관산동</option>
+						<option vlaue="고양동">고양동</option>
+						<option vlaue="신원동">신원동</option>
+					</optgroup>
+				</select>
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>

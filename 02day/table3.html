@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>표 만들기</title>
+</head>
+<body>
+	<h1>표 만들기</h1>
+	<h2>데이터 테이블</h2>
+
+	<!-- width=""를 이용하여 테이블 너비 설정 -->
+	<table border="1", width="100%">
+		<!-- 테이블 제목 -->
+		<caption>태블릿 PC와 스마트폰 판매현황</caption>
+
+		<!-- 테이블 너비 설정한 값을 이용하여 열 별로 그룹을 묶어 값 설정 -->
+		<colgroup>
+			<col width="20%">
+			<col width="40%">
+			<col width="40%">
+		</colgroup>
+
+		<!-- 테이블 머리 구분 -->
+		<thead>
+			<tr>
+				<!-- 글씨 굵게 -->
+				<!-- scope를 이용하여 col을 설정 (col에 포함되게 정의해서 구분하게 만들어줌) -->
+				<th scope="col">구분</th>
+				<th scope="col">태블릿 PC</th>
+				<th scope="col">스마트폰</th>
+			</tr>
+		</thead>
+
+		<!-- 테이블 몸통 구분 -->
+		<tbody>
+			<tr>
+				<th>상반기 판매수</th>
+				<td>2만대</td>
+				<td>5만대</td>
+			</tr>
+			<tr>
+				<th>하반기 판매수</th>
+				<td>3만대</td>
+				<td>11만대</td>
+			</tr>
+		</tbody>
+
+		<!-- 테이블 총합 구분 -->
+		<tfoot>
+			<tr>
+				<!-- scope를 이용하여 row를 설정 -->
+				<th scope="row">총 판매수</th>
+				<td>5만대</td>
+				<td>16만대</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
