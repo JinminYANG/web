@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*ul의 점을 없애줌*/
+		.box{list-style:none;}
+		/*li의 float(정렬), 배경색, 선, 폭, 글자정렬, padding, margin 설정*/ 
+		.box li{float:left; background-color:#b4bcf0; border-top:7px #0024ff solid; width:100px;text-align: center; padding:7px 15px; margin-right:5px;}
+		/*앵커의 색상, 밑줄같은 decoration을 설정*/
+		.box li a{color:#6d6d6d; text-decoration:none;}
+		/*hover 할때 li와 a를 정확히 구분해서 코딩해야함*/
+		.box li:hover{background-color:white;}
+		.box li a:hover{color:red;}
+	</style>
+	<title>CSS</title>
+</head>
+<body>
+	<ul class="box">
+		<li><a href="#">회사소개<br>COMPANY</a></li>
+		<li><a href="#">제품안내<br>PRODUCT</a></li>
+		<li><a href="#">고객지원<br>CUSTOMER</a></li>
+		<li><a href="#">채용정보<br>RECRUIT</a></li>
+		<li><a href="#">커뮤니티<br>COMMUNITY</a></li>
+	</ul>
+</body>
+</html>

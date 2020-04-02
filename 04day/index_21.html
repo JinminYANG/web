@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		.menu{margin-left:-40px; margin-top: -20px;}
+		/*dispaly:inline은 크기를 받지 못하는 특성이 있음.*/
+		/*display:inline-block은 크기를 측정함*/
+		.menu li{list-style:none; /*float:left;*/ background-color:red; width:150px; padding:10px 0px; margin: 1px; text-align:center; /*display:inline;*/ display:inline-block;}
+		.menu li a{color:white;}
+	</style>
+</head>
+<body>
+	<h1>주메뉴</h1>
+	<ul class="menu">
+		<li><a href="#">COMPANY</a></li>
+		<li><a href="#">PRODUCT</a></li>
+		<li><a href="#">SERVICE</a></li>
+		<li><a href="#">COMMUNITY</a></li>
+	</ul>
+</body>
+</html>

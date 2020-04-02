@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		li>a:hover{color:green;}
+		/*p>a{color:red;}*/
+		/*클래스명이 more인 p태그의 링크(a)색상을 변경함*/
+		p.more>a{color:red;}
+		p>a:hover{color:purple;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">202호 - 프로젝트 출발</a></li>
+		<li><a href="#">204호 - 프로젝트 진행</a></li>
+		<li><a href="#">208호 - 대기</a></li>
+	</ul>
+
+	<p class="more"><a href="#">더보기</a></p>
+</body>
+</html>

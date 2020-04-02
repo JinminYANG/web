@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		/*'dashed' 실선 표현*/
+		li{list-style:none; border-bottom:1px black dashed; padding-top:10px;}
+		/*'first-letter' 입력한 문자의 첫 글자만 다루게 해주는 기능*/
+		li:first-letter{font-size:50px;}
+		/*p{color:green;}*/
+		/*'after'는 입력한 다음에 오는  태그를 다룰 수 있게 해줌 (형제개념X / 태그의 다음 개념)*/
+		.box:after{content: "항목을 선택해주세요."; color:green;}
+	</style>
+</head>
+<body>
+	<ul class="box">
+		<li>COMPANY</li>
+		<li>PRODUCT</li>
+		<li>SERVICE</li>
+	</ul>
+
+	<!-- <p>항목을 선택해주세요.</p> -->
+</body>
+</html>

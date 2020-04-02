@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		.box{background-color:pink; width:630px; height:210px;}
+		/*padding값을 넣으면 width의 크기 + padding의 크기가 웹상으로 표현됨*/
+		.menu{list-style:none; width:200px; /*background-color: red;*/  padding:10px 0px; float: left; margin-left:10px;}
+		.p1{width:400px; /*background-color:green;*/ padding:10px 0px; border-left: 1px white solid; float:left; /*float:right;*/}
+		/*float된 것을 무시하게 만들어줌*/
+		.p2{clear:both;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="menu">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">제품안내</a></li>
+			<li><a href="#">커뮤니티</a></li>
+		</ul>
+		<p class="p1">
+			정부가 전 세계에서 국내로 들어오는 입국자에 대해 2주간 자가격리를 의무화한 첫날인 이달 1일 검역에서만 18명이 코로나19로 확인됐다.
+
+			2일 중앙방역대책본부에 따르면 이날 0시 기준 확인된 국내 코로나19 확진자 중 해외 유입 사례는 601명으로 전날과 비교해 41명 늘어났다. 전날 발표된 해외 유입 사례는 560명이었다.
+
+			이번 주 들어 코로나19 해외 유입 사례는 하루 40∼60명 수준으로 연일 증가하고 있다.
+		</p>
+	</div>
+	<p class="p2"><small>&copy; 2012 COPYRIGHT. All Rights Reserved</small></p>
+</body>
+</html>
