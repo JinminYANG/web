@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>autofocus 속성</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>포커스 자동이동</legend>
+
+			<ul>
+				<!-- autofocus를 이용하여 웹을 실행했을 때 사용자가 마우스를 클릭하지 않고 바로 순서대로 입력할 수 있게 도와주는 기능 -->
+				<li><label for="name">*이름</label><input type="text" name="text" id="name" required autofocus="autofocus"></li>
+				<li><label for="id">*아이디</label><input type="text" name="id" id="id" required="required"></li>
+				<li><label for="password">*비밀번호</label><input type="password" name="pw" id="pw" required="required"></li>
+				<li><label for="tel">*전화번호</label><input type="tel" name="tel" id="tel" required="required"></li>
+				<li><label for="email">*이메일</label><input type="email" name="email" id="email" required="required"></li>
+			</ul>
+			<p><input type="submit" name="submit" value="전송"></p>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 영어가 아닌 문자들이 깨질 수 있는 현상을 meta 문자를 이용해 설정해 줌 -->
+	<meta charset="utf-8">
+	<title>서브 레이아웃</title>
+	<style type="text/css">
+		body{font-family:돋움; font-size:12px;}
+		.hidden{display:none;}
+		h1{float:left;}
+		#gnbmenu{float:right; margin-top:10px;}
+		/*clear는 비워주는 기능 : both는 clear의 속성으로 양 쪽을 제거하게 만듬 (left,right,both)*/
+		hr{clear: both;}
+		/*띄어쓰기 후 스타일 해줄 태그를 입력 (후손 개념)*/
+		#gnbmenu li{float:left; margin:10px; list-style:none;}
+		/*border를 이용하여 선을 만들고 선 굵기, 선 색상, 선 모양을 설정*/
+		div{float:left; padding:20px;}
+		#leftmenu{border-right:1px black solid;}
+		address{font-style:normal;}
+	</style>
+</head>
+<body>
+	<p class="hidden"> <a href="#">컨텐츠 바로가기</a></p>
+	<h1>아이콕스</h1>
+	<h2 class="hidden">메인메뉴</h2>
+
+	<!--유의미적 접근 : id는 유일성, class는 여러 개  -->
+	<ul id="gnbmenu">
+		<li><a href="#">아이콕스</a></li>
+		<li><a href="#">도서소개</a></li>
+		<li><a href="#">iCoX커뮤니티</a></li>
+		<li><a href="#">iCox자료실</a></li>
+	</ul>
+	<hr>
+
+	<div id="leftmenu">
+		<h2>iCOX커뮤니티</h2>
+		<ul>
+			<li><a href="#">와글와글IT</a></li>
+			<li><a href="#">C 스쿨</a></li>
+			<li><a href="#">Java 스쿨</a></li>
+		</ul>
+	</div>
+	<div>
+		<p> 컨텐츠 머리말 <br>
+		내용...</p>
+	</div>
+	<hr>
+
+	<p>
+		<address>경기도 고양시 덕양구 관산동 연락처 : 010-9351-7495 <br>
+		COPYRIGHT &copy; iCox. All Rights Reserved</address>
+	</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>disable 속성과 readonly 속성</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>disable 속성과 readonly속성</legend>
+			<p>
+				<ul>
+					<li> <label for ="number">시리얼 번호 입력 : <input type="number" name="number" id="number"> </label>
+						<input type="button" name="submit" value="이전">
+						<!-- disabled는 비활성화 상태를 만들어줌 -->
+						<!-- ex)쇼핑몰에서 sold out 되었을 때 클릭하지 못하게 해주는 기능 -->
+						<input type="button" name="submit" value="다음" disabled="disabled">
+					</li>
+				</p>
+				<p>
+					<li> <label for ="select">선택한 책 : </label>
+						<!-- readonly 읽기 전용으로 약관같은거에 쓰인다고 함 (그 자리에 고정 값을 만들어 주는 기능-->
+						<input type="text" name="text" id="text" list="select" value="안드로이드로 용돈 뽑기" readonly="readonly"> 
+						<label for="number">수량 :</label>
+						<input type="number" name="number" min="1" max="100" value="1">
+					</li>
+				</p>
+			</ul>
+		</fieldset>
+	</form>
+
+</body>
+</html>

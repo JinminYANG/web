@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>datalist 기능</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>datalist</legend>
+			<!-- input에서 list를 사용할 것이라고 정의:정의할 이름 -->			
+			<p><label for ="course">수강과목 : </label> <input type="text" name="course" id="course" list="subjects">
+				<!-- datalist를 이용하여 마우스를 클릭 했을 때 option에 코드로 작성해 놓은 리스트를 보여주게 만듬 -->
+				<datalist id="subjects">
+					<option value="HTML5"></option>
+					<option value="CSS3"></option>
+					<option value="Javascripts"></option>
+					<option value="jQuery"></option><
+				</datalist>
+			</p>
+		</fieldset>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>input type</title>
+</head>
+<body>
+
+	<form>
+		<fieldset>
+			<legend>input type</legend>
+			<p><label for="search">검색 : </label><input type="search" name="search" id="input_search" autofocus="autofocus"></p>
+			<p><label for="email">이메일 : </label><input type="email" name="email" id="input_email"></p>
+			<p><label for="url">사이즈 주소 : </label><input type="url" name="url" id="input_url"></p>
+			<p><label for="tel">전화번호 : </label><input type="tel" name="tel" id="input_tel"></p>
+			<p><label for="number">수량 : </label><input type="number" name="number" value="1" id="input_number" min="1" max="10" step="1"></p>
+			<p><label for="range">만족도 : </label><input type="range" name="range" id="input_range" min="1" max="10" step="1"></p>
+			<p><label for="date">날짜 : </label><input type="date" name="date" id="input_date"></p>
+			<!-- utc는 input태그의 속성이 아님, time, del의 속성이라고 한다.--> 
+			<!-- <p><label for="datetime">날짜시간(UTC) : </label><input type="datetime" name="datetime" id="input_dt"></p> -->
+			<p><label for="datetime-local">날짜시간 : </label><input type="datetime-local" name="datetime-local" id="input_dtl"></p>
+			<p><label for="month">월 : </label><input type="month" name="month" id="input_month"></p>
+			<p><label for="week">주 : </label><input type="week" name="week" id="input_week"></p>
+			<p><label for="time">시간 : </label><input type="time" name="time" id="input_time"></p>
+			<p><label for="color">색상 : </label><input type="color" name="color" id="input_color"></p>
+		</fieldset><
+	</form>
+
+</body>
+</html>

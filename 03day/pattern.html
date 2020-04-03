@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>pattern 속성</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>pattern 속성</legend>
+			<p>
+				<!-- pattern을 이용하여 사용자가 입력해야하는 방식으로 인도해준다.
+				올바르지 않게 입력했을 때 title을 이용해서 안내문구를 보여주어 입력을 도와준다. -->
+				<label for="tel">휴대폰 번호 : </label><input type="tel" name="tel" id="tel" pattern="\d{3}-\d{3,4}-\d{4}" title=" 휴대폰 번호는 3자리 숫자 - 3/4자리 숫자 - 4자리 숫자로 입력하셔야 합니다." placeholder="010-0000-0000" autofocus="autofocus" required="required">
+			</p>
+			<p>
+				<input type="submit" name="submit" value="확인">
+			</p>
+		</fieldset>
+	</form>
+
+</body>
+</html>
