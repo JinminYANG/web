@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		div{/*background-color:red;*/ height:100px;}
+		/*position을 사용할 경우 width를 사용하여 너비를 설정 해줘야 한다.*/
+		.div_01{/*background-color:red;*/ background-image: url(images/logo.png); position: fixed; width: 1000px;} 
+		/*중앙값을 제어하는 속성은 따로 없음. left와 top로 '%'를 설정하여 위치 조정*/
+		.div_02{/*background-color:green;*/ background:url(images/logo_01.png) no-repeat; position:fixed; width: 100px; /*left: 500px; top:300px;*/ /*margin-left: 200px;*/ top:50%; left:50%}
+		.div_03{background-image: url(images/logo_03.png); position:fixed; /*left:-100px; top:-100px;*/ width:1000px; bottom:0px;}
+	</style>
+</head>
+<body>
+	<div class="div_01"></div>
+	<div class="div_02"></div>
+	<div class="div_03"></div>
+</body>
+</html>

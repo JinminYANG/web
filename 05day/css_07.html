@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		/*'background-image: url(images/bg.jpg)' src가아닌 url을 사용함*/
+		/*no-repeat하면 이미지가 반복되는 현상을 막아줌*/
+		.box div{border:1px black solid; margin:10px 5px; /*padding-top:20px;*/ /*padding:20px 5px;*/width:500px; height:220px; padding: 30px 10px 0px 10px; /*background-image: url(images/bg.jpg);*/ background:url(images/bg.jpg) no-repeat;} 
+		.box div h2{color:orange; margin-bottom:30px;}
+		.box .div_01{background-size:120px 90px;}
+		/*'cover'는 가로의 길이에 맞춰 사이즈가 늘어나는데 이미지의 세로의 길이가 더 큰경우 div를 무시하고 더 늘어나서 overflow 처럼 보임*/
+		.box .div_02{background-size: cover;}
+		/*'contain'은 세로의 길이에 맞춰서 이미지가 늘어남*/
+		.box .div_03{background-size: contain;}
+		.box .div_04{background-size: 250px;}
+	</style>
+</head>
+<body>
+	<section class="box">
+		<div class="div_01">
+			<h2>I believe you and your happy</h2>
+			<p>대구시 보건당국은 정례브리핑에서 코호트 격리된 제2미주병원 환자·종사자 188명에 대해 3차 전수조사를 한 결과 환자 19명과 종사자 3명 등 22명이 추가로 확진됐다고 3일 밝혔다.
+
+				3명은 판정이 미뤄졌고, 7명은 아직 검사 결과가 나오지 않았다. 누적 확진자는 169명이다.
+
+				대실요양병원 63명에 대한 검사에서는 환자 2명이 추가 확진됐다. 판정 미결정은 1명이고 누적 확진자는 97명이다.
+			</p>
+		</div>
+		<div class="div_02">
+			<h2>I believe you and your happy</h2>
+			<p>대구시 보건당국은 정례브리핑에서 코호트 격리된 제2미주병원 환자·종사자 188명에 대해 3차 전수조사를 한 결과 환자 19명과 종사자 3명 등 22명이 추가로 확진됐다고 3일 밝혔다.
+
+				3명은 판정이 미뤄졌고, 7명은 아직 검사 결과가 나오지 않았다. 누적 확진자는 169명이다.
+
+				대실요양병원 63명에 대한 검사에서는 환자 2명이 추가 확진됐다. 판정 미결정은 1명이고 누적 확진자는 97명이다.
+			</p>
+		</div>
+		<div class="div_03">
+			<h2>I believe you and your happy</h2>
+			<p>대구시 보건당국은 정례브리핑에서 코호트 격리된 제2미주병원 환자·종사자 188명에 대해 3차 전수조사를 한 결과 환자 19명과 종사자 3명 등 22명이 추가로 확진됐다고 3일 밝혔다.
+
+				3명은 판정이 미뤄졌고, 7명은 아직 검사 결과가 나오지 않았다. 누적 확진자는 169명이다.
+
+				대실요양병원 63명에 대한 검사에서는 환자 2명이 추가 확진됐다. 판정 미결정은 1명이고 누적 확진자는 97명이다.
+			</p>
+		</div>
+		<div class="div_04">
+			<h2>I believe you and your happy</h2>
+			<p>대구시 보건당국은 정례브리핑에서 코호트 격리된 제2미주병원 환자·종사자 188명에 대해 3차 전수조사를 한 결과 환자 19명과 종사자 3명 등 22명이 추가로 확진됐다고 3일 밝혔다.
+
+				3명은 판정이 미뤄졌고, 7명은 아직 검사 결과가 나오지 않았다. 누적 확진자는 169명이다.
+
+				대실요양병원 63명에 대한 검사에서는 환자 2명이 추가 확진됐다. 판정 미결정은 1명이고 누적 확진자는 97명이다.
+			</p>
+		</div>
+	</section>
+</body>
+</html>

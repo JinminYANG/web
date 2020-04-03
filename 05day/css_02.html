@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		h1{color:red;}
+		/*div로 클래스를 정의해서 크기를 정의하면 float가 적용되지 않음 (p를 보지 않고 div를 보기 때문.)*/
+		/*.txt{ float:left; display:inline-block; }*/
+		/*'text-indent' : 들여쓰기 기능*/
+		/*'left'는 position에 대한 제어*/
+		h2{width:0px; height:0px; /*text-indent:-9999px;*/ /*line-height:0px;  font-size:0px; */position: absolute; /*margin-left: -1000px;*/ left:-100px;}
+		/*'display-inblock'은 float와 유사한 기능을 사용하기 위해 사용*/
+		p{width:200px; height:100px; border:2px red solid; margin-top:-20px; /*margin-left:1px;*/ padding:10px; /*float:left;*/ display:inline-block;}
+		/*p{float:left; display:inline-block;}*/
+		/*.txt_01{position: absolute; z-index:1;}
+		.txt_02{position: absolute; z-index:2;}
+		.txt_03{position: absolute; z-index:3;}*/
+		
+	</style>
+</head>
+<body>
+
+	<h1>세상에 없는 12지 동물 - 용</h1>
+	<h2>용의 기원</h2>
+	<p class="txt_01">용의 기원은 정확하게 밝혀진 바 없으나 화석으로 인한 추정이 있고 자연현상으로 인한 상상이 있다.</p>
+	<h2>용의 모습</h2>
+	<p class="txt_02"> 화석이나 자연 현상이 워낙 강했기 때문에 용의 모습은 동양이나 서양이나 곱상할 수는 없었을 것이다.</p>
+	<h2>용의 의미</h2>
+	<p class="txt_03">그 강한 용은 보통사람들의 갖지 못한 인상 때문에 신묘하여 우러를 수 있는 존재를 의미하게 된 것이다.</p>
+	
+</body>
+</html>

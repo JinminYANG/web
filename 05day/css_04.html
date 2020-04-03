@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		/*.head의 포지션을 절대값 처리*/
+		/*'position:fixed;' head의 포지션을 고정으로 위치시켜 스크롤을 움직였을 때도 위치시킨 곳에 고정되게 만들어줌*/
+		.head{position:absolute; left:40px; position:fixed;}
+		.head p{color: green; position:absolute; top:120px; width: 200px;}
+		.logo{position:relative; left:10px; position:absolute; left:0px; top:180px;}
+		.menu li{background-color:black; width:150px; height:20px; list-style:none; margin-bottom:3px; padding:3px 3px; margin-left: -40px;}
+		.menu li:hover{background-color:green;}
+		.menu li a{color:white; text-decoration:none;}
+		.menu li a:hover{color:yellow;}
+		.box{ background-color:pink; width:300px; height:2000px; /*float:right;*/ /*position:absolute; left:250px; top:20px;*/ margin-left: 200px;}
+	</style>
+</head>
+<body>
+	<header class="head">
+		<h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
+		<p>뜨거운 웹 표준<br>
+		시원하게 알려드려요!</p>
+		<div class="logo">
+			<ul class="menu">
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">PRODUCT</a></li>
+				<li><a href="#">SERVICE</a></li>
+				<li><a href="#">COMMUNITY</a></li>
+			</ul>
+		</div>
+	</header>
+	
+
+	<section class="box">
+		본문내용이지요~
+	</section>
+
+</body>
+</html>

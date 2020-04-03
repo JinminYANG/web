@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		.boxes p{width:200px; height:120px; padding:10px 10px; color:white;} 
+		.box_01{background-color:red; position:absolute; z-index:4; }
+		/*z-index는 선행작업이 필요 (position) / z축 위치조정 / 숫자가 높으면 더 앞쪽에 위치 */
+		/*position의 값으로 absolute라는 절대 값이 들어감.*/
+		.box_02{background-color:blue; margin-left: 43px; margin-top: 60px; position:absolute; z-index:3;}
+		.box_03{background-color:green; margin-left: 25px; margin-top: 180px; position:absolute; z-index:2;}
+	</style>
+</head>
+<body>
+	<div class="boxes">
+		<p class="box_01">박스의 크기의 위치를 잘 살펴보아야 합니다.</p>
+		<p class="box_02">박스의 포지션 속성을 바꿔가야 테스트해 보아야 합니다.</p>
+		<p class="box_03">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+	</div>
+</body>
+</html>

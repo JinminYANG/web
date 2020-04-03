@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+		/*position: relative는 position의 값을 기준으로 잡는 것.*/
+		/*relative가 부모가 되고 absolute가 자식 개념이 됨*/
+		div{background-color:pink; width:500px; height:200px; /*padding-top:10px;*/ padding:2px 20px; /*font-style:normal;*/ position: relative; border:gray 2px solid;}
+		h2{color:green;}
+		ul li a{color:black; text-decoration: none;}
+		ul li a:hover{color:blue; text-decoration-line:underline; }
+		li{list-style:none;}
+		/*'position:absolute' 같이 절대 값을 주고 나서는 x,y가 0,0을 기준으로 입력해야함.*/
+		p{position:absolute; left:400px; top:20px; right:30px;}
+		p a{float:right; /*margin-top:-175px;*/}
+	</style>
+</head>
+<body>
+	<div>
+		<h2>동물병원 24시</h2>
+		<ul class="box">
+			<li><a href="#">밥 먹이는 시간 지킬 것</a></li>
+			<li><a href="#">길 고양이 주사 맞히기</a></li>
+			<li><a href="#">눈 아픈 동물 목에 깔때기 씌우기</a></li>
+			<li><a href="#">매일 목욕 시킬 것</a></li>
+			<li><a href="#">이름없는 애들 이름 짓지 말기</a></li>
+		</ul>
+		<p><a href="#">더보기</a></p>
+	</div>
+</body>
+</html>
