@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		*{margin:0, padding:0;}
+		h1{margin-left: 20px;}
+		/*'transition:width 1.2s' width값이 설정된 움직임을 제어하기 위해 사용 (값 : 1.2s)*/
+		li{background:#90DDC9; width: 250px; list-style:none; margin-top: 5px; padding: 5px; margin-left: -20px; transition:width 1.2s}
+		a{text-decoration:none; color:black; margin-left:5px;}
+		/*'transition'이 움직일 명령 여기서 width를 사용했기 때문에 li에서 width 제어가 가능*/
+		li:hover{width:450px;}
+		li:hover a {color:red;/*transform:scale(1.5,1.0);*/ /*width:250px;*/ }
+		/*li a:hover{color:red;}*/
+		/*a:hover{color:red;}*/
+	</style>
+</head>
+<body>
+	<h1>Moving Mainmenu</h1>
+	<ul>
+		<li><a href="#">COMPANY</a></li>
+		<li><a href="#">PRODUCT</a></li>
+		<li><a href="#">SERVICE</a></li>
+		<li><a href="#">CUSTOMER SUPPORT</a></li>
+		<li><a href="#">COMMUNITY</a></li>
+	</ul>
+</body>
+</html>

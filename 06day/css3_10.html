@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		/*animation을 사용할 것을 정의하고 이름을 입력*/
+		p{width: 100px; height:100px; color:white; background:red; animation:myfirst 5s infinite;}
+
+		/*animation에서 입력한 이름을 @keyframe을 이용하여 0~100% 까지의 움직임을 제어*/
+		@keyframes myfirst{
+			0%{background:red; width:100px; height:100px;}
+			25%{background:#00c; width:200px; height:100px;}
+			50%{background:#808; width:200px; height:200px;}
+			75%{background:#080; width:100px; height:200px;}
+			100%{background:red; width:100px; height:100px;}
+		}
+	</style> 
+</head>
+<body>
+	<h2>Animation</h2>
+	<p>Animation is my pleasure. <br> Animationwork gives me great pleasure.</p>
+</body>
+</html>

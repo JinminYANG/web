@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		/*background를 사용할 때 여러가지 속성을 사용하기 위해서는 -image를 사용하지 않아야 함.*/
+		/*'background-repeat', 'background-position'을 사용하지 않고 background에서 입력 가능*/
+		h1{background/*-image*/:url(images/s_bg.png) no-repeat 0 50%; text-indent: 20px; /*padding-left:20px;*/ /*background-position:left center;*/ /*background-position:0 50%*/}
+		/*li{list-style-image: url(images/s_bg.png)}*/
+		p{width:500px; background:pink; padding:20px; ba}
+	</style>
+</head>
+<body>
+	<!-- h1을 여러 개 사용할 경우에는 div를 사용하여 묶어주어야 함. (의미가 다름.) -->
+	<div>
+		<h1>아침 식사와 저녁 식사</h1>
+		<p>학계 역시 비슷한 의견이다. 제갈동욱 서울성모병원 진단검사의학과 교수는 "정확한 이유는 개별 사례 분석이 필요하다"며 "(환자 몸속에 있는) 바이러스는 감소했다 증가했다 하는 패턴을 보이는데 진단키트로 검사를 못 할 정도로 감소했을 때 음성이 나왔던 사례인지 꼼꼼하게 살펴봐야 한다"고 말했다.</p>
+
+		<h1>간식과 아침</h1>
+		<p>엄중식 가천대 길병원 감염내과 교수 역시 "상기도 검체는 깊숙한 곳에서 채취해야 하는데 코 앞쪽에서 검체를 채취하면 실제 양성인 환자도 음성으로 나올 수 있다"며 "검사 과정에서 오류가 있었는지 등 여러 가능성을 두고 살펴봐야 한다"고 설명했다.</p>
+
+		<h1>보양식과 약</h1>
+		<p>현재 코로나19 진단은 PCR(유전자증폭) 검사로 하는데 환자의 검체에 있는 바이러스양이 얼마나 있는지에 따라 결정된다. 기준값보다 많으면 '양성', 기준값보다 적으면 '음성'으로 판단한다. 완치 판정은 24시간 간격으로 진행된 진단검사에서 2회 연속 음성이 나와야 한다. 이는 몸속에 남아있는 바이러스가 다른 사람에게 전파할 수준이 아니어서 격리에서 해제해도 된다고 보는 기준이다.</p>
+	</div>
+
+</body>
+</html>

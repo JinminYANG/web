@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		ul{width:400px;}
+		li{list-style:none; float:left; /*height:20px;*/  text-align:center; background:#FFE8E8;}
+		/*'box-sizing:border-box' width의 크기제어를 box에 빗대어 400px에 맞추어 자동 계산됨 border와 padding을 무시하도록 도와줌*/
+		a{text-decoration-line:none; border:1px black solid; color:black; width:200px; height:45px;/*width:178px;*/ display:block; padding:10px; box-sizing:border-box;}
+		/*nth-child(숫자)를 입력하면 li를 하나씩 제어할 수 있음*/
+		/*nth-child를 사용할 때는 li를 이용하여 코드를 작성해야 함*/
+		a:nth-child(1){border-right:none;}
+		a:nth-child(2){border-bottom:none;}
+		a:nth-child(3){border-top:none;}
+		a:nth-child(4){border-left:none;}
+		li:hover a{color:white; background:#E3F9F5; }
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">아이콕스</a></li>
+		<li><a href="#">도서소개</a></li>
+		<li><a href="#">iCox커뮤니티</a></li>
+		<li><a href="#">iCox자료실</a></li>
+	</ul>
+</body>
+</html>

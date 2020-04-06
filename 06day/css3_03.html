@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		/*0을 입력할 때는 단위값이 필요하지 않음*/
+		*{margin:0; padding:0;}
+		/*"굴림"에서 "을 사용하는 이유는 한글을 사용하기 때문*/
+		body{font:12px "굴림",Gulim; margin: 20px;}
+		/*'em'는 배수를 뜻하는 단위로 body의 font를 기준으로 삼는다. 사용하는 것을 추천하지 않음*/ 
+		/*background에서 -color를 사용하지 않고 바로 속성값을 입력 가능*/
+		p{ width:11em; padding:10px; /*width:300px; height:300px;*/ background:#69f; margin-bottom:10px; /*padding:10px; margin:20px;*/}
+		/*문자열을 입력했을 때 띄어쓰기는 자동으로 줄이 바뀌지만 긴 단어는 줄 바꿈이 되지 않는다.
+		word-wrap 속성을 이용하여 break-word를 사용하면 긴 단어를 width에 맞춰 줄 바꿈이 가능하다.*/
+		.txt_02{word-wrap:break-word;}
+	</style>
+</head>
+<body>
+	<p class="txt_01">
+		이 문장은 매우 긴 단어를 포함하고 있습니다. PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS word-wrap 속성으로 인해, 긴 단어는 잘라서 다음 줄로 내려가게 될 것 입니다.
+	</p>
+	<p class="txt_02">
+		이 문장은 매우 긴 단어를 포함하고 있습니다. PNEUMONOULTRAMICROSCOPICSILICOVOLCANOCONIOSIS word-wrap 속성으로 인해, 긴 단어는 잘라서 다음 줄로 내려가게 될 것 입니다.
+	</p>
+
+
+</body>
+</html>

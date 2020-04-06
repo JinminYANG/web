@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		/*font-weight는 px단위가 아님;*/
+		p{font: 100px "Arial"; margin:15px; font-weight:600; }
+		/*'text-shadow' : x축, y축, 입력할 색*/
+		.txt_01{color:#C6B300; text-shadow: 7px 7px #cc9;}
+		/*같은 속성을 여러 개 넣을 때는 ','를 사용하여 입력함.*/
+		.txt_02{color:#002D96; text-shadow: 2px 2px #E0E0E0,
+			4px 4px #AFAFAF,
+			6px 6px #878787,
+			10px 10px #606060,
+			12px 12px #383838;}
+	</style>
+</head>
+<body>
+
+	<p class="txt_01">curved</p>
+	<p class="txt_02">arrow</p>
+</body>
+</html>
