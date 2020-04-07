@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS3</title>
+	<style type="text/css">
+		'outline' 외곽선
+		/*'outline-offset'외곽선이 들어갈 자리의 margin 값*/
+		div{width:750px; /*height:360px;*/ border:1px red solid; outline:1px red solid; outline-offset: 3px;}
+		/*div의 자식에 대한 정의
+		clear:both로 float처리한 것을 무효화 시킴
+		content:""로 내용이 없음을 의미
+		display:block으로 블락처리 */
+		div:after{clear:both; content:""; display:block;}
+		h1{text-align:center;}
+		.p1{float:left; width:300px; padding:20px; text-align:justify; border:1px blue solid; margin-left:20px;}
+		.p2{float:right; width:300px; padding:20px; text-align:justify; border: 1px green solid; margin-right:20px;}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>녹차와 커피</h1>
+
+		<p class="p1">국가채무 1인당 1천409만원…통합재정수지 적자전환, 적자폭 10년만에 최대 (세종=연합뉴스) 이 율 기자 = 지난해 국가부채가 사상 처음으로 1천750조원에 육박했다. 5년 만의 세수 결손에 재정적자 보전을 위한 국채발행이 늘어났기 때문이다. 중앙·지방정부가 반드시 갚아야 할 국가채무(D1)는 728조8천억원으로 국민 1인당 1천409만원에 달했다.</p>
+
+		<p class="p2">국가채무 1인당 1천409만원…통합재정수지 적자전환, 적자폭 10년만에 최대 (세종=연합뉴스) 이 율 기자 = 지난해 국가부채가 사상 처음으로 1천750조원에 육박했다. 5년 만의 세수 결손에 재정적자 보전을 위한 국채발행이 늘어났기 때문이다. 중앙·지방정부가 반드시 갚아야 할 국가채무(D1)는 728조8천억원으로 국민 1인당 1천409만원에 달했다.</p>
+	</div>
+</body>
+</html>

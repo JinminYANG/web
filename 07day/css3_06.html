@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style type="text/css">
+	*{margin:0; border:0; /*background:#9B9B9B;*/}
+	/*background를 *에 넣지말고 body 태그에 넣어야 함.*/
+	body{background:#9B9B9B;}
+	/*'margin:0 auto'를 통해 작업한 것을 중앙에 위치시키도록 함*/
+	#all{width:960px; margin:0 auto; /*background-color:#DDDDDD;*/ /*border:1px red solid;*/ /*box-sizing:border-box;*/  }
+	header h1{background:#20BBC9; color: white; font-size:90px; text-align:center; /*position: absolute; width:760px;*/ /*float:left;*/ border:1px green solid; box-sizing:border-box; /*position:absolute;*/ width:960px; /*left:50%;*/} 
+	header span{font-size:30px; color:#EDC125; background:#20BBC9; }
+	header strong{font-size:50px; color:#EDC125; background:#20BBC9;}
+	#contents{background:#DDDDDD;}
+	#contents:after{clear:both; content:""; display:block; }
+	nav{ width:200px;   /*position:absolute;*/  /*border:1px black solid;*/  /*box-sizing:border-box;*/ /*z-index:2;*/  float:left; /*display:block;*/ }
+	nav:after{clear:both; content:""; display:block;}
+	nav ul{/*background:#DDDDDD;*/}
+	nav ul li{list-style:none; padding:16px; box-sizing:border-box; /*display:block;*/ /*background:#DDDDDD;*/ /*position:absolute;*/ /*background:#DDDDDD;*/ }
+	nav ul li a{color:black; text-decoration-line:none; /*background:#DDDDDD;*/ box-sizing:border-box;}
+	nav ul li a:hover{text-decoration-line:underline; } 	
+	section{width:760px; /*border:1px pink solid;*/ /*box-sizing:border-box;*/ float:right; /*display: block;*/}
+	section h2{color:yellow; background:red; padding:15px;}
+	section article p{background:white; padding:20px;}
+	footer{/*width:100%;*/background:#DAA3FF; padding:10px;}
+	footer small{/*position:absolute; bottom:0px; left:50%;*/  /*background:#DAA3FF;*/
+	/********************/
+	/*위에서 after처리 (clear:both) 했으으로 float가 끊긴 상태. 굳이 float:left를 할 이유 없음*/
+	/*float:left; */
+/*clear:both;*/  /*margin:0 auto;*/ } 
+</style>
+</head>
+<body>
+	<div id="all">
+		<header>
+			<h1>호랑이<span>를</span> <strong>주제</strong><span>로 한</span> 민화</h1>
+		</header>
+
+		<div id="contents">
+			<nav>
+				<ul>
+					<li><a href="#">그림의 작가</a></li>
+					<li><a href="#">그림의 시대</a></li>
+					<li><a href="#">그림의 재료</a></li>
+					<li><a href="#">그림의 주인공</a></li>
+					<li><a href="#">그림의 활용</a></li>
+				</ul>
+			</nav>
+
+			<section>
+				<article id="at_01">
+					<h2>승운옹호도</h2>
+					<p>강민석 청와대 대변인은 이날 브리핑에서 "정부는 국민께 지원금이 하루속히 지급되도록 신속히 추가경정예산(추경)안을 제출할 것"이라며 "국회 심의 과정에서 정부는 여야와 심도 있는 논의를 거칠 것"이라고 말했다.
+
+						문재인 대통령은 지난달 30일 열린 제3차 비상경제회의에서 소득 하위 70%에 4인 기준 가구당 100만원의 긴급재난지원금을 지급하겠다고 발표했다.
+					</p>
+				</article>
+				<article id="at_02">
+					<h2>길상백호</h2>
+					<p>
+						여야는 그러나 총선을 앞두고 '돈 풀기'라는 지적에도 불구하고 모두 긴급재난지원금을 전 국민에게 지급해야 할 필요성을 제기하고 있다.
+
+						더불어민주당은 '4월 내 소득 구분 없이 4인 가구 기준 100만원 지급'을 추진 중이고 미래통합당은 '총선 전 모든 국민 1인당 50만원 지급'을 제안했다.
+
+						이런 상황에서 긴급재난지원금을 전 국민에게 지급하는 문제와 관련한 청와대의 입장은 정치권의 이런 요구에 수용 여지를 열어두고 검토하겠다는 뜻으로도 해석할 수 있다.
+
+						다만 청와대 핵심관계자는 '전 국민에게 지급하자는 정치권의 의견에 대해, 청와대 역시 가능성을 열어두겠다는 뜻인가'라는 물음에는 "국회에서 심의 과정을 거칠 것이며, 거기서 여러 얘기가 나올 것이라고 생각한다"고만 대답했다.
+
+						그러면서 "가능성을 열어뒀다, 닫아뒀다고 얘기하지는 않겠다"고 부연했다.
+
+						이 관계자는 '재정권한을 가진 청와대와 정부의 입장은 무엇인가'라는 물음에는 "70% 국민에게 지급하는 안을 국회에 보낼 것이라고 누차 말씀드렸다"고 말해 당장은 비상경제회의에서 결정한 안을 최우선으로 고려한다는 뜻을 우회적으로 전했다.
+
+						그는 '청와대와 여당의 입장이 다른데 사전 정리는 없었는가'라는 물음에는 "여야의 주장을 평가하지는 않겠다"며 "어쨌든 청와대와 정부가 해야 할 일을 설명드린 것"이라고 말해 즉답을 피했다.
+
+						아울러 "정부는 뼈를 깎는 세출 구조조정으로 추경안을 제출할 것이고, 이후 논의 과정을 지켜봐야 할 것"이라며 "정부는 그 자리에서 당연히 정부 입장을 낼 수 있을 것"이라고 언급했다.
+
+						청와대 핵심관계자는 민주당 이인영 원내대표가 이날 당 현안점검회의에서 문 대통령에게 긴급재정명령 발동을 요청할 수 있다고 말한 것과 관련해서는 "국회에 낼 추경안에 대한 심의가 먼저 이뤄져야 한다는 설명을 이미 드렸다"고 밝혔다.
+
+						현시점에서는 사실상 긴급재정명령 발동을 검토하지 않는다는 뜻으로 풀이된다.
+						여야는 그러나 총선을 앞두고 '돈 풀기'라는 지적에도 불구하고 모두 긴급재난지원금을 전 국민에게 지급해야 할 필요성을 제기하고 있다.
+
+						더불어민주당은 '4월 내 소득 구분 없이 4인 가구 기준 100만원 지급'을 추진 중이고 미래통합당은 '총선 전 모든 국민 1인당 50만원 지급'을 제안했다.
+
+						이런 상황에서 긴급재난지원금을 전 국민에게 지급하는 문제와 관련한 청와대의 입장은 정치권의 이런 요구에 수용 여지를 열어두고 검토하겠다는 뜻으로도 해석할 수 있다.
+
+						다만 청와대 핵심관계자는 '전 국민에게 지급하자는 정치권의 의견에 대해, 청와대 역시 가능성을 열어두겠다는 뜻인가'라는 물음에는 "국회에서 심의 과정을 거칠 것이며, 거기서 여러 얘기가 나올 것이라고 생각한다"고만 대답했다.
+
+						그러면서 "가능성을 열어뒀다, 닫아뒀다고 얘기하지는 않겠다"고 부연했다.
+
+						이 관계자는 '재정권한을 가진 청와대와 정부의 입장은 무엇인가'라는 물음에는 "70% 국민에게 지급하는 안을 국회에 보낼 것이라고 누차 말씀드렸다"고 말해 당장은 비상경제회의에서 결정한 안을 최우선으로 고려한다는 뜻을 우회적으로 전했다.
+
+						그는 '청와대와 여당의 입장이 다른데 사전 정리는 없었는가'라는 물음에는 "여야의 주장을 평가하지는 않겠다"며 "어쨌든 청와대와 정부가 해야 할 일을 설명드린 것"이라고 말해 즉답을 피했다.
+
+						아울러 "정부는 뼈를 깎는 세출 구조조정으로 추경안을 제출할 것이고, 이후 논의 과정을 지켜봐야 할 것"이라며 "정부는 그 자리에서 당연히 정부 입장을 낼 수 있을 것"이라고 언급했다.
+
+						청와대 핵심관계자는 민주당 이인영 원내대표가 이날 당 현안점검회의에서 문 대통령에게 긴급재정명령 발동을 요청할 수 있다고 말한 것과 관련해서는 "국회에 낼 추경안에 대한 심의가 먼저 이뤄져야 한다는 설명을 이미 드렸다"고 밝혔다.
+
+						현시점에서는 사실상 긴급재정명령 발동을 검토하지 않는다는 뜻으로 풀이된다.
+					</p>
+				</article>
+			</section>
+		</div>
+
+		<footer>
+			<small>Copyright&copy; All Rigths Reserved </small>
+		</footer>
+	</div>
+</body>
+</html>
