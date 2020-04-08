@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>switch</title>
+	<script type="text/javascript">
+		var myArea = prompt("지역을 입력하세요. :","서울");
+		// var areaNum;
+
+		// prompt에서 입력 받은 값을 문자열 그대로 case 별로 switch 시켜주는 메소드
+		switch(myArea){
+			case "서울" :
+				areaNum="02";
+				break;
+			case "경기" :
+				areaNum="031";
+				break;
+			case "부산" :
+				areaNum="051";
+				break;
+			default :
+				alert("등록되지 않은 지역입니다.");
+				break;
+		}
+
+		document.write(myArea+"지역 번호는"+areaNum);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

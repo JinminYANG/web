@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>new document</title>
+	<script type="text/javascript">
+
+		// Number()함수는 prompt()함수에서 받은 *문자열*을 숫자로 변환 시켜줌
+		var kor = Number(prompt("국어 점수는?","0"));
+		var eng = Number(prompt("영어 점수는?","0"));
+		var math = Number(prompt("수학 점수는?","0"));
+
+		// Number()안해주면 문자열이 입력됨
+		// var sum = kor+eng+math;
+		// document.write(sum);
+		var ave = (kor+eng+math)/3;
+		document.write(ave);
+		var result= ave>=60;
+		document.write(result);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
