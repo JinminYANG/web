@@ -4,41 +4,72 @@
 	<meta charset="utf-8">
 	<title>CSS</title>
 	<style type="text/css">
+		/*왼쪽 상단 가장자리 정렬*/
 		*{margin:0; padding:0}
+		/*페이지 옆 여분의 색상 입력*/
 		body{background:#EAE5E5;}
+
+		/*페이지를 전체 감싸는 id를 만들어 width와 margin 가운데 정렬을 입력*/
 		#all{width:960px; margin:0 auto; }
+
+		/*header에 해당하는 요소들을 입력*/
 		header{background:orange; text-align:center; /*box-sizing:border-box; display: block;*/}
-		header h1{font-size:100px; color:white;}
-		.p1{color:white; font-size:20px;}
-		.p2{background:#CCC7C7;}
+		/*큰 글씨*/
+		header h1{font-size:120px; color:white;}
+		/*큰 글씨 밑*/
+		.p1{color:white; font-size:20px; padding-bottom:10px;}
+		/*제목 밑에 회색 배경 문자열*/
+		.p2{background:#CCC7C7; padding:3px;}
+
+		/*header를 뺀 나머지 부분을 contents로 묶어주고 설정 값 입력*/
 		#contents{background:white;}
+		/*contents의 자식에 대한 정의
+		clear:both로 float처리한 것을 무효화 시킴
+		content:""로 내용이 없음을 의미
+		display:block으로 블락처리 */
 		#contents:after{clear:both; content:""; display:block;}
+
+		/*왼쪽 메뉴에 대한 설정값 입력*/
 		nav{width:25%; background:white; float:left; /*box-sizing:border-box; display: block;*/}
-		nav h2{background:red; padding:5px 20px; color:white;}
-		nav ul li{list-style:none; padding:20px;}
+		nav h2{background:red; padding:10px 20px; color:white; text-indent:-5px;}
+		nav ul li{list-style:none; padding:15px;}
 		nav ul li a{color:black; text-decoration:none; font-weight:1000}
 		nav ul li a:hover{color:pink;}
+		/*nav 자식에 대한 정의
+		clear:both로 float:left 처리 한 것을 무효화 시킴 (줄 바꿈 개념)
+		content"" 로 내용없음 의미
+		display:block으로 블락 처리*/
 		nav:after{clear:both; content:""; display:block;}
+
+		/*가운데 article에 대한 설정 값 입력*/
 		section{/*box-sizing:border-box;*/ width:50%; margin:0 auto; background:#EAE5E5; float:left; }
 		section article{/*float:left;*/}
-		section article h2{color:white; background:#AAADF7; margin:5px; padding:5px;}
+		section article h2{color:white; background:#AAADF7; margin:10px; padding:5px;}
 		section article h3{padding:10px 10px;}
 		section article p{padding:20px 10px;}
-		/*section:after{clear:both; content:""; display:block;}
-		section article:after{clear:both; content:""; display:block;}*/
+		/*section 자식에 대한 정의
+		clear:both로 float:left 처리 한 것을 무효화 시킴 (줄 바꿈 개념)
+		content"" 로 내용없음 의미
+		display:block으로 블락 처리*/
+		section:after{clear:both; content:""; display:block;}
+		/*section article:after{clear:both; content:""; display:block;}*/
+
+		/*오른쪽 보조 설명 (aside)에 대한 설정 값 입력*/
 		aside{float:left; width:22%; background:white; margin:0 auto; padding:10px;}
-		aside h1{color:gray; text-decoration:underline; font-size:25px;}
-		aside h2{color:orange; text-decoration:underline; font-size:25px;}
-		aside h3{color:black; font-size:25px;}
-		aside ul li{list-style:none;}
+		aside h1{color:gray; text-decoration:underline; font-size:26px;}
+		aside h2{color:orange; text-decoration:underline; font-size:26px;}
+		aside h3{color:black; font-size:26px;}
+		aside ul li{list-style:none; padding:15px 0;}
 		aside ul li a{color:black; font-weight:1000}
+
+		/*하단에 대한 설정 값 입력*/
 		footer{background:pink; padding:20px;}
 	</style>
 </head>
 <body>
 	<div id="all">
 		<header>
-			<h1>Musee d'Orsay</h1>
+			<h1>Musée d'Orsay</h1>
 			<p class="p1">A Clear and Quick Reference to HTML Symbol Entities Codes</p>
 			<p class="p2">It is worth noting that Entity Names are case sensitive</p>
 		</header>
