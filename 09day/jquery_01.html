@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>jQuary</title>
+	<style type="text/css">
+		#txt_01{color:red; font-weight:1000;}
+		#txt_02{color:green; font-weight:1000;}
+		h2{background:yellow;}
+		.dv_01 h2{color:blue;}
+		.dv_01 p{/*padding:10px;*/}
+		.dv_02 ul li{font-weight:1000;}
+		.dv_02 ul li:nth-child(1){color:blue;}
+		.dv_02 ul li:nth-child(2){color:red;}
+		.dv_02 ul li:nth-child(3){color:black;}
+		.dv_03 ul li:nth-child(1){color:black;}
+		.dv_03 ul li:nth-child(2){color:blue;}
+		.dv_03 ul li:nth-child(3){color:red;}
+		/*.dv_04{width:auto; border:3px red dotted;}*/
+		.dv_04 p{border:3px red dotted;}
+		/*.dv_04 p ul li{border:3px red dotted;}*/
+		.dv_04 ul li:nth-child(1){text-align:right;}
+		.dv_05 ul li:nth-child(1){text-align:center;}
+		.dv_05 ul li:nth-child(3){text-align:center;}
+		.dv_06 p input{background:gray; color:green;}
+	</style>
+</head>
+<body>
+	<p id="txt_01">제이쿼리</p>
+	<p id="txt_02">선택자</p>
+
+	<div class="dv_01">
+		<h2>부모 요소 선택자</h2>
+		<p>현재 id가 "ab"인 요소를 기준으로, 부모 요소는 'div'요소입니다.<p>
+	</div>
+	<div class="dv_02"> 
+		<h2>자식 요소 선택자</h2>
+		<ul>
+			<li>리스트1</li>
+			<li>리스트2</li>
+			<li>리스트3</li>
+		</ul>
+	</div>
+	<div class="dv_03">
+		<h2>형 요소 선택자</h2>
+		<ul>
+			<li>리스트4</li>
+			<li>리스트5</li>
+			<li>리스트6</li>
+		</ul>
+	</div>
+	<div class="dv_04">
+		<h2>동생 요소 선택자</h2>
+		<p>
+			<ul>
+				<li>리스트7</li>
+				<li>리스트8</li>
+				<li>리스트9</li>
+			</ul>
+		</p>
+	</div>
+	<div class="dv_05">
+		<h2>형제 요소들 선택자</h2>
+		<ul>
+			<li>리스트10</li>
+			<li>리스트11</li>
+			<li>리스트12</li>
+		</ul>
+	</div>
+	<div class="dv_06">
+		<h2>입력 요소 선택자</h2>
+		<p>이름 : <input type="text" name="name" placeholder="홍길동" value="홍길동"> </p>
+	</div>
+
+
+</body>
+</html>

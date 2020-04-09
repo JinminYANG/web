@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style type="text/css">
+		/*'font':12px(크기) '/'(구분자) 1.5(행높이)*/ 
+		body{font:12px/1.5 "굴림",Gulim; margin:10px;}
+	</style>
+
+	<!-- *** script의 주소는 type과 script를 입력하기 이전에 선언 해줘야함 ***-->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		// '$()' jQuery 식별자
+		// '(document)'한테 사용할거다
+		// '.ready( )'함수 jQuery쓸거니까 준비해라 (생략 가능)
+		// 'ready(function(){ })'처럼 ready가 function을 감싸야함
+		// 'function()' jQuery 함수 사용할거다.
+		$(document).ready(function(){
+			/* $("")안에 태그, 클래스, id 입력 개념 */
+			// '.css()' 메소드를 사용할거다 (구분자',')
+			$("*").css("font-size","13px");
+			$("h1").css("color","red");
+			$("#firstTitle").css("color","green");
+			$(".nextTitle").css("color","blue");
+			// '.obj>li'는 자식표현이라는 것이 동일하다.
+			$(".obj2>li").css("font-weight","bold");
+			// (.children(~) == >) 동일 표현
+			$(".obj2").children(".theObj1").css("color","purple");
+			// jQuery에서는 .parent() 메소드를 이용하여 부모도 컨트롤이 가능함
+			$(".obj5").parent().css("border","2px dashed #f00");
+			$("#wrap h3").css("font-size","20px").css("background-color","yellow");
+			// next()는 동생 개념 (입력한 태그(id,class)의 다음 것)
+			$(".obj4").next().css("color","orange");
+			// prev()는 형 개념 (입력한 태그(id,class)의 이전 것)
+			$(".obj5").prev().css("text-align","right");
+			// .siblings는 형제들 개념 ((같은 특성의)입력한 태그(id,class)의 이전, 다음 것들)
+			$(".obj6").siblings("li").css("text-align","center");
+			// ':' input 태크를 지칭
+			// css({ : , : })를 이용하여 한꺼번에 사용가능
+			$(":text").css({"background-color":"#ccc", "border":"solid 1px #000", "color":"green"});
+		});
+
+	</script>
+</head>
+<body>
+
+	<div id="wrap">
+		<h1>제이쿼리</h1>
+		<h2 id="firstTitle">선택자</h2>
+		<h3 class="nextTitle">부모요소 선택자</h3>
+		<div>
+			<p class="obj1"> 현재 id가 "obj1"인 요소를 기준으로, 부모 요소는 'dvi'요소입니다.</p>
+		</div>
+
+		<h3>자식 요소 선택자</h3>
+		<ul class="obj2">
+			<li>리스트1</li>
+			<li class="theObj1">리스트2</li>
+			<li>리스트3</li>
+		</ul>
+
+		<h3>형 요소 선택자</h3>
+		<ul>
+			<li>리스트4</li>
+			<li class="obj4">리스트5</li>
+			<li>리스트6</li>
+		</ul>
+
+		<h3>동생 요소 선택자</h3>
+		<ul>
+			<li>리스트7</li>
+			<li class="obj5">리스트8</li>
+			<li>리스트9</li>
+		</ul>
+
+		<h3>형제 요소들 선택자</h3>
+		<ul>
+			<li>리스트10</li>
+			<li class="obj6">리스트11</li>
+			<li>리스트12</li>
+		</ul>
+
+		<h3>입력 요소 선택자</h3>
+		<p> <label for="user_name">이름</label>
+			<input type="text" name="user_name" id="user_name">
+		</p>
+	</div> <!-- <div id="wrap"> -->
+
+</body>
+</html>
