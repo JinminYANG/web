@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 'odd' 홀수 행 선택 (0부터 시작/인덱스 개념)
+			$("#list_01 li:odd").css("background","yellow");
+			// 'even' 짝수 행 선택
+			$("#list_01 li:even").css("background","gray");
+			$("#list_01 li:first").css("color","red");
+			$("#list_01 li:last").css("color","green");
+			// 'eq()'에서도 인덱스 개념 적용
+			$("#list_01 li").eq(1).css("font-style","italic");
+			// lt() 형 개념 (상위 인덱스들)  
+			$("#list_01 li:lt(2)").css("border","2px aqua dotted");
+			// gt() 동생 개념 (하위 인덱스들)
+			$("#list_01 li:gt(2)").css("border","2px purple dotted");
+
+			// nth-child()에서는 서수개념 / n번째 행에 곱셈가능
+			$("#list_02 li:nth-child(2n)").css("background","orange");
+			// contains('문자열') '문자열'이 포함된 태그에 설정
+			$("#list_02 li:contains('리스트11')").css("color","red");
+			// has('span') 'span'태그를 가지고 있는 li에 설정
+			$("#list_02 li:has('span')").css("color","aqua");
+			// filter() 필터링해서 찾아내는 기능
+			$("#list_02 li").filter(".theObj").css("font-size","20px");
+			// find() 찾는 기능
+			$("#list_02 li").find("a").css("background","red");
+
+			// .html 기존의 것을 밀어내는 기능 (속성 값 안에 ""를 사용하면 속성 값과 구분이 어려워서 ''를 사용)
+			$(".theTitle").html("<a href='#'>요소 객체 조작</a>");
+			// .text() 텍스트 노드에 있는 내용을 새로 입력한 값으로 바꾸는 기능
+			$(".obj1").text("리스트_2");
+			// .append() 속성 값 안에 입력한 것을 마지막에 추가하는 기능
+			$("#list_03").append("<li>list_6</li>");
+			// .prepend() 속성 값 안에 입력한 것을 처음에 추가하는 기능
+			$("#list_03").prepend("<li>list_1</li>");
+			// 삽입할 태그와 텍스트 노드를 먼저 작성하고 / insertBefore($())를 통해 어디에 삽입할지 결정. eq()를 통해 몇 번째 인덱스에 넣을지도 결정 
+			//이전 단계 삽입
+			$("<li>insertBefore</li>").insertBefore($("#list_03 li").eq(4));
+			// 다음 단계 삽입
+			$("<li>insertAfter</li>").insertAfter($("#list_03 li").eq(5));
+			// clone() 복제기능 / appendTo() 태그의 마지막에 추가하는 기능
+			$(".obj1").clone().appendTo("#list_03");
+			// eq()를 통해 몇번째 행인지 선택하고 / remove() 제거 기능.
+			$("#list_03 li").eq(0).remove();
+			// attr() 속성 값에 class(class 이름 X)를 넣어 class를 복제하는 기능
+			$("#list_03 li").eq(0).attr("class");
+			// .attr(" "," ") 첫번째""에는 class / 두번째""에는 대체할 값 입력 
+			$("#list_03 li").eq(0).attr("class","obj2");
+			$(".obj2").css("background-color","yellow");
+			// 여러 개의 class를 사용할 수 있다.
+			$("#list_03 li").eq(0).addClass("obj3");
+			$(".obj3").css("color","red");
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>탐색 선택자 및 html 조작</h1>
+
+		<h2>탐색 선택자</h2>
+		<ul id="list_01">
+			<li>리스트1</li>
+			<li>리스트2</li>
+			<li>리스트3</li>
+			<li>리스트4</li>
+			<li>리스트5</li>
+			<li>리스트6</li>
+			<li>리스트7</li>
+		</ul>
+		<ul id="list_02">
+			<li>리스트8</li>
+			<li class="theObj">리스트9</li>
+			<li><span>리스트10</span></li>
+			<li>리스트11</li>
+			<li><a href="#">리스트12</a></li>
+			<li>리스트13</li>
+			<li>리스트14</li>
+		</ul>
+
+		<h2 class="theTitle">html 조작</h2>
+		<ul id="list_03">
+			<li class="obj1">list_2</li>
+			<li>list_3</li>
+			<li>list_4</li>
+			<li>list_5</li>
+		</ul>
+
+	</div> <!-- id="wrap" -->
+</body>
+</html>

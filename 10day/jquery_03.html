@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		body{font:15px/1.5 "굴림",Gulim; margin:10px;}
+		h2{margin-top:30px;}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				// hide()는 선택한 태그를 숨기는 기능
+				$(".box1").hide("slow");
+			});
+			$("#btn2").click(function(){
+				// show()는 숨어있는 것을 나타내는 기능 / (1/1000)초 단위 사용가능 (""없이 사용)
+				$(".box1").show(1000);
+			});
+			// toggle() 한번/다시 클릭했을때 사라졌다/나타났다 하게 하는 기능 
+			// 3.4.1 버전에서는 hide()/show() 기능만 사용가능
+			$("#btn3").click(function(){
+				$(".box2").toggle(500);
+			});
+
+			// this(#btn3)의 부모(p)의 형제(next (p))에게 메소드 적용 
+			$("#btn4").click(function(){
+				$(this).parent().next().slideUp(500);
+			});
+			$("#btn5").click(function(){
+				$(this).parent().next().slideDown("fast");
+			});
+			// slideToggle은 클릭했을때 up/ 다시클릭했을 때 down의 효과
+			$("#btn6").click(function(){
+				$(this).parent().next().slideToggle("fast");
+			});
+			// fadeOut() 천천히 사라짐
+			$("#btn7").click(function(){
+				$(this).parent().next().fadeOut(1000);
+			});
+			// fadeIn() 천천히 나타남
+			$("#btn8").click(function(){
+				$(this).parent().next().fadeIn("slow");
+			});
+			// fadeToggle은 fade 효과를 한번/다시 클릭했을 때 out/in 되는 기능
+			$("#btn9").click(function(){
+				$(this).parent().next().fadeToggle("normal");
+			});
+			// fadeTo() fade 효과를 시간, 불투명도를 사용하여 적용
+			$("#btn10").click(function(){
+				$(this).parent().next().fadeTo("slow",0.3);
+			});
+			// 불투명도는 0~1 범위로 0에 수렴할 수록 사라지고 1에 수렴할 수록 나타남
+			$("#btn11").click(function(){
+				$(this).parent().next().fadeTo("slow",1);
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	<div id="wrap">
+		<h1>제이쿼리 Effect</h1>
+		<p>제이쿼리에서는 화면전환, 슬라이드 다운과 업 효과 등 <br>다양한 효과 메소드를 제공합니다. </p>
+
+		<h2>show/hide 효과</h2>
+		<p><button id="btn1">hide</button> <button id="btn2">show</button></p>
+		<p class="box1">선택 요소를 숨기거나 노출하고 싶을 경우에 사용합니다.<br>hide(시간)/show(시간) 시간은 fast, normal, slow 등으로 입력할 수 있으며, 1000분의 1초 단위의 숫자로 표기할 수도 있습니다.</p>
+
+		<h2>toggle 효과</h2>
+		<p><button id="btn3">toggle</button></p>
+		<p class="box2">선택 요소가 숨겨져 있다면 보이게 하고, <br>보이고 있다면 숨기는 역할을 합니다.</p>
+
+		<h2>slideDown/Up 효과</h2>
+		<p><button id="btn4">slideUp</button> <button id="btn5">slideDown</button> <button id="btn6">slideToggle</button></p>
+		<p>slideUp은 선택 요소를 위로 미끄러지듯 말아 올리면서 숨깁니다.<br>반면, slideDown은 선택 요소를 아래로 미끌어지듯 말아 내리면서 노출시킵니다.</p>
+
+		<h2>fadeIn/fadeOut 효과</h2>
+		<p><button id="btn7">fadeOut</button> <button id="btn8">fadeIn</button> <button id="btn9">fadeToggle</button></p>
+		<p>fadeOut은 선택 요소를 천천히 사라지게 만듭니다.<br>fadeIn은 선택 요소를 천천히 나타나게 합니다.</p>
+
+		<h2>fadeTo 효과</h2>
+		<p><button id="btn10">fadeTo(0.3)</button> <button id="btn11">fadeTo(1)</button></p>
+		<p id="box3">fadeTo는 선택 요소를 원하는 만큼만<br>보이거나 숨길 수 있습니다.</p>
+	</div> <!-- id="wrap" -->
+</body>
+</html>

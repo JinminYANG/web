@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		p{background:red; width:100px; height:100px; position:absolute;}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// animate() 움직이는 동작 수행 메소드
+			// *** position:absolute가 style에 선행되어야 한다. ***
+			$("#box1").animate({
+				left:"500px",
+				width:"200px",
+				height:"200px",
+				opacity:0.5
+			},2000
+			).animate({
+				left:"0px",
+				width:"100px",
+				height:"100px",
+				opacity:1
+			},1000)
+		});
+	</script>
+</head>
+<body>
+	<p id="box1">박스1</p>
+</body>
+</html>

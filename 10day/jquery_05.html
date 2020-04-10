@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		#box2{width:100px; height:100px; background:yellow; margin-bottom:10px; position:absolute;}
+		button{width:50px; height:30px; font-size:20px; margin-top:110px; position:relative;}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#rightBtn").click(function(){
+				// stop()를 사용하면 클릭이 한번에 여러번 되었을 때 실행중인 animate에 끝날때까지 방해되지 않도록 해준다.
+				$("#box2").stop().animate(
+					{left:"+=100px"},500
+					);
+			});
+			
+			// $("#leftBtn").click(function(){
+			// 	$("#box2").stop().animate(
+			// 		{left:"-=100px"},500
+			// 		);
+			// });
+			
+			// clearQueue는 진행중인 메소드를 완료될 때 까지 기다렸다가 큐를 clear시켜주는 기능이다.
+			$("#leftBtn").click(function(){
+				$("#box2").clearQueue().animate(
+					{left:"-=100px"},500
+					);
+			})
+		});
+	</script>
+</head>
+<body>
+	<div id="box2">박스2</div>
+	<p>
+		<button id="leftBtn">left</button> <button id="rightBtn">right</button>
+	</p>
+</body>
+</html>
