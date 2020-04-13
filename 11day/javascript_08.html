@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>new document</title>
+	<script type="text/javascript">
+		var days = new Array("일","월","화","수","목","금","토");
+		var today = new Date;
+		var yoil = days[today.getDay()];
+			  // = days[1] 오늘은 월요일이니까 1
+		document.write(yoil +"요일 <br>");
+
+		var money = [100,100,200,50];
+		document.write(money + "<br>");
+		var total = 0;
+		for(var i=0; i<money.length; i++){
+			total += money[i];
+		}
+		document.write(total + "<br>");
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

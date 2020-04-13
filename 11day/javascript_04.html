@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>new document</title>
+	<script type="text/javascript">
+		// document.write("<img src='images/img_01.jpg' alt='img_01'>");
+		// document.write("<img src='images/img_02.jpg' alt='img_02'>");
+		// document.write("<img src='images/img_03.jpg' alt='img_03'>");
+
+		// 사진 3장에 대한 출력을 위해 random()*3 을 해줌
+		// 소수점 이하의 숫자들이 +1 해주면 1.#### ~ 3.#### 으로 변경되어 1~3의 숫자들로 제어
+		var imgNum = Math.floor((Math.random()*3))+1;
+		document.write("<img src='images/img_0" + imgNum + ".jpg' alt='랜덤이미지'>");
+		
+		// if(imgNum==1){
+		// 	document.write("난수 : " + imgNum +"<br>");
+		// 	document.write("<img src='images/img_01.jpg' alt='img_01'>");
+		// }else if(imgNum==2){
+		// 	document.write("난수 : " + imgNum +"<br>");
+		// 	document.write("<img src='images/img_02.jpg' alt='img_02'>");
+		// }else{
+		// 	document.write("난수 : " + imgNum +"<br>");
+		// 	document.write("<img src='images/img_03.jpg' alt='img_03'>");
+		// }
+
+
+	</script>
+</head>
+<body>
+	<!-- <img src="images/img_01.jpg" alt="img_01">;
+	<img src="images/img_02.jpg" alt="img_02">;
+	<img src="images/img_03.jpg" alt="img_03">; -->
+</body>
+</html>

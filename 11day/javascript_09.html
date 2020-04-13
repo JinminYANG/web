@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>new document</title>
+	<script type="text/javascript">
+		var today = new Date();
+
+		document.write("<h1>날짜 바꾸기</h1>")
+		document.write(today + "<br>");
+		// document.write(today.getYear());
+		// document.write("월 : " + (today.getMonth()+1) );
+		today.setMonth(11);
+		today.setDate(25);
+		document.write(today + "<br>");
+
+		var newMonth = today.getMonth()+1;
+		document.write("월 : " + newMonth + "<br>");
+		var newDate = today.getDate();
+		document.write("일 : " + newDate + "<br>");
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

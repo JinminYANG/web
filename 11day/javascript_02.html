@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>new document</title>
+	<script type="text/javascript">
+		// document.write("<img src='images/img_01.jpg' alt='img_01'>");
+
+		var today = new Date(); // 객체 생성
+		// document.write(today + "<br>");
+		var nowDay = today.getDay();
+		// document.write(nowDay);
+
+		if(nowDay==0){
+			document.write("오늘은 일요일 <br>");
+			document.write("<img src='images/img_01.jpg' alt='일요일'>");
+		}else if(nowDay==1){
+			document.write("오늘은 월요일 <br>");
+			document.write("<img src='images/img_02.jpg' alt='월요일'>");
+		}else if(nowDay==2){
+			document.write("오늘은 화요일 <br>");
+			document.write("<img src='images/img_03.jpg' alt='화요일'>");
+		}else if(nowDay==3){
+			document.write("오늘은 수요일 <br>");
+			document.write("<img src='images/img_04.jpg' alt='수요일'>");
+		}else if(nowDay==4){
+			document.write("오늘은 목요일 <br>");
+			document.write("<img src='images/img_05.jpg' alt='목요일'>");
+		}else if(nowDay==5){
+			document.write("오늘은 금요일 <br>");
+			document.write("<img src='images/img_06.jpg' alt='금요일'>");
+		}else{
+			document.write("오늘은 토요일 <br>");
+			document.write("<img src='images/img_07.jpg' alt='토요일'>");
+		}
+
+	</script>
+</head>
+<body>
+	<!-- <img src="images/img_01.jpg" alt="img_01"> -->
+</body>
+</html>
