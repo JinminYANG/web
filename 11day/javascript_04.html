@@ -9,10 +9,10 @@
 		// document.write("<img src='images/img_03.jpg' alt='img_03'>");
 
 		// 사진 3장에 대한 출력을 위해 random()*3 을 해줌
-		// 소수점 이하의 숫자들이 +1 해주면 1.#### ~ 3.#### 으로 변경되어 1~3의 숫자들로 제어
+		// 소수점 이하의 숫자들이 +1 해주면 1.#### ~ 3.#### 으로 변경된 것을 floor()해서 정수로 만들어준 후  1~3의 숫자들로 제어 
 		var imgNum = Math.floor((Math.random()*3))+1;
 		document.write("<img src='images/img_0" + imgNum + ".jpg' alt='랜덤이미지'>");
-		
+
 		// if(imgNum==1){
 		// 	document.write("난수 : " + imgNum +"<br>");
 		// 	document.write("<img src='images/img_01.jpg' alt='img_01'>");
