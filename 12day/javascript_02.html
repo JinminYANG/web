@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="utf-8">
+	<title>new document</title>
+	<script type="text/javascript">
+		var theSubway = ["2호선", "9호선", "7호선", "4호선", "3호선"];
+		theSubway.shift(); // 0번째 배열을 밀어내는(없애는) 기능
+		console.log(theSubway);
+
+		var newLine1 ="1호선";
+		theSubway.unshift(newLine1); //0번째 배열을 추가해서 원래 있던 배열을 오른쪽으로 밀어내는 기능
+		console.log(theSubway);
+
+		var newLine2 ="분당선";
+		theSubway.push(newLine2); // 마지막 번째 배열 +1 자리에 배열을 추가하는 기능
+		console.log(theSubway);
+
+		theSubway.pop(); // 마지막 번째 배열을 없애는 기능
+		console.log(theSubway);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
