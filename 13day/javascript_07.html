@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>function</title>
+	<script type="text/javascript">
+		var i=10;
+		var num=20;
+
+		function theTest(){
+			var num=i+200; //전역변수에 num이 있더라도 지역변수 num을 선언 가능하다.
+			alert(num);
+		}
+		theTest();
+
+		function theFnc(){
+			document.write(num);
+		}
+		theFnc();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

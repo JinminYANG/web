@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>eval</title>
+	<script type="text/javascript">
+		// eval() 문자열을 변수로 변환시켜주는 함수
+		var result1=eval("10+20");
+		document.write(result1 + "<br>");
+
+		var num=100;
+		document.write("num" + 10 + "<br>");
+		document.write(eval(num) + 10 + "<br>");
+		document.write(eval("num") + 10 + "<br>");
+
+		// isNan(is Not a Number) => No 가 true
+		var result2 = isNaN("02-352-1620");
+		var result3 = isNaN("023521620");
+		document.write(result2 +"<br>");
+		document.write(result3 +"<br>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>
