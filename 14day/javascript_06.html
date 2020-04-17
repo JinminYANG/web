@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>object control</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var theList = document.getElementById("theList");
+			var listAll = theList.getElementsByTagName("li");
+			var copyList = listAll[3].cloneNode(true); // cloneNode(true) 복제 기능 (속성값을 true로 해줘야함)
+
+			theList.removeChild(listAll[3]);
+			theList.insertBefore(copyList, listAll[0]); //insertBefore(추가할 속성값, 추가될 위치 값)
+		}
+	</script>
+</head>
+<body>
+	<h1>문서 객체 조작</h1>
+	<ul id="theList">
+		<li>리스트2</li>
+		<li>리스트3</li>
+		<li>리스트4</li>
+		<li>리스트1</li>
+	</ul>
+</body>
+</html>

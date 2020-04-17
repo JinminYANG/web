@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>script</title>
+	<script type="text/javascript">
+		// document.write("<input type='button' name='' value='버튼1'");
+		// on~~은 자바스크립트에서 사용할때 쓰는 구문
+		// onload=~~아래에 있는 기능을 사용하겠다.
+		window.onload=function(){
+			// createElement("~") => ~ 요소 생성
+			var newPtag = document.createElement("p");
+			var newButton1 = document.createElement("button");
+			var newButton2 = document.createElement("button");
+			var text1 = document.createTextNode("버튼1");
+			var text2 = document.createTextNode("버튼2");
+
+			newButton1.setAttribute("id","btn1"); //newButton1을 객체로 만들어 속성을 추가(설정)하는 기능
+			newButton2.setAttribute("id","btn2");
+
+			newButton1.appendChild(text1); // newButton1에 text1을 자식으로 추가하는 기능 (newButton1과 text1을 연결)
+			newButton2.appendChild(text2);
+
+			newPtag.appendChild(newButton1); //newPtag에 newButton1을 자식으로 추가하는 기능 (newPtag와 newBotton을 연결)
+			newPtag.appendChild(newButton2);
+
+			var theObj = document.getElementById("theBox");
+			theObj.appendChild(newPtag); // theBox의 자식으로 newPtag을 생성
+
+		}
+	</script>
+	<style type="text/css">
+		#theBox{background:#bdc3c7;}
+		#btn1{color:red; margin-right:10px; padding:10px;}
+		#btn2{color:blue; padding:10px;}
+	</style>
+</head>
+<body>
+	<div id="theBox">
+		<h1>요소 생성 연습</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+photoshop
+
+layer 선택 -> Resterize Layer = 비트맵으로 변환
+
+layer 선택 -> Create Clipping Mask = 상위 레이어가 하위 레이어 모양으로 마스킹됨
