@@ -1,0 +1,53 @@
+@charset"utf-8";
+
+body{background:url("../images/body_bg.gif") repeat-x;}
+/*width값과 실행 창의 화면이 맞아야 확인이 가능*/
+ /**** # 띄어쓰기 XXX ****/
+header#firstheader{position:relative; width:1003px; margin:0 auto; z-index:40;}
+		 /*위 왼,오른 아래*/
+h1{padding: 26px 0 17px; height:62px;}
+#sform{position:absolute; right:0; top:60px; width: 235px; text-align:right;}
+#sform .tbox{height:19px; width:178px; border:1px solid #ccc;}
+.util{position:absolute; right:0; top:20px;}
+.util li{display:inline; padding-left:20px;} /*블록되어있는 li를 inline으로 만들어줌*/ 
+#gnb{position:relative; width:100%; height:70px;} /*relative 하위에 relative 가능*/ /*width는 부모인 header를 따라 제어*/
+#gnb:after{content:""; display:block; clear:both;}  /*gnb의 after(동생)*/ /*content:""; display:block; 같이 써야함*/
+#gnb ul{float: left;}
+#gnb li{float: left; width: 205px; height:39px; text-align:center; background:#d1f6bb; margin-right:1px;}
+#gnb li a.mm{float:left; width:205px; height:29px; text-align:center; padding-top:10px; color:#ff8a84;}
+#gnb li ul{position: absolute; left:40px; top:45px; display:none;}
+#gnb li.m1 ul{  }
+#gnb li.m2 ul{ left:230px; }
+#gnb li.m3 ul{ left:405px; }
+#gnb li.m4 ul{ left:640px; }
+#gnb li ul li{padding:0 10px; width:auto; height:auto; background:none;} /*width:auto 해주면 문자열(li에 입력된 값)을 기준으로 width가 적용되면서 여러 li들이 화면에 출력됨*/
+.allmenu_view{float: left; width:179px; text-align:center;}
+.allmenu_view a{display:inline-block; background:#3da7db url("../images/btn_allmenu.gif") no-repeat center top; width:100%; height:26px; padding-top:13px; color:green;} /*inline-block(형 변환 =block) 하면 사진도 들어가고 width로 크기조절 가능*/ /*background에 center 해주면 정가운데, top은 맨위로 보내줌*/
+#allMenu_box{position:absolute; width:850px; left:40px; top:105px; padding:15px 30px; display:none; background:#fff; z-index:40; border: 4px solid #369;}
+#allMenu_box ul{width:100%;}
+#allMenu_box ul:after{content:""; display:block; clear:both;}
+#allMenu_box ul li{float:left; width:140px; padding:0 30px;} /*하위 자식들(ul li)까지 모두 적용*/
+#allMenu_box ul li a{font:bold 16px Gulim; color:#555;}
+#allMenu_box ul li ul{padding-top:20px; width:100px;}
+#allMenu_box ul li ul li{float:none; width:auto; padding:5px; border-bottom:1px dashed #ccc;}
+#allMenu_box ul li ul li a{font:bold 14px gulim; color:#aaa;}
+.all_close{position:absolute; right:0; bottom:0; padding:5px; background:#369; color:#fff;} /*position이 할아버지 개념인 header를 기준으로 잡힘*/
+.all_close:hover{color:#000;}
+#recomm_book{position:relative; width:1003px; margin:0 auto; padding-bottom:10px; overflow:hidden; z-index:30;} /*메뉴를 클릭했을때 section위에 나타나야 하므로 z-index값을 section보다 낮게 잡음*/
+#book_frame{position:relative; left:0; width:200%;}
+#book_frame:after{content:""; display:block; clear:both;}
+.bookcon{float:left; width:50%; padding-top:30px;} /*width:50%은 아버지의 절반 즉 book_frame이 200%이니 100%를 사용한다는 의미*/
+.bookcon:after{content:""; display:block; clear:both;}
+.bookcon h2{text-align:right; padding:0 50px 0 0;}
+.bookcon ul{width:100%; border:1px solid red;}
+.bookcon ul:after{content:""; display:block; clear:both;}
+/*content:""; display:block; 바리케이트 역할*/
+/* float하면 height를 제어할 수 없음 / 그래서 43행을 처리함으로써 제어해줌 (아버지 영역을 나태내는 부분을 clear:both 해서 영향을 안받게 해줌)*/
+.bookcon li.pic{float:left; width:273px; position:relative; top:-50px; margin-bottom:-50px; padding-left:50px;}
+.bookcon li.smr{float:right; width:489px; padding:50px 50px 0 0;}
+.bookcon li.detail{float:right; width:430px; padding:50px 65px 0;}
+#arrow a{position:absolute; top:120px;}
+.prev{left:0;}
+.next{right:0;}
+#book_roll{position:absolute; left:48%; bottom:0;}
+#book_roll li{display:inline;} /*display:inline; 수직으로 되있는걸 수평으로 만들어줌*/
