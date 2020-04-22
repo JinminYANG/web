@@ -1,0 +1,16 @@
+@charset"utf-8"; 
+
+html,body,div,span,iframe,h1,h2,address,img,small,strong,header,form,fieldset, legend, label, input, ul, li, nav, section, hr, a, article, footer, p{margin:0; padding:0;} /*26*/
+
+article, footer, header, nav, section{display:block;}
+
+/*12-13행*/
+li{list-style-type:none;}
+img,fieldset,iframe{border:0;}
+
+/*16-18행*/
+li img{vertical-align:top;}
+input{vertical-align:middle;}
+hr{display: none;}
+
+#skip, .skip{font-size:0; width:0; height:0; line-height:0; position:absolute; left:-9999px;}
