@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>images slide</title>
+	<script type="text/javascript">
+		var i = 1;
+		function prevGallery(){
+			i--;
+			if(i<1){
+				i=7;
+			}
+			document.getElementById("gallery").src="images/img"+ i + ".gif";
+		}
+
+		function nextGallery(){
+			i++;
+			if(i>7){
+				i=1;
+			}
+			document.getElementById("gallery").src="images/img" + i + ".gif";
+		}
+	</script>
+	
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		#wrap{width:615px; margin:0 auto;}
+		h1{text-align:center; padding:10px;}
+		p{text-align:center;}
+		a{position:relative; top:-75px;}
+	</style>
+
+</head>
+<body>
+	<div id="wrap">
+		<h1>이미지 넘기기</h1>
+		<p>
+			<a href="#prev"><img src="images/left_btn.png" alt="left" onclick="return prevGallery();"></a>
+			<img src="images/img1.gif" alt="gallery" id="gallery">
+			<a href="#next"><img src="images/right_btn.png" alt="right" onclick="return nextGallery();"></a>
+		</p>
+	</div>
+</body>
+</html>
