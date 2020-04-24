@@ -1,0 +1,564 @@
+@charset"utf-8";
+   /* 띄어쓰기 1칸 / 세미콜론X */
+@media (min-width:1024px){
+
+body{background:url("../images/body_bg.gif") repeat-x;}
+/*width값과 실행 창의 화면이 맞아야 확인이 가능*/
+/**** # 띄어쓰기 XXX ****/
+header#firstheader{position:relative; width:1003px; margin:0 auto; z-index:40;}
+/*위 왼,오른 아래*/
+h1{padding: 26px 0 17px; height:62px;}
+#sform{position:absolute; right:0; top:60px; width: 235px; text-align:right;}
+#sform .tbox{height:19px; width:178px; border:1px solid #ccc;}
+.util{position:absolute; right:0; top:20px;}
+.util li{display:inline; padding-left:20px;} /*블록되어있는 li를 inline으로 만들어줌*/ 
+#gnb{position:relative; width:100%; height:70px;} /*relative 하위에 relative 가능*/ /*width는 부모인 header를 따라 제어*/
+#gnb:after{content:""; display:block; clear:both;}  /*gnb의 after(동생)*/ /*content:""; display:block; 같이 써야함*/
+#gnb ul{float: left;}
+#gnb li{float: left; width: 205px; height:39px; text-align:center; background:#d1f6bb; margin-right:1px;}
+#gnb li a.mm{float:left; width:205px; height:29px; text-align:center; padding-top:10px; color:#ff8a84;}
+#gnb li ul{position: absolute; left:40px; top:45px; display:none;}
+#gnb li.m1 ul{  }
+#gnb li.m2 ul{ left:230px; }
+#gnb li.m3 ul{ left:405px; }
+#gnb li.m4 ul{ left:640px; }
+#gnb li ul li{padding:0 10px; width:auto; height:auto; background:none;} /*width:auto 해주면 문자열(li에 입력된 값)을 기준으로 width가 적용되면서 여러 li들이 화면에 출력됨*/
+.allmenu_view{float: left; width:179px; text-align:center;}
+.allmenu_view a{display:inline-block; background:#3da7db url("../images/btn_allmenu.gif") no-repeat center top; width:100%; height:26px; padding-top:13px; color:green;} /*inline-block(형 변환 =block) 하면 사진도 들어가고 width로 크기조절 가능*/ /*background에 center 해주면 정가운데, top은 맨위로 보내줌*/
+#allMenu_box{position:absolute; width:850px; left:40px; top:105px; padding:15px 30px; display:none; background:#fff; z-index:40; border: 4px solid #369;}
+#allMenu_box ul{width:100%;}
+#allMenu_box ul:after{content:""; display:block; clear:both;}
+#allMenu_box ul li{float:left; width:140px; padding:0 30px;} /*하위 자식들(ul li)까지 모두 적용*/
+#allMenu_box ul li a{font:bold 16px Gulim; color:#555;}
+#allMenu_box ul li ul{padding-top:20px; width:100px;}
+#allMenu_box ul li ul li{float:none; width:auto; padding:5px; border-bottom:1px dashed #ccc;}
+#allMenu_box ul li ul li a{font:bold 14px Gulim; color:#aaa;}
+.all_close{position:absolute; right:0; bottom:0; padding:5px; background:#369; color:#fff;} /*position이 할아버지 개념인 header를 기준으로 잡힘*/
+.all_close:hover{color:#000;}
+#recomm_book{position:relative; width:1003px; margin:0 auto; padding-bottom:10px; overflow:hidden; z-index:30;} /*메뉴를 클릭했을때 section위에 나타나야 하므로 z-index값을 section보다 낮게 잡음*/
+#book_frame{position:relative; left:0; width:200%;}
+#book_frame:after{content:""; display:block; clear:both;}
+.bookcon{float:left; width:50%; padding-top:30px;} /*width:50%은 아버지의 절반 즉 book_frame이 200%이니 100%를 사용한다는 의미*/
+.bookcon:after{content:""; display:block; clear:both;}
+.bookcon h2{text-align:right; padding:0 50px 0 0;}
+.bookcon ul{width:100%;}
+.bookcon ul:after{content:""; display:block; clear:both;}
+/*content:""; display:block; 바리케이트 역할*/
+/* float하면 height를 제어할 수 없음 / 그래서 43행을 처리함으로써 제어해줌 (아버지 영역을 나태내는 부분을 clear:both 해서 영향을 안받게 해줌)*/
+.bookcon li.pic{float:left; width:273px; position:relative; top:-50px; margin-bottom:-50px; padding-left:50px;}
+.bookcon li.smr{float:right; width:489px; padding:50px 50px 0 0;}
+.bookcon li.detail{float:right; width:430px; padding:50px 65px 0;}
+#arrow a{position:absolute; top:120px;}
+.prev{left:0;}
+.next{right:0;}
+#book_roll{position:absolute; left:48%; bottom:0;}
+#book_roll li{display:inline;} /*display:inline; 수직으로 되있는걸 수평으로 만들어줌*/
+#book_roll li img{width:8px;}
+#content{width:1003px; margin:0 auto; border-top:3px double #ccc; padding:30px 0;}
+#content:after{content:""; display:block; clear:both;}
+#login-banner{float:left; width:201px; padding:0 35px 0 10px;}
+#login-area h2{height:33px;}
+#login-area .iform{position:relative; width:100%;}
+#login-area .iform fieldset{border:1px solid #ccc; padding:10px 13px;}
+.iform .tbox{border:1px solid #ccc; border-radius:4px; width:105px; height:22px;}
+.iform p{padding:2px 0 3px;}
+.loginbtn{position:absolute; right:15px; top:11px;}
+.loginbtn a{display:block; width:54px; height:33px; padding-top:17px;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b0ff89+0,28b6c9+100 */
+background: #b0ff89; /* Old browsers */
+background: -moz-linear-gradient(top,  #b0ff89 0%, #28b6c9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #b0ff89 0%,#28b6c9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #b0ff89 0%,#28b6c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0ff89', endColorstr='#28b6c9',GradientType=0 ); /* IE6-9 */
+ border:1px solid #069; border-radius:7px; color:#fff; text-align:center;}
+.iform ul{padding:10px 0 5px;}
+.iform ul:after{content:""; display:block; clear:both;}
+.iform ul li.find{float:left;}
+.iform ul li.join{float:right;}
+.iform ul li a{font:12px Gulim; color:#999;}
+.iform ul li a:hover{color:#333;}
+#banner-area{padding-top:10px;}
+#banner-area li{padding-top:5px; text-align:center;}
+#newbooks-news{position:relative; float:left; width:470px; }
+#newbooks-news .t1{position:absolute; right:131px; top:0}
+#newbooks-news .t2{position:absolute; right:11px; top:0;}
+.item1{margin-top:37px; border-top:1px solid #aaa;}
+a.rss{display:inline-block; margin-top:40px;}
+#newbook_list1{  }
+.booklist{font:13px Gulim;}
+.booklist:after{content:""; display:block; clear:both;}
+.booklist h1{float:left; width:85px; padding:0 0 0 10px;}
+.booklist p.subtit{ float:right; width: 340px; padding-right: 10px; font:13px Gulim; color:#333;}
+.booklist p.smr{float:right; width:340px; padding:10px 10px; line-height:150%; color:#999; text-align:justify;}
+.booklist footer{float:right; width:340px; padding-right: 10px;}
+.booklist footer strong{font:13px Gulim; color:#f60;}
+.item2{display: none;}
+#news_list{margin-top:37px; border-top:1px solid #aaa; padding-top:40px;}
+#news_list ul{padding:0 10px;}
+#news_list ul li{position:relative; width:100%; font:13px Gulim; padding:8px 0; border-bottom:1px solid #999;}
+#news_list ul li a{background:url("../images/bul_icon.gif") no-repeat 0 50%; padding-left:10px; color:#999;}
+#news_list ul li a:hover{color:#069;}
+#news_list ul li span{position:absolute; right:10px;}
+#down-author{float:right; width:248px; padding:0 10px 0 0; /*border:1px solid red;*/}
+#author_column h2{ padding:10px 0; }
+#author_column ul li a{font:12px Gulim; color:#999;}
+.nscreen{padding-top: 10px;}
+.nscreen span{display:block; color:#333; font-weight:bold;}
+
+#realfooter{background:#CCC; width:100%; margin:0 auto; position: relative;}
+#realfooter:after{content:""; display:block; clear:both;}
+.foot{padding:20px 30px; width:1003px; margin:0 auto; position: relative;}
+.foot div p{color:#555; font:13px Gulim;}
+.foot div small{font:12px Gulim; font-weight:bold;}
+.foot ul{position:absolute; top:30%; right:0;}
+.foot ul li{display:inline-block; padding-right:20px;}
+}
+
+@media (min-width:767px){
+
+}
+
+@media (min-width:768px) and (max-width:1023px){
+	body{
+		background:url("../images/body_bg.gif") repeat-x;
+	}
+
+	/* 헤더 */
+	header#firstheader{
+		position:relative; 
+		width:95%; 
+		margin:0 auto; 
+		z-index:40; 
+		/*border:1px solid red;*/
+	}
+	h1{
+		padding:26px 0 17px; 
+		height: 62px; 
+		/*box-sizing:border-box;*/
+	}
+	#sform{
+		position:absolute; 
+		right:0; 
+		top:60px; 
+		width:235px; 
+		text-align:right;
+	}
+	#sform .tbox{
+		height:19px;
+		width:178px;
+		border: 1px solid #ccc;
+	}
+	.util{
+		position:absolute;
+		right:0;
+		top:20px;
+	}
+	.util li{
+		display:inline;
+		padding-left:20px;
+	}
+	#gnb{
+		position:relative;
+		width:95%;
+		height:70px;
+		margin:0 auto;
+	}
+	/*#gnb:after{
+		content:"";
+		display:block;
+		clear:both;
+	}*/
+	#gnb ul{
+		float:left;
+		width:80%;
+	}
+	#gnb li{
+		float: left;
+		width: 25%;
+		height: 39px;
+		text-align:center;
+		background:#3da7db;
+		box-sizing:border-box; /* width height가 padding등 에 대한 영향을 미치지 않는다.*/
+		border-right:1px solid #06c;
+	}
+	#gnb li a.mm{
+		float:left;
+		width: 100%;
+		height: 29px;
+		text-align:center;
+		padding-top: 10px;
+		color: #fff;
+		/*background: red;*/
+	}
+	#gnb li ul{
+		position: absolute;
+		left: 0;
+		top:45px;
+		display: none;
+	}
+	#gnb li.m1 ul{
+		/*display: block;*/
+		width:170px;
+	}
+	#gnb li.m2 ul{
+		left:20%;
+		width: 170px;
+	}
+	#gnb li.m3 ul{
+		left: 40%;
+		width:280px;
+	}
+	#gnb li.m4 ul{
+		left: 60%;
+		width: 200px;
+	}
+	#gnb li ul li{
+		padding: 0 10px;
+		width: auto;
+		height: auto;
+		background: none;
+		border: none;
+	}
+	.allmenu_view{
+		float:left;
+		width:20%;
+		text-align:center;
+	}
+	.allmenu_view a{
+		display: inline-block;
+		background:#3da7db url("../images/btn_allmenu.gif") no-repeat center top;
+		width: 100%;
+		height: 26px;
+		padding-top: 13px;
+		color: #777;
+	}
+	#allMenu_box{
+		position: absolute;
+		width: 85%;
+		left: 7%;
+		top: 105px;
+		padding: 10px 0 0;
+		display: none;
+		z-index: 40;
+		background: #fff;
+		border: 4px solid #369;
+	}
+	#allMenu_box ul{
+		width: 95%;
+		margin: 0 auto;
+		padding-bottom: 5px;
+	}
+	#allMenu_box ul li{
+		width: 100%;
+		border-bottom: 1px solid #ccc;
+		padding: 5px 0;
+	}
+	#allMenu_box ul li.last{
+		border:none;
+	}
+	#allMenu_box ul li:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#allMenu_box ul li a{
+		float: left;
+		font: bold 16px/1.8 Gulim;
+		background: #eee;
+		color: #555;
+		width: 33%;
+		text-align: center;
+	}
+	#allMenu_box ul li ul{
+		float: left;
+		width: 65%;
+		padding: 0 0 0 2%;
+	}
+	#allMenu_box ul li ul li{
+		float: left;
+		width: auto;
+		padding: 5px 5% 5px 0;
+		border: none;
+	}
+	#allMenu_box ul li ul li a{
+		width: auto;
+		font: bold 14px Gulim;
+		color: #999;
+		text-align: left;
+		background: none;
+	}
+	.all_close{
+		display: block;
+		text-align: center;
+		padding: 5px;
+		background: #369;
+		color: #fff;
+	}
+	.all_close:hover{
+		color:#999;
+	}
+
+	/* 섹션 */
+	#recomm_book{
+		position: relative;
+		width: 95%;
+		margin: 0 auto;
+		padding-bottom: 15px;
+		overflow: hidden;
+		z-index: 30;
+		/*border: 1px solid red;*/
+	}
+	#book_frame{
+		position: relative;
+		left: 0;
+		width: 200%;
+	}
+	#book_frame:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.bookcon{
+		float: left;
+		width: 50%;
+	}
+	.bookcon:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.bookcon h2{
+		text-align: right;
+		padding: 2% 9% 0 0;
+	}
+	.bookcon h2 img{
+		width: 51%;
+		/*border:1px solid red;*/
+	}
+	.bookcon ul{
+		width: 100%;
+	}
+	.bookcon ul:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.bookcon li.pic{
+		float: left;
+		width: 27.2%;
+		position: relative;
+		top: -45px;
+		margin-bottom: -45px;
+		padding-left: 6.48%;
+	}
+	.bookcon li.smr{
+		float: right;
+		width: 48.75%;
+		padding: 3% 6.3% 0 0;
+		/*border: 1px solid red;*/
+	}
+	.bookcon li.detail{
+		float: right;
+		width: 44.76%;
+		padding: 5% 6% 0;
+	}
+	.bookcon li.detail img{
+		width: 60%;
+	}
+	#arrow a{
+		position: absolute;
+		top: 38%;
+	}
+	.prev{
+		left: 0;
+	}
+	.next{
+		right: 0;
+	}
+	#book_roll{
+		position: absolute;
+		left: 48%;
+		bottom: 0;
+	}
+	#book_roll li{
+		display: inline;
+	}
+
+	/* 컨텐츠 왼쪽*/
+	#content{
+		width: 95%;
+		margin: 0 auto;
+		border-top: 3px double #ccc;
+		padding: 30px 0;
+	}
+	#content:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#login-banner{
+		float: left;
+		max-width: 201px;
+		width: 22%;
+		padding: 0 0 20px 10px;
+	}
+	#login-area h2{
+		height: 33px;
+	}
+	#login-area h2 img{
+		height: 33px;
+	}
+	#login-area .iform{
+		position: relative;
+		width: 100%;
+	}
+	#login-area .iform fieldset{
+		border:1px solid #ccc;
+		padding: 8px 5px 8px 5px;
+	}
+	.iform .tbox{
+		border:1px solid #ccc; 
+		border-radius: 4px;
+		width: 57%;
+		height: 22px;
+	}
+	.iform p{
+		padding: 2px 0 3px;
+	}
+	.loginbtn{
+		position: absolute;
+		width: 56px;
+		height: 53px;
+		right: 5px;
+		top: 11px;
+	}
+	.loginbtn a{
+		display: block;
+		width: 54px;
+		height: 33px;
+		padding-top: 14px;
+		/*background: #09f;*/
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff898b+0,f230f2+100 */
+		background: #ff898b; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ff898b 0%, #f230f2 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #ff898b 0%,#f230f2 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #ff898b 0%,#f230f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff898b', endColorstr='#f230f2',GradientType=0 ); /* IE6-9 */
+		border: 1px solid #069;
+		border-radius: 7px;
+		color: #fff;
+		text-align: center;
+	}
+	.iform ul li a{
+		padding-left: 5px;
+		font: 12px Gulim;
+		color: #999;
+	}
+	.iform ul li a:hover{
+		color: #333;
+	}
+	#banner-area{
+		padding-top: 8px;
+	}
+	#banner-area li{
+		padding-top: 2px;
+		text-align: center;
+	}
+
+	/* 컨텐츠 가운데 */
+	#newbooks-news{
+		position: relative;
+		float: right;
+		width: 73%;
+	}
+	#newbooks-news .t1{
+		position: absolute;
+		left: 10px;
+		top: 0;
+	}
+	#newbooks-news .t2{
+		position: absolute;
+		left: 130px;
+		top: 0;
+	}
+	.item1{
+		margin-top: 37px;
+		border-top: 1px solid #aaa;
+	}
+	a.rss{
+		display: inline-block;
+		margin-top: 30px;
+	}
+	#newbooks_list1{
+
+	}
+	.booklist{
+		position: relative;
+		min-height: 111px;
+		font:13px Gulim;
+	}
+	.booklist h1{
+		position: absolute;
+		left: 10px;
+		padding: 0;
+		width: 111px;
+	}
+	.booklist h1 img{
+		width: 100%;
+		max-width: 83px;
+	}
+	.booklist p.subtit{
+		width: 77%;
+		margin-left: 111px;
+		padding-right: 10px;
+		font:13px Gulim;
+		color: #333;
+	}
+	.booklist p.smr{
+		width: 77%;
+		margin-left: 111px;
+		padding: 10px 10px 10px 0;
+		line-height: 150%;
+		text-align: justify;
+	}
+	.booklist footer{
+		width: 77%;
+		margin-left: 111px;
+		padding-right: 10px;
+	}
+	.booklist footer strong{
+		font: 13px Gulim;
+		color: #f00;
+	}
+	.item2{
+		/*display: none;*/
+	}
+	#news_list{
+		margin-top: 37px;
+		border-top: 1px solid #aaa;
+		padding-top: 25px;
+	}
+	#news_list ul{
+		padding: 0 10px;
+	}
+	#news_list ul li{
+		position: relative;
+		width: 100%;
+		font: 13px Gulim;
+		padding: 8px 0;
+		border-bottom: 1px solid #ccc;
+		color: #555;
+	}
+	#news_list ul li a{
+		background: url("../images/bul_icon.gif") no-repeat 0 50%;
+		padding-left: 10px;
+		color: #999;
+	}
+	#news_list ul li a:hover{
+		color: #069;
+	}
+	#news_list ul li span{
+		position: absolute;
+		right: 10px;
+	}
+}
