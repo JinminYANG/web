@@ -1,5 +1,8 @@
 @charset"utf-8";
 
+	/*간격 1칸 / 세미콜론X*/
+@media (min-width:1024px){
+
 body{background:url("../images/body_bg.gif") repeat-x;}
 /*width값과 실행 창의 화면이 맞아야 확인이 가능*/
 /**** # 띄어쓰기 XXX ****/
@@ -110,3 +113,5 @@ a.rss{display:inline-block; margin-top:40px;}
 .foot div small{font:12px Gulim; font-weight:bold;}
 .foot ul{position:absolute; top:30%; right:0;}
 .foot ul li{display:inline-block; padding-right:20px;}
+
+}
