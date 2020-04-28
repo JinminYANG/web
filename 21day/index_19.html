@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>disable 속성과 readonly 속성</legend>
+			<p>
+				<label for="text">인증번호: </label><input type="text" name="text" id="text">
+				<input type="button" name="prev" id="prev" value="이전">
+				<input type="button" name="next" id="next" value="다음" disabled="disabled">
+			</p>
+			<p>
+				<label for="txt">선택한 책: </label><input type="text" name="txt" id="txt" readonly="readonly" value="반응형 웹">
+				<label for="count">수량</label><input type="number" name="count" id="count" value="1" min="1" max="10">
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>
