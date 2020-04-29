@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		p{color: pink;}
+		/*id가 class보다 우선순위가 높다.*/
+		/*#ctxt{color: orange;}*/
+		/*'!important'는 다 무시하고 이게 중요하다는 의미로 실행됨*/
+		p.atxt{color: blue /*!important*/;}
+		p.atxt.btxt{color: magenta /*!important*/;}
+		/*child는 class보다 우선순위가 밀림*/
+		p:first-child{color: red;}
+	</style>
+</head>
+<body>
+	<!-- inline스타일이 우선순위가 높다. -->
+	<p id="ctxt" class="atxt btxt">
+		한국인은 비타민D가 부족한 사람이 많다.
+	</p>
+	<p>
+		비타민D는 햇빛에 있다.
+	</p>
+</body>
+</html>
