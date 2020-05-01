@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<tile></title>
+		<style type="text/css">
+			div{
+				border:2px solid black;
+				margin: 10px;
+				/*font-weight: bold;*/
+				padding: 10px 5px;
+			}
+			.d1 p:first-child:before{
+				content:"이름 :";
+				font-weight: bold;
+			}
+			.d1 p:last-child:before{
+				content:"연락처 :";
+				font-weight: bold;
+			}
+			.d3 p:first-child:before{
+				content:"이름 :";
+				visibility: hidden; /* 자리에 위치한 그대로 글씨가 숨어지는 현상 */
+				/*display: none;*/
+			}
+			.d3 p:last-child:before{
+				content:"연락처 :";
+				visibility: hidden;
+				/*display: none;*/
+				/*text-indent: 10px;*/
+			}
+			.d3 p{
+				/*text-indent: 10px;*/
+			}
+		</style>
+</head>
+<body>
+	<div class="d1">
+		<p>홍길동</p>
+		<p>서울 종로구 세검정</p>
+	</div>
+	<div class="d2">
+		<p>홍길동</p>
+		<p>서울 종로구 세검정</p>
+	</div>
+	<div class="d3">
+		<p>홍길동</p>
+		<p>서울 종로구 세검정</p>
+	</div>
+</body>
+</html>

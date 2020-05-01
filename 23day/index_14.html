@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		/*.ani1{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background: url(images/spade.gif) no-repeat center;
+		}*/
+
+		/*img를 묶어준 p태그의 크기나 관계를 먼저 제어 -> 중심이되는 spade를 배경을 설정한다.*/
+		p{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background: url(images/spade.gif) no-repeat center;
+		}
+		
+		/*p에서 설정한 값을 이용해 img의 관계를 제어하고 위치를 지정한다.*/
+		img{
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		/*@keyframes을 이용해 animation이 어떻게 이루어질지 제어*/
+		@keyframes myani1{
+			0%{
+				transform: scale(0.3, 0.3); opacity: 0.5;
+			}
+			100%{
+				transform: scale(1.2, 1.2); opacity: 0;
+			}
+		}
+		@keyframes myani2{
+			0%{
+				transform: scale(0.5, 0.5); opacity: 1;
+			}
+			100%{
+				transform: scale(1.4, 1.4); opacity: 0;
+			}
+		}
+
+		/*움직일 이미지에 animation 동작 제어*/
+		.ani1{
+			animation: myani1 3s infinite;
+		}
+		.ani2{
+			animation: myani2 3s infinite;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<img src="images/ani.gif" alt="애니" class="ani1">
+		<img src="images/ani.gif" alt="애니" class="ani2">
+	</p>
+</body>
+</html>

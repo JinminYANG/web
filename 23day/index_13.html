@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		div{
+			width: 160px;
+			height: 160px;
+			background-color: green;
+			padding: 20px;
+			animation-name: sample; /*@keyframe에 이름으로 지정한 것을 넣어준다.*/
+			animation-duration: 2s;
+		}
+		@keyframes sample {
+			0%{
+				background: green;
+				transform: translate(0,0);
+			}
+			50%{
+				background: blue;
+				transform: translate(30px, 20px);
+			}
+			100%{
+				background: green;
+				transform: translate(0,0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div >
+		Animation
+	</div>
+</body>
+</html>

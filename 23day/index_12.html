@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>hover / transition</title>
+	<style type="text/css">
+		li{
+			list-style: none;
+			/*width: 300px;*/
+			margin: 3px;
+		}
+		a{
+			background: aqua;
+			text-decoration: none;
+			color: black;
+			display: block;
+			width: 400px;
+			padding: 15px;
+			transition:width 1s, color 0.3s; /*, background: 1s;*/ /*hover했을 때가 아닌 여기에 쓰는게 맞다*/
+		}
+		a:hover{
+			color:red;
+			width:700px;
+			/*background: yellow;*/
+		}
+	</style>
+</head>
+<body>
+	<h2>Moving Menu</h2>
+	<ul>
+		<li><a href="#">Company</a></li>
+		<li><a href="#">Product</a></li>
+		<li><a href="#">Service</a></li>
+		<li><a href="#">Customer Service</a></li>
+		<li><a href="#">Community</a></li>
+	</ul>
+</body>
+</html>

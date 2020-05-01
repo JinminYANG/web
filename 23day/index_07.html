@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		div{
+			height: 300px;
+			margin: 10px;
+			background: url(images/friends-5100219_1920.jpg) no-repeat;
+			background-color: blue; /* 순서 중요 */
+			border: 1px solid red;
+		}
+		.d1{
+			background-size: 100px 300px;
+			/*background: blue;*/
+		}
+		.d2{
+			background-size: auto;
+			/*background-position: top;*/
+		}
+		.d3{
+			background-size: 80% 200%;
+		}
+		.d4{
+			background-size: cover; /*x축을 기준으로 y축이 조절됨 (x축(width))는 다 보임*/
+		}
+		.d5{
+			background-size: contain; /*y축을 기준으로 x축이 조절됨 (x축이 줄어들어 이미지 전체가 줄어들어 보임)*/
+		}
+
+	</style>
+</head>
+<body>
+	<div class="d1"></div>
+	<div class="d2"></div>
+	<div class="d3"></div>
+	<div class="d4"></div>
+	<div class="d5"></div>
+</body>
+</html>
