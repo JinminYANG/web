@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		var age = prompt('나이입력', '');
+		var admissionFee = ''; //null은 0으로 인지
+		if(age>=1 && age < 13 || age >= 65){
+			admissionFee ='2,000원';
+		} else if(age >= 13 && age < 20){
+			admissionFee = '4,000원';
+		} else{
+			admissionFee = '6,000원';
+		}
+		document.write(admissionFee);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

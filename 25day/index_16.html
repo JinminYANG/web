@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		var table = '<table>';
+		var i;
+		for(i =2; i<=9; i++){
+			table += '<tr>';
+			for(var j =1; j<10; j++){
+				table += '<td>' + i + '*' + j + '=' + i*j +'</td>';
+			}
+			table += '</tr>';
+		}
+		table += '</table>';
+		document.write(table);
+	</script>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+		}
+		table td{
+			border: 2px solid black;
+		}
+	</style>
+
+</head>
+<body>
+
+</body>
+</html>
