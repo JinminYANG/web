@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>즉시 실행 함수</title>
+	<script type="text/javascript">
+		(function(){	//'('
+			life();	// 정의 내용
+		})();	//')' '();'를 사용하면 스크립트가 즉시 실행 시켜준다. (함수 호출 없이)
+		function life(){
+			console. log('즉시 실행 함수 1');
+		}
+
+		var instant = (function(){
+			console.log('즉시 실행 함수 2');
+		})();
+		// instant();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

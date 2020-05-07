@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>로그인 체크</title>
+	<script type="text/javascript">
+		// function click(n){
+		// 	var id = document.getElementsById('id');
+		// 	var pw = document.getElementsById('pw');
+		// }
+
+		window.onload = function(){ //페이지를 시작할 때 기능을 사용하겠다는 정의.
+			var login = document.login;
+			login.onsubmit = function(){ //페이지에서 submit을 누를때 기능을 사용하겠다는 정의.
+				if(!login.id.value){
+					alert('아이디를 입력하세요.');
+					login.id.focus();
+					return false;
+				}
+				if(!login.pw.value){
+					alert('비밀번호를 입력하세요.');
+					login.pw.focus();
+					return false;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="#" method="post" name="login">
+		<div>
+			<label for="id">아이디: </label><input type="text" name="id" id="id" >
+		</div>
+		<div>
+			<label for="pw">비밀번호: </label><input type="password" name="pw" id="pw" >
+		</div>
+		<div>
+			<input type="submit" name="확인" value="확인">
+		</div>
+	</form>
+</body>
+</html>
