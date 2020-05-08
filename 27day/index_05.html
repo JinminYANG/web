@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div:nth-child(1){
+			background: red;
+		}
+		div:nth-child(2){
+			background: green;
+		}
+		div:nth-child(3){
+			background: blue;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $("div").eq(0).css({padding:10,"text-align":"center"});
+			$("div").eq(0).css({"padding":"10px","text-align":"center"});
+			$("div").css("width", function(index){
+				return index * 100 + 100; 
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>내용1</div>
+	<div>내용2</div>
+	<div>내용3</div>
+</body>
+</html>

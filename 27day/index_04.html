@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log($("#site > a:eq(0)").attr("href"));
+			$("#site > a:eq(1)").attr("href","http://jg.tjoeun.co.kr/").text("더조은IT학원");
+			// console.log($("#site > a:eq(1)").attr("href"));
+			// $("#site a").attr("title","새창");
+			$("#site a").attr("title",function(){
+				return "새창";
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="site">
+		<a href="https://google.com" target="_blank">구글</a>
+		<a href="https://naver.com" target="_blank">네이버</a>
+		<a href="https://daum.net" target="_blank">다음</a>
+		<!-- target="_blank" 새 창 띄우기 -->
+	</div>
+</body>
+</html>

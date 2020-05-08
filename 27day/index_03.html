@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*nav{
+			display: block;
+			width: 40%;
+			height: 100%;
+			background-color: #111;
+			border: 1px solid red;
+		}*/
+		/*ul{
+			height: 100%;
+		}*/
+		li{
+			list-style: none;
+			width: 100%;
+			/*padding-left: 20px;*/
+			/*border-bottom: 1px solid #555;*/
+
+		}
+		#m_menu{
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			background: #262626;
+		}
+		#m_menu a{
+			display: block;
+			color: #ccc;
+			text-decoration-line: none;
+			/*width: 90%;*/
+			border-bottom: 1px solid #555;
+			padding: 20px;
+			height: 100%;
+			/*background-color: black;*/
+		}
+		#m_menu a.m{
+			background: #111;
+			font-weight: bold;
+		}
+		#m_menu a.m.on{
+			color: #ff6600;
+		}
+		#m_menu ul a{
+			background: #3a3a3a;
+			text-indent: 20px;
+		}
+		#m_menu li ul{
+			display: none;
+		}
+		#m_menu li ul.on{
+			display: block;
+		}
+		
+		/*a:hover{
+			color: orange;
+		}*/
+		/*.menu1 ul li{
+			text-indent: 20px;		
+		}
+		.menu2 ul li{
+			text-indent: 20px;		
+		}
+		.menu3 ul li{
+			text-indent: 20px;		
+		}
+		.menu1 ul li ul li{
+			text-indent: 40px;
+		}*/
+	</style>
+
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#m_menu a.m").click(function(){
+				// $(this).next().addBack().toggleClass("on");
+				$(this).next().addBack().toggleClass("on").parent().siblings().find(".m, ul").removeClass("on");
+
+			}); 
+			// /addBack()은 자신을 포함(그 위까지)하는 기능
+			//toggleClass()는 클릭할때마다 클래스가 추가되고 제거되는 기능
+		});
+	</script>
+</head>
+<body>
+	<nav>
+		<ul id="m_menu">
+			<li class="menu1"><a href="#" class="m">메뉴1</a>
+				<!-- ************************** -->
+				<ul>
+					<li><a href="#" class="m">메뉴1_1</a>
+						<ul>
+							<li><a href="#">메뉴1_1_1</a></li>
+							<li><a href="#">메뉴1_1_2</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="m">메뉴1_2</a>
+						<ul>
+							<li><a href="#">메뉴1_2_1</a></li>
+							<li><a href="#">메뉴1_2_2</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="m">메뉴1_3</a>
+						<ul>
+							<li><a href="#">메뉴1_3_1</a></li>
+							<li><a href="#">메뉴1_3_2</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="menu2"><a href="#" class="m">메뉴2</a>
+				<ul>
+					<li><a href="#">메뉴2_1</a></li>
+					<li><a href="#">메뉴2_2</a></li>
+					<li><a href="#">메뉴2_3</a></li>
+				</ul>
+			</li>
+			<li class="menu3"><a href="#" class="m">메뉴3</a>
+				<ul>
+					<li><a href="#">메뉴3_1</a></li>
+					<li><a href="#">메뉴3_2</a></li>
+					<li><a href="#">메뉴3_3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

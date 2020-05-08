@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 100%;
+		}
+		header{
+			width: 100%;
+			/*margin: 0 auto;*/
+		}
+		.box{
+			/*margin: 0 auto;*/
+			text-align: center;
+			border-bottom: 2px solid black;
+			padding: 20px;
+			font-size: 20px;
+		}
+		#m2{
+			width: 640px;
+			margin: 0 auto;
+			/*text-align: center;*/
+			padding: 10px;
+			/*float: left;*/
+		}
+		#m2 .circle0,.circle1,.circle2{
+			text-align: center;
+			/*margin-top: 100px;*/
+			float: left;
+			border: 3px solid red;
+			/*padding: 100px;*/
+			border-radius: 50%;
+			width: 200px;
+			height: 120px;
+			padding-top: 80px;
+			margin: 3px;
+			/*border-collapse: collapse;*/
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#m1 > h1").addClass("box");
+			// $("#m2 > div").addClass("circle");
+			$("#m2 > div").addClass(function(index){
+				return "circle" + index;
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="m1">
+		<h1>jQuery</h1>
+	</header>
+	<section id="m2">
+		<div>html</div>	
+		<div>css</div>	
+		<div>javascript</div>	
+	</section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#m1 > div").removeClass("con");
+
+			// $("#m2 > div").removeClass("bg");
+			$("#m2 > div").removeClass(function(){
+				return "bg";
+			}); // 실행결과 위와 동일
+		});
+	</script>
+</head>
+<body>
+	<div id="m1">
+		<div class="con">콘텐츠</div>
+	</div>
+	<div id="m2">
+		<div class="c1 bg">내용1</div>
+		<div class="c2 bg">내용2</div>
+		<div class="c3 bg">내용3</div>
+	</div>
+</body>
+</html>
