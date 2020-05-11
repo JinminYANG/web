@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>	
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			height: 2000px;
+		}
+		#up{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			transition: all 0.5s ease; /* 나타나고 사라지는 속도제어 */
+			opacity: 0%;
+			visibility: hidden; /* 공간은 차지하나 보여주지는 않음 */
+		}
+		#wrap #up a{
+			display: block; /*인라인은 크기 인식이 안되서 블락처리해줌.*/
+			color: white;
+			background: black;
+			/*height: 40px;*/
+			padding: 20px;
+			text-align: center;
+			text-decoration-line: none;
+		}
+		#up.on{
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var isOn = false;
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 100){
+					if(!isOn){ // isOn이 false이면 실행
+						$("#up").addClass("on");
+						// console.log(isOn);
+						isOn = true;
+						// console.log(isOn);
+					}
+				}else{
+						if(isOn){
+							$("#up").removeClass("on");
+							isOn = false;
+						}
+					}
+			});
+			$("#up a").click(function(){
+				$(window).scrollTop(0);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="up">
+			<!-- <a href="#">TOP</a> -->
+			<a href="javascript:;">TOP</a>
+		</div>
+	</div>
+</body>
+</html>

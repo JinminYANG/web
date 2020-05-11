@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.bg{
+			padding: 40px;
+			margin-bottom: 40px;
+			background: #ccc;
+		}
+		.inner{
+			padding: 20px;
+			background: #999;
+		}
+	</style>
+
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".wrap1").mouseover(function(){
+				$(".display").append("<strong>마우스오버 </strong>"); // 아버지(선택자)인 wrap1과 자식인 inner에 모두 적용된다.
+			});
+			$(".wrap2").mouseenter(function(){
+				$(".display").append("<em>마우스들어감 </em>");
+			}); // 아버지(선택자)인 wrap2만 적용되고 자식인 inner에는 적용되지 않는다.
+		});
+	</script>
+
+</head>
+<body>
+	<div class="wrap1 bg">
+		<div class="inner">mouseover</div>		
+	</div>
+	<div class="wrap2 bg">
+		<div class="inner">mouseenter</div>
+	</div>
+	<div class="display"></div>
+</body>
+</html>

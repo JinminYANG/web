@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#outer{
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			border: 1px solid #333;
+			overflow: auto;
+		}
+		.inner{
+			width: 1000px;
+			height: 1000px;
+			background: #ff6600;
+		}
+		#info{
+			position: fixed;
+			top: 0;
+			width: 300px;
+			text-align: right;
+			/*margin-left: -150px;*/
+			/*margin-left: -65px;*/
+			margin-left: -550px;
+			left: 50%;
+
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var top = $("#outer").scrollTop();
+			// console.log(top);
+			var left = $("#outer").scrollLeft();
+			// console.log(left);
+
+			$("#info span").text("scrollTop : " + top + " / " + "scrollLeft : " + left); // 초기값
+
+			$("#outer").scroll(function(){ // scroll 이벤트가 발생했을 때 
+				top = $("#outer").scrollTop();
+				left = $("#outer").scrollLeft();
+				$("#info span").text("scrollTop : " + top + " / " + "scrollLeft : " + left);
+			});
+
+			$("button").click(function(){
+				$("#outer").scrollLeft(250).scrollTop(250);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="outer">
+		<div class="inner"></div>
+	</div>
+	<div id="info">
+		<span></span>
+		<button>클릭</button>
+	</div>
+</body>
+</html>
