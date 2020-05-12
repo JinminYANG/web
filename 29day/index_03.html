@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		html{
+			height: 100%;
+		}
+		body{
+			font-family: "돋움";
+			font-size: 12px;
+			color: #333;
+			height: 100%;
+		}
+		a{
+			font-family: "돋움";
+			font-size: 12px;
+			color: #333;
+			text-decoration: none;
+			line-height: 20px;
+		}
+		#select{
+			width: 200px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background: #fff;
+			z-index: 100;
+		}
+		#select a{
+			display: block;
+			height: 20px;
+		}
+		#select #title{
+			border: 1px solid #ccc;
+		}
+		#select #title a{
+			background: url(images/icon.gif) no-repeat 100% 0;
+		}
+		#select #title a.on{
+			background-position: 100% -20px;
+		}
+		#select #list{
+			border: 1px solid #ccc;
+			background: #fff;
+			position: absolute;
+			left: 0;
+			top: -94px;
+			width: 200px;
+			box-sizing: border-box;
+			display: none;
+		}
+		#select #list.on{
+			display: block;
+		}
+		#select #list a{
+			padding: 5px 10px;
+			border-bottom: 1px solid #ddd;
+		}
+		#select #list a:hover,
+		#select #list a:active,
+		#select #list a:focus{
+			background: #ff6600;
+			color: #fff;
+		}
+		#con{
+			background: #ddd;
+			height: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#title a").click(function(event){
+				if($(this).hasClass("on")){
+					$(this).add("#list").removeClass("on");
+				}else{
+					// #title하고 a하고 #list에 on클래스를 동시에 주기
+					$(this).add("#list").addClass("on");
+				}
+				event.preventDefault(); //이벤트동작 방해
+				event.stopPropagation(); //부모의 이벤트동작을 방해
+			});
+			$("html").click(function(){
+				$("#title a").add("#list").removeClass("on");
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="select">
+		<div id="title"><a href="#">사이트이동</a></div>
+		<ul id="list">
+			<li><a href="https://naver.com" target="_blank" title="새창">네이버</a></li>
+			<li><a href="https://google.com" target="_blank" title="새창">구글</a></li>
+			<li><a href="https://nate.com" target="_blank" title="새창">네이트</a></li>
+		</ul>
+	</div>
+	<div id="con"></div>
+</body>
+</html>

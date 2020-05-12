@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			height: 2000px;
+		}
+		header{
+			/*position: relative;*/
+			/*width: 100%;*/
+			height: 100px;
+			/*background: black;*/
+			border-bottom: 1px solid #999;
+		}
+		header.bg{
+			background: #333;
+		}
+		#quick{
+			position: absolute;
+			top: 150px;
+			/*right: 0;*/
+			left: 100%;
+			margin-left: -100px;
+			width: 100px;
+			height: 400px;
+			background: #ff6600;
+			text-align: center;
+			color: #fff;
+		}
+		#quick.on{
+			position: fixed;
+			top: 50px;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			if($(this).width() < 960){
+				$("header").addClass("bg");
+			}else{
+				$("header").removeClass("bg");
+			}
+
+			$(window).scroll(function(){ // 퀵메뉴 스크롤 고정
+				if($(this).scrollTop() > $("header").height()){
+					$("#quick").addClass("on");
+				}else{
+					$("#quick").removeClass("on");
+				}
+			}).resize(function(){ // '.'을 이용해 여러개의 메소드 사용가능
+				if($(this).width() < 960){
+					$("header").addClass("bg");
+				}else{
+					$("header").removeClass("bg");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header></header>
+	</div>
+		<div id="quick">QUICK</div>
+</body>
+</html>

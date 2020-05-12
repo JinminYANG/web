@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 2px;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			border: 2px solid #000;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $("#m1 #show").click(function(){
+			// 	$("#m1 .box").show();
+			// });	
+			$("#m1 button:eq(0)").click(function(){
+				$("#m1 .box").show();
+			});	
+			$("#m1 button:eq(1)").click(function(){
+				$("#m1 .box").hide();
+			});
+			$("#m1 button:eq(2)").click(function(){
+				$("#m1 .box").toggle("fast","swing");
+			});
+			$("#m2 button:eq(0)").click(function(){
+				$("#m2 .box").slideDown("fast","swing");
+			});
+			$("#m2 button:eq(1)").click(function(){
+				$("#m2 .box").slideUp("slow","swing");
+			});
+			$("#m2 button:eq(2)").click(function(){
+				$("#m2 .box").slideToggle(250,"linear");
+			});
+			$("#m3 button:eq(0)").click(function(){
+				$("#m3 .box").fadeIn("fast","swing", function(){$(this).text("jQuery");
+				});
+			});
+			$("#m3 button:eq(1)").click(function(){
+				$("#m3 .box").fadeOut("fast", "swing", function(){
+					$(this).text("내용3");
+				});
+			});
+			$("#m3 button:eq(2)").click(function(){
+				$("#m3 .box").fadeToggle("fast","swing", function(){
+					if($(this).css("display")== "none"){
+						$(this).text("내용3");
+					}else{
+						$(this).text("jquery");
+					}
+				});
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="m1">
+		<button id="show">show</button>
+		<button id="hide">hide</button>
+		<button id="toggle">toggle</button>
+		<div class="box">내용1</div>
+	</div>
+	<div id="m2">
+		<button id="slideDown">slideDown</button>
+		<button id="slideUp">slideUp</button>
+		<button id="slideToggle">slideToggle</button>
+		<div class="box">내용2</div>
+
+	</div>
+	<div id="m3">
+		<button id="fadeIn">fadeIn</button>
+		<button id="fadeOut">fadeOut</button>
+		<button id="fadeToggle">fadeToggle</button>
+		<div class="box"></div>
+	</div>
+
+
+</body>
+</html>
