@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 1000px;
+			/*text-align: center;*/
+			margin: 0 auto;
+		}
+		#wrap header{
+			width: 1000px;
+			/*text-align: center;*/
+			margin: 0 auto;
+		}
+		#wrap header h1{
+			font-size: 25px;
+			text-align: center;
+			margin: 0 auto;
+			padding: 10px 0;
+		}
+		#wrap header h1:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+		#menu{
+			width: 800px;
+			/*float: left;*/
+			margin: 0 auto;
+		}
+		#menu:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+		#menu .gnb{
+			float: left;
+			list-style: none;
+			/*text-align: left;*/
+		}
+		#menu .gnb>li{
+			float: left;
+			/*width: 200px;*/
+			list-style: none;
+		}
+		#menu .gnb>li>a{
+			display: block;
+			text-decoration: none;
+			width: 150px;
+			color: black;
+			font-weight: bold;
+			text-align: center;
+			padding: 10px 0;
+		}
+		#menu .gnb>li>a:hover{
+			border-bottom: 2px solid brown;
+		}
+		.m{
+			/*width: 150px;*/
+		}
+		.m>li{
+			list-style: none;
+		}
+		.m>li>a{
+			display: block;
+			width: 150px;
+			/*height: 30px;*/
+			text-align: center;
+			background: gray;
+			color: white;
+			text-decoration-line: none;
+			padding:10px 0;
+			display: none;
+		}
+		.m>li>a:hover{
+			background: white;
+			color: black;
+			display: all;
+		}
+		#visual{
+			/*text-align: center;
+			width: 1000px;
+			height: 400px;
+			margin: 0 auto;
+			background: url(images/f1.jpg);*/
+		}
+		#visual a{
+			display: block;
+			text-align: center;
+			width: 1000px;
+			height: 400px;
+			margin: 0 auto;
+			background: url(images/f1.jpg);
+			/*content: "";*/
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1>기본 효과 메소드</h1>
+			<div id="menu">
+				<ul class="gnb">
+					<li><a href="#">메뉴1</a>
+						<ul class="m m_m1">
+							<li><a href="#">메뉴1_1</a></li>
+							<li><a href="#">메뉴1_2</a></li>
+							<li><a href="#">메뉴1_3</a></li>
+							<li><a href="#">메뉴1_4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">메뉴2</a>
+						<ul class="m m_m2">
+							<li><a href="#">메뉴2_1</a></li>
+							<li><a href="#">메뉴2_2</a></li>
+							<li><a href="#">메뉴2_3</a></li>
+							<li><a href="#">메뉴2_4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">메뉴3</a>
+						<ul class="m m_m3">
+							<li><a href="#">메뉴3_1</a></li>
+							<li><a href="#">메뉴3_2</a></li>
+							<li><a href="#">메뉴3_3</a></li>
+							<li><a href="#">메뉴3_4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">메뉴4</a>
+						<ul class="m m_m4">
+							<li><a href="#">메뉴4_1</a></li>
+							<li><a href="#">메뉴4_2</a></li>
+							<li><a href="#">메뉴4_3</a></li>
+							<li><a href="#">메뉴4_4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">메뉴5</a>
+						<ul class="m m_m4">
+							<li><a href="#">메뉴5_1</a></li>
+							<li><a href="#">메뉴5_2</a></li>
+							<li><a href="#">메뉴5_3</a></li>
+							<li><a href="#">메뉴5_4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div id="visual"><a href="#">비주얼</a></div>
+	</div>
+</body>
+</html>
