@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<style type="text/css">
+		input{
+			border: 1px solid #bbb;
+			height: 24px;
+			margin-right: 5px;
+		}
+		img{
+			vertical-align: middle;
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".datepicker").datepicker({
+				showOn: "button",
+				buttonImage: "images/calendar.png",
+				buttonImageOnly: true,
+				buttonText: "달력",
+				changeYear: true,
+				dateformat: "yy-mm-dd"
+			});
+			$.datepicker.setDefaults({
+				monthNames: ['1월', '2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월',],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일', ],
+				showMonthAfterYear: true
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<label for="datepicker">기간설정 </label><input type="text" class="datepicker"> ~ <input type="text" class="datepicker">
+	</div>
+</body>
+</html>
