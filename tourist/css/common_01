@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url('layout_base.css');
-
 /* reset element */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -17,9 +16,9 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin:0; padding:0;
 }
-h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:inherit;}
+ h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:inherit;}
 
-/* HTML5 display-role reset for older browsers */
+ /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, 
 menu, nav, section {display:block;}
 body {line-height:1;}
@@ -33,8 +32,7 @@ table, thead, tbody, tfoot {border-collapse:collapse; border-spacing:0; border:0
 ul, ol, li {list-style:none;}
 address, em {font-style:normal;}
 input, select, textarea, button, form img, label {vertical-align:middle;}
-
-/* 건너뛰기 링크(접근성) */
+ /*건너뛰기 링크(접근성)*/
 .skipnavi{
 	position: absolute;
 	left: 0;
@@ -56,70 +54,87 @@ input, select, textarea, button, form img, label {vertical-align:middle;}
 	text-indent: 0px;
 	font-size: 12px;
 	font-weight: bold;
-	background: #f2f2f2;
+	background:#f2f2f2;
+}
+         /*anchor*/
+a{
+	text-decoration: none;
+}                  
+a:link{
+	color: #444;
+}
+a:visited{
+	color: #444;
+}
+a:hover{
+	color: #444;
+}
+a:focus{
+	color: #444;
 }
 
-/* anchor */
-a {text-decoration: none;}
-a:link{color: #444;}
-a:visited{color: #444;}
-a:hover{color: #444;}
-a:focus{color: #444;}
 
-/*common*/
-html{height: 100%;}
+  
+
+
+	/*common*/
+html{
+	height: 100%;
+}	
 body{
-	height: 1005;
-	font-family:'Malgun Godhic','맑은 고딕', sans-serif;
+	height: 100%; 
+	font-family: 'malgunGothic','맑은 고딕',sans-serif;
 	font-size: 16px;
-	letter-spacing: -1px;
-	color: #444;
-	word-spacing: normal;
+	white-space: normal;
 	word-wrap: break-word;
 }
+
+
+
 .hdd, legend{
 	font-size: 0;
 	width: 0;
-	height: ;
+	height: 0;
 	line-height: 0;
 	text-indent: -9999px;
 	overflow: hidden;
 	visibility: hidden;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0:
+	left:0;		
 }
 caption{
 	font-size: 0;
 	width: 0;
 	height: 0;
 	line-height: 0;
-	text-align: center;
+	text-indent: -9999px;
+	overflow: hidden;
 }
 .clear:after{
 	content: "";
-	display: none;
-	clear: both;
+	display: block;clear: both;
 }
 
-#warp{}
+ /*button_style*/
+
+
+
+  /*layout*/
+#wrap{}
 .box_inner{
 	width: 1050px;
 	margin: 0 auto;
 }
-
-/**** header ****/
+ /*header  */
 header{
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 113px;
-	background: rgba(0,0,0,0.5);;
+	background: rgba(0,0,0,0.5);
 	z-index: 100;
-}
-header .header_area{
-	/*position: relative;*/
 }
 header .header_area h1{
 	float: left;
@@ -148,16 +163,17 @@ header .header_area .openMOgnb{
 	display: inline;
 }
 .header_cont .util li:after{
-	content: "|";
+	content:"|";
 	display: inline-block;
 	padding: 0 10px;
+	font-size: 10px;
 	color: #eee;
 	position: relative;
 	top: -2px;
 }
 .header_cont .util li:last-child:after{
 	content: "";
-	display: block;
+	display: none;
 }
 .header_cont .util li a{
 	font-size: 14px;
@@ -166,8 +182,8 @@ header .header_area .openMOgnb{
 .header_cont .gnb{
 	float: right;
 	box-sizing: border-box;
+	/*box-sizing: 을하고 padding을 넣었을떄 height의 영향을안받게된다*/
 	padding-top: 5px;
-	/*height: 113px;*/
 }
 .header_cont .gnb li{
 	float: left;
@@ -191,7 +207,6 @@ header .header_area .openMOgnb{
 	width: 100%;
 	background: rgba(250,100,0,0.85);
 	z-index: 100;
-	/*display: none;*/
 }
 .gnb_depth .submenu_list{
 	width: 1050px;
@@ -212,7 +227,8 @@ header .header_area .openMOgnb{
 }
 .gnb_depth2_4 .submenu_list{
 	box-sizing: border-box;
-	padding-left: 940px;
+	padding-left: 930px;
+	/*padding-left: 940px;*/
 }
 .gnb_depth .submenu_list li{
 	display: inline;
@@ -228,8 +244,7 @@ header .header_area .openMOgnb{
 	color: #fff;
 }
 
-
-/**** footer ****/
+	/*footer*/
 footer{
 	border-top: 1px solid #ddd;
 }
@@ -283,7 +298,7 @@ footer .foot_area .snslink{
 }
 footer .foot_area .snslink li{
 	float: left;
-	margin-left: 60px;
+	margin-left:60px;
 }
 footer .foot_area .snslink li a{
 	display: block;
@@ -291,108 +306,105 @@ footer .foot_area .snslink li a{
 	height: 74px;
 	text-indent: -9999px;
 	overflow: hidden;
-	background: url(../images/ico_blog_r.png) no-repeat;
+	background: url(../images/ico_blog_r.png)no-repeat;
 }
-footer .foot_area .snslink li + li a{
-	background: url(../images/ico_facebook_r.png) no-repeat;
+footer .foot_area .snslink li+li a{
+	background-image: url(../images/ico_facebook_r.png);
 }
-footer .foot_area .snslink li + li + li a{
-	background: url(../images/ico_instargram_r.png) no-repeat;	
-}
-
-body{
-	background: green;
-}
-/**** container ****/
-#container{
-	padding-bottom: 70px;
+footer .foot_area .snslink li+li+li a{
+	background-image: url(../images/ico_instargram_r.png);
 }
 
-/***main_rolling***/
-.main_rolling_mobile{
-	display: none;
-}
-.visualRoll{
-	position: relative;
-	width: 100%;
-}
-.viewImgList{
-	position: relative;
-	width: 100%;
-}
-.viewImgList li{
-	text-align: center;
-	height: 550px;
-	line-height: 550px;
-}
-.viewImgList li.imglist0{
-	position: relative;
-	z-index: 50;
-	background: url(../images/mainslide_01.jpg) no-repeat center;
-}
-.viewImgList li.imglist1{
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 10;
-	background: url(../images/mainslide_02.jpg) no-repeat center;
-}
-.viewImgList li.imglist2{
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 10;
-	background: url(../images/mainslide_03.jpg) no-repeat center;
-}
-.viewImgList li{
-	background-size: cover !important;
-	/*모니터가 그림보다 작을 때 background를 모니터의 width에 맞게 resize해준다.*/
-}
-.viewImgList li .roll_content{
-	position: relative;
-}
-.viewImgList li .roll_content .roll_txtline{
-	position: absolute;
-	left: 0;
-	bottom: 60px;
-	width: 100%;
-	line-height: 1;
-	text-align: center;
-	font-size: 22px;
-	color: #fff;
-	letter-spacing: 2px;
-}
-.rollbtnArea{
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 25px;
-	z-index: 200;
-}
-.rollbtnArea .rollingbtn{
-	width: 320px;
-	margin: 0 auto;
-	text-align: center;
-}
-.rollbtnArea .rollingbtn li{
-	display: inline-block;
-	margin-right: 5px;
-}
-.rollbtnArea .rollingbtn li.butt0{
-	margin-left: 10px;
-}
-.rollbtnArea .rollingbtn li.rollstop{
-}
-.rollbtnArea .rollingbtn li.rollplay{
-	display: none;
-}
-.rollbtnArea .rollingbtn li a{
-	vertical-align: top;
-}
+ /*container*/
+ #container{
+ 	padding-bottom: 70px;
+ }
+ /*main rolling*/
+ .main_rolling_mobile{
+ 	/*display: none;*/
+ }
+ .visualRoll{
+ 	position: relative;
+ 	width: 100%;
+ }
+ .viewImgList{
+ 	position: relative;
+ 	width: 100%;
+ }
+ .viewImgList li{
+ 	text-align: center;
+ 	height: 550px;
+ 	line-height: 550px;
+ }
+ .viewImgList li.imglist0{
+ 	position: relative;
+ 	z-index: 50;
+ 	background: url(../images/mainslide_01.jpg)no-repeat center;
+ }
+ .viewImgList li.imglist1{
+ 	position: absolute;
+ 	width: 100%;
+ 	left: 0;
+ 	top: 0;
+ 	z-index: 10;
+ 	background: url(../images/mainslide_02.jpg)no-repeat center;
+ }
+  .viewImgList li.imglist2{
+ 	position: absolute;
+ 	width: 100%;
+ 	left: 0;
+ 	top: 0;
+ 	z-index: 10;
+ 	background: url(../images/mainslide_03.jpg)no-repeat center;
+ }
+ .viewImgList li{
+ 	background-size: cover !important;
+ 	/*모니터가 그림보다 짝았을때 사이즈를 맞춰준다 
+ 	짤려나가고그럼*/
+ }
+ .viewImgList li .roll_content{
+ 	position: relative;
+ }
+ .viewImgList li .roll_content .roll_txtline{
+ 	position: absolute;
+ 	left: 0;
+ 	bottom: 60px;
+ 	width: 100%;
+ 	line-height: 1;
+ 	text-align: center;
+ 	font-size: 22px;
+ 	color: #fff;
+ 	letter-spacing: 2px;
+ }
+ .rollbtnArea{
+ 	position: absolute;
+ 	width: 100%;
+ 	left: 0;
+ 	bottom: 25px;
+ 	z-index: 200;
+ }
+ .rollbtnArea .rollingbtn{
+ 	width: 320px;
+ 	margin: 0 auto;
+ 	text-align: center;
+ }
+ .rollbtnArea .rollingbtn li{
+ 	display: inline-block;
+ 	margin-right: 5px;
+ }
+ .rollbtnArea .rollingbtn li.butt0{
+ 	margin-left: 10px;
+ }
+ .rollbtnArea .rollingbtn li.rollstop{
 
-/***about_area***/
+ }
+ .rollbtnArea .rollingbtn li.rollplay{
+ 	display: none;
+  }
+ .rollbtnArea .rollingbtn li a{
+ 	vertical-align: top;
+ }
+   /*about_area */
  .about_area{}
  .about_area h2{
  	padding: 55px 0 105px;
@@ -494,7 +506,7 @@ body{
  	text-overflow: ellipsis;
  	white-space: nowrap;
  }
-/*quick_list*/
+    /*quick_list*/
  .quick_area{
  	position: fixed;
  	 /*position ab이랑 fix는 요소들이 겹칠수잇지만 re는 아니다 */   
@@ -503,3 +515,5 @@ body{
  	width: 94px;
  	z-index: 100;
  }
+ 
+
