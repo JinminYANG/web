@@ -207,6 +207,7 @@ header .header_area .openMOgnb{
 	width: 100%;
 	background: rgba(250,100,0,0.85);
 	z-index: 100;
+	display: none;
 }
 .gnb_depth .submenu_list{
 	width: 1050px;
@@ -559,4 +560,76 @@ footer .foot_area .snslink li+li+li a{
 	border-bottom: 1px solid #a3a3a3;
 	background: url(../images/ico_totop.jpg) no-repeat center;
 	background-size: 50%;
+}
+.to_top.hide{
+	display: none;
+}
+
+ /* popup_base */
+.popup_base{
+	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	background: rgba(0,0,0,0.7);
+ 	z-index: 200;
+ 	display: none;
+}
+.popup_base .pop_content{
+ 	position: relative;
+ 	width: 580px;
+ 	margin: 200px auto 0;
+ 	box-sizing: border-box;
+ 	background: #fff;
+}
+.pop_content .btn_xpop{
+	position: absolute;
+	right: 0;
+	top: -55px;
+}
+.pop_content .btn_xpop a{
+	display: block;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(../images/btn_xpop.png) no-repeat;
+	background-size: 45px;
+}
+.pop_content .pop_list li{
+	padding: 36px;
+	text-align: center;
+}
+.pop_content .pop_list li + li{
+	background: #f4f0e9;
+}
+.pop_content .pop_list li + li + li{
+	background: #fff;
+}
+.pop_content .pop_list .tit_pop{
+	font-size: 30px;
+	/*padding-bottom: 10px;*/
+	padding: 10px 0 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.pop_content .pop_list .pop_img{
+	width: 100%;
+	height: 100%;
+}
+.pop_content .pop_list .pop_txt{
+	padding-top: 15px;
+	/*text-align: justify;*/
+}
+.pop_content .pop_list .pop_txt p{
+	padding-top: 10px;
+	line-height: 1.0;
+	font-size: 17px;
+	width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
+	word-break: keep-all;
+	letter-spacing: 2px;
 }
