@@ -10,15 +10,15 @@ function play_w(directw){
 			wnum = 0;
 		}
 	}
-	// else if(directw == 'left'){   // 2 --> 1
-	// 	wnum--;
-	// 	if(wnum < 0){
-	// 		wnum = 2;
-	// 	}
-	// }
-	// else{
-	// 	wnum = directw;
-	// }
+	else if(directw == 'left'){   // 2 --> 1
+		wnum--;
+		if(wnum < 0){
+			wnum = 2;
+		}
+	}
+	else{
+		wnum = directw; // 동그라미 버튼 클릭했을 때
+	}
 
 	//버튼
 	$(".rollingbtn").find('li.seq a').each(function(){
@@ -72,6 +72,13 @@ $(document).ready(function(){
 		// }
 	});
 	$('.rollingbtn li.seq a').each(function(index){
-
+		$(this).click(function(){
+			$('.rollplay').hide();
+			$('.rollstop').css('display','inline-block');
+			if(wwslidingAuto){
+				clearTimeout(wwslidingAuto);
+			}
+			play_w(index);
+		});
 	});
 });
