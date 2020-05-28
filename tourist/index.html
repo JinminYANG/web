@@ -5,10 +5,10 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/common_01.css">
-	<script src="js/jquery-3.5.0.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/rollmain.js"></script> <!-- pc버전 이미지롤링 -->
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/swiper.min.js"></script>
+	<!-- <script src="js/jquery-ui.min.js"></script> -->
+	<!-- <script src="js/swiper.min.js"></script> -->
 	<script src="js/common.js"></script>
 
 </head>
@@ -215,12 +215,33 @@
 		</p>
 	</div> <!-- quick_area -->
 
+	<script src="js/swiper.min.js"></script>
 	<!-- 모바일용 이미지 롤링 -->
-	<script type="text/javascript">
+	 <script type="text/javascript">
 		$(document).ready(function(){
-
+			var swiper = new Swiper('.swiper-container',{
+				loop:true,
+				autoplay:5500,
+				autoplayDisableOnInteraction:false,
+				pagination:'.swiper-pagination',
+				paginationClickable:true
+			});
 		});
 	</script>
+
+
+
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			var swiper = new Swiper('.swiper-container', {
+				loop: true,
+				autoplay: 5500,
+				autoplayDisableOnInteraction: false,
+				pagination:'.swiper-pagination',
+				paginationClickable: true
+			});
+		});
+	</script> -->
 
 	<!-- contact_pop -->
 	<div class="popup_base contact_pop">
