@@ -192,7 +192,16 @@ $(document).ready(function(){
 	});
 
 
-
+	// 모바일 메뉴 띄우기
+	$('.openMOgnb').click(function(){
+		$('header').addClass('on');
+		$('header .header_cont').slideDown('fast');
+		$('header .header_area .header_cont .closepop').show();
+	});
+	$('.closePop').click(function(){
+		$('header').removeClass('on');
+		$('header .header_cont').slideUp('fast');
+	});
 
 
 
