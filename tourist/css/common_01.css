@@ -829,6 +829,9 @@ h1.loginTit a img{
 	background: none;
 	height: 90px;
 }
+.bodytext_area input:focus{
+	outline-color: yellow;
+}
 .app_list .app_content{
 	display: inline-block;
 	padding: 10px 10px;
@@ -899,12 +902,80 @@ h1.loginTit a img{
 }
 .bodytext_area .btn_line .btn_baseColor{
 	color: #fff;
-	background: #0000CD;
+	background: darkblue;
 	padding: 10px 40px;
 	font-weight: bold;
 }
 
-
+/* mypage 마이페이지 */
+.myinfo dt{
+	width: 170px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 18px;
+	background: #000;
+	color: #fff;
+}
+.myinfo dd{
+	border-top: 2px solid #000;
+}
+.regForm .reg_list{
+	padding: 10px 0 0;
+	background: url(../images/bg_reglist.jpg) repeat-y;
+	/*opacity: 0.2;*/
+}
+.regForm .reg_list li{
+	min-height: 60px;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+.regForm .reg_list li .tit_lbl{
+	position: relative;
+	float: left;
+	width: 150px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	line-height: 55px;
+	font-weight: bold;
+	font-size: 16px;
+}
+.regForm .reg_list li .reg_content{
+	float: right;
+	/*float: left;*/
+	width: 770px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 15px;
+}
+.regForm .reg_list li .reg_content *{
+	vertical-align: middle;
+}
+.regForm .reg_list li .reg_content.radio_area{
+	padding-top: 20px;
+	line-height: 100%;
+}
+.regForm .reg_list li:nth-child(6) .reg_content.radio_area{
+	padding-top: 10px;
+}
+.regForm .reg_list li:nth-child(6) .reg_content.radio_area p{
+	padding-top: 10px;
+}
+.regForm .reg_list li .reg_content label{
+	vertical-align: middle;
+	width: 30px;
+}
+.regForm .reg_list li:last-child .reg_content.radio_area{
+	padding-top: 10px;
+}
+.regForm .reg_list li:last-child .reg_content.radio_area label{
+	height: 15px;
+	/*padding-top: 10px;*/
+}
+.regForm .reg_list li:last-child .reg_content.radio_area p{
+	padding-top: 10px;
+}
 
 /* 태블릿 */
 @media all and (max-width: 1065px) and (min-width: 801px){
@@ -970,6 +1041,19 @@ h1.loginTit a img{
 		background: url(../images/ico_totop_mo.png) no-repeat center;
 		background-size: 45px;
 	}
+
+	/*mypage 마이페이지 (태블릿)*/
+	.myinfo{
+		margin: 20px auto;
+	}
+	.regForm .reg_list li{
+		min-height: 30px !important;
+	}
+	.regForm .reg_list .tit_lbl{
+		box-sizing: border-box;
+		padding-top: 0px;
+		/*line-height: 70px !important;*/
+	}
 }
 
 
@@ -978,6 +1062,17 @@ h1.loginTit a img{
 
 /* 모바일 */
 @media all and (max-width: 800px){
+	.btn_baseColor{
+		display: inline-block;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		background: #384d75;
+		font-weight: bold;
+		font-size: 20px;
+		color: #fff !important;
+		padding: 0px !important;
+	}
 	.box_inner{
 		width: 100%;
 	}
@@ -1386,4 +1481,113 @@ h1.loginTit a img{
 		line-height: 50px;
 	}
 
+
+
+	/* join.html 회원가입 */
+	.appForm{
+		margin: 20px auto;
+	}
+	.appForm fieldset{
+		/*width: 100%;*/
+		/*margin: 20px auto;*/
+		min-width: auto;
+	}
+	.appForm .pilsoo_item:before{
+		top: 1px;
+	}
+	.appForm .app_list li{
+		position: relative;
+		padding: 10px 0;
+		border-bottom: 1px solid #ccc;
+	}
+	.appForm .app_list li:last-child{
+		border-bottom: none;
+		padding-bottom: 10px;
+	}
+	.appForm .app_list li .tit_lbl{
+		float: none;
+		width: auto;
+		height: 30px;
+		line-height: 30px;
+	}
+	.appForm .app_list li .app_content{
+		float: none;
+		width: auto;
+		display: block;
+		padding: 0px;
+	}
+	.appForm .app_list li .app_content *{
+		vertical-align: middle;
+	}
+	.appForm .app_list li .app_content input[type=text],
+	.appForm .app_list li .app_content input[type=password],
+	.appForm .app_list li .app_content input[type=tel]{
+		border: none;
+		width: 100% !important;
+	}
+	.appForm .app_list li .app_content.email_area{
+		padding: 5px 0 0;
+		font-size: 0;
+	}
+	.appForm .app_list li .app_content.email_area input[type=text],
+	.appForm .app_list li .app_content.email_area input[type=password]{
+		border: 1px solid #ccc;
+		width: 45% !important;
+		font-size: 14px;
+	}
+	.appForm .app_list li .app_content.email_area .ico_space{
+		width: 10% !important;
+		text-align: center;
+		font-size: 14px;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+	.appForm .app_list li .app_content.radio_area{
+		height: 30px;
+		/*line-height: 40px;*/
+		padding-left: 20px;
+		padding-top: 10px;
+	}
+	.appForm .app_list li .app_content.checkbox_area{
+		height: 30px;
+		/*line-height: 40px;*/
+		padding-left: 20px;
+		padding-top: 10px;
+	}
+	.appForm .app_list li .select_common{
+		width: 100%;
+		height: 45px;
+		margin-top: 10px;
+	}
+	.appForm .app_list li .select_common select{
+		width: 100%;
+		height: 39px;
+	}
+	.appForm .app_list li textarea {
+		height: 130px;
+		width: 100% !important;
+		box-sizing: border-box;
+	}
+	.appForm .btn_line{
+		padding: 20px 0;
+	}
+	/*.appForm .btn_line a.btn_app{
+		margin-left: 0;
+	}*/
+	.app_list li:last-child label.tit_lbl{
+		height: 30px;
+	}
+	.app_list span.tit_lbl{
+		margin-top: 0px;
+	}
+	.app_list li:nth-child(7) span.tit_lbl{
+		margin-top: 0px;
+	}
+	.app_list li:last-child .app_content{
+		padding-top: 10px;
+	}
+	.app_list .app_content .w100p{
+		width: 100% !important;
+		/*box-sizing: border-box;*/
+	}
 }
