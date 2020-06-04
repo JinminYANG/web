@@ -203,6 +203,39 @@ $(document).ready(function(){
 		$('header .header_cont').slideUp('fast');
 	});
 
+	// program.html - 더보기 / 접기 작동
+	// $('.program_list li:nth-child(1) .btn_more a').click(function(){
+	// 	$('.program_list li:nth-child(1) .program_content .subtxt').toggle();
+	// 	$(this).toggleClass("active");
+	// });
+
+	// $('.program_list li .btn_more a').each(function(){
+	// 	$(this).click(function(){
+	// 	$('.program_list li:nth-child(1) .program_content .subtxt').toggle();
+	// 	$(this).toggleClass("active");
+	// });
+	
+});
 
 
+$(document).ready(function(){
+	//PC브라우저에서 좁혀서 메뉴 닫고 다시 넓힐 때 상단메뉴 노출되게
+	$(window).resize(function(){
+		if(parseInt($('header').css('width'))>800){
+			$('.header_cont').show();
+		}else{
+			$('.header_cont').hide();
+		}
+	});
+
+	// program.html - 더보기 / 접기 작동
+	$('.program_list li .btn_more a').click(function(){
+		if($(this).parent().parent().find('.subtxt').css('display') == 'none'){
+			$(this).parent().parent().find('.subtxt').css('display','inline');
+			$(this).text('접기');
+		}else{
+			$(this).parent().parent().find('.subtxt').css('display','none');
+			$(this).text('더보기');
+		}
+	}); //절대값을 이용하면 a가 전부 선택되버리니 상대값을 이용하여 하나만 작동되게 함.
 });

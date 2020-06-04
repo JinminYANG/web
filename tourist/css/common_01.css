@@ -987,6 +987,97 @@ h1.loginTit a img{
 	background-size: cover;
 }
 
+/* place_area */
+.bodytext_area.place_area{
+	padding: 55px 0 0;
+}
+.program_list li{
+	/*width: 340px;*/
+	width: 31.5%;
+	float: left;
+	/*height: 600px;*/
+	/*margin-right: 15px;*/
+	margin: 0 0.9%;
+}
+.program_list li:nth-child(3n+1){
+	clear: both;
+}
+.program_list li:nth-child(3){
+	margin-right: 0;
+}
+.program_list li:nth-child(6){
+	margin-right: 0;
+}
+.program_list li:nth-child(9){
+	margin-right: 0;
+}
+.program_list li:last-child{
+	margin-right: 0;
+}
+.program_list li img.img_place{
+	display: block;
+	width: 100%;
+	/*margin-bottom: 20px;*/
+}
+.program_list li h3{
+	font-weight: bold;
+	/*font-size: 20px;*/
+	font-size: 22px;
+	padding: 40px 0 0;
+}
+.program_list li .subttl{
+	color: #fa6400;
+	font-weight: bold;
+	/*padding: 0 0 20px 0;*/
+	padding: 25px 0 0;
+	font-size: 16px;
+	letter-spacing: 0;
+}
+.program_list li .program_content{
+	/*padding: 0 0 20px 0;*/
+	padding: 15px 0 0;
+	/*text-align: justify;*/
+	/*color: gray;*/
+	line-height: 1.8;
+	font-size: 15px;
+}
+.program_list li .program_content p{
+	width: 100%;
+	overflow: hidden;
+	word-break: keep-all;
+}
+.program_list li .program_content p .subtxt{
+	display: none;
+}
+.program_list li .btn_more{
+	padding: 10px 0 20px;
+	/*width: 100%;*/
+	font-size: 15px;
+	/*margin: 0 auto;*/
+	text-align: center;
+	/*font-size: 0;*/
+}
+.program_list li .btn_more a{
+	/*position: absolute;*/
+	/*background: url(../images/btn_more1.png) no-repeat center center;*/
+	/*text-indent: 10px;*/
+	/*width: 100%;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*text-indent: -9999%;*/
+	/*display: block;*/
+	display: inline-block;
+	padding: 5px 7px;
+	border-radius: 3px;
+	background: #000;
+	color: #fff;
+	/*overflow: hidden;*/
+	/*display: none;*/
+}
+.program_list li .btn_more a.active {
+  background-image: url('../images/btn_more2.png');
+}
+
 
 
 /* 태블릿 */
@@ -1119,6 +1210,11 @@ h1.loginTit a img{
 		float: none;
 		margin-left: 180px;
 	}
+
+
+
+	/* program.html 프로그램 소개 */
+
 }
 
 
@@ -1694,6 +1790,72 @@ h1.loginTit a img{
 	.regForm .reg_list li:last-child .reg_content.radio_area{
 		padding-top: 0;
 	}
+
+
+
+
+	/* program.html 프로그램 소개*/
+.bodytext_area.place_area{
+	/*text-align: center;*/
+	/*padding: 55px 0 0;*/
+	padding: 33px 0 0;
+}
+.program_list{
+	/*float: left;*/
+	/*width: 100%;*/
+	/*margin: 0 auto;*/
+	/*text-align: center !important;*/
+	padding: 0 20px;
+}
+.program_list li{
+	/*margin: 0 auto;*/
+	margin: 0%;
+	/*text-align: center;*/
+	float: left;
+	width: 100%;
+	/*height: 700px;*/
+	/*margin: 20px;*/
+	box-sizing: border-box;
+	/*padding-top: 30px;*/
+	padding: 30px 0;
+	border-top: 1px solid #ccc;
+	/*border-bottom: 1px solid #ccc;*/
+}
+.program_list li:first-child{
+	border-top: none;
+	padding-top: 0;
+}
+/*
+.program_list li:last-child{
+	border-bottom: none;
+}
+*/
+/*.program_list li .img_place{
+	width: 700px !important;
+	height: 400px;
+	margin: 0 auto;
+}*/
+.program_list li h3{
+	/*margin: 0 auto;*/
+	/*width: 700px;*/
+	padding: 20px 0 0;
+	text-align: center;
+}
+.program_list li .subttl{
+	/*margin: 0 auto;*/
+	/*width: 700px;*/
+	padding: 15px 0 0;
+	text-align: center;
+	font-size: 18px;
+}
+.program_list li .program_content p .subtxt{
+	/*margin: 0 auto;*/
+	/*width: 700px;*/
+	display: inline;
+}
+.program_list li .btn_more{
+	display: none;
+}
 
 }
  
