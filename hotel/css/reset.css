@@ -1,0 +1,266 @@
+@charset "utf-8";
+@import url(https://fonts.google.com/specimen/Gaegu);
+
+/* reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+ol, ul{
+	list-style: none;
+}
+a{
+	outline: none;
+	text-decoration: none;
+	color: #555;
+}
+img{
+	border: 0;
+}
+body{
+	font:20px/1.6 'Gaegu';
+	color: #555;
+}
+
+/* 레이아웃 */
+header{
+	position: fixed; /*를 사용해서 window의 height을 조정할 수 있음*/
+	width: 15%;
+	height: 100%;
+	background: #ddd;
+	top: 0px;
+	left: 0px;
+	transition: all 0.5s;
+}
+
+/* header 컨텐츠 */
+header h1{
+	width: 180px;
+	height: 136px;
+	background: url(../images/logo1.png) no-repeat 0px 0px;
+	background-size: contain;
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -80px;
+	text-indent: -99999px;
+}
+#gnb{
+	position: absolute;
+	top: 300px;
+	/*right: 57px;*/
+	left: 50%;
+	margin-left: -90px;
+}
+#gnb a{
+	display: block;
+	padding: 8px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #555;
+	text-align: left;
+	line-height: 1.8;
+	transition: all 0.5s;
+}
+#gnb a:hover{
+	color: skyblue;
+}
+#gnb a i{
+	margin-right: 10px;
+}
+.snsSet{
+	width: 100px;
+	height: 47px;
+	position: absolute;
+	bottom: 50px;
+	right: 50%;
+	margin-right: -45px;
+	font-size: 16px;
+}
+.snsSet a{
+	float: left;
+	margin-right: 3px;
+}
+.snsSet a:nth-child(1){
+	width: 45%;
+}
+.snsSet a:nth-child(1):after{
+	content: "/";
+	margin-left: 3px;
+}
+.snsSet a:nth-child(2){
+	width: 45%;
+}
+.snsSet a:nth-child(2):after{
+	clear: both;
+	display: block;
+	content: "";
+}
+.snsSet a:nth-child(3){
+	display: block;
+}
+
+
+nav{
+	width: 85%;
+	position: absolute;
+	margin-left: 15%;
+	background: #000;
+}
+nav ul{
+	width: 100%;
+}
+nav ul li{
+	float: left;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+nav ul li:nth-child(3){
+	float: right;
+	position: absolute;
+	right: 100px;
+}
+nav ul li:nth-child(3):after{
+	content: "|";
+	margin-left: 20px;
+	color: #fff;
+	font-size: 15px;
+}
+nav ul li:nth-child(4){
+	float: right;
+	position: absolute;
+	right: 10px;
+}	
+nav ul li a{
+	color: #fff;
+}
+
+
+section{
+	position: relative;
+	margin-left: 15%;
+	top: 32px;
+	width: 85%;
+	height: 90%;
+	/*float: left;*/
+}
+section:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+section article{
+	float: left;
+	width: 20%;
+	height: 260px;
+}
+section article{
+	position: relative;
+	box-sizing: border-box;
+}
+section article div{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+section article:nth-child(1){
+	/*position: absolute;*/
+	width: 60%;
+	height: 520px;
+	overflow: hidden;
+}
+section article:nth-child(1) span{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	/*background: red;*/
+	font-size: 150px;
+	color: #fff;
+	margin-bottom: -50px;
+}
+section article .txt{
+	height: 260px;
+	padding: 20px;
+}
+section article .bg1{
+	width: 100%;
+	/*height: 520px;*/
+	background: url(../images/terrace-1030758_1920.jpg) no-repeat center center;
+	background-size: cover;
+}
+section article .bg1:hover span{
+	transform: rotateY(360deg);
+	transition: transform 550ms ease;
+}
+section article:nth-child(2){
+	width: 40%;	
+}
+section article:nth-child(3){
+	background: #fbeac1;
+}
+section article .fa.fa-refresh{
+	position: absolute;
+	font-size: 200px;
+	bottom: -20px;
+	right: 0;
+	animation: moveSlideshow 2s linear infinite;
+	color: #fff;
+}
+@keyframes moveSlideshow {
+  100% { 
+    transform: rotate(360deg););  
+	}
+}
+section article .bg2{
+	height: 100%;
+	background: url(../images/travel-1677347_1920.jpg) no-repeat center center;
+	background-size: cover;
+}
+section article .bg3{
+	height: 100%;
+	background: url(../images/walkway-347319_1920.jpg) no-repeat center center;
+	background-size: cover;
+}
+section article:nth-child(6){
+	width: 40%;
+}
+section article .bg4{
+	height: 100%;
+	background: url(../images/sheraton-palace-hotel-398845_1920.jpg) no-repeat center center;
+	background-size: cover;
+}
+section article:nth-child(9){
+	width: 40%;
+	overflow: hidden;
+
+}
+section article .bg5{
+	height: 100%;
+	background: url(../images/hotel-389256_1280.jpg) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+}
+section article .bg5 span{
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	font-size: 60px;
+	/*background: red;*/
+	color: #fff;
+	margin-bottom: -20px;
+	overflow: hidden;
+
+}
+section article .bg6{
+	height: 100%;
+	background: url(../images/landscape-2016308_1920.jpg) no-repeat center center;
+	background-size: cover;
+}
+section article:nth-child(11){
+	background: #ddfcfc;
+}
+section article .bg7{
+	height: 100%;
+	background: url(../images/pier-569314_1920.jpg) no-repeat center center;
+	background-size: cover;
+}
