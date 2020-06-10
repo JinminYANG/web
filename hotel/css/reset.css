@@ -104,7 +104,6 @@ header h1{
 nav{
 	width: 85%;
 	height: 30px;
-	/*position: absolute;*/
 	position: relative;
 	margin-left: 15%;
 	background: #000;
@@ -172,18 +171,15 @@ section article{
 }
 article .bg span{
 	opacity: 0;
-	transform: scale(3);
 	font-size: 50px;
 	color: white;
-	/*padding-left: 20px;*/
 	position: absolute;
 	bottom: 0;
 	margin-bottom: -10px;
 	right: 20px;
-	/*transform: rotateY(0deg);*/
+	transform: scale(3);
 	transition: all 0.5s;
 	overflow: hidden;
-	/*animation: scale 1s 1;*/
 }
 /*이미지박스 호버효과*/
 article:hover .bg span{
@@ -196,7 +192,6 @@ section article div{
 	overflow: hidden;
 }
 section article:nth-child(1){
-	/*position: absolute;*/
 	width: 60%;
 	height: 520px;
 	overflow: hidden;
@@ -333,7 +328,6 @@ section article .bg7{
 
 @media screen and (min-width: 1280px) and (max-width: 1599px){
 	header{
-		position: absolute;
 		width: 100%;
 		height: 100px;
 		background: #fff;
@@ -343,8 +337,12 @@ section article .bg7{
 		background-size: contain;
 		top: -20px;
 		left: 100px;
+		height: 100px;
+		margin-top: 15px;
 	}
 	#gnb{
+		left: auto;
+		right: 200px;
 		top: 0;
 	}
 	#gnb li{
@@ -356,16 +354,355 @@ section article .bg7{
 		top: 20px;
 	}
 	nav{
-		position: absolute;
 		width: 100%;
 		top: 100px;
 		margin-left: 0;
-		/*margin-top: 100px;*/
 	}
 	section{
 		position: absolute;
 		width: 100%;
 		margin-left: 0;
 		top: 130px;
+	}
+}
+
+/* 노트북 */
+@media screen and (min-width:1024px) and (max-width: 1279px){
+	header{
+		position: relative;
+		width: 100%;
+		/*height: 100px;*/
+		background: #fff;
+	}
+	header h1{
+		background: url(../images/logo2.png) no-repeat center center;
+		background-size: contain;
+		top: -20px;
+		left: 100px;
+		height: 100px;
+		margin-top: 15px;
+	}
+	#gnb{
+		top: 0;
+		left: auto;
+		right: 0;
+		margin-left: 0px;
+		height: 100px;
+	}
+	#gnb li{
+		float: left;
+		margin-top: 25px;
+	}
+
+	.snsSet{
+		display: none;
+	}
+	nav{
+		/*display: none;*/
+		margin-left: 0%;
+		width: 100%;
+		top: 100px;
+	}
+	section{
+		/*display: none;*/
+		margin-left: 0%;
+		width: 100%;
+		top: 98px;
+	}
+	section article{
+		width: 25%;
+	}
+	section article:nth-child(1){
+		width: 75%;
+	}
+	section article:nth-child(2){
+		width: 25%;	
+	}
+	section article:nth-child(6){
+		width: 50%;
+	}
+	section article:nth-child(7){
+		width: 50%;
+	}
+	section article:nth-child(9){
+		width: 25%;
+	}
+	section article:nth-child(10){
+		width: 50%;
+	}
+}
+
+/* 태블릿 가로 */
+@media screen and (min-width: 780px) and (max-width: 1023px){
+	header{
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		background: #fff;
+	}
+	header h1{
+		background: url(../images/logo2.png) no-repeat center center;
+		background-size: contain;
+		top: -20px;
+		left: 100px;
+		height: 100px;
+		margin-top: 15px;
+	}
+	#gnb{
+		top: 0;
+		left: auto;
+		right: 0;
+		margin-left: 0px;
+		height: 100px;
+	}
+	#gnb li{
+		float: left;
+		margin-top: 25px;
+	}
+	.snsSet{
+		display: none;
+	}
+	nav{
+		margin-left: 0%;
+		width: 100%;
+		top: 100px;
+	}
+	section{
+		margin-left: 0%;
+		width: 100%;
+		top: 98px;
+	}
+	section article{
+		width: 33.3%;
+	}
+	section article:nth-child(1){
+		width: 99.9%;
+	}
+	section article:nth-child(2){
+		width: 66.6%;
+	}
+	section article:nth-child(5){
+		display: none;
+	}
+	section article:nth-child(6){
+		width: 66.6%
+	}
+	section article:nth-child(7){
+		display: none;
+	}
+	section article:nth-child(9){
+		width: 33.3%;
+	}
+	section article:nth-child(10){
+		display: none;
+	}
+	section article:nth-child(12){
+		display: none;
+	}
+}
+
+
+/* 태블릿 세로 */
+@media screen and (min-width:640px) and (max-width: 779px){
+	header{
+		position: absolute;
+		width: 100%;
+		height: 80px;
+		background: #fff;
+	}
+	header h1{
+		background: url(../images/logo2.png) no-repeat center center;
+		background-size: contain;
+		top: -20px;
+		left: 100px;
+		height: 100px;
+		margin-top: 15px;
+	}
+	#gnb{
+		top: 0;
+		left: auto;
+		right: 0;
+		margin-left: 0px;
+		height: 100px;
+	}
+	#gnb li{
+		float: left;
+		margin-top: 25px;
+	}
+	#gnb li a{
+		padding: 0px 10px;
+		font-size: 16px;
+	}
+	.snsSet{
+		display: none;
+	}
+	nav{
+		margin-left: 0%;
+		width: 100%;
+		top: 80px;
+	}
+	section{
+		margin-left: 0%;
+		width: 100%;
+		top: 78px;
+	}
+	section article{
+		width: 50%;
+		/*height: 50%;*/
+	}
+	section article:nth-child(1){
+		width: 100%;
+	}
+	section article:nth-child(2){
+		width: 100%;
+	}
+	section article:nth-child(3){
+		display: none;
+	}
+	section article:nth-child(4){
+		display: none;
+	}
+	section article:nth-child(6){
+		width: 50%;
+	}
+	section article:nth-child(7){
+		display: none;
+	}
+	section article:nth-child(9){
+		width: 50%;
+	}
+	section article:nth-child(12){
+		display: none;
+	}
+}
+
+
+@media screen and (min-width:480px) and (max-width: 639px){
+	header{
+		position: relative;
+		width: 100%;
+		height: 150px;
+		background: #fff;
+	}
+	header h1{
+		background: url(../images/logo2.png) no-repeat center center;
+		background-size: contain;
+		top: 0px;
+		height: 100px;
+	}
+	#gnb{
+		position: relative;
+		top: 100px;
+		left: 0;
+		margin-left: 0px;
+		width: 100%;
+	}
+	#gnb li{
+		float: left;
+		width: 25%;
+	}
+	#gnb li a{
+		text-align: center;
+		box-sizing: border-box;
+		padding: 7px 20px;
+	}
+	.snsSet{
+		display: none;
+	}
+	nav{
+		display: none;
+	}
+	section{
+		margin-left: 0%;
+		width: 100%;
+	}
+	section article{
+		width: 50%;
+	}
+	section article:nth-child(1){
+		width: 100%;
+	}
+	section article:nth-child(2){
+		width: 100%;
+	}
+	section article:nth-child(3){
+		display: none;
+	}
+	section article:nth-child(4){
+		display: none;
+	}
+	section article:nth-child(6){
+		width: 50%;
+	}
+	section article:nth-child(7){
+		display: none;
+	}
+	section article:nth-child(9){
+		width: 50%;
+	}
+	section article:nth-child(12){
+		display: none;
+	}
+}
+
+@media screen and (max-width: 479px){
+	header{
+		position: relative;
+		width: 100%;
+		/*background: url(../images/ocean-5176878_1920.jpg) no-repeat center center;*/
+	}
+	header h1{
+		width: 100px;
+		height: 100px;
+		top: 30px;
+		margin-left: -50px;
+	}
+	#gnb{
+		top: 150px;
+		margin-left: -100px;
+	}
+	#gnb li{
+		margin-bottom: 15px;
+	}
+	#gnb li a{
+		background: #333;
+		width: 200px;
+		box-sizing: border-box;
+		border-radius: 10px;
+		padding: 5px 20px;
+		color: #fff;
+		opacity: 0.5;
+		/*transform: scale(1);*/
+		/*transition: all 0.5s;*/
+	}
+	#gnb a:hover{
+		color: IndianRed;
+		opacity: 0.8;
+		transform: scale(1.5);
+		transition: all 0.2s;
+	}
+	.snsSet{
+		display: none;
+	}
+	nav{
+		display: none;
+	}
+	section{
+		position: fixed;
+		margin-left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	section article{
+		display: none;
+	}
+	section article:first-child{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	section article .bg1 span{
+		display: none;
 	}
 }
