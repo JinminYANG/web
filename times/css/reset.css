@@ -29,10 +29,84 @@ body{
 	height: 100%;
 	min-width: 1400px;
 	min-height: 780px;
-	background: url(../images/bg_morning.jpg) no-repeat;
+	background-image: url(../images/bg_morning.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
 	transition: all 2s;
 }
+#wrap.morning{
+	background-image: url(../images/bg_morning.jpg);
+}
+#wrap.morning figure{
+	background-image: url(../images/cellphone_morning.png);
+}
+
+
+#wrap.afternoon{
+	background-image: url(../images/bg_afternoon.jpg);
+}
+#wrap.afternoon figure{
+	background-image: url(../images/cellphone_afternoon.png);
+}
+
+
+#wrap.evening{
+	background-image: url(../images/bg_evening.jpg);
+}
+#wrap.evening h1{
+	background-image: url(../images/logo_2.png);
+}
+#wrap.evening #gnb li a{
+	color: #fff;
+}
+#wrap.evening #sns li i{
+	color: #fff;
+}
+#wrap.evening article p{
+	color: #fff;
+}
+#wrap.evening article p strong{
+	color: #fff;
+}
+#wrap.evening article em{
+	color: #aaa;
+}
+#wrap.evening figure{
+	background-image: url(../images/cellphone_evening.png);
+}
+#wrap.evening figure p{
+	color: #fff;
+}
+
+
+#wrap.night{
+	background-image: url(../images/bg_night.jpg);
+}
+#wrap.night h1{
+	background-image: url(../images/logo_2.png);
+}
+#wrap.night #gnb li a{
+	color: #fff;
+}
+#wrap.night #sns li i{
+	color: #fff;
+}
+#wrap.night article p{
+	color: #fff;
+}
+#wrap.night article p strong{
+	color: #fff;
+}
+#wrap.night article em{
+	color: #aaa;
+}
+#wrap.night figure{
+	background-image: url(../images/cellphone_night.png);
+}
+#wrap.night figure p{
+	color: #fff;
+}
+
 
 /*로고*/
 #wrap h1{
@@ -51,6 +125,7 @@ body{
 	position: fixed;
 	top: 50px;
 	right: 200px;
+	/*color: #fff;*/
 	/*width: 600px;*/
 	/*height: 50px;*/
 }
@@ -62,6 +137,7 @@ body{
 	margin-left: 0;
 }
 #gnb li a{
+	/*color: #fff;*/
 	font-size: 22px;
 	font-weight: bold;
 }
@@ -153,7 +229,7 @@ figure{
 	right: 0;
 	width: 1070px;
 	height: 680px;
-	background: url(../images/cellphone_morning.png) no-repeat center right;
+	background-image: url(../images/cellphone_morning.png);
 	background-size: cover;
 	transition: all 2s;
 	overflow: hidden;
@@ -223,7 +299,7 @@ figure p img.cl2{
 nav{
 	position: fixed;
 	bottom: 100px;
-	left: 130px;
+	left: 1%;
 	width: 100%;
 }
 nav ul{
@@ -232,16 +308,24 @@ nav ul{
 nav ul li{
 	float: left;
 	width: 20.5%;
-	margin-left: 10px;
+	margin-left: 3%;
+	opacity: 0.5;
+	background: #fff;
+}
+nav ul li.on{
+	background: #000;
+}
+nav ul li.on a{
+	color: #fff;
 }
 nav ul li a{
 	/*width: 450px;*/
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
-	background: #fff;
-	opacity: 0.5;
-	margin-left: 10px;
+	/*background: #fff;*/
+	/*opacity: 0.5;*/
+	/*margin-left: 10px;*/
 	padding-left: 20px;
 	display: block;
 	box-sizing: border-box;
