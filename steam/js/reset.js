@@ -12,8 +12,13 @@ $(document).ready(function(){
 
 	//메뉴 버튼 안에 리스트 클릭시
 	$('nav li').on("click", function(){
-		$('nav').fadeOut();
+		// $('nav').fadeOut();
+
 		$('.btnMenu').fadeIn();
-		// $(".box1").fadeIn();
+		$('section').removeClass('on');
+		$('nav').removeClass('on');
+		var i = $(this).index();
+		$('section>div').removeClass('on');
+		$('section>div').eq(i).addClass('on');
 	});
 });

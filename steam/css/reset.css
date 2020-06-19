@@ -155,18 +155,19 @@ section>div{
 }
 section>div.on{
 	z-index: 2;
+	/*perspective: 0px;*/
 	opacity: 1;
 }
 section>div>p{
 	box-sizing: border-box;
 	/*text-align: center;*/
 	overflow: hidden;
-	/*transform: rotateY(180deg);*/
+	transform: rotateY(180deg);
 	transition: all 1.5s;
 	margin: 0 auto;
 }
 section>div.on p{
-	transform: rotateY(0deg;);
+	transform: rotateY(0deg);
 }
 
 /*컨텐츠 폰트 설정*/
@@ -196,6 +197,7 @@ section>div>p>strong{
 /*box1 p:11개*/
 .box1>p{
 	/*display: none;*/
+	opacity: 1;
 	height: 25%;
 	width: 25%;
 	float: left;
@@ -265,7 +267,8 @@ section>div>p>strong{
 
 
 .box2>p{
-	display: none;
+	/*display: none;*/
+	opacity: 1;
 	height: 25%;
 	width: 25%;
 	float: left;
@@ -325,7 +328,8 @@ section>div>p>strong{
 
 
 .box3>p{
-	display: none;
+	/*display: none;*/
+	opacity: 1;
 	height: 25%;
 	width: 25%;
 	float: left;
