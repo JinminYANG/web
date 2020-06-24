@@ -1,0 +1,242 @@
+@charset 'utf-8';
+
+/*reset css*/
+*{
+	margin: 0;
+	padding: 0;
+}
+ol, ul{
+	list-style: none;
+}
+a{
+	outline: 0;
+	text-decoration: none;
+	color: #bbb;
+}
+img{
+	border: 0;
+}
+body{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #111;
+}
+
+.vid{
+	position: fixed;
+	top: -70px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.vid video{
+	width: 100%;
+	height: auto;
+}
+
+h1{
+	position: fixed;
+	z-index: 10;
+	top: 30px;
+	left: 30px;
+	width: 200px;
+	height: 150px;
+}
+h1 img{
+	width: 100%;
+	height: auto;
+}
+
+header{
+	position: fixed;
+	z-index: 5;
+	left: -280px;
+	width: 700px;
+	height: 100%;
+	background: #fff;
+	transform: skewX(-30deg);
+}
+#gnb{
+	position: absolute;
+	top: 150px;
+	left: 500px;
+	width: 200px;
+	background: red;
+}
+#gnb>li{
+	position: relative;
+	margin-bottom: 3px;
+}
+#gnb>li>a{
+	display: block;
+	color: #000;
+	font-weight: bold;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	background: #433;
+	font-size: 20px;
+	/*transform: skewX(40deg);*/
+	text-align: center;
+}
+#gnb>li>a>i{
+	transform: skewX(40deg);
+}
+#gnb>li>a>em{
+	/*transform: skewX(40deg);*/
+	font-style: normal;
+}
+
+/*2depth*/
+#gnb ul{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	transform: all 0.4s;
+}
+#gnb>li:hover ul{
+	opacity: 0.8;
+	left: 205px;
+
+}
+#gnb ul a{
+	display: block;
+	width: 300px;
+	height: 40px;
+	background: #222;
+	border-bottom: 1px solid #d9fb05;
+	font: bold 16px/2.5 arial;
+	color: #fff;
+	box-sizing: border-box;
+	padding-left: 50px;
+	margin-bottom: 3px;
+	transition: all 0.5;
+}
+#gnb ul a:hover{
+	background: #d9fb05;
+	color: #333;
+}
+#gnb>li.on ul{
+	opacity: 0.8;
+	left: 205px;
+	top: -10px;
+}
+#gnb>li.on ul a{
+	background: #444;
+	opacity: 0.7;
+}
+
+/*#gnb>li>ul{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 250px;
+	background: blue;
+}
+#gnb>li>ul:nth-child(1){
+	top: -10px;
+}
+#gnb>li>ul>li{
+	transform: skewX(40deg);
+}
+#gnb>li>ul>li>a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}*/
+
+
+
+#sns{
+	position: fixed;
+	z-index: 20;
+	top: 50px;
+	right: 50px;
+}
+#sns li{
+	float: left;
+	margin-left: 30px;
+}
+#sns li a{
+	display: block;
+	font-size: 30px;
+	transform: scale(1);
+	transition: all 0.5s;
+}
+#sns li a:hover{
+	transform: scale(1.5);
+	color: #fff;
+}
+
+.txtBox{
+	position: fixed;
+	z-index: 10;
+	top: 35%;
+	right: 50px;
+	text-align: center;
+}
+.txtBox .txt{
+	font-size: 70px;
+}
+.txtBox .txt b{
+	display: block;
+}
+.txtBox .tit{
+	font-size: 18px;
+}
+
+#side{
+	position: fixed;
+	z-index: 9;
+	bottom: 0;
+	right: -500px;
+	width: 700px;
+	height: 100%;
+	background: #fff;
+	transform: skewX(-30deg);
+	transition: all 1s;
+}
+#side:hover{
+	right: -270px;
+	z-index: 10;
+}
+#side:hover .con p{
+	opacity: 1;
+}
+#side .con{
+	width: 100%;
+	height: 100%;
+	background: #aaa;
+	text-align: left;
+}
+#side .con p{
+	position: absolute;
+	bottom: 50px;
+	left: 100px;
+	width: 250px;
+	height: 150px;
+	margin-top: 30px;
+	opacity: 0;
+	transition: all 0.5s;
+}
+#side .con p:nth-child(1){
+	top: 300px;
+}
+#side .con p:nth-child(2){
+	top: 500px;
+}
+#side .con p em{
+	transform: skewX(40deg);
+	color: green;
+	font-style: normal;
+	font-size: 20px;
+}
+#side .con p a img{
+	width: 100%;
+	height: 100%;
+}
