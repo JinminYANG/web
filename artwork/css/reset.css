@@ -15,6 +15,7 @@ body{
 	width: 100%;
 	background: #ddd;
 	font-family: 'Signika';
+	height: 4800px;
 }
 a{
 	text-decoration: none;
@@ -73,6 +74,9 @@ h1 img{
 #navi li a:hover{
 	color: #444;
 }
+#navi li.on a{
+	color: #444;
+}
 
 .txt{
 	position: fixed;
@@ -97,11 +101,14 @@ section{
 	position: fixed;
 	z-index: 5;
 	top: 25%;
-	left: -3050px;
+	/*left: -3050px;*/
+	left: 0;
 	width: 4800px;
 	height: 402px;
+	transition: all 1s;
 }
 section>article{
+	position: relative;
 	float: left;
 	width: 183px;
 	height: 402px;
@@ -113,23 +120,26 @@ section>article{
 	opacity: 0.6;
 	box-shadow: 5px 5px #b3b3b3;
 	transition: all 1s;
+	overflow: hidden;
 }
+
 section>article:hover{
 	opacity: 1;
 }
 section>article>h2{
 	position: absolute;
-	z-index: 6;
+	z-index: 9;
 	top: 75%;
 	text-align: left;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+
 }
 section>article>h2>a{
 	font-size: 18px;
-	width: 183px;
 	display: block;
-	height: 50px;
 	box-sizing: border-box;
-	line-height: 50px;
 	background: #333;
 	padding-left: 10px;
 }
@@ -140,18 +150,74 @@ section>article>strong>img{
 }
 section>article>p{
 	position: absolute;
-	top: 0px;
-	width: 500px;
-	height: 403px;
-	display: block;
+	/*z-index: -10;*/
+	top: 10%;
+	right: 0%;
+	width: 100%;
+	height: 120%;
+	margin-top: -50px;
+	text-align: center;
+	overflow: hidden;
+	opacity: 0;
+	/*display: none;*/
+	/*border: 1px solid red;*/
 }
 section>article>em{
-	opacity: 0;
+	position: absolute;
+	/*opacity: 0;*/
+	right: -1000px;
+	transition: all 1s;
 }
 section>article>span{
+	position: absolute;
+	/*opacity: 0;*/
+	right: -1000px;
+	transition: all 1s;
+}
+article.on{
+	width: 780px;
+	height: 500px;
+	margin-top: -50px;
+	/*opacity: 1;*/
+}
+article.on h2{
+	top: 100px;
+	height: 100px;
+	background : #111;
+	opacity: 0.9;
+}
+article.on h2 a{
+	font-style: 30px;
+	width: 100%;
+	height: 100%;
+	line-height: 100px;
+	color: #fff;
+}
+article.on strong{
 	opacity: 0;
 }
-
+article.on p{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+}
+article.on p img{
+	width: 100%;
+}
+article.on em{
+	background: #aaa;
+	right: 20px;
+	bottom: 20px;
+	/*opacity: 1;*/
+	padding: 10px;
+	z-index: 1;
+}
+article.on span{
+	right: 20px;
+	top: 110px;
+	/*opacity: 1;*/
+	z-index: 10;
+}
 
 .copyright{
 	position: fixed;
