@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/*reset;*/
+*{
+	margin:0;
+	padding:0;
+}
+ul,ol{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#555;
+	outline:0;
+}
+img{
+	vertical-align:top;
+	border:0;
+}
+
+body{
+	background:#000;
+	background-image:url("../images/bg.png");
+}
+
+header h1{
+	position: fixed;
+	top: 30px;
+	left: 50%;
+	width: 300px;
+	height: 150px;
+	margin-left: -150px;
+	z-index: 10;
+}
+header h1 a{
+	width: 100%;
+	height: 100%;
+}
+header h1 a img{
+	width: 100%;
+	height: 100%;
+}
+header #sns{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+}
+header #sns li{
+	float: left;
+	margin-left: 20px;
+}
+header #sns li a i{
+	font-size: 25px;
+	transform: scale(1);
+	transition: all 0.5s;
+}
+header #sns li a i:hover{
+	transform: scale(1.5);
+	color: #fff;
+}
+
+
+nav{
+	position: fixed;
+	top: 200px;
+	left: 0;
+	width: 100%;
+	height: 500px;
+	/*background: red;*/
+}
+nav>ul{
+	position: absolute;
+	top: 220px;
+	/*left: 300px;*/
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background: #444;
+	opacity: 0.9;
+	/*z-index: 10;*/
+}
+nav>ul>li{
+	position: relative;
+	z-index: 100;
+	float: left;
+	width: 200px;
+	height: 100%;
+	text-align: center;
+}
+nav>ul>li:first-child{
+	margin-left: 30%;
+}
+nav>ul>li>a{
+	color: #bbb;
+	width: 100%;
+	height: 100%;
+	display: block;
+	font-size: 16px;
+}
+nav>ul>li>a:hover{
+	color: #fff;
+}
+nav>ul>li>a:hover+div{
+	/*background: green;*/
+	opacity: 1;
+}
+nav>ul>li>div{
+	/*display: none;*/
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+	top: -170px;
+	/*left: 0px;*/
+	width: 100%;
+	height: 400px;
+	/*background: #453264;*/
+}
+nav>ul>li>div>h2{
+	text-align: center;
+	font-size: 14px;
+}
+nav>ul>li>div>p{
+	width: 80%;
+	height: 100px;
+	margin: 0 auto;
+}
+nav>ul>li>div>p>img{
+	width: 100%;
+	height: 100px;
+}
+nav>ul>li>div>ul{
+	margin-top: 60px;
+}
+nav>ul>li>div>ul>li{
+	/*background: green;*/
+}
+nav>ul>li>div>ul>li>a{
+	color: #ddd;
+}
+
+
+section{
+	position: relative;
+	z-index: -1;
+	top: 200px;
+	height: 500px;
+	/*background: green;*/
+}
+section img{
+	width: 100%;
+	height: 100%;
+}
+
+
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 30px;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+footer ul{
+	width: 40%;
+	height: 50px;
+	display: inline;
+}
+footer ul li{
+	float: left;
+	margin-right: 20px;
+}
+footer span{
+	float: right;
+	text-align: right;
+	width: 40%;
+	height: 100%;
+	color: #fff;
+	margin-right: 50px;
+}
