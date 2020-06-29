@@ -18,6 +18,9 @@ $(document).ready(function(){
 		var percent = Math.floor((posX/wid)*200);
 		// 200까지의 백분율 수치 저장
 
-		
+		$("section>img").hide();
+
+		$("section>img").eq(percent).show();
+		//현재 마우스의 위치에 해당하는 이미지 순서만 보임 처리
 	});
 });
