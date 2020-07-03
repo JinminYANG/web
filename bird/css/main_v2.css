@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.page-main{
+	position: relative;
+}
+.page-main>div{
+	padding: 50px 0 100px;
+}
+.page-main>div h2{
+	/*color: #fff;*/
+	text-align: center;
+	margin: 0 0 50px;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+}
+
+
+#images p{
+	position: relative;
+	width: 580px;
+	height: 380px;
+	margin: 0 auto 80px;
+}
+#images p img{
+	position: absolute;
+	top: 0;
+	width: 580px;
+	height: 380px;
+}
+#images p strong{
+	color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-size: 20px;
+	background: rgba(0,0,0,0.5);
+	width: 580px;
+	height: 70px;
+	line-height: 70px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	opacity: 0;
+}
+#images p:nth-child(2) strong{
+	left: -100%;
+}
+#images p:nth-child(3){
+	overflow: hidden;
+}
+#images p:nth-child(3) strong{
+	bottom: -70px;
+}
+#images p span{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 580px;
+	height: 380px;
+	box-shadow: 0px 10px 20px 20px #656565 inset;
+	opacity: 0;
+}
+

@@ -12,6 +12,16 @@ body{
 	background: red;
 	/*text-align: center;*/
 }
+/*.page-header h1{
+	width: 976px;
+	height: 80px;
+	margin: 0 auto;
+	padding-left: 10px;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 80px;
+	letter-spacing: 0.1em;
+}*/
 .page-main #images{
 	position: relative;
 	width: 35%;

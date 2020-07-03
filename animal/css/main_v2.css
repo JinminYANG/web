@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.page-main{
+	position: relative;
+}
+.page-main>div{
+	padding: 50px 0 100px;
+}
+.page-main>div h2{
+	/*color: #fff;*/
+	text-align: center;
+	margin: 0 0 50px;
+	font-weight: normal;
+	letter-spacing: 0.15em;
+}
+#buttons2{
+	background-color: #01b169;
+	height: 340px;
+}
+#buttons2 .inner{
+	position: relative;
+	width: 976px;
+	margin: 0 auto;
+}
+#buttons2 button{
+	display: block;
+	position: absolute;
+	width: 224px;
+	height: 224px;
+	overflow: hidden;
+	padding: 0 0 35px;
+	font-size:16px;
+	letter-spacing: 1px;
+	color: #01b169;
+	background-color: #fff;
+	border: none;
+	border-radius: 112px;
+}
+#buttons2 button:nth-child(1){
+	left: 10px;
+}
+#buttons2 button:nth-child(2){
+	/*top: 50px;*/
+	left: 254px;
+}
+#buttons2 button:nth-child(3){
+	/*top: 100px;*/
+	left: 500px;
+}
+#buttons2 button:nth-child(4){
+	/*top: 150px;*/
+	left: 750px;
+}
+#buttons2 button span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	/*bottom: 10px;*/
+}
+
+#buttons2 button img{
+	position: absolute;
+	left: 30px;
+	top: 40px;
+	width: 70%;
+	height: 70%;
+}
+#buttons2 button img:nth-child(2){
+	opacity: 0;
+}
