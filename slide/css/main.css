@@ -77,7 +77,7 @@
 	left: 0;
 	right: 0;
 	text-align: center;
-	background-color: red;
+	/*background-color: red;*/
 }
 .slideshow-indicator a{
 	display: inline-block;
@@ -85,7 +85,7 @@
 	height: 16px;
 	margin-left: 3px;
 	margin-right: 3px;
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 }
 .slideshow-indicator a.active{
 	cursor: default;

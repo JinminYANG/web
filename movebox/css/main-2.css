@@ -1,0 +1,80 @@
+@charset 'utf-8';
+
+#canvas{
+	
+}
+#merry{
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rint 10s infinite linear;
+	
+}
+
+.face{
+	float: left;
+	margin-right: 10px;
+}
+.face:nth-child(1) .cell{
+	transform: rotateY(0deg);
+	background: red;
+}
+.face:nth-child(2) .cell{
+	transform: rotateY(36deg) translateZ(-160px);
+	background: orange;
+}
+.face:nth-child(3) .cell{
+	transform: rotateY(72deg) translateZ(-160px);
+	background: yellow;
+}
+.face:nth-child(4) .cell{
+	transform: rotateY(108deg) translateZ(-160px);
+	background: green;
+}
+.face:nth-child(5) .cell{
+	transform: rotateY(144deg) translateZ(-160px);
+	background: blue;
+}
+.face:nth-child(6) .cell{
+	transform: rotateY(180deg) translateZ(-160px);
+	background: darkblue;
+}
+.face:nth-child(7) .cell{
+	transform: rotateY(216deg) translateZ(-160px);
+	background: purple;
+}
+.face:nth-child(8) .cell{
+	transform: rotateY(252deg) translateZ(-160px);
+	background: pink;
+}
+.face:nth-child(9) .cell{
+	transform: rotateY(288deg) translateZ(-160px);
+	background: gold;
+}
+.face:nth-child(10) .cell{
+	transform: rotateY(324deg) translateZ(-160px);
+	background: silver;
+}
+
+
+/*.item:nth-child(1){
+	transform: rotateY(0deg) translateZ(-200px);
+	background: red;
+}*/
+
+.cell{
+	/*position: absolute;*/
+	width: 150px;
+	height: 150px;
+	background: red;
+	margin-bottom: 10px;
+}
+
+
+@keyframes rint{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg) ;
+	}
+}
