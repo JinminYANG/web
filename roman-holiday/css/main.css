@@ -18,7 +18,7 @@ body{
 
 #body{
 	position: relative;
-	top: 150px;
+	top: 140px;
 	width: 1000px;
 	height: 600px;
 	/*line-height: 600px;*/
@@ -31,12 +31,13 @@ body{
 	width: 200px;
 	height: 50px;
 	top: -50px;
+	left: 50px;
 }
 #title h1{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	/*display: none;*/
+	display: none;
 }
 
 #container{
@@ -54,7 +55,7 @@ body{
 
 #container #main{
 	top: -30px;
-	display: none;
+	/*display: none;*/
 }
 #container #main img{
 	width: 100%;
@@ -78,13 +79,24 @@ body{
 	text-align: justify;
 	box-sizing: border-box;
 	padding: 30px;
+	/*display: block;*/
+	background: url(../images/effect.png) center center no-repeat;
+	background-size: cover;
+	/*background: red;*/
+}
+#container #information .description p{
+	/*background: url(../images/effect.png);*/
 }
 
 
 #container #character{
-	/*display: none;*/
+	display: none;
 }
 
+#container #character a{
+	text-indent: -9999px;
+	overflow: hidden;
+}
 #container #character a:first-child{
 	position: absolute;
 	top: 50%;
@@ -113,40 +125,55 @@ body{
 	height: 100%;
 	box-sizing: border-box;
 	padding: 30px 50px 60px 50px;
+	background: url(../images/effect.png) right center no-repeat;
+	background-size: contain;
 }
 #container #character article h1{
 	font-size: 25px;
+	margin-left: 20px;
 }
 #container #character article img:nth-child(2){
 	position: absolute;
-	top: 0px;
-	left: 200px;
+	top: 20px;
+	left: 250px;
 	width: 200px;
 	height: auto;
 }
 #container #character article img:nth-child(3){
 	position: absolute;
-	left: 50px;
-	top: 100px;
-	width: 250px;
-	height: auto;
+	left: 70px;
+	top: 120px;
+	width: 300px;
+	height: 400px;
 	border-radius: 10px;
 	box-shadow: 3px 3px 5px;
 }
 #container #character article p{
 	position: absolute;
-	left: 35%;
-	top: 100px;
-	width: 600px;
+	left: 40%;
+	top: 120px;
+	width: 550px;
 }
+
+
+
 #multimedia{
 	display: none;
+	width: 100%;
+	height: 100%;
 }
+#multimedia iframe{
+	width: 100%;
+	height: 100%;
+}
+
+
+
 
 
 #main_navigation{
 	position: absolute;
-	top: 570px;
+	top: 600px;
 	left: 0;
 	width: 1000px;
 	height: 70px;
@@ -166,14 +193,19 @@ body{
 	width: 100%;
 	height: 100%;
 	background: url(../images/nav.png) top;
+	text-indent: -9999px;
+	overflow: hidden;
 }
 #main_navigation li:nth-child(2) a{
-	background: url(../images/nav.png) center 29%;
+	background: url(../images/nav.png);
+	background-position: 0 -140px;
 }
 #main_navigation li:nth-child(3) a{
-	background: url(../images/nav.png) center 57%;
+	background: url(../images/nav.png);
+	background-position: 0 -280px;
 }
 #main_navigation li:nth-child(4) a{
-	background: url(../images/nav.png) center 86%;
+	background: url(../images/nav.png);
+	background-position: 0 -420px;
 }
 
