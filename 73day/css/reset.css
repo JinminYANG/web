@@ -1,0 +1,243 @@
+@charset "utf-8"
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,pre,a,button,abbr,address,code,em,img,strong,sub,ul,li,fieldset,form,label,legend,table,caption,tbody,tr,th,hr{
+	margin: 0; padding: 0; font-size: 100%;
+	box-sizing: border-box;
+ 	}
+body{
+	height: 100%;
+	min-height: 100%;
+	font-size: 16px;
+	color: #737373;
+	line-height: 1.5;
+	background: url(../images/bg4.jpg) repeat;
+}
+h1,h2{
+	font-weight: normal;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	border: 0 none;
+	vertical-align: top;
+}
+address{
+	font-style: normal;
+}
+header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption{
+	display: block;
+	box-sizing: border-box;
+}
+a{
+	color: #919090;
+	text-decoration: none;
+}
+a:link, a:visited{
+	text-decoration: none;
+}
+a:her{
+	text-decoration: none;
+}
+html,body{
+	overflow: hidden;
+	height: 100%;
+}
+
+/*layout*/
+#wrap{
+	width: 100%;
+	height: 100%;
+	padding-right: 180px;
+}
+#wrap>h1{
+	font-size: 0;
+}
+header .logo_box{
+	position: absolute;
+	right: 35px;
+	top: 75px;
+	cursor: pointer;
+}
+header .logo_box img{
+	width: 100px;
+}
+#wrap header{
+	width: 180px;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: #000;
+	z-index: 11;
+}
+#wrap header nav{
+	width: 100%;
+	height: 100%;
+}
+#wrap header nav ul{
+	width: 100%;
+	height: 100%;
+	padding-top: 350px;
+	padding-left: 0;
+
+}
+#wrap header nav ul li{
+	margin: 0px 0px 10px 30px;
+	padding-left: 15px;
+	position: relative;
+}
+#wrap header nav ul li a{
+	font-size: 16px;
+	color: #fff;
+	font-weight: 600;
+	line-height: 30px;
+}
+#wrap header nav ul li:after{
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	left: 0px;
+	top: 13px;
+}
+#wrap header nav ul li:hover a,#wrap header nav ul li.on a{
+	color: #ed3140;
+}
+#wrap header nav ul li:hover:after,#wrap header nav ul li.on:after{
+	background: #ed3140;
+}
+footer{
+	width: 180px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	padding: 0px 20px 30px 20px;
+	font-size: 11px;
+	color: #7e7e7e;
+	z-index: 12;
+}
+footer address{
+	padding: 0px 0px 15px 0px;
+}
+footer>a{
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: -31px;
+	transition: 0.4s;
+}
+footer>a.instagram{
+	right: 18px;
+}
+footer>a.instagram:hover i{
+	 color: red;
+}
+footer>a.twitter{
+	right: 48px;
+}
+footer>a.twitter:hover i{
+	 color: red;
+}footer>a.facebook{
+	right: 80px;
+}
+footer>a.facebook:hover i{
+	 color: red;
+}
+#container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+#container .content{
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	transition: all 0.5s;
+}
+/*페이지 이동효과*/
+/*#container .content.this{
+	width: 100%;
+	left: 0 !important;
+}
+#container .content.prev{
+	width: 100%;
+	left: -100% !important;
+}
+#container .content.next{
+	width: 100%;
+	left: 100% !important;
+}*/
+
+
+
+
+#container #menu1{
+	left: 0%;
+	background: url(../images/bg1.jpg)repeat;
+}
+#container #menu2{
+	left: 25%;
+	background: url(../images/bg2.jpg)repeat;
+}
+#container #menu3{
+	left: 50%;
+	background: url(../images/bg3.jpg)repeat;
+}
+#container #menu4{
+	left: 75%;
+	background: url(../images/bg4.jpg)repeat;
+}
+
+/*가상요소 활용하기*/
+#container .content:before,#container .content:after{
+	content: "";
+	display: block;
+	position: absolute;
+}
+#container .content:before{
+	width: 1px;
+	height: 100%;
+	background: #000;
+	left: 0;
+	top: 0;
+	z-index: 4;
+}
+#container .content:after{
+	left: 30px;
+	top: 180px;
+	font-size: 25px;
+	font-weight: 700;
+	color: #ed3140;
+}
+#container #menu1:after{
+	content: "회사소개";
+}
+#container #menu2:after{
+	content: "도서소개";
+}
+#container #menu3:after{
+	content: "FAQ";
+}
+#container #menu4:after{
+	content: "Contact Us";
+}
+#container .content .conbox:before{
+	content: "";
+	display: block;
+	position: absolute;
+}
+#container #menu1 .conbox:before{
+	background: url(../images/c1.png)no-repeat;
+	width: 350px;
+	height: 260px;
+	right: -10px;
+	top: 130px;
+	background-size: 100%;
+}
