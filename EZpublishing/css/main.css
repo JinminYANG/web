@@ -275,3 +275,50 @@ footer>a.instar>i:hover{color: #ed3140;}
 	width: 100px;
 	height: auto;
 }
+
+#menu3 .content_wrap{
+
+}
+#menu3 .content_wrap .tit_faq{
+	color: #fff;
+	display: block;
+}
+#menu3 .content_wrap .tit_faq strong{
+	font-size: 20px;
+}
+#menu3 .content_wrap .accordio_box{
+	background: url(../images/faq_01.png);
+	background-size: 150px;
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding-top: 150px;
+}
+#menu3 .content_wrap .accordio_box li{
+	width: 100%;
+	border-top: 3px solid red;
+}
+#menu3 .content_wrap .accordio_box li h4{
+	color: #000;
+	background-color: #fff;
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+#menu3 .content_wrap .accordio_box li p{
+	display: none;
+}
+#menu3 .content_wrap .accordio_box li.on p{
+	display: block;
+	background-color: #999;
+	height: 150px;
+	padding-top: 30px;
+	box-sizing: border-box;
+	padding-left: 150px;
+	background-image: url(../images/faq_02.png);
+	background-size: 150px;
+	background-repeat: no-repeat;
+	background-position: center left;
+
+}

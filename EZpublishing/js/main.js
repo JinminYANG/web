@@ -28,4 +28,10 @@ $(document).ready(function(){
 	$(".roll_right").on("click", function(){
 		$(".book_roll li:last-child").insertBefore(".book_roll li:first-child");
 	});
+
+	// faq 게시판
+	$(".accordio_box ol li").on("click", function(){
+		$(".accordio_box ol li").removeClass("on");
+		$(this).addClass("on");
+	});
 });
