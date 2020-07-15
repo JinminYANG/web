@@ -3,37 +3,56 @@ $(document).ready(function(){
 
 	// var h_width = $('header').width();
 
+	$('header > .header-inner > .right_nav > .gnb > .cf > .hover a').on("mouseover", function(e){
+		$('header').addClass('on');
+		$('.hover ul').addClass('on');
+	});
+
+	$('header > .header-inner > .right_nav > .gnb > .cf > .hover a').on("mouseleave", function(e){
+		$('header').removeClass('on');
+		$('.hover ul').removeClass('on');	
+	});
+
+	// $('.gnb > li > a').on("mouseover", function(e){
+	// 	e.preventDefault();
+	// 	alert('hi');
+	// 	$(this).siblings().addClass("on");
+	// });
+
+
+
+
 	// 헤더 네비게이션
-	$('#header .nav1 ul li a').on("mouseover", function(e){
-		e.preventDefault();
-		$('#header .nav1>ul>li>a').css({'border-bottom':'3px solid red'});
-		$("#header").stop().css({
-			'background-color':'rgba(0,0,0,0.7)',
-			'height': '300px'
-		});
-		$(this).siblings('.nav_sub').slideDown();
-		$('.nav_sub').stop().slideDown();
-		$('.nav_sub').css({
-			'visibility':'visible',
-			'display':'block'
-		});
-		$('.nav_sub>ul>li>a').css({
-			'border-bottom':'none'
-		});
-	});
-	$('#header .nav1 ul li a').on("mouseout", function(){
-		$(this).css({'border-bottom':'none'});
-		$("#header").stop().css({
-			'background':'none',
-			'height': '100px'
-		});
-		$(this).siblings('.nav_sub').slideDown();
-		$('.nav_sub').stop().slideUp();
-		$('.nav_sub').css({
-			'display':'none',
-			'visibility':'hidden'
-		});
-	});
+	// $('#header .nav1 ul li a').on("mouseover", function(e){
+	// 	e.preventDefault();
+	// 	$('#header .nav1>ul>li>a').css({'border-bottom':'3px solid red'});
+	// 	$("#header").stop().css({
+	// 		'background-color':'rgba(0,0,0,0.7)',
+	// 		'height': '300px'
+	// 	});
+	// 	$(this).siblings('.nav_sub').slideDown();
+	// 	$('.nav_sub').stop().slideDown();
+	// 	$('.nav_sub').css({
+	// 		'visibility':'visible',
+	// 		'display':'block'
+	// 	});
+	// 	$('.nav_sub>ul>li>a').css({
+	// 		'border-bottom':'none'
+	// 	});
+	// });
+	// $('#header .nav1 ul li a').on("mouseout", function(){
+	// 	$(this).css({'border-bottom':'none'});
+	// 	$("#header").stop().css({
+	// 		'background':'none',
+	// 		'height': '100px'
+	// 	});
+	// 	$(this).siblings('.nav_sub').slideDown();
+	// 	$('.nav_sub').stop().slideUp();
+	// 	$('.nav_sub').css({
+	// 		'display':'none',
+	// 		'visibility':'hidden'
+	// 	});
+	// });
 
 
 
