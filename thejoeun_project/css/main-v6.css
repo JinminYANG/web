@@ -64,19 +64,45 @@ body{
 
 header{
     position: absolute;
-    left: 0; top: 0;
+    left: 0; 
+    top: 0;
     width: 100%;
-    /*height: 100px;*/ /*** 이거있으면 ul 안나옴 ㅡㅡ ***/
+    height: 80px;
+    overflow: hidden;
+    /*background-color: #ccc;*/
     z-index: 50;
+    transition: all 0.5s;
 }
+/*header:hover{
+	height: 300px;
+	width: 80%;
+	animation: ani 0.5s;
+}*/
 header.on{
 	height: 300px;
 	background: rgba(0,0,0,0.7);
 }
+
 #header .header-inner{
 	width: 1260px;
 	/*height: 100%;*/
 	margin: 0 auto;
+	/*background: rgba(0,0,0,0.7);*/
+	transition: all 0.5s;
+	animation: ani 0.5s;
+}
+/*#header .header-inner:hover{
+	background: rgba(0,0,0,0.7);
+	height: 300px;
+}*/
+
+@keyframes ani{
+	0%{
+		height: 80px;
+	}
+	100%{
+		height: 300px;
+	}
 }
 #header #logo{
 	width: 15%;
@@ -115,36 +141,27 @@ header.on{
 
 .gnb{
 	float: left;
-	width: 60%;
-	/*height: 100px;*/ /****이거 있으면 자식의 ul이 안나옴***/
-	margin-left: 5%;
 	text-align: center;
 }
 .gnb .cf{
-	/*display: inline-block;*/
-	/*width: 100%;*/
-	/*height: 100%;*/
-    /*margin-top: 4px;*/
 
 }
-.gnb .hover{
-    float: left;
-    /*width: 20%;*/
-    /*height: 100%;*/
-    /*padding: 0 25px;*/
-    text-align: center;
+.gnb> .cf > .hover{
     display: inline-block;
+    position: relative;
 }
-.gnb .hover > a{
+.gnb > .cf > .hover > a{
     display: block;
-    color: #fff;
-    box-sizing: border-box;
-    /*padding: 20% 0;*/
     padding: 0 30px;
-    line-height: 90px;
-    /*height: 90px;*/
-    /*height: 100%;*/
-    /*line-height: 2;*/
+    line-height: 80px;
+}
+.gnb .cf ul{
+	position: absolute;
+	width: 100%;
+}
+.gnb .cf ul a{
+	display: block;
+	line-height: 20px;
 }
 .gnb .hover > a span{
     position:relative;
@@ -166,20 +183,6 @@ header.on{
 	width: 100%;
 }
 
-.gnb .hover > ul{
-    /*display: block;*/
-    /*height: 200px;*/
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s;
-}
-.gnb .hover > ul.on{
-	display: block;
-	height: 200px;
-	visibility: visible;
-	opacity: 1;
-}
 .gnb .hover > ul li{
 	margin-top: 10px;
 }
@@ -190,6 +193,7 @@ header.on{
 .gnb .hover > ul li a:focus{
 	color:#c12f30;
 }
+
 
 #header .search{
 	float: right;
