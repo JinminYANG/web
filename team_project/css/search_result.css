@@ -89,22 +89,22 @@ main .main__content{
     width: 100%;
     height: auto;
 }
-.show_list .show_list_title{
+.inner_title{
     width: 100%;
     margin: 30px;
 }
-.show_list .show_list_title h3{
+.inner_title h3{
     font-size: 20px;
     float: left;
 }
-.show_list .show_list_title>span{
+.inner_title>span{
     float: right;
     margin-right: 50px;
 }
-.show_list .show_list_title>span>strong{
+.inner_title>span>strong{
     color: red;
 }
-.show_list .show_list_title:after{
+.inner_title:after{
     display: block;
     content: "";
     clear: both;
@@ -123,7 +123,7 @@ main .main__content{
     float: left;
     box-sizing: border-box;
     margin-right: 1%;
-    /*border: 1px solid red;*/
+    border: 1px solid #000;
 }
 .show_list_img>ul>li:last-child{
     margin-right: 0%;
@@ -155,9 +155,9 @@ main .main__content{
     line-height: 4;
 }
 
-.show_list .view_more{
+.view_more{
     float: right;
-    margin: 20px 0 20px 0;
+    margin: 30px 0 30px 0;
 }
 
 .show_list:after{
@@ -166,4 +166,83 @@ main .main__content{
     clear: both;  
     border-bottom: 1px solid #444;
     width: 100%;
+}
+
+.notice{
+    width: 100%;
+    height: auto;
+}
+.notice_list{
+    width: 100%;
+    border: 1px solid #777;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.notice_list ul{
+    display: inline-block;
+    width: 100%;
+}
+.notice_list ul li{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid #aaa;
+}
+.notice_list ul li>a>span{
+    float: left;
+}
+.notice_list ul li>span{
+    float: right;
+}
+.notice_list ul li:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.notice:after{
+    display: block;
+    content: "";
+    clear: both;  
+    border-bottom: 1px solid #444;
+    width: 100%;
+}
+
+
+.faq{
+    width: 100%;
+    height: auto;
+}
+.faq_list{
+    width: 100%;
+    border: 1px solid #777;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.faq_list ul{
+    display: inline-block;
+    width: 100%;
+}
+.faq_list ul li{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid #aaa;
+}
+.faq_list ul li>a>span{
+    float: left;
+}
+.faq_list ul li>span{
+    float: right;
+}
+.faq_list ul li:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.faq:after{
+    display: block;
+    content: "";
+    clear: both;
 }
