@@ -1,0 +1,359 @@
+@charset 'utf-8';
+
+@import url(reset.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(topBtn.css);
+
+.mainVisual{
+    position: relative;
+    width: 100%;
+    height: 937px;
+    overflow: hidden;
+    /*top: -10px;*/
+    top: 0px;
+}
+.mainVisual .visualView{
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 937px;
+    /*z-index: 2;*/
+
+}
+.mainVisual .visualView > div{
+    position: absolute;
+    top: 0;
+    transition: all 0.5s;
+    height:100%;
+}
+.mainVisual .visualView > .bg1{
+    background: url(../img/main/img_main_visual1.jpg) no-repeat center bottom;
+
+    width: 20%;
+    height: 937px;
+    left: 0%;
+}
+.mainVisual .visualView > .bg2{
+    background: url(../img/main/img_main_visual2.jpg) no-repeat center bottom;
+
+    width: 20%;
+    height: 937px;
+    left: 20%;
+}
+.mainVisual .visualView > .bg3{
+    background: url(../img/main/img_main_visual3.jpg) no-repeat center bottom;
+    width: 20%;
+    height: 937px;
+    left: 40%;
+}
+.mainVisual .visualView > .bg4{
+    background: url(../img/main/img_main_visual4.jpg) no-repeat center bottom;
+    width: 20%;
+    height: 937px;
+    left: 60%;
+}
+.mainVisual .visualView > .bg5{
+    background: url(../img/main/img_main_visual5.jpg) no-repeat center bottom;
+    width: 20%;
+    height: 937px;
+    left: 80%;
+}
+.mainVisual .visualView > div.show{
+    width: 100%;
+}
+
+.mainVisual .visual {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 937px;
+}
+.mainVisual .visual > div {
+/*    display: table-cell;*/
+    float: left;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.mainVisual .visual > div:last-child{border-right: none;}
+.mainVisual .textView {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #7c6c5d;
+    height: 35%;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: all 0.5s;
+}
+.mainVisual .textView.on{
+    display: block;
+}
+.mainVisual .textView h4{
+    position: absolute;
+    top: 10%;
+    font-size: 18px;
+    font-weight: normal;
+}
+.mainVisual .textView h2{
+    position: absolute;
+    top: 20%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.mainVisual .textView p:nth-of-type(1){
+    position: absolute;
+    top: 35%;
+    font-size: 15px;
+}
+.mainVisual .textView p:nth-of-type(2){
+    position: absolute;
+    top: 45%;
+    font-size: 15px;
+}
+.mainVisual .textView p:nth-of-type(3){
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    font-size: 20px;
+}
+.mainVisual .textView p:nth-of-type(4){
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 20px;
+}
+.mainVisual .textView p a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.mainVisual .visual > div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+main .icons{padding: 50px 0;}
+.icons ul li{
+    float: left;
+    width: 14.2857%;
+}
+.icons li a{
+    display: block;
+    height: 100%;
+    padding: 20px 0;
+    text-align: center;
+    transition: all 0.5s;
+}
+.icons ul li i{display: block;margin-bottom: 10px;}
+
+.icons li a:hover{color: #78c0ff;}
+
+.showInfo{
+    padding: 50px 0;
+    text-align: center;
+}
+.showInfo .showInfo__tit{
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+.showInfo > p{
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.showInfo__slide{position: relative;}
+.showInfo__slide .slide__btns{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 45px;
+    transform: translate(-50%,-50%);
+}
+.slide__btns > a{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide__btns .btns__rightBtn{
+    left: auto; right: 0;
+}
+
+.showInfo__slide .slide__show{
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.showInfo__slide .show__showList{
+    width: 2400px;
+}
+.show__showList .showList__cont{
+    position: relative;
+    float: left;
+    width: 212px;
+    height: 400px;
+    margin-right: 10px;
+    background: url(../img/b1.jpg) no-repeat center;
+    background-size: cover;
+}
+.show__showList .showList__cont:last-child{margin-right: 0;}
+
+.showList__cont .cont__wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.showList__cont .cont__wrap:hover{opacity: 1}
+.cont__wrap .wrap__inner{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.wrap__inner h3{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.wrap__inner p{
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.wrap__inner > a{
+    display: inline-block;
+    margin-right: 8px;
+    padding: 5px 10px;
+    background: #cb1111;
+    border-radius: 5px;
+}
+.wrap__inner > a:nth-last-of-type(2){margin-right: 0;}
+
+.news article{
+    float: left;
+    width: 50%;
+    height: 467.98px;
+    padding: 50px 10px;
+    box-sizing: border-box;
+}
+.news article > div{float: left; height: 100%;}
+.news .text{
+    position: relative;
+    width: 30%;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+.news .text span{
+    position: relative;
+    display: inline-block;
+    margin: 10px 0 20px;
+}
+.news .text span:after{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #4d4d4d;
+}
+.news .text h2{margin-bottom: 15px; font-size: 20px;}
+.news .text p{font-size: 13px; word-break: keep-all;}
+
+.notice__more, .event__btns{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+.news .cont{
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.news .cont table{display: none;}
+/*
+.news .cont table{
+    width: 100%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.news .cont tr{
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.news .cont td{height: 40px; line-height: 40px;}
+.news .cont td:nth-of-type(1){
+    width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.news .cont td:nth-of-type(2){width: 30%; text-align: center;}
+*/
+
+
+
+
+
+
+
+.news__event .cont{overflow: hidden;}
+.news__event .cont ul{width:1011.3332px }
+.news__event .cont li{
+    float: left;
+    width: 245.3333px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.news__event .cont li:last-child{margin-right: 0;}
+.news__event .cont li img{transition: all 0.5s;}
+.news__event .cont li:hover img{transform: scale(1.2)}
