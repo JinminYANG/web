@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>TheJoeun_Project</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/join.css">
-	<script src="js/join.js"></script>
+	<link rel="stylesheet" href="css/search_result.css">
+	<!-- <script src="js/join.js"></script> -->
 
 </head>
 <body>
@@ -81,7 +81,7 @@
 		</header>
 
 		<div class="sub__tit">
-			<h2>충무아트센터 회원가입</h2>
+			<h2>"<span></span>" 검색 결과</h2>
 		</div>
 		<div class="sub__container cf">
 			<main id="main">
@@ -94,96 +94,83 @@
 				</div>
 				<div class="main__content">
 					<div class="content__innerConts">
-						<h3 class="innerConts__tit">충무아트센터</h3>
-						<p>회원가입을 통해 충무아트센터의 멤버십혜택을 누려보세요.</p>
+						<h3 class="innerConts__tit"></h3>
+						<!-- <p></p> -->
 						<div class="innerConts__cont">
-							<form class="join_form" method="post" action="" name="join_form">
-								<fieldset>
-									<legend></legend>
-									<div class="form_list">
-										<span class="star">*필수기입항목</span>
-										<ul>
-											<li>
-												<label for="id"><span>*</span>아이디:</label> 
-												<input type="text" name="id" id="id" placeholder="6자 이상의 영문과 숫자를 조합해 주세요" required="">
-												<button><a href="#"><span>중복확인</span></a></button>
-											</li>
-											<li>
-												<label for="pw"><span>*</span>비밀번호:</label> 
-												<input type="password" name="pw" id="pw" placeholder="8자 이상의 영문과 숫자를 조합해 주세요" required="">
-											</li>
-											<li>
-												<label for="pw2"><span>*</span>비밀번호확인:</label> 
-												<input type="password" name="pw2" id="pw2" placeholder="비밀번호를 다시 한 번 입력해주세요" required="">
-											</li>
-											<li>
-												<label for="name"><span>*</span>이름:</label> 
-												<input type="text" name="name" id="name" placeholder="이름을 입력해 주세요" required="">
-											</li>
-											<li>
-												<label for="sex"><span>*</span>성별:</label>
-												<div class="sex">
-													<input type="radio" name="sex" id="sex_man"><label for="sex_man">남성</label>
-													<input type="radio" name="sex" id="sex_women"><label for="sex_three">여성</label>
-													<input type="radio" name="sex" id="sex_three"><label for="sex_three">제 3의성</label>
-													<input type="radio" name="sex" id="sex_none"><label for="sex_none">기재원치않음</label>
-												</div>
-											</li>
-											<li>
-												<label for="datepicker"><span>*</span>생년월일:</label> 
-												<input type="text" class="datepicker" placeholder="년도 / 월 / 일을 입력해주세요 (ex: 19920510)">
-												<!-- 다시 작업 필요 -->
-											</li>
-											<li>
-												<label for="tel"><span>*</span>연락처:</label> 
-												<input type="tel" name="tel" id="tel" placeholder="숫자만 입력해주세요" required="">
-											</li>
-											<li>
-												<label for="address"><span>*</span>주소:</label> 
-												<input type="address" name="address" id="address" placeholder="" required="">
-												<button onclick="execDaumPostcode()"><a href="#"><span>우편번호 찾기</a></span></button>
-											</li>
-											<li>
-												<label for="address2"><span>*</span>상세주소:</label> 
-												<input type="address" name="address2" id="address2" placeholder="" required="">
-											</li>
-											<li>
-												<label for="email"><span>*</span>이메일:</label> 
-												<div class="email_area">
-													<input type="text" name="email1" id="email1" required="">
-													<span>@</span>
-												</div>
-												<div class="email_select">
-													<select>
-														<option value="">직접입력</option>
-														<option value="">naver.com</option>
-														<option value="">hanmail.com</option>
-														<option value="">google.com</option>
-													</select>
-												</div>
-												<button><a href="#"><span>인증번호 발송</a></span></button>
-											</li>
-											<li>
-												<label for="email_conf"><span>*</span>이메일 인증 확인:</label> 
-												<input type="text" name="email_conf" id="email_conf" placeholder="인증번호를 입력하신 후 확인을 눌러주세요" required="">
-												<button><a href="#"><span>인증번호 확인</a></span></button>
-											</li>
-											<li>
-												<input type="checkbox" name="chk1" id="chk1">
-												<label for="chk1">충무아트센터에서 제공하는 정보를 메일로 받아보시겠습니까? (선택)</label>
-											</li>
-											<li>
-												<input type="checkbox" name="chk2" id="chk2">
-												<label for="chk2">충무아트센터에서 제공하는 정보를 SMS로 받아보시겠습니까? (선택)</label>
-											</li>
-										</ul>
-										<div class="btn_yn">
-											<button><a href="#"><span>확인</span></a></button>
-											<button><a href="#"><span>취소</span></a></button>
-										</div>
-									</div>
-								</fieldset>
+							<form class="result_search" action="action_page.php">
+								<i class="fa fa-search"></i>
+								<input type="search" name="search" class="t_box" placeholder=" 검색어를 입력해주세요">
+								<button type="submit" class="submit"><a href="#">검색</a></button>
 							</form>
+
+							<div class="show_list">
+								<div class="show_list_title">
+									<h3>공연 / 전시 / 행사</h3>
+									<span>총 <strong>5</strong>건</span>
+								</div>
+								<div class="show_list_img">
+									<ul>
+										<li>
+											<div class="img_wrap">
+												<a href="#"><img src="img/b1.jpg" alt="img_1"></a>
+											</div>
+											<div class="img_des">
+												<h4>공연이름(최대 두줄)</h4>
+												<h4>공연이름(최대 두줄)</h4>
+												<span>20.07.05~20.07.30</span>
+												<span>뮤지컬</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_wrap">
+												<a href="#"><img src="img/b1.jpg" alt="img_2"></a>
+											</div>
+											<div class="img_des">
+												<h4>공연이름(최대 두줄)</h4>
+												<h4>공연이름(최대 두줄)</h4>
+												<span>20.07.05~20.07.30</span>
+												<span>뮤지컬</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_wrap">
+												<a href="#"><img src="img/b1.jpg" alt="img_3"></a>
+											</div>
+											<div class="img_des">
+												<h4>공연이름(최대 두줄)</h4>
+												<h4>공연이름(최대 두줄)</h4>
+												<span>20.07.05~20.07.30</span>
+												<span>뮤지컬</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_wrap">
+												<a href="#"><img src="img/b1.jpg" alt="img_4"></a>
+											</div>
+											<div class="img_des">
+												<h4>공연이름(최대 두줄)</h4>
+												<h4>공연이름(최대 두줄)</h4>
+												<span>20.07.05~20.07.30</span>
+												<span>뮤지컬</span>
+											</div>
+										</li>
+										<li>
+											<div class="img_wrap">
+												<a href="#"><img src="img/b1.jpg" alt="img_5"></a>
+											</div>
+											<div class="img_des">
+												<h4>공연이름(최대 두줄)</h4>
+												<h4>공연이름(최대 두줄)</h4>
+												<span>20.07.05~20.07.30</span>
+												<span>뮤지컬</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="view_more">
+									<span><a href="#"><i class="fas fa-plus"></i> 더보기</a></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</main>
