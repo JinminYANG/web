@@ -1,0 +1,67 @@
+@charset 'utf-8';
+
+footer{
+    padding: 50px 0; 
+    background:url("../img/footer.jpg");
+    color:#eee;
+}
+
+.footerinner{
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.footerinner .footerinner__top{margin-bottom: 20px;}
+.footerinner__top h2{float: left;}
+.footerinner__top .top__links{float: right;}
+
+.top__links .links__sns{
+    margin-bottom: 20px;
+    text-align: right;
+}
+.links__sns a{
+    display: inline-block;
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+.links__sns a:hover{color: #61b0ff}
+
+.top__links .links__list li{
+    float: left;
+    margin-left: 20px;
+}
+.links__list li a{display: block;}
+
+.links__list select{
+    height: 22px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+.footerinner__bottom .bottom__left{float: left;}
+.bottom__left address{margin-bottom: 30px;}
+
+.footerinner__bottom .bottom__right{float: right; text-align: right}
+.bottom__right > a{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.links__list li:nth-child(6){
+    width:200px;
+    border:1px solid #eee;   
+}
+.links__list li:nth-child(6) select{
+    width:200px;
+    padding-left:10px;
+    appearance:none;
+    color:#eee;
+
+}
+
+.links__list li:nth-child(6) select option{
+    color:#999;
+}
