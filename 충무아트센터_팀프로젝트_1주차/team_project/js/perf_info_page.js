@@ -4,19 +4,24 @@ $(document).ready(function(){
 	var totalData = $('.perf_view>ul>li').length;
 	 // 총 데이터 수
 	// console.log("totalData : " + totalData);
-	var dataPerPage = 8;    // 한 페이지에 나타낼 데이터 수
-	var pageCount = Math.ceil(totalData/dataPerPage);        // 한 화면에 나타낼 페이지 수
+	var dataPerPage = 8;    
+	// 한 페이지에 나타낼 데이터 수
+	var pageCount = Math.ceil(totalData/dataPerPage);       
+	// 한 화면에 나타낼 페이지 수
 
+	var firstPageNum = 1; // 첫 페이지 num
+	var lastPageNum	 = Math.floor(totalData/dataPerPage) + 1;
+	// 마지막 페이지 num
 
-	//리스트 초기 설정
+	//리스트 초기 설정 (8개만 나오게)
 	$('.perf_view>ul>li').stop().hide();
-	for(var k=0; k<8; k++){
+	for(var k=0; k<dataPerPage; k++){
 		$('.perf_view>ul>li').stop().eq(k).show();
 	}
 
 	function paging(totalData, dataPerPage, pageCount, currentPage){
 
-		console.log("currentPage : " + currentPage);
+	console.log("currentPage : " + currentPage); // 현재 페이지
 
     var totalPage = Math.ceil(totalData/dataPerPage);    // 총 페이지 수
     console.log("totalPage : " + totalPage);
@@ -25,11 +30,12 @@ $(document).ready(function(){
     console.log("pageGroup : " + pageGroup);
 
     var last = pageGroup * pageCount;    // 화면에 보여질 마지막 페이지 번호
-    if(last > totalPage)
+    if(last > totalPage){
     	last = totalPage;
+    }
     var first = last - (pageCount-1);    // 화면에 보여질 첫번째 페이지 번호
-    var next = last+1;
-    var prev = first-1;
+    var next = last; // '>' 말고 '>>' 으로 구현
+    var prev = first; // '<' 말고 '<<' 으로 구현
 
     console.log("last : " + last);
     console.log("first : " + first);
@@ -40,18 +46,26 @@ $(document).ready(function(){
 
     var html = "";
 
-    if(prev >= 0)
-    	html += "<a href='#' id="+prev+ "> < </a>";
+    if(prev >= 0){
+    	html += "<a href='#' id="+prev+ "> << </a>";
+    }
 
     for(var i=first; i <= last; i++){
     	html += "<a href='#' id=" + i + ">" + i + "</a> ";
     }
 
-    if(next >= totalPage)
-    	html += "<a href='#' id="+next+ "> > </a>";
+    if(next >= totalPage){
+    	html += "<a href='#' id="+next+ "> >> </a>";
+    }
 
 	$("#paging").html(html);    // 페이지 목록 생성
-	$("#paging a").css("color", "black");
+	$("#paging a").css({
+		"display" : "inline-block",
+		"color": "black",
+		"width" : "30px",
+		"height" : "30px",
+		"border" : "1px solid #000"
+	});
 	$("#paging a#" + currentPage).css({
 		"text-decoration":"none", 
 		"color":"red",
@@ -65,11 +79,10 @@ $(document).ready(function(){
 		var selectedPage = $item.text();
 
 		if($id == "next")
-			selectedPage = next; // '>'
+			selectedPage = next; // '>>'
 
 		if($id == "prev"){
-			selectedPage = prev; // '<'
-			perv();
+			selectedPage = prev; // '<<'
 		}
 
 		paging(totalData, dataPerPage, pageCount, selectedPage);
