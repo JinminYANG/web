@@ -40,15 +40,15 @@ $(document).ready(function(){
 
     var html = "";
 
-    if(prev > 0)
-    	html += "<a href=# id='prev'><</a> ";
+    if(prev >= 0)
+    	html += "<a href='#' id="+prev+ "> < </a>";
 
     for(var i=first; i <= last; i++){
     	html += "<a href='#' id=" + i + ">" + i + "</a> ";
     }
 
-    if(last < totalPage)
-    	html += "<a href=# id='next'>></a>";
+    if(next >= totalPage)
+    	html += "<a href='#' id="+next+ "> > </a>";
 
 	$("#paging").html(html);    // 페이지 목록 생성
 	$("#paging a").css("color", "black");
@@ -65,10 +65,12 @@ $(document).ready(function(){
 		var selectedPage = $item.text();
 
 		if($id == "next")
-			selectedPage = next;//
+			selectedPage = next; // '>'
 
-		if($id == "prev")
-			selectedPage = prev;
+		if($id == "prev"){
+			selectedPage = prev; // '<'
+			perv();
+		}
 
 		paging(totalData, dataPerPage, pageCount, selectedPage);
 
@@ -86,7 +88,19 @@ $(document).ready(function(){
 		// 		$('.perf_view>ul>li').eq(dataPerPage*(selectedPage-1)+i).show();
 		// 	}
 		// }
-
+		function prev(){
+			if(selectedPage==1){
+				for(var i=0; i<dataPerPage; i++){
+					$('.perf_view>ul>li').eq((dataPerPage)+i).hide();
+					$('.perf_view>ul>li').eq(selectedPage*i).show();
+				}
+			}else if(selectedPage==2){
+				for(var i=0; i<dataPerPage; i++){
+					$('.perf_view>ul>li').eq((selectedPage-1)*i).hide();
+					$('.perf_view>ul>li').eq(dataPerPage+i).show();
+				}
+			}
+		}
 
 
 		if(selectedPage==1){

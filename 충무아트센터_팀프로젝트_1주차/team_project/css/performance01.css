@@ -156,6 +156,7 @@ main .main__content{
 .perf_img{
     width: 100%;
     height: auto;
+    margin-bottom: 50px;
 }
 .perf_img img{
     width: 100%;
