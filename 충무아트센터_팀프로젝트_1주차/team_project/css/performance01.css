@@ -9,7 +9,9 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    background: #ccc;
+    /*background: #ccc;*/
+    background: url(../img/tit_bg2.jpg) 0 -250px;
+    background-size: cover;
 }
 .sub__tit h2{
     position: absolute;
@@ -17,6 +19,7 @@
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
+    color: #fff;
 }
 
 .sub__container{
