@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "UTF-8";
 
 @import url(reset.css);
 @import url(header.css);
@@ -195,7 +195,6 @@ main .icons{padding: 50px 0;}
 .showInfo{
     padding: 50px 0;
     text-align: center;
-    background:#999;
 }
 .showInfo .showInfo__tit{
     margin-bottom: 10px;
@@ -323,26 +322,30 @@ main .icons{padding: 50px 0;}
 }
 
 
-.news .cont table{display: none;}
-/*
 .news .cont table{
     width: 100%;
+    height: 100%;
     padding-right: 10px;
     box-sizing: border-box;
+    table-layout: fixed;
 }
 .news .cont tr{
+    height: 20%;
     border-top: 1px solid #ccc;
     box-sizing: border-box;
 }
-.news .cont td{height: 40px; line-height: 40px;}
-.news .cont td:nth-of-type(1){
-    width: 70%;
+.news .cont tr:last-child{border-bottom: 1px solid #ccc;}
+.news .cont td:nth-child(1){width: 80%;}
+.news .cont td > a{
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    line-height: 73px;
+    padding: 0 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
 }
-.news .cont td:nth-of-type(2){width: 30%; text-align: center;}
-*/
+.news .cont td:nth-child(2){width: 20%; text-align: center;}
 
 
 

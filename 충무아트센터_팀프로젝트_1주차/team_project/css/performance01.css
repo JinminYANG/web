@@ -149,12 +149,7 @@ main .main__content{
     color: #f00;
     border: 1px solid #f00;
 }
-/*.perf_description .perf_description_img:after{
-    display: block;
-    content: "";
-    clear: both;
-    border-bottom: 1px solid #000;
-}*/
+
 .perf_description:after{
     display: block;
     content: "";
@@ -164,9 +159,28 @@ main .main__content{
 .perf_img{
     width: 100%;
     height: auto;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 .perf_img img{
     width: 100%;
     height: auto;
+}
+
+.innerConts__cont .prev_page{
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+    float: right;
+    margin-bottom: 50px;
+}
+.innerConts__cont .prev_page a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    font-size: 16px;
+}
+.innerConts__cont .prev_page a:hover{
+    background: #777;
+    color: #fff;
 }

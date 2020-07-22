@@ -224,6 +224,7 @@ main .main__content{
     line-height: 80px;
     border-radius: 80px;
     border: 2px solid #fff;
+    background: rgba(255,255,255,0.2);
     color: #fff;
     font-size: 16px;
 }
