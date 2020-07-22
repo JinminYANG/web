@@ -107,7 +107,7 @@ main .main__content{
     color: #fff;
 }
 
-.perf_list{
+.event_list{
     width: 100%;
     height: 70px;
     /*float: left;*/
@@ -115,121 +115,119 @@ main .main__content{
     text-align: left;
     margin-top: 20px;
 }
-.perf_list .order_list{
+.event_list .order_list{
     float: left;
     width: 50%;
 }
-.perf_list .order_list span{
+.event_list .order_list span{
     margin-left: 20px;
     width: auto;
     height: auto;
     box-sizing: border-box;
 }
-.perf_list .order_list span a{
+.event_list .order_list span a{
     box-sizing: border-box;
     /*display: block;*/
     padding: 10px 20px;
     border: 1px solid #000;
     border-radius: 20px;
 }
-.perf_list .order_list span a:hover{
+.event_list .order_list span a:hover{
     background: purple;
     color: #fff;
 }
 
-.perf_list .perf_list_count{
+.event_list .event_list_count{
     float: right;
     width: 10%;
     text-align: right;
     margin-right: 10px;
 }
-.perf_list .perf_list_count strong{
+.event_list .event_list_count strong{
     color: #f00;
     font-weight: bold;
 }
 
-.perf_view{
+.event_view{
     width: 100%;
     height: auto;
 }
-.perf_view ul{
+.event_view ul{
     display: inline-block;
     width: 100%;
     height: 100%;
 }
-.perf_view ul li{
+.event_view ul li{
     float: left;
-    width: 25%;
-    height: 450px;
+    width: 46%;
+    height: 400px;
+    margin: 2%;
     /*border: 1px solid #f00;*/
 }
-.perf_view ul li .perf_view_wrap{
+.event_view ul li .event_view_wrap{
     width: 100%;
     height: 100%;
     position: relative;
 }
-.perf_view ul li img{
+.event_view ul li img{
     width: 100%;
-    height: 350px;
+    height: 70%;
     box-sizing: border-box;
     padding: 10px;
+    border: 1px solid #000;
 }
-.perf_view ul li .perf_view_wrap_des{
+.event_view ul li .event_view_wrap_des{
     width: 100%;
-    height: 100px;
+    height: 30%;
     box-sizing: border-box;
     padding: 5px 10px;
     text-align: left;
 }
-.perf_view ul li .perf_view_wrap_des h4{
-    font-size: 20px;
+.event_view ul li .event_view_wrap_des h4{
+    font-size: 22px;
 }
-.perf_view ul li .perf_view_wrap_des h5{
-    font-size: 18px;
+.event_view ul li .event_view_wrap_des p{
+    font-size: 17px;
+    color: #555;
+    margin-top: 5px;
 }
-.perf_view ul li .perf_view_wrap_des span{
-    font-size: 16px;
-    float: left;
+.event_view ul li .event_view_wrap_des p strong{
+    font-weight: normal;
+    color: #f00;
 }
-.perf_view ul li .perf_view_wrap_des span:nth-of-type(2){
-    float: right;
-}
-.perf_view ul li .perf_view_wrap:hover .perf_view_wrap_mh{
+.event_view ul li .event_view_wrap:hover .event_view_wrap_mh{
     opacity: 1;
 }
 
 
 /*hover 했을 때*/
-.perf_view_wrap .perf_view_wrap_mh{
+.event_view_wrap .event_view_wrap_mh{
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     background: rgba(0,0,0,0.5);
     opacity: 0;
 }
-.perf_view_wrap .perf_view_wrap_mh span{
-    /*padding: 10px 25px;
-    background: #fff;
-    border-radius: 10px;*/
+.event_view_wrap .event_view_wrap_mh span{
     position: absolute;
     top: 50%;
-    left: 11%;
-    margin-top: -30px;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
 }
-.perf_view_wrap .perf_view_wrap_mh span a{
+.event_view_wrap .event_view_wrap_mh span a{
     display: block;
-    padding: 10px 25px;
-    border-radius: 10px;
-    background: red;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 80px;
+    border: 2px solid #fff;
     color: #fff;
+    font-size: 16px;
 }
-.perf_view_wrap .perf_view_wrap_mh span:nth-of-type(2){
-    left: 51%;
-    /*background: #f00;*/
-    /*color: #fff;*/
-}
+
 
 /*pagination 구현 작업중*/
 .pagination{

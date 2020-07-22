@@ -1,0 +1,121 @@
+@charset 'uft-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url(reset.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(topBtn.css);
+
+.sub__tit{
+    position: relative;
+    height: 350px;
+    /*background: #ccc;*/
+    background: url(../img/tit_bg.jpg) 0 -250px;
+    background-size: cover;
+}
+.sub__tit h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 50px;
+}
+.sub__container{
+    width: 1260px;
+    height: auto;
+    margin: 0 auto;
+}
+.sub__container .container__subClass,
+.sub__container main {float: left;}
+
+.sub__container .container__subClass{
+    width: 200px;
+    height: 100%;
+    background: gold;
+}
+.container__subClass .subClass__tit{
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 30px;
+    background: skyblue;
+}
+
+.subClass__list li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.subClass__list li a:hover{
+    color: #7fceff;
+    background: #434343;
+}
+
+main{width: 1060px;}
+
+main .main__siteLoad{padding: 5px;}
+.main__siteLoad a{
+    display: inline-block;
+    font-size: 13px;
+}
+
+main .main__content{
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content__innerConts .innerConts__tit{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-top: 2px solid #000;
+    text-indent: 10px;
+}
+
+.content__innerConts > p{
+    margin-bottom:50px;
+    font-size: 18px;
+    word-break: keep-all;
+    display: block;
+    text-align: left;
+    width: 50%;
+    float: left;
+    color: #555;
+    text-indent: 10px;
+}
+.content__innerConts > p:nth-of-type(2){
+    text-align: right;
+}
+.content__innerConts > p:after{
+    content: "";
+    clear: both;
+    display: block;
+    margin-top: 10px;
+    border-bottom: 1px solid #555;
+}
+.innerConts__cont img{
+    width: 100%;
+    height: 100%;
+}
+.innerConts__cont .prev_page{
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+    float: right;
+    margin-bottom: 50px;
+}
+.innerConts__cont .prev_page a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    font-size: 16px;
+}
+.innerConts__cont .prev_page a:hover{
+    background: #777;
+    color: #fff;
+}

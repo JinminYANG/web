@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>가위바위보</title>
+	<script>
+		document.write("<h1> 컴퓨터 가위 바위 보 맞추기 </h1>");
+
+		var game = prompt("가위 바위 보 중 선택하세요: ", "가위");
+		var gameNum;
+
+		switch(game){
+			case "가위" : gameNum=1;
+			break;
+
+			case "바위" : gameNum=2;
+			break;
+
+			case "보" : gameNum=3;
+			break;
+
+			default: alert("잘못 입력했습니다");
+			location.reload(); // default 시에 프롬프트를 다시실행
+		}
+
+		var com = Math.ceil(Math.random()*3);
+
+		document.write("<img src='img/pic_" + com +".png'>");
+		if(gameNum == com){
+			document.write("<img src='img/yes.png'");
+		}else{
+			document.write("<img src='img/no.png'");
+		}
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.red{
+			color: #f00;
+		}
+		.blue{
+			color: #00f;
+		}
+		.cyan{
+			color: #0ff;
+		}
+	</style>
+	<script>
+		for(var i=1; i<=100; i++){
+			if(i%5==0 && i%7!=0){
+				document.write("<p class='red'>" + i + "</p>");
+			}else if(i%7==0 && i%5!=0){
+				document.write("<p class='blue'>" + i + "</p>");
+			}else if(i%7==0 && i%5==0){
+				document.write("<p class='cyan'>" + i + "</p>");
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

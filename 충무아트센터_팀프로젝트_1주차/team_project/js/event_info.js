@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// alert('hi');
-	var totalData = $('.perf_view>ul>li').length;
+	var totalData = $('.event_view>ul>li').length;
 	 // 총 데이터 수
 	// console.log("totalData : " + totalData);
 
@@ -22,21 +22,21 @@ $(document).ready(function(){
 		}
 		// console.log(count);
 	}
-	$('.perf_list>.perf_list_count>span>strong').text(totalData);
+	$('.event_list>.event_list_count>span>strong').text(totalData);
 	
-	$('.perf_view>ul>li').stop().hide();
+	$('.event_view>ul>li').stop().hide();
 	// 첫 화면
 	for(var i=0; i<dataPerPage; i++){
-		$('.perf_view>ul>li').stop().eq(i).show();
+		$('.event_view>ul>li').stop().eq(i).show();
 	}
 
 
 	$('.pagination>a').eq(0).on('click', function(){
-		$('.perf_view>ul>li').stop().hide();
+		$('.event_view>ul>li').stop().hide();
 		$('.pagination>a').children('span').removeClass("currentpage");
 		$('.pagination>a').eq(1).children('span').addClass("currentpage");
 		for(var i=0; i<dataPerPage; i++){
-			$('.perf_view>ul>li').stop().eq(i).show();
+			$('.event_view>ul>li').stop().eq(i).show();
 		}
 	});
 
@@ -44,11 +44,11 @@ $(document).ready(function(){
 		txt = $('.pagination>a').eq(1).children('span').text();
 		$('.pagination>a').children('span').removeClass("currentpage");
 		$(this).children('span').addClass("currentpage");
-		$('.perf_view>ul>li').stop().hide();
+		$('.event_view>ul>li').stop().hide();
 		for(var i=0; i<dataPerPage; i++){
 			// index(1 ~ 8)출력
-			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
-			// $('.perf_view>ul>li').stop().eq(i).show();
+			$('.event_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+			// $('.event_view>ul>li').stop().eq(i).show();
 		}
 	});
 
@@ -58,20 +58,20 @@ $(document).ready(function(){
 	 		txt = $('.pagination>a').eq(2).children('span').text();
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
-	 		$('.perf_view>ul>li').stop().hide();
+	 		$('.event_view>ul>li').stop().hide();
 	 		for(var i=0; i<dataPerPage; i++){
 	 			// index(9 ~ 16) 출력
-	 			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
-	 			// $('.perf_view>ul>li').stop().eq(dataPerPage+i).show();
+	 			$('.event_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+	 			// $('.event_view>ul>li').stop().eq(dataPerPage+i).show();
 	 		}
 	 	});
 	}
 	 // $('.pagination>a').eq(2).on('click', function(){
 	 // 	$('.pagination>a').children('span').removeClass("currentpage");
 	 // 	$(this).children('span').addClass("currentpage");
-	 // 	$('.perf_view>ul>li').stop().hide();
+	 // 	$('.event_view>ul>li').stop().hide();
 	 // 	for(var i=0; i<dataPerPage; i++){
-	 // 		$('.perf_view>ul>li').stop().eq(dataPerPage+i).show();
+	 // 		$('.event_view>ul>li').stop().eq(dataPerPage+i).show();
 	 // 	}
 	 // });
 	if($('.pagination>a').eq(3).children('span').text()=='3'){
@@ -80,11 +80,11 @@ $(document).ready(function(){
 	 		// console.log(txt);
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
-	 		$('.perf_view>ul>li').stop().hide();
+	 		$('.event_view>ul>li').stop().hide();
 
 	 		// index(17 ~ 24) 출력
 	 		for(var i=0; i<dataPerPage; i++){
-	 			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+	 			$('.event_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
 	 		}
 	 	});
 	}
@@ -95,12 +95,12 @@ $(document).ready(function(){
 	 		// console.log(txt);
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
-	 		$('.perf_view>ul>li').stop().hide();
+	 		$('.event_view>ul>li').stop().hide();
 
 	 		// ((dataPerPage*(text()-1)-1)+i)
 	 		// 23~30 출력
 	 		for(var i=0; i<dataPerPage; i++){
-	 			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+	 			$('.event_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
 	 		}
 	 	});
 	}
@@ -111,23 +111,23 @@ $(document).ready(function(){
 	 		// console.log(txt);
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
-	 		$('.perf_view>ul>li').stop().hide();
+	 		$('.event_view>ul>li').stop().hide();
 
 	 		// ((dataPerPage*(text()-1)-1)+i)
 	 		// 15~22 출력
 	 		for(var i=0; i<dataPerPage; i++){
-	 			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+	 			$('.event_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
 	 		}
 	 	});
 	}
 
 	$('.pagination>a').last().on('click', function(){
 	 	txt = $('.pagination>a').eq(count).children('span').text();
-	 	$('.perf_view>ul>li').stop().hide();
+	 	$('.event_view>ul>li').stop().hide();
 	 	$('.pagination>a').children('span').removeClass("currentpage");
 	 	$('.pagination>a').eq(pageCount).children('span').addClass("currentpage");
 	 	for(var i=0; i<dataPerPage; i++){
-	 		$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+	 		$('.event_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
 	 	}
 	});
 
