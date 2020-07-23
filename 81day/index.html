@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>배열</title>
+	<script>
+		var arr = [30, "따르릉", true];
+
+		document.write("<h1>배열 값 가져오기-1</h1>");
+		document.write("<p>" + arr[0] + "</p>");
+		document.write("<p>" + arr[1] + "</p>");
+		document.write("<p>" + arr[2] + "</p>");
+
+		document.write("<h1>배열 값 가져오기-2</h1>");
+		for(var i=0; i<arr.length; i++){
+			document.write("<p>" + arr[i] + "</p>");
+		}
+
+		document.write("<h1>배열 값 가져오기-3</h1>");
+		for(i in arr){ 
+			document.write("<p>" + arr[i] + "</p>");
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

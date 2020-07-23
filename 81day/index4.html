@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		var count = 0;
+		myFnc();
+
+		function myFnc(){
+			count++;
+			document.write("hello" + count + "<br>");
+		}
+
+		//setInterval(myFnc(), 4000); // 오류
+		// setInterval(myFnc, "4s"); // 오류
+		setInterval(myFnc, 4000);
+
+		// myFnc();
+		var theFnc = function(){
+			count++;
+			document.write("bye" + count+ "<br>");
+		}
+		theFnc();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

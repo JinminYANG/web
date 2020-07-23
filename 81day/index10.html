@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>선택자</title>
+	<style type="text/css">
+		#wrap{
+			width: 500px;
+			height: 500px;
+		}
+		#wrap>section{
+			width: 300px;
+			height: 300px;
+		}
+		#wrap>section>article{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		// alert("hi");
+
+		$(function(){
+			$("#wrap>h1").css({"border" : "2px dashed #f00"});
+
+			$("#wrap>section").children().css({
+				"background-color" : "yellow",
+				"border" : "2px solid #f00"
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>안녕하세요.</h1>
+		<section>
+			<article></article>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		var rightId = "korea";
+		var rightPw = "1234";
+		function lonin(id, pw) {
+			if(pw == rightPw){
+				document.write(id + "님 방문을 환영합니다.")
+			}else{
+				// alert("존재하지 않는 아이디입니다.");
+				alert("잘못된 비밀번호입니다. 아이디입니다.");
+			}
+		}
+		var userId = prompt("아이디를 입력하세요. : ", " ");
+		var userPw = prompt("비밀번호를 입력하세요. : ", " ");
+		login(userId, userPw);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
