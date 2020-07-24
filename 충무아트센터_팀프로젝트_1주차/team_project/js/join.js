@@ -1,49 +1,84 @@
+function validate() {
+  var re = /^[a-zA-Z0-9]{4,12}$/; // 아이디와 패스워드가 적합한지 검사할 정규식
+  var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+  // 이메일이 적합한지 검사할 정규식
 
-function execDaumPostcode() {
-    new daum.Postcode({
-        oncomplete: function(data) {
-            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+  var id = document.getElementById("id");
+  var pw = document.getElementById("pw");
+  var email = document.getElementById("email");
+  var num1 = document.getElementById("num1");
+  var num2 = document.getElementById("num2");
 
-            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-            var addr = ''; // 주소 변수
-            var extraAddr = ''; // 참고항목 변수
+  // ------------ 이메일 까지 -----------
 
-            //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-            if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-                addr = data.roadAddress;
-            } else { // 사용자가 지번 주소를 선택했을 경우(J)
-                addr = data.jibunAddress;
-            }
+  if(!check(re,id,"아이디는 4~12자의 영문 대소문자와 숫자로만 입력")) {
+    return false;
+  }
+
+  if(!check(re,pw,"패스워드는 4~12자의 영문 대소문자와 숫자로만 입력")) {
+    return false;
+  }
+
+  if(join.pw.value != join.checkpw.value) {
+    alert("비밀번호가 다릅니다. 다시 확인해 주세요.");
+    join.checkpw.value = "";
+    join.checkpw.focus();
+    return false;
+  }
+
+  if(email.value=="") {
+    alert("이메일을 입력해 주세요");
+    email.focus();
+    return false;
+  }
+
+  if(!check(re2, email, "적합하지 않은 이메일 형식입니다.")) {
+    return false;
+  }
+
+  if(join.name.value=="") {
+    alert("이름을 입력해 주세요");
+    join.name.focus();
+    return false;
+  }
 
 
-            // 우편번호와 주소 정보를 해당 필드에 넣는다.
-            document.getElementById('zipcode').value = data.zonecode;
-            document.getElementById("addr1").value = addr;
-            // 커서를 상세주소 필드로 이동한다.
-            document.getElementById("addr2").focus();
-            
-         // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-            if(data.userSelectedType === 'R'){
-                // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-                // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-                if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                    extraAddr += data.bname;
-                }
-                // 건물명이 있고, 공동주택일 경우 추가한다.
-                if(data.buildingName !== '' && data.apartment === 'Y'){
-                    extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                }
-                // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-                if(extraAddr !== ''){
-                    extraAddr = ' (' + extraAddr + ')';
-                }
-                // 조합된 참고항목을 해당 필드에 넣는다.
-                document.getElementById("addr1").value = addr + extraAddr;
-            
-            } else {
-                document.getElementById("addr1").value = addr + '';
-            }
-        }
-    }).open();
+  // 관심분야, 자기소개 미입력시 하라는 메시지 출력
+  if(join.inter[0].checked==false &&
+    join.inter[1].checked==false &&
+    join.inter[2].checked==false &&
+    join.inter[3].checked==false &&
+    join.inter[4].checked==false){
+    alert("관심분야를 골라주세요");
+  return false;
 }
+
+if(join.self.value=="") {
+ alert("자기소개를 적어주세요");
+ join.self.focus();
+ return false;
+}
+
+alert("회원가입이 완료되었습니다.");
+}
+
+function check(re, what, message) {
+  if(re.test(what.value)) {
+    return true;
+  }
+  alert(message);
+  what.value = "";
+  what.focus();
+  //return false;
+}
+
+$(document).ready(function(){
+  //이메일 선택값 input에 넣기
+  // 선택된 값 index 불러오기
+  var index = $(".email_select option").index($(".email_select option:selected"));
+  index = $(".email_select option").eq(index).attr("value");
+  console.log(index);
+
+  $(".email_area #email2").val(index);
+
+});

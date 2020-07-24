@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#gallery_wrap{
+			margin: 0 auto;
+			width: 640px;
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css">
+	<script>
+		$(function(){
+			$(".slide_gallery").bxSlider({
+				auto: true,
+				autoControls: true,
+				stopAutoOnClick: true,
+				pager : true
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="gallery_wrap">
+		<ul class="slide_gallery">
+			<li><img src="img/pic1.jpg" alt="img1"></li>
+			<li><img src="img/pic2.jpg" alt="img2"></li>
+			<li><img src="img/pic3.jpg" alt="img3"></li>
+			<li><img src="img/pic4.jpg" alt="img4"></li>
+			<li><img src="img/pic5.jpg" alt="img5"></li>
+			<li><img src="img/pic6.jpg" alt="img6"></li>
+			<li><img src="img/pic7.jpg" alt="img7"></li>
+			<li><img src="img/pic8.jpg" alt="img8"></li>
+		</ul>
+	</div>
+</body>
+</html>

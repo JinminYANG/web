@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.content{
+			width: 400px;
+			background-color: #eee;
+		}
+	</style>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".btn2").hide();
+
+			$(".btn1").on("click", function(){
+				$(".box").slideUp(1000,"linear", function(){
+					$(".btn1").hide();
+					$(".btn2").show();
+				});
+			});
+			$(".btn2").on("click", function(){
+				$(".box").fadeIn(1000,"swing", function(){
+					$(".btn2").hide();
+					$(".btn1").show();
+				});
+			});
+
+			$(".btn3").on("click", function(){
+				$(".box").slideToggle(1000, "linear");
+			});
+
+			$(".btn4").on("click", function(){
+				$(".box").fadeTo("fast", 0.3);
+			});
+
+			$(".btn5").on("click", function(){
+				$(".box").fadeTo("fast", 1);
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<p>
+		<button class="btn1">SlideUp</button>
+		<button class="btn2">fadeIn</button>
+	</p>
+
+	<p>
+		<button class="btn3">toggleSlide</button>
+	</p>
+
+	<p>
+		<button class="btn4">fadeTo(0.3)</button>
+		<button class="btn5">fadeTo(1)</button>
+	</p>
+	<div class="box">
+		<div class="content">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</div>
+	</div>
+</body>
+</html>

@@ -122,16 +122,17 @@ main .main__content{
     margin-left: 3px;
 }
 
-.form_list ul>li:nth-of-type(10) div{
-    width: 30%;
+.form_list ul>li:nth-of-type(10)>div{
+    width: 60%;
+    float: left;
 }
 .form_list ul>li:nth-of-type(10) div input{
-    width: 90%;
+    width: 30%;
     height: 48px;
     margin-left: 5px;
 }
 .form_list ul>li:nth-of-type(10) div select{
-    width: 100%;
+    width: 30%;
     height: 38px;
     margin-top: 0px;
 }
@@ -160,7 +161,12 @@ main .main__content{
     color: #444;
     padding-left: 1%;
 }
-
+.form_list ul>li:nth-of-type(5) .sex{
+    margin-left: -13px;
+}
+.form_list ul>li:nth-of-type(5) label{
+    margin-right: 20px;
+}
 
 
 .form_list .btn_yn{
