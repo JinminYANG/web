@@ -73,12 +73,11 @@ function check(re, what, message) {
 }
 
 $(document).ready(function(){
-  //이메일 선택값 input에 넣기
-  // 선택된 값 index 불러오기
-  var index = $(".email_select option").index($(".email_select option:selected"));
-  index = $(".email_select option").eq(index).attr("value");
-  console.log(index);
-
-  $(".email_area #email2").val(index);
-
+  $('select[name=email_select]').change(function() {
+    if($(this).val()=="1"){
+      $('#email2').val("");
+    }else{
+      $('#email2').val($(this).val());
+    }
+  });
 });

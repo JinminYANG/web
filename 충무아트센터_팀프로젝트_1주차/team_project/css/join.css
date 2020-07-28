@@ -1,4 +1,4 @@
-@charset 'uft-8';
+@charset "uft-8";
 
 @import url(reset.css);
 @import url(header.css);
@@ -71,6 +71,11 @@ main .main__content{
     display: inline-block;
     border: 2px solid #000;
 }
+.form_list ul>li:after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .form_list ul>li>label{
     float: left;
     display: inline-block;
@@ -83,6 +88,11 @@ main .main__content{
     text-align: left;
     line-height: 3.5;
 }
+.form_list ul>li>label:after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .form_list ul>li>label>span{
     color: #f00;
 }
@@ -94,10 +104,8 @@ main .main__content{
 .form_list ul>li:nth-of-type(2)>input,
 .form_list ul>li:nth-of-type(3)>input,
 .form_list ul>li:nth-of-type(4)>input,
-.form_list ul>li:nth-of-type(5)>input,
 .form_list ul>li:nth-of-type(6)>input,
-.form_list ul>li:nth-of-type(7)>input,
-.form_list ul>li:nth-of-type(9)>input
+.form_list ul>li:nth-of-type(7)>input
 {
     width: 78%;
 }
@@ -110,8 +118,10 @@ main .main__content{
     cursor: pointer;
     color: #fff;
 }
-.form_list ul>li:nth-of-type(8)>button{
-    background: cyan;
+.form_list ul>li>button:after{
+    content: "";
+    display: block;
+    clear: both;
 }
 .form_list ul>li>div{
     float: left;
@@ -121,40 +131,42 @@ main .main__content{
     line-height: 3.5;
     margin-left: 3px;
 }
+.form_list ul>li>div:after{
+    content: "";
+    display: block;
+    clear: both;
+}
 
-.form_list ul>li:nth-of-type(10)>div{
+.form_list ul>li:nth-of-type(9)>div{
     width: 60%;
     float: left;
 }
-.form_list ul>li:nth-of-type(10) div input{
+.form_list ul>li:nth-of-type(9) div input{
     width: 30%;
-    height: 48px;
+    height: 46px;
     margin-left: 5px;
 }
-.form_list ul>li:nth-of-type(10) div select{
+.form_list ul>li:nth-of-type(9) div select{
     width: 30%;
     height: 38px;
-    margin-top: 0px;
 }
 
-
-.form_list ul>li:nth-of-type(12){
+.form_list ul>li:nth-of-type(11){
     margin-top: 3%;
 }
-.form_list ul>li:nth-of-type(12),
-.form_list ul>li:nth-of-type(13){
+.form_list ul>li:nth-of-type(11),
+.form_list ul>li:nth-of-type(12){
     border: none;
 }
-.form_list ul>li:nth-of-type(12)>input,
-.form_list ul>li:nth-of-type(13)>input
+.form_list ul>li:nth-of-type(11)>input,
+.form_list ul>li:nth-of-type(12)>input
 {
     width: 3%;
     float: left;
-    margin-top: 0px;
 
 }
-.form_list ul>li:nth-of-type(12)>label,
-.form_list ul>li:nth-of-type(13)>label{
+.form_list ul>li:nth-of-type(11)>label,
+.form_list ul>li:nth-of-type(12)>label{
     width: 80%;
     float: left;
     background: none;
@@ -167,12 +179,60 @@ main .main__content{
 .form_list ul>li:nth-of-type(5) label{
     margin-right: 20px;
 }
+
+
 .form_list ul>li.add_area{
-    height: 200px;
+    height: 135px;
+}
+.form_list ul>li.add_area label:after{
+    content: "";
+    display: block;
+    clear: both;
 }
 .form_list ul>li.add_area input{
-    float: left;
+    position: relative;
+    float: none;
+    border: 0.5px solid #000;
+    height: 40px;
+    margin: 0;
 }
+.form_list ul>li.add_area input#sample4_postcode{
+    width: 20%;
+    left: -3.05%;
+}
+.form_list ul>li.add_area input#post_btn{
+    width: 15%;
+    top: 1px;
+    left: -2.5%;
+    height: 43px;
+    background: #ddd;
+    cursor: pointer;
+}
+.form_list ul>li.add_area input#post_btn:hover{
+    background: #7e7e7e;
+    color: #fff;
+}
+.form_list ul>li.add_area input#sample4_roadAddress{
+    top: 44px;
+    left: -39.2%;
+    width: 35%;
+}
+.form_list ul>li.add_area input#sample4_jibunAddress{
+    top: 1px;
+    left: 33%;
+    width: 35%;
+}
+.form_list ul>li.add_area input#sample4_detailAddress{
+    top: 45px;
+    left: -39.05%;
+    width: 35%;
+}
+.form_list ul>li.add_area input#sample4_extraAddress{
+    top: 2px;
+    left: 15.1%;
+    width: 35%;
+}
+
 
 
 .form_list .btn_yn{
