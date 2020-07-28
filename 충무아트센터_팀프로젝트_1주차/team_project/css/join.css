@@ -167,6 +167,12 @@ main .main__content{
 .form_list ul>li:nth-of-type(5) label{
     margin-right: 20px;
 }
+.form_list ul>li.add_area{
+    height: 200px;
+}
+.form_list ul>li.add_area input{
+    float: left;
+}
 
 
 .form_list .btn_yn{
@@ -195,3 +201,5 @@ main .main__content{
     color: #000;
     margin-right: 15%;
 }
+
+

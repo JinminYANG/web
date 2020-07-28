@@ -70,38 +70,56 @@ main .main__content{
     margin-bottom: 30px;
 }
 
-.content__innerConts > p{
-    margin-bottom:50px;
-    font-size: 14px;
+.rentalStepContainer{
+    width: 900px;
+    margin: 0 auto;
+}
+.rentalStepContainer .rentalStepContainer__rentalStep,
+.rentalStepContainer .rentalStepContainer__rentalcontact{
+    margin-bottom: 30px;
+}
+.rentalStepContainer__rentalStep .rentalStep__title,
+.rentalStepContainer__rentalcontact .rentalcontact__tit{
+    line-height: 1;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 18px;
+    color: #7b0091;
+    border-left: 3px solid #ab00cb;
+}
+.rentalStep__stepContainer .stepList,
+.rentalcontact__contactContainer .contactList{
+    float: left;
+    width: 25%;
+    height: 300px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.stepList .stepList__tit{
+    display: block;
+    width: 80px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background: #8d8d8d;
+    color: #fff;
+    border-radius: 10px;
+}
+.stepList .stepList__text{
+    font-size: 13px;
     word-break: keep-all;
 }
 
-.etiquette{
-    width: 800px;
-    margin: 0 auto;
-    text-align: left;
+.rentalcontact__contactContainer .contactList{
+    width: 33.3333%;
+    height: auto;
+    margin-bottom: 0;
 }
-.etiquette .etiquette__list{
-    float: left;
-    width: 50%;
-    height: 200px;
-    padding-left: 15%;
-    box-sizing: border-box;
-    word-break: keep-all;
-    background: url(../img/etiquette/icons_talk.png) no-repeat 5px 0;
-    background-size: 110px;
+.contactList .contactList__tit{
+    display: block;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
 }
-.etiquette .etiquette__list:nth-child(2){background-image: url(../img/etiquette/icons_camera.png)}
-.etiquette .etiquette__list:nth-child(3){background-image: url(../img/etiquette/icons_child.png)}
-.etiquette .etiquette__list:nth-child(4){background-image: url(../img/etiquette/icons_clock.png)}
-.etiquette .etiquette__list:nth-child(5){background-image: url(../img/etiquette/icons_food.png)}
-.etiquette .etiquette__list:nth-child(6){background-image: url(../img/etiquette/icons_phone.png)}
-.etiquette__list .list__tit{
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-.etiquette__list .list_detail{
-    padding-left: 10px;
-    list-style: disc;
-}
-.list_detail li{margin-bottom: 5px;}
