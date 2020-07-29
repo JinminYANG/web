@@ -119,20 +119,21 @@ main .main__content{
     float: left;
     width: 50%;
 }
-.perf_list .order_list span{
-    margin-left: 20px;
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
-}
-.perf_list .order_list span a{
+/*.perf_list .order_list span{*/
+/*    margin-left: 20px;*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    box-sizing: border-box;*/
+/*}*/
+.perf_list .order_list a{
     box-sizing: border-box;
     /*display: block;*/
+    margin-left: 20px;
     padding: 10px 20px;
     border: 1px solid #000;
     border-radius: 20px;
 }
-.perf_list .order_list span a:hover{
+.perf_list .order_list a:hover{
     background: purple;
     color: #fff;
 }
@@ -209,27 +210,37 @@ main .main__content{
     background: rgba(0,0,0,0.5);
     opacity: 0;
 }
-.perf_view_wrap .perf_view_wrap_mh span{
-    /*padding: 10px 25px;
-    background: #fff;
-    border-radius: 10px;*/
-    position: absolute;
-    top: 50%;
-    left: 11%;
-    margin-top: -30px;
-}
-.perf_view_wrap .perf_view_wrap_mh span a{
+/*.perf_view_wrap .perf_view_wrap_mh span{*/
+/*    !*padding: 10px 25px;*/
+/*    background: #fff;*/
+/*    border-radius: 10px;*!*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 11%;*/
+/*    margin-top: -30px;*/
+/*}*/
+.perf_view_wrap .perf_view_wrap_mh a{
+    width: 55px;
+    float: left;
     display: block;
     padding: 10px 25px;
     border-radius: 10px;
     background: red;
     color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-105%, -50%);
 }
-.perf_view_wrap .perf_view_wrap_mh span:nth-of-type(2){
-    left: 51%;
-    /*background: #f00;*/
-    /*color: #fff;*/
+.perf_view_wrap .perf_view_wrap_mh a:nth-of-type(2){
+    transform: translate(5%,-50%);
 }
+
+/*.perf_view_wrap .perf_view_wrap_mh span:nth-of-type(2){*/
+/*    left: 51%;*/
+/*    !*background: #f00;*!*/
+/*    !*color: #fff;*!*/
+/*}*/
 
 /*pagination 구현 작업중*/
 .pagination{
