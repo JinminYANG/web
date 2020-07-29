@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.scene{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.scene .mask{
+	width: 25%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+.scene .mask img{
+	position: relative;
+}
+.scene .mask .bar{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background: red;
+	bottom: 0;
+}
+#apple-1 img{
+	left: 0;
+	top: 0;
+}
+#apple-2 img{
+	left: -100%;
+}
+#apple-3 img{
+	left: -200%;
+}
+#apple-4 img{
+	left: -300%;
+}

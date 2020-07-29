@@ -5,11 +5,14 @@ function validate() {
 
   var id = document.getElementById("id");
   var pw = document.getElementById("pw");
-  var email = document.getElementById("email");
+  // var email = document.getElementById("email");
+  var email = "";
   var num1 = document.getElementById("num1");
   var num2 = document.getElementById("num2");
 
-  // ------------ 이메일 까지 -----------
+  email += $("#email1").val();
+  email += $("#email > span").text();
+  email += email2;
 
   if(!check(re,id,"아이디는 4~12자의 영문 대소문자와 숫자로만 입력")) {
     return false;
@@ -19,47 +22,45 @@ function validate() {
     return false;
   }
 
-  if(join.pw.value != join.checkpw.value) {
+  if(join_form.pw.value != join_form.checkpw.value) {
     alert("비밀번호가 다릅니다. 다시 확인해 주세요.");
-    join.checkpw.value = "";
-    join.checkpw.focus();
+    join_form.checkpw.value = "";
+    join_form.checkpw.focus();
     return false;
   }
 
-  if(email.value=="") {
-    alert("이메일을 입력해 주세요");
-    email.focus();
+  if(join_form.name.value=="") {
+    alert("이름을 입력해 주세요");
+    join_form.name.focus();
+    return false;
+  }
+
+  if(join_form.sex.value=="") {
+    alert("성별을 선택해 주세요");
+    join_form.sex_man.focus();
+    return false;
+  }
+
+  if(join_form.email1.value=="") {
+    alert("이메일1을 입력해 주세요");
+    email1.focus();
+    return false;
+  }
+  if(join_form.email2.value=="") {
+    alert("이메일2을 입력해 주세요");
+    $("#email2").focus();
     return false;
   }
 
   if(!check(re2, email, "적합하지 않은 이메일 형식입니다.")) {
-    return false;
-  }
-
-  if(join.name.value=="") {
-    alert("이름을 입력해 주세요");
-    join.name.focus();
+    console.log(email);
     return false;
   }
 
 
-  // 관심분야, 자기소개 미입력시 하라는 메시지 출력
-  if(join.inter[0].checked==false &&
-    join.inter[1].checked==false &&
-    join.inter[2].checked==false &&
-    join.inter[3].checked==false &&
-    join.inter[4].checked==false){
-    alert("관심분야를 골라주세요");
-  return false;
-}
+  // console.log($("#email2").value);
 
-if(join.self.value=="") {
- alert("자기소개를 적어주세요");
- join.self.focus();
- return false;
-}
-
-alert("회원가입이 완료되었습니다.");
+  alert("회원가입이 완료되었습니다.");
 }
 
 function check(re, what, message) {
@@ -72,12 +73,49 @@ function check(re, what, message) {
   //return false;
 }
 
+//이메일에서 value값 가져오는데 오류가 많아 하나 더 만듬
+function check2(re, what, message) {
+  if(re.test(what)) {
+    return true;
+  }
+  alert(message);
+  what.value = "";
+  $("#email1").focus();
+  //return false;
+}
+
+var email2 ="";
+
 $(document).ready(function(){
-  $('select[name=email_select]').change(function() {
-    if($(this).val()=="1"){
-      $('#email2').val("");
-    }else{
-      $('#email2').val($(this).val());
-    }
+  // console.log($("#email2").value);
+
+  //숫자만 입력하는 기능
+  $("#datepicker:text[numberOnly]").on("keyup", function(){
+    $(this).val($(this).val().replace(/[^0-9]/g,""));
   });
+  $("#tel:text[numberOnly]").on("keyup", function(){
+    $(this).val($(this).val().replace(/[^0-9]/g,""));
+  });
+
+  //이메일 뒤 선택기능
+  $('select[name=email_select]').change(function() {
+    $("select[name=email_select] option:selected").each(function() {
+      if($(this).val()=="1"){
+        $('#email2').val("");
+        $('#email2').attr("disabled", false);
+        email2 = $('#email2').val();
+      }else{
+        $('#email2').val($(this).val());
+        $('#email2').attr("disabled", true);
+        email2 = $('#email2').val();
+      }
+    });
+  });
+
+  // 확인 클릭했을 때 전부다 지워지는 기능 막음
+  $("button").on("click", function(e){
+    e.preventDefault();
+  });
+
+
 });

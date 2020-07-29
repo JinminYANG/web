@@ -137,19 +137,6 @@ main .main__content{
     clear: both;
 }
 
-.form_list ul>li:nth-of-type(9)>div{
-    width: 60%;
-    float: left;
-}
-.form_list ul>li:nth-of-type(9) div input{
-    width: 30%;
-    height: 46px;
-    margin-left: 5px;
-}
-.form_list ul>li:nth-of-type(9) div select{
-    width: 30%;
-    height: 38px;
-}
 
 .form_list ul>li:nth-of-type(11){
     margin-top: 3%;
@@ -234,6 +221,31 @@ main .main__content{
 }
 
 
+.form_list ul>li.email_area{
+    position: relative;
+}
+.form_list ul>li.email_area #email_id{
+    position: absolute;
+    width: 20%;
+    left: 21%;
+}
+.form_list ul>li.email_area>span{
+    position: absolute;
+    left: 43%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.form_list ul>li.email_area #email_add{
+    position: absolute;
+    left: 45%;
+    width: 20%;
+}
+.form_list ul>li.email_area #email_sel{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    left: 66%;
+}
 
 .form_list .btn_yn{
     margin: 3% 0 3% 0;

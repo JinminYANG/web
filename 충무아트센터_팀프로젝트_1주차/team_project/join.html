@@ -132,11 +132,11 @@
 											</li>
 											<li class="date_area">
 												<label for="datepicker"><span>*</span>생년월일:</label> 
-												<input type="text" class="datepicker" id="datepicker" placeholder="년도 / 월 / 일을 입력해주세요 (ex: 19920510)">
+												<input type="text" class="datepicker" id="datepicker" placeholder="년도 / 월 / 일을 입력해주세요 (ex: 19920510)" numberOnly maxlength="8">
 											</li>
 											<li class="tel_area">
 												<label for="tel"><span>*</span>연락처:</label> 
-												<input type="tel" name="tel" id="tel" placeholder="숫자만 입력해주세요">
+												<input type="text" name="tel" id="tel" placeholder="숫자만 입력해주세요" numberOnly maxlength="11">
 											</li>
 											<li class="add_area">
 													<label for="sample4_postcode"><span>*</span>주소:</label>
@@ -151,11 +151,11 @@
 											<li class="email_area">
 												<label for="email"><span>*</span>이메일:</label> 
 												<div class="email" id="email">
-													<input type="text" name="email1" id="email1" value="">
+													<input type="text" name="email_id" id="email_id">
 													<span>@</span>
-													<input type="text" name="email2" id="email2" value="">
-													<select class="email_select" name="email_select">
-														<option value="">직접입력</option>
+													<input type="text" name="email_add" id="email_add" >
+													<select class="email_select" name="email_select" id="email_select" onchange="change_email()">
+														<option value="1">직접입력</option>
 														<option value="naver.com">naver.com</option>
 														<option value="hanmail.com">hanmail.com</option>
 														<option value="google.com">google.com</option>
