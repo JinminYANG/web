@@ -95,7 +95,7 @@ main .main__content{
     box-sizing: border-box;
     padding: 0 20px;
 }
-.exhi_description_txt h5{
+.exhi_description_txt h4{
     font-size: 20px;
 }
 .exhi_description_txt h3{
@@ -147,33 +147,31 @@ main .main__content{
 }
 .exhi_description .exhi_description_img button{
     width: 90%;
-    height: 10%;
+    height: 60px;
     margin-top: 10%;
     background: #f00;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
+
 }
 .exhi_description .exhi_description_img button:hover{
     background: #fff;
     color: #f00;
     border: 1px solid #f00;
 }
-/*.exhi_description .exhi_description_img:after{
-    display: block;
-    content: "";
-    clear: both;
-    border-bottom: 1px solid #000;
-}*/
 .exhi_description:after{
     display: block;
     content: "";
     clear: both;
     border-bottom: 1px solid #000;
 }
+
 .exhi_img{
     width: 100%;
     height: auto;
-    margin-bottom: 50px;
+    margin: 50px 0;
+
 }
 .exhi_img img{
     width: 100%;

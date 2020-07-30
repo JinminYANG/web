@@ -17,14 +17,14 @@ $(function(){
 
 
 		//마스크에 마우스오버 했을 때와 잃을 때 작업
-		// $container.on({
-		// 	mouseenter: function(){
-		// 		resizeMask($(this).index());
-		// 	},
-		// 	mouseleave: function(){
-		// 		resizeMask(-1);
-		// 	}
-		// }, '.mask');
+		$container.on({
+			mouseenter: function(){
+				resizeMask($(this).index());
+			},
+			mouseleave: function(){
+				resizeMask(-1);
+			}
+		}, '.mask');
 		//호출
 
 		resizeMask(-1); //디자인 초기화
@@ -50,12 +50,18 @@ $(function(){
 					l = w/maskLength * i;// 마우스를 벗어난 경우 균등하게 할당
 					// console.log(l);
 				}
-				// else if(active < i){ // 마우스 오버된 마스크보다 오른쪽 마스크는
-				// 	l = w(1-0.1 * (maskLength -i)); // 자르기 영역의 왼쪽이 오른쪽 방향으로 수정된다.					
-				// }else{
-				// 	// 그 외에는 왼쪽이 왼쪽으로
-				// 	l = w*0.05*i;
-				// }
+				// 1 < 2
+				// 1 < 3
+				else if(active < i){ // 마우스 오버된 마스크보다 오른쪽 마스크는
+					l = w*(1-0.1 * (maskLength -i)); // 자르기 영역의 왼쪽이 오른쪽 방향으로 수정된다.
+					// console.log(l);
+				}
+				// 1 < 0
+				// 1 < 1
+				else{
+					// 그 외에는 왼쪽이 왼쪽으로
+					l = w*0.05*i;
+				}
 
 
 				$(maskData[i]).stop(true).animate({left:l}, {

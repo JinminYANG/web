@@ -119,15 +119,8 @@ main .main__content{
     float: left;
     width: 50%;
 }
-/*.perf_list .order_list span{*/
-/*    margin-left: 20px;*/
-/*    width: auto;*/
-/*    height: auto;*/
-/*    box-sizing: border-box;*/
-/*}*/
 .perf_list .order_list a{
     box-sizing: border-box;
-    /*display: block;*/
     margin-left: 20px;
     padding: 10px 20px;
     border: 1px solid #000;
@@ -137,7 +130,6 @@ main .main__content{
     background: purple;
     color: #fff;
 }
-
 .perf_list .perf_list_count{
     float: right;
     width: 10%;
@@ -148,6 +140,7 @@ main .main__content{
     color: #f00;
     font-weight: bold;
 }
+
 
 .perf_view{
     width: 100%;
@@ -162,7 +155,6 @@ main .main__content{
     float: left;
     width: 25%;
     height: 450px;
-    /*border: 1px solid #f00;*/
 }
 .perf_view ul li .perf_view_wrap{
     width: 100%;
@@ -182,10 +174,10 @@ main .main__content{
     padding: 5px 10px;
     text-align: left;
 }
-.perf_view ul li .perf_view_wrap_des h4{
+.perf_view ul li .perf_view_wrap_des h3{
     font-size: 20px;
 }
-.perf_view ul li .perf_view_wrap_des h5{
+.perf_view ul li .perf_view_wrap_des h4{
     font-size: 18px;
 }
 .perf_view ul li .perf_view_wrap_des span{
@@ -210,15 +202,7 @@ main .main__content{
     background: rgba(0,0,0,0.5);
     opacity: 0;
 }
-/*.perf_view_wrap .perf_view_wrap_mh span{*/
-/*    !*padding: 10px 25px;*/
-/*    background: #fff;*/
-/*    border-radius: 10px;*!*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 11%;*/
-/*    margin-top: -30px;*/
-/*}*/
+
 .perf_view_wrap .perf_view_wrap_mh a{
     width: 55px;
     float: left;
@@ -236,11 +220,6 @@ main .main__content{
     transform: translate(5%,-50%);
 }
 
-/*.perf_view_wrap .perf_view_wrap_mh span:nth-of-type(2){*/
-/*    left: 51%;*/
-/*    !*background: #f00;*!*/
-/*    !*color: #fff;*!*/
-/*}*/
 
 /*pagination 구현 작업중*/
 .pagination{

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>calendar</title>
+    <link rel="icon" sizes="16x16" type="image.png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <a href="#main" id="gomain">본문바로가기</a>
+        <header>
+            <div class="header-inner cf">
+                <h1><a href="index.html"><span class="hidden">logo</span><img src="img/logo.png" alt="logo"></a>
+                </h1>
+
+                <div class="right_nav">
+                    <ul class="tnb cf">
+                        <li><a href="./login.html">로그인</a></li>
+                        <li><a href="./join.html">회원가입</a></li>
+                        <li><a href="./mypage.html">마이페이지</a></li>
+                    </ul>
+                    <nav class="gnb">
+                        <ul class="cf">
+                            <li class="hover">
+                                <a href="#">충무아트센터 소개</a>
+                                <ul>
+                                    <li><a href="#">기관 및 재단소개</a></li>
+                                    <li><a href="#">좌석배치도</a></li>
+                                    <li><a href="#">층별안내</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                    <li><a href="#">편의시설</a></li>
+                                    <li><a href="#">주차시설</a></li>
+                                </ul>
+                            </li>
+                            <li class="hover">
+                                <a href="calendar.html">공연&middot;전시&middot;행사</a>
+                                <ul>
+                                    <li><a href="calendar.html">캘린더</a></li>
+                                    <li><a href="all_info.html">공연정보</a></li>
+                                    <li><a href="exhi_info.html">전시정보</a></li>
+                                    <li><a href="event_info.html">행사정보</a></li>
+                                </ul>
+                            </li>
+                            <li class="hover">
+                                <a href="#">뉴스&middot;소식</a>  
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">뉴스/이슈</a></li>
+                                </ul>
+                            </li>
+                            <li class="hover">
+                                <a href="#">대관안내</a>
+                                <ul>
+                                    <li><a href="#">대관시설</a></li>
+                                    <li><a href="#">대관규정</a></li>
+                                    <li><a href="#">대관절차</a></li>
+                                    <li><a href="#">대관신청</a></li>
+                                </ul>
+                            </li>
+                            <li class="hover">
+                                <a href="#">고객센터</a>
+                                <ul>
+                                    <li><a href="#">회원혜택</a></li>
+                                    <li><a href="#">자주하는 질문</a></li>
+                                    <li><a href="#">1:1 문의</a></li>
+                                    <li><a href="#">관람예절</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <form class="search" action="action_page.php">
+                    <input type="search" name="search" class="t_box" placeholder="&nbsp;&nbsp;&nbsp;검색어를 입력해주세요">
+                    <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </header>
+        
+        <div class="sub__tit">
+            <h2>캘린더</h2>
+        </div>
+        <div class="sub__container cf">
+            <aside class="container__subClass">
+                <h3 class="subClass__tit">공연&middot;전시&middot;행사</h3>
+                <nav class="subClass__list">
+                    <ul>
+                        <li><a href="calendar.html">캘린더</a></li>
+                        <li><a href="perf_info.html">공연정보</a></li>
+                        <li><a href="exhi_info.html">전시정보</a></li>
+                        <li><a href="event_info.html">행사정보</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main id="main">
+                <div class="main__siteLoad">
+                    <p>
+                        <a href="calendar.html">공연&middot;전시&middot;행사</a> &gt;
+                        <a href="event_info.html">캘린더</a> &gt;
+                        <a href="#">소메뉴</a>
+                    </p>
+                </div>
+                <div class="main__content">
+                    <div class="content__innerConts">
+                        <div class="innerConts__cont">
+                            <div class="search_info">
+                                <ul>
+                                    <li class="search_info_date">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <ul>
+                                            <li class="search_info_date_start">
+                                                <label for="date_start">공연시작</label>
+                                                <input type="text" name="date_start" id="date_start" placeholder="2020-07-01" value="2020-07-01">
+                                            </li>
+                                            <span>-</span>
+                                            <li class="search_info_date_end">
+                                                <label for="date_end">공연끝</label>
+                                                <input type="text" name="date_end" id="date_end" placeholder="2020-07-31" value="2020-07-31">
+                                            </li>
+                                        </ul>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </li>
+                                    <li class="search_info_genre">
+                                        <i class="fa fa-bars" aria-hidden="true"></i>
+                                        <label for="theme" class="hide">장르는?</label>
+                                        <input type="text" id="theme" placeholder="장르를 선택하세요." readonly="" class="choiceKeyword">
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                        <div class="pop">
+                                            <div class="pop_inner">
+                                                <ul>
+                                                    <li>
+                                                        <input type="checkbox" name="ck1" id="ck1">
+                                                        <label for="ck1">전체</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck2" id="ck2">
+                                                        <label for="ck2">뮤지컬</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck3" id="ck3">
+                                                        <label for="ck3">발레</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck4" id="ck4">
+                                                        <label for="ck4">연극</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck5" id="ck5">
+                                                        <label for="ck5">음악극</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck6" id="ck6">
+                                                        <label for="ck6">연주회</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck7" id="ck7">
+                                                        <label for="ck7">대중음악</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="ck8" id="ck8">
+                                                        <label for="ck8">기타</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="pop_close">
+                                                <button>닫기</button>
+                                            </div>
+                                            <div class="pop_select">
+                                                <button>선택</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="search_info_sr">
+                                        <label for="search_wrd" class="hide">공연명은?</label>
+                                        <input type="text" name="search_wrd" id="search_wrd" placeholder="공연명을 입력하세요">
+                                        <button type="button" class="submit"><i class="fa fa-search"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="all_list">
+                                <div class="order_list">
+                                    <a href="#">최신순</a>
+                                    <a href="#">인기순</a>
+                                </div>
+                                <div class="all_list_count">
+                                    <span>총 <strong>0</strong>건</span>
+                                </div>
+                            </div>
+                            <div class="all_view">
+                                <ul>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-6.jpg" alt="all_01">
+                                            <div class="all_view_wrap_des">
+                                                <h3>뮤지컬 &lt;썸씽로튼&gt;</h3>
+                                                <h4>장소 :  충무아트센터 대극장</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="allormance01.html">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-1.jpg" alt="all_02">
+                                            <div class="all_view_wrap_des">
+                                                <h3>시데레우스</h3>
+                                                <h4>장소 : 는 어딜까</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-2.jpg" alt="all_03">
+                                            <div class="all_view_wrap_des">
+                                                <h3>마음을 안다</h3>
+                                                <h4>장소 : 우리 집</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>갤러리</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-3.jpg" alt="all_04">
+                                            <div class="all_view_wrap_des">
+                                                <h3>오네긴</h3>
+                                                <h4>장소 : 앞 마당</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>발레</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-4.jpg" alt="all_05">
+                                            <div class="all_view_wrap_des">
+                                                <h3>프랑켄슈타인</h3>
+                                                <h4>장소 : 우주</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-7.jpg" alt="all_06">
+                                            <div class="all_view_wrap_des">
+                                                <h3>판레터</h3>
+                                                <h4>장소 : 더조은 종각</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-8.jpg" alt="all_07">
+                                            <div class="all_view_wrap_des">
+                                                <h3>지젤</h3>
+                                                <h4>장소 : 상상마당</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-9.jpg" alt="all_08">
+                                            <div class="all_view_wrap_des">
+                                                <h3>브라더스 까리마조프</h3>
+                                                <h4>장소 : 모르겠다</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-3.jpg" alt="all_04">
+                                            <div class="all_view_wrap_des">
+                                                <h3>오네긴</h3>
+                                                <h4>장소 : 앞 마당</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>발레</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-4.jpg" alt="all_05">
+                                            <div class="all_view_wrap_des">
+                                                <h3>프랑켄슈타인</h3>
+                                                <h4>장소 : 우주</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-7.jpg" alt="all_06">
+                                            <div class="all_view_wrap_des">
+                                                <h3>판레터</h3>
+                                                <h4>장소 : 더조은 종각</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-8.jpg" alt="all_07">
+                                            <div class="all_view_wrap_des">
+                                                <h3>지젤</h3>
+                                                <h4>장소 : 상상마당</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="all_view_wrap">
+                                            <img src="img/sub-pos-9.jpg" alt="all_08">
+                                            <div class="all_view_wrap_des">
+                                                <h3>브라더스 까리마조프</h3>
+                                                <h4>장소 : 모르겠다</h4>
+                                                <span>20.07.05~20.07.30</span>
+                                                <span>뮤지컬</span>
+                                            </div>
+                                            <div class="all_view_wrap_mh">
+                                                <a href="#">예매하기</a>
+                                                <a href="#">상세정보</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pagination">
+                                <a href="#" class="firstpage pbtn"><img src="img/btn_firstpage.png" alt="첫 페이지로 이동"></a>
+                                <a href="#"><span class="pagenum currentpage">1</span></a>
+                                <a href="#"><span class="pagenum">2</span></a>
+                                <a href="#"><span class="pagenum">3</span></a>
+                                <a href="#"><span class="pagenum">4</span></a>
+                                <a href="#"><span class="pagenum">5</span></a>
+                                <a href="#" class="lastpage pbtn"><img src="img/btn_lastpage.png" alt="마지막 페이지로 이동"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <a href="#" class="topBtn">TOP</a>
+        </div>
+        <footer>
+            <div class="footerinner">
+                <div class="footerinner__top cf">
+                    <h2><a href="#"><img src="img/logo.png" alt="로고"></a></h2>
+                    <div class="top__links">
+                        <div class="links__sns cf">
+                            <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fas fa-share-alt fa-2x"></i></a>
+                            <a href="#"><i class="far fa-envelope fa-2x"></i></a>
+                        </div>
+                        <ul class="links__list cf">
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">행정정보공개</a></li>
+                            <li><a href="#">이메일수집거부</a></li>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li>
+                                <select name="site" id="">
+                                    <option value="">관련사이트 바로가기</option>
+                                    <option value="사이트1">사이트1</option>
+                                    <option value="사이트2">사이트2</option>
+                                    <option value="사이트3">사이트3</option>
+                                    <option value="사이트4">사이트4</option>
+                                    <option value="사이트5">사이트5</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerinner__bottom cf">
+                    <div class="bottom__left">
+                        <address>
+                            사업자등록번호 : 201-82-06405 <br>
+                            통신판매번호 : 제2008-서울중구-1218호 <br>
+                            주소 : 서울시 중구 퇴계로 387(흥인동 131)
+                        </address>
+                        <p>COPY &copy; CHUNGMU ARTS CENTER</p>
+                    </div>
+                    <div class="bottom__right">
+                        <a href="tel:02-2230-6600">02.2230.6600</a>
+                        <p>
+                            상담시간 : 월~금 09:30~18:30 <br>
+                            점심시간 : 12:00~13:00 <br>
+                            주말 및 공휴일 휴무
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/calendar.js"></script>
+</body></html>

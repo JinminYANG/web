@@ -9,7 +9,6 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    /*background: #ccc;*/
     background: url(../img/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
@@ -106,7 +105,6 @@ main .main__content{
 .perf_description_txt>dl>dt{
     float: left;
     margin-bottom: 9px;
-    /*width: 70px;*/
     width: 15%;
     font-weight: bold;
     color: #444;
@@ -138,11 +136,12 @@ main .main__content{
 }
 .perf_description .perf_description_img button{
     width: 90%;
-    height: 10%;
+    height: 60px;
     margin-top: 10%;
     background: #f00;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
 }
 .perf_description .perf_description_img button:hover{
     background: #fff;

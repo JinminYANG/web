@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	// alert('hi');
 	var totalData = $('.perf_view>ul>li').length;
-	 // 총 데이터 수
+	// 총 데이터 수
 	// console.log("totalData : " + totalData);
 
 	var dataPerPage = 8;    
@@ -54,29 +54,29 @@ $(document).ready(function(){
 
 	// console.log($('.pagination>a').eq(2).children('span').text());
 	if($('.pagination>a').eq(2).children('span').text()=='2'){
-	 	$('.pagination>a').eq(2).on('click', function(){
-	 		txt = $('.pagination>a').eq(2).children('span').text();
-	 		$('.pagination>a').children('span').removeClass("currentpage");
-	 		$(this).children('span').addClass("currentpage");
-	 		$('.perf_view>ul>li').stop().hide();
-	 		for(var i=0; i<dataPerPage; i++){
+		$('.pagination>a').eq(2).on('click', function(){
+			txt = $('.pagination>a').eq(2).children('span').text();
+			$('.pagination>a').children('span').removeClass("currentpage");
+			$(this).children('span').addClass("currentpage");
+			$('.perf_view>ul>li').stop().hide();
+			for(var i=0; i<dataPerPage; i++){
 	 			// index(9 ~ 16) 출력
 	 			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
 	 			// $('.perf_view>ul>li').stop().eq(dataPerPage+i).show();
 	 		}
 	 	});
 	}
-	 // $('.pagination>a').eq(2).on('click', function(){
-	 // 	$('.pagination>a').children('span').removeClass("currentpage");
-	 // 	$(this).children('span').addClass("currentpage");
-	 // 	$('.perf_view>ul>li').stop().hide();
-	 // 	for(var i=0; i<dataPerPage; i++){
-	 // 		$('.perf_view>ul>li').stop().eq(dataPerPage+i).show();
-	 // 	}
-	 // });
+	// $('.pagination>a').eq(2).on('click', function(){
+	// 	$('.pagination>a').children('span').removeClass("currentpage");
+	// 	$(this).children('span').addClass("currentpage");
+	// 	$('.perf_view>ul>li').stop().hide();
+	// 	for(var i=0; i<dataPerPage; i++){
+	// 		$('.perf_view>ul>li').stop().eq(dataPerPage+i).show();
+	// 	}
+	// });
 	if($('.pagination>a').eq(3).children('span').text()=='3'){
-	 	$('.pagination>a').eq(3).on('click', function(){
-	 		txt = $('.pagination>a').eq(3).children('span').text();
+		$('.pagination>a').eq(3).on('click', function(){
+			txt = $('.pagination>a').eq(3).children('span').text();
 	 		// console.log(txt);
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
@@ -90,8 +90,8 @@ $(document).ready(function(){
 	}
 
 	if($('.pagination>a').eq(4).children('span').text()=='4'){
-	 	$('.pagination>a').eq(4).on('click', function(){
-	 		txt = $('.pagination>a').eq(4).children('span').text();
+		$('.pagination>a').eq(4).on('click', function(){
+			txt = $('.pagination>a').eq(4).children('span').text();
 	 		// console.log(txt);
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
@@ -106,8 +106,8 @@ $(document).ready(function(){
 	}
 
 	if($('.pagination>a').eq(5).children('span').text()=='5'){
-	 	$('.pagination>a').eq(5).on('click', function(){
-	 		txt = $('.pagination>a').eq(5).children('span').text();
+		$('.pagination>a').eq(5).on('click', function(){
+			txt = $('.pagination>a').eq(5).children('span').text();
 	 		// console.log(txt);
 	 		$('.pagination>a').children('span').removeClass("currentpage");
 	 		$(this).children('span').addClass("currentpage");
@@ -122,14 +122,12 @@ $(document).ready(function(){
 	}
 
 	$('.pagination>a').last().on('click', function(){
-	 	txt = $('.pagination>a').eq(count).children('span').text();
-	 	$('.perf_view>ul>li').stop().hide();
-	 	$('.pagination>a').children('span').removeClass("currentpage");
-	 	$('.pagination>a').eq(pageCount).children('span').addClass("currentpage");
-	 	for(var i=0; i<dataPerPage; i++){
-	 		$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
-	 	}
+		txt = $('.pagination>a').eq(count).children('span').text();
+		$('.perf_view>ul>li').stop().hide();
+		$('.pagination>a').children('span').removeClass("currentpage");
+		$('.pagination>a').eq(pageCount).children('span').addClass("currentpage");
+		for(var i=0; i<dataPerPage; i++){
+			$('.perf_view>ul>li').stop().eq((dataPerPage*(txt-1))+i).show();
+		}
 	});
-
-
-	});
+});

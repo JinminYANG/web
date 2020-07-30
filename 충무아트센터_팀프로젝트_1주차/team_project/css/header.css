@@ -84,11 +84,11 @@ header{
     display: block;
     color: #fff;
 }
-.gnb .hover > a span{
+.gnb .hover > a{
     position:relative;
     display: inline-block;
 }
-.gnb .hover > a span::after{
+.gnb .hover > a::after{
     position: absolute;
     bottom: -7px; left: 0;
     content: '';
@@ -98,8 +98,8 @@ header{
     background:#c12f30;
     transition: all 0.5s;
 }
-.gnb .hover:hover > a span::after, 
-.gnb .hover > a:focus span::after{
+.gnb .hover:hover > a::after, 
+.gnb .hover > a:focus::after{
     width: 100%;
 }
 .gnb .hover > ul{

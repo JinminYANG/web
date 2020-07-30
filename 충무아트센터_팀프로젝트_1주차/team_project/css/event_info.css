@@ -9,7 +9,6 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    /*background: #ccc;*/
     background: url(../img/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
@@ -110,31 +109,9 @@ main .main__content{
 .event_list{
     width: 100%;
     height: 70px;
-    /*float: left;*/
     line-height: 70px;
     text-align: left;
     margin-top: 20px;
-}
-.event_list .order_list{
-    float: left;
-    width: 50%;
-}
-.event_list .order_list span{
-    margin-left: 20px;
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
-}
-.event_list .order_list span a{
-    box-sizing: border-box;
-    /*display: block;*/
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 20px;
-}
-.event_list .order_list span a:hover{
-    background: purple;
-    color: #fff;
 }
 
 .event_list .event_list_count{
@@ -162,7 +139,6 @@ main .main__content{
     width: 46%;
     height: 400px;
     margin: 2%;
-    /*border: 1px solid #f00;*/
 }
 .event_view ul li .event_view_wrap{
     width: 100%;
@@ -210,17 +186,16 @@ main .main__content{
     background: rgba(0,0,0,0.5);
     opacity: 0;
 }
-.event_view_wrap .event_view_wrap_mh span{
+
+.event_view_wrap .event_view_wrap_mh a{
     position: absolute;
+    display: block;
     top: 50%;
     left: 50%;
-    margin-top: -40px;
-    margin-left: -40px;
-}
-.event_view_wrap .event_view_wrap_mh span a{
-    display: block;
     width: 80px;
     height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
     line-height: 80px;
     border-radius: 80px;
     border: 2px solid #fff;
@@ -228,7 +203,6 @@ main .main__content{
     color: #fff;
     font-size: 16px;
 }
-
 
 /*pagination 구현 작업중*/
 .pagination{
