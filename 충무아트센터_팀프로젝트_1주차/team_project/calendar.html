@@ -5,8 +5,8 @@
     <title>calendar</title>
     <link rel="icon" sizes="16x16" type="image.png" href="img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/calendar.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
     
 </head>
 
@@ -110,13 +110,14 @@
                             <div class="search_info">
                                 <ul>
                                     <li class="search_info_date">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <div class="search_info_date_icon"></div>
+                                        <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
                                         <ul>
                                             <li class="search_info_date_start">
                                                 <label for="date_start">공연시작</label>
                                                 <input type="text" name="date_start" id="date_start" placeholder="2020-07-01" value="2020-07-01">
                                             </li>
-                                            <span>-</span>
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
                                             <li class="search_info_date_end">
                                                 <label for="date_end">공연끝</label>
                                                 <input type="text" name="date_end" id="date_end" placeholder="2020-07-31" value="2020-07-31">

@@ -5,6 +5,7 @@
 	padding: 0;
 }
 html,body,.scene{
+	width: 100%;
 	height: 100%;
 }
 
@@ -22,7 +23,7 @@ html,body,.scene{
 	top: 50%;
 	left: 50%;
 	margin-left: -960px;
-	margin-top: -463.5px;
+	margin-top: -469px;
 	width: 1920px;
 	height: 927px;
 }

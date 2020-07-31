@@ -138,7 +138,8 @@ $(document).ready(function(){
         ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
         ,showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
         ,changeYear: true //콤보박스에서 년 선택 가능
-        ,changeMonth: true //콤보박스에서 월 선택 가능                
+        ,changeMonth: true //콤보박스에서 월 선택 가능 
+        ,buttonImage: "../img/btn_prevpage.png" // 버튼 이미지 *오류*           
         // ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
         // ,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
         // ,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
@@ -149,7 +150,7 @@ $(document).ready(function(){
         ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
         ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
         // ,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-        // ,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)                    
+        // ,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)             
     });
 
 	$("#date_start").datepicker();
@@ -157,35 +158,42 @@ $(document).ready(function(){
 
 	$('#date_start').datepicker('setDate', 'today'); //오늘 날짜 나오게
 	$('#date_end').datepicker('setDate', '+1M'); // 오늘기준 한달뒤 나오게
-
+	console.log($( "#date_start" ).datepicker( "getDate" ));
 
 	$("#theme").on("click", function(){
 		$(".pop").stop().slideToggle(200, "linear");
 
+		//전체선택 기능
 		$(".pop input#ck1").on("click",function(){
         	//클릭되었으면
         	if($(".pop input#ck1").prop("checked")){
            		//input태그의 type이 checkbox인 태그들을 찾아서 checked옵션을 true로 정의
-            	$(".pop input[type=checkbox]").prop("checked",true);
+           		$(".pop input[type=checkbox]").prop("checked",true);
             //클릭이 안되있으면
-        	}else{
+        }else{
             	//input태그의 type이 checkbox인 태그들을 찾아서 checked옵션을 false로 정의
             	$(".pop input[type=checkbox]").prop("checked",false);
-        	}
-    	});
+            }
+        });
 
-    	$(".pop_select>button").on("click", function(){
-    		var test = [];
+		$(".pop_select>button").on("click", function(){
+			var test = [];
     		$(".pop input[type=checkbox]:checked").each(function() {
-				test += $(this).siblings("label").text();
+				test.push($(this).siblings("label").text());
 			});
-			$("input#theme").prop("value",test);
-    		$(this).parent().parent().slideUp();
-    	});
 
-    	$(".pop_close>button").on("click", function(){
-    		$(this).parent().parent().slideUp();
-    	});
+			//전체 선택 했을때 '전체'를 배열에서 제거
+			if($(".pop input#ck1").is(":checked")==true){
+				test.splice(0,1);
+			}
+
+			$("input#theme").prop("value", (test));
+			$(this).parent().parent().slideUp();
+		});
+
+		$(".pop_close>button").on("click", function(){
+			$(this).parent().parent().slideUp();
+		});
 	});
 
 });

@@ -2,6 +2,9 @@ $(function(){
 	// alert("hi");
 
 	initScene3();
+	$(window).resize(function() {
+		initScene3();
+	});
 	// Scene 3: 마스크 애니메이션
 	function initScene3(){
 		var $container = $("#scene-3"),
@@ -78,4 +81,6 @@ $(function(){
 			});
 		}
 	}
+
+
 });
