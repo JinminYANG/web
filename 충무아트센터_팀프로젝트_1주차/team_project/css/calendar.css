@@ -180,10 +180,13 @@ main .main__content{
 
 .ui-widget-content .ui-state-default{
     text-align: center;
+    background: #fff;
+    color: #000;
 }
 .ui-widget-content .ui-state-default:hover{
     background: #c12f30;
     color: #fff;
+    border: 1px solid gray;
 }
 
 
