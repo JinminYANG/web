@@ -9,6 +9,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
+    /*background: #ccc;*/
     background: url(../img/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
@@ -18,12 +19,13 @@
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
-    color: #fff;
-    font-size: 50px;
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
 }
 
 .sub__container{
-    width: 1260px;
+    max-width: 1260px;
     height: auto;
     margin: 0 auto;
 }
@@ -31,16 +33,21 @@
 .sub__container main {float: left;}
 
 .sub__container .container__subClass{
-    width: 200px;
     height: 100%;
-    background: gold;
 }
+
 .container__subClass .subClass__tit{
-    height: 150px;
-    line-height: 150px;
+    width:180px;
+    height:180px;
     text-align: center;
-    font-size: 30px;
-    background: skyblue;
+    font-size: 20px;
+    font-weight:bold;
+    background-color:#222;
+    color:#888;
+}
+.container__subClass .subClass__tit i{
+    font-size:72px;
+    margin:30px 0 10px 0;
 }
 
 .subClass__list li a{
@@ -49,10 +56,14 @@
     line-height: 50px;
     text-align: center;
     transition: all 0.5s;
+    border-bottom:1px solid #555;
+    font-size:16px;
+    font-weight:bold;
+    color:#555;
 }
 .subClass__list li a:hover{
-    color: #7fceff;
-    background: #434343;
+    color: #eee;
+    background: #555;
 }
 
 main{width: 1060px;}
@@ -97,6 +108,7 @@ main .main__content{
 .perf_description_txt>h3{
     font-size: 30px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 .perf_description_txt>dl{
     width: 100%;
@@ -142,6 +154,7 @@ main .main__content{
     color: #fff;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.5s;
 }
 .perf_description .perf_description_img button:hover{
     background: #fff;
@@ -167,8 +180,8 @@ main .main__content{
 
 .innerConts__cont .prev_page{
     width: 150px;
-    height: 70px;
-    line-height: 70px;
+    height: 50px;
+    line-height: 50px;
     float: right;
     margin-bottom: 50px;
 }

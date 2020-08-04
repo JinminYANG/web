@@ -19,11 +19,13 @@
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
-    color: #fff;
-    font-size: 50px;
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
 }
+
 .sub__container{
-    width: 1260px;
+    max-width: 1260px;
     height: auto;
     margin: 0 auto;
 }
@@ -31,16 +33,21 @@
 .sub__container main {float: left;}
 
 .sub__container .container__subClass{
-    width: 200px;
     height: 100%;
-    background: gold;
 }
+
 .container__subClass .subClass__tit{
-    height: 150px;
-    line-height: 150px;
+    width:180px;
+    height:180px;
     text-align: center;
-    font-size: 30px;
-    background: skyblue;
+    font-size: 20px;
+    font-weight:bold;
+    background-color:#222;
+    color:#888;
+}
+.container__subClass .subClass__tit i{
+    font-size:72px;
+    margin:30px 0 10px 0;
 }
 
 .subClass__list li a{
@@ -49,10 +56,14 @@
     line-height: 50px;
     text-align: center;
     transition: all 0.5s;
+    border-bottom:1px solid #555;
+    font-size:16px;
+    font-weight:bold;
+    color:#555;
 }
 .subClass__list li a:hover{
-    color: #7fceff;
-    background: #434343;
+    color: #eee;
+    background: #555;
 }
 
 main{width: 1060px;}
@@ -69,11 +80,12 @@ main .main__content{
 }
 
 .content__innerConts .innerConts__tit{
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 10px;
     text-align: left;
     border-top: 2px solid #000;
     text-indent: 10px;
+    font-weight: bold;
 }
 
 .content__innerConts > p{
@@ -103,8 +115,8 @@ main .main__content{
 }
 .innerConts__cont .prev_page{
     width: 150px;
-    height: 70px;
-    line-height: 70px;
+    height: 50px;
+    line-height: 50px;
     float: right;
     margin-bottom: 50px;
 }

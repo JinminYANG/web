@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index6.css">
+</head>
+<body>
+<form name="cal">
+	<table>
+		<caption>계산기</caption>
+		<tr>
+			<th colspan="4"><input type="text" name="result" value="0"></th>
+		</tr>
+		<tr>
+			<td><input type="button" value="7"></td>
+			<td><input type="button" value="8"></td>
+			<td><input type="button" value="9"></td>
+			<td><input type="button" value="+"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4"></td>
+			<td><input type="button" value="5"></td>
+			<td><input type="button" value="6"></td>
+			<td><input type="button" value="-"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1"></td>
+			<td><input type="button" value="2"></td>
+			<td><input type="button" value="3"></td>
+			<td><input type="button" value="*"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" value="0"></td>
+			<td><input type="button" value="%"></td>
+			<td><input type="button" value="/"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" class="cls_btn" value="clear"></td>
+			<td colspan="2"><input type="button" class="result_btn" value="="></td>
+		</tr>
+	</table>
+</form>
+
+<script>
+	var inp = document.forms['cal'];
+	var input = inp.getElementsByTagName('input');
+	var cls_btn = document.getElementsByClassName("cls_btn")[0];
+	var result_btn = document.getElementsByClassName("result_btn")[0];
+
+	// 계산기 초기화
+	function clr(){
+		inp['result'].value = 0;
+	}
+
+	function calc(value){
+		//입력이 들어가면 0을 지움
+		if(inp['result'].value ==0){
+			inp['result'].value='';
+		}
+
+		//입력값을 결과창에 출력
+		inp['result'].value += value;
+	}
+
+	// 계산결과 처리 함수
+	function my_result(){
+		var result = document.forms['cal']['result'];
+		var calc = eval(result.value);
+					// 문자를 계산하게 만둘어주는 메소드
+
+		// 결과창에 표시
+		inp['result'].value = calc;
+	}
+
+// 숫자 및 사칙연산 버튼
+for(var i =0; i<input.length; i++){
+	// 숫자와 사칙연산자만 입력 처리
+	if(input[i].value != "=" && input[i].value !='clear'){
+		input[i].onclick = function(){
+			calc(this.value);
+		}
+	}
+}
+
+cls_btn.onclick = function(){
+	clr();
+}
+result_btn.onclick = function(){
+	try{
+		my_result();
+	}
+	catch(err){
+		var result = inp['result'];
+		result.value = '입력오류';
+	}
+}
+
+
+</script>
+</body>
+</html>

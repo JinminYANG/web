@@ -6,6 +6,7 @@
 @import url(footer.css);
 @import url(topBtn.css);
 
+/*상단 타이틀*/
 .sub__tit{
     position: relative;
     height: 350px;
@@ -19,12 +20,27 @@
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
-    color: #fff;
-    font-size: 40px;
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
 }
 
 .sub__container{
-    width: 1260px;
+    max-width: 1260px;
+    height: auto;
+    margin: 0 auto;
+}
+/*html .subClass__tit에 fontawesome을 이용해 적절한 아이콘을 넣어주세요. 
+
+<h3 class="subClass__tit">
+    <i class="fas fa-guitar"></i><br>공연&middot;전시&middot;행사
+</h3>
+
+와 같은 형식이 됩니다.*/
+
+/*왼쪽 서브메뉴*/
+.sub__container{
+    max-width: 1260px;
     height: auto;
     margin: 0 auto;
 }
@@ -32,16 +48,21 @@
 .sub__container main {float: left;}
 
 .sub__container .container__subClass{
-    width: 200px;
     height: 100%;
-    background: gold;
 }
+
 .container__subClass .subClass__tit{
-    height: 150px;
-    line-height: 150px;
+    width:180px;
+    height:180px;
     text-align: center;
-    font-size: 30px;
-    background: skyblue;
+    font-size: 20px;
+    font-weight:bold;
+    background-color:#222;
+    color:#888;
+}
+.container__subClass .subClass__tit i{
+    font-size:72px;
+    margin:30px 0 10px 0;
 }
 
 .subClass__list li a{
@@ -50,20 +71,26 @@
     line-height: 50px;
     text-align: center;
     transition: all 0.5s;
+    border-bottom:1px solid #555;
+    font-size:16px;
+    font-weight:bold;
+    color:#555;
 }
 .subClass__list li a:hover{
-    color: #7fceff;
-    background: #434343;
+    color: #eee;
+    background: #555;
 }
 
-main{width: 1060px;}
-
-main .main__siteLoad{padding: 5px;}
+main{
+    width: 1060px;
+}
+main .main__siteLoad{
+    padding: 5px;
+}
 .main__siteLoad a{
     display: inline-block;
     font-size: 13px;
 }
-
 main .main__content{
     padding: 10px 0;
     text-align: center;
@@ -97,7 +124,7 @@ main .main__content{
 .innerConts__cont form .submit{
     width: 20%;
     height: 100%;
-    background: red;
+    background: #d32e2e;
     cursor: pointer;
     float: right;
     border-radius: 0 10px 10px 0;
@@ -124,7 +151,7 @@ main .main__content{
     margin-left: 20px;
     padding: 10px 20px;
     border: 1px solid #000;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .perf_list .order_list a:hover{
     background: purple;
@@ -173,19 +200,26 @@ main .main__content{
     box-sizing: border-box;
     padding: 5px 10px;
     text-align: left;
+    color:#555;
+
 }
 .perf_view ul li .perf_view_wrap_des h3{
-    font-size: 20px;
+    color:#222;
+    font-size: 18px;
+    font-weight:bold;
 }
 .perf_view ul li .perf_view_wrap_des h4{
-    font-size: 18px;
+    font-size: 14px;
+    /*font-size: 18px;*/
 }
 .perf_view ul li .perf_view_wrap_des span{
-    font-size: 16px;
+    /*font-size: 16px*/
+    font-size: 14px;
     float: left;
 }
 .perf_view ul li .perf_view_wrap_des span:nth-of-type(2){
     float: right;
+    color:#d32e2e;
 }
 .perf_view ul li .perf_view_wrap:hover .perf_view_wrap_mh{
     opacity: 1;
@@ -199,8 +233,10 @@ main .main__content{
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.7);
     opacity: 0;
+    border:1px solid #000;
+    transition:all 0.5s;
 }
 
 .perf_view_wrap .perf_view_wrap_mh a{
@@ -208,7 +244,7 @@ main .main__content{
     float: left;
     display: block;
     padding: 10px 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     background: red;
     color: #fff;
     position: absolute;
@@ -219,7 +255,11 @@ main .main__content{
 .perf_view_wrap .perf_view_wrap_mh a:nth-of-type(2){
     transform: translate(5%,-50%);
 }
-
+.perf_view_wrap .perf_view_wrap_mh a:hover{
+    background-color:#fff;
+    color:#d32e2e;
+    font-weight:bold;
+}
 
 /*pagination 구현 작업중*/
 .pagination{

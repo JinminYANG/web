@@ -120,6 +120,7 @@ function change_email(){
 } 
 
 $(document).ready(function(){
+  $("#datepicker").datepicker();
 
   //숫자만 입력하는 기능
   $("#datepicker:text[numberOnly]").on("keyup", function(){

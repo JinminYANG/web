@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form name="frm">
+		<label for="myId">ID: </label>
+		<input type="text" name="myId" id="myId">
+		<label for="pwd">PW: </label>	
+		<input type="password" name="pwd" id="pwd">
+		<input type="button" name="send" value="로그인">
+	</form>
+
+	<script type="text/javascript">
+		var frm = document.frm;
+		var myId = frm.myId;
+		var pwd = frm.pwd;
+		var send_btn = document.frm.send;
+
+		send_btn.onclick = function(){
+			var newId = myId.value,
+			newPwd = pwd.value;
+
+			if(newId =='' || newPwd == ''){
+				alert("아이디 또는 비밀번호가 입력되지 않았습니다");
+			}else{
+				alert(myId.value + '님 환영합니다');
+			}
+		}
+	</script>
+</body>
+</html>

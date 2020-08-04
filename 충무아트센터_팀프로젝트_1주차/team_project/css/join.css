@@ -1,36 +1,45 @@
-@charset "uft-8";
+@charset "UTF-8";
 
 @import url(reset.css);
 @import url(header.css);
 @import url(footer.css);
 @import url(topBtn.css);
 
+.innerConts__cont li{transition:all 0.5s;}
+.innerConts__cont li:hover{background-color:#eee;}
+.innerConts__cont li button{
+    transition:all 0.5s;
+}
+.innerConts__cont li.id_area button:hover,
+.innerConts__cont li.email_area button:hover,
+.innerConts__cont li.email_conf_area button:hover{
+    background-color:#fff;
+    color:#d32e2e;
+}
+
 .sub__tit{
     position: relative;
     height: 350px;
-    background: #ccc;
+    background:url(../img/topBg/subtest.jpg);
 }
 .sub__tit h2{
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
+    font-size:24px;
+    font-weight:bold;
+    color:#fff;
 }
 
 .sub__container{
-    width: 1260px;
+    max-width: 1260px;
     height: auto;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 /*main{width: 1060px;}*/
-
-main .main__siteLoad{padding: 5px;}
-.main__siteLoad a{
-    display: inline-block;
-    font-size: 13px;
-}
 
 main .main__content{
     padding: 50px 0;
@@ -38,16 +47,21 @@ main .main__content{
 }
 
 .content__innerConts .innerConts__tit{
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight:bold;
+    margin-bottom: 20px;
 }
+
 .main__content_tit .form_tit{
     font-size: 40px;
 }
 .content__innerConts > p{
     margin-bottom:50px;
-    font-size: 14px;
+    font-size: 16px;
     word-break: keep-all;
+}
+.main__content_tit .form_tit{
+    font-size: 40px;
 }
 
 .join_form{
@@ -69,7 +83,7 @@ main .main__content{
     height: 50px;
     margin-bottom: 10px;
     display: inline-block;
-    border: 2px solid #000;
+    border: 1px solid #222;
 }
 .form_list ul>li:after{
     content: "";
@@ -80,13 +94,17 @@ main .main__content{
     float: left;
     display: inline-block;
     width: 20%;
-    background: #000;
+    background: #222;
     color: #fff;
     height: 100%;
     box-sizing: border-box;
-    padding-left: 3%;
+    padding-left: 2%;
     text-align: left;
-    line-height: 3.5;
+    font-size:16px;
+    line-height:3;
+}
+.form_list ul>li.add_area>label{
+    line-height:3.3;
 }
 .form_list ul>li>label:after{
     content: "";
@@ -94,7 +112,7 @@ main .main__content{
     clear: both;
 }
 .form_list ul>li>label>span{
-    color: #f00;
+    color: #d32e2e;
 }
 .form_list ul>li>input{
     width: 60%;
@@ -111,12 +129,13 @@ main .main__content{
 }
 .form_list ul>li>button{
     float: right;
-    background-color: #f00;
+    background-color: #d32e2e;
     border: none;
     width: 18%;
     height: 100%;
     cursor: pointer;
-    color: #fff;
+    color: #eee;
+    font-size:16px;
 }
 .form_list ul>li>button:after{
     content: "";
@@ -139,29 +158,44 @@ main .main__content{
 
 
 .form_list ul>li:nth-of-type(11){
-    margin-top: 3%;
+    margin-top: 2%;
 }
 .form_list ul>li:nth-of-type(11),
 .form_list ul>li:nth-of-type(12){
+    height:20px;
     border: none;
+    margin-bottom:0;
 }
+.form_list ul>li:nth-of-type(11):hover,
+.form_list ul>li:nth-of-type(12):hover{
+    background-color:#fff;
+}
+
 .form_list ul>li:nth-of-type(11)>input,
 .form_list ul>li:nth-of-type(12)>input
 {
-    width: 3%;
+    width:14px;
+    height:14px;
+    margin-top:1px;
     float: left;
-
 }
+
 .form_list ul>li:nth-of-type(11)>label,
 .form_list ul>li:nth-of-type(12)>label{
     width: 80%;
     float: left;
     background: none;
+    font-size:14px;
     color: #444;
     padding-left: 1%;
+    line-height:1;
 }
+
 .form_list ul>li:nth-of-type(5) .sex{
     margin-left: -13px;
+}
+.form_list ul>li:nth-of-type(5) span{
+    opacity:0;
 }
 .form_list ul>li:nth-of-type(5) label{
     margin-right: 20px;
@@ -169,7 +203,9 @@ main .main__content{
 
 
 .form_list ul>li.add_area{
-    height: 135px;
+    position: relative;
+    width:100%;
+    height: 200px;
 }
 .form_list ul>li.add_area label:after{
     content: "";
@@ -177,22 +213,27 @@ main .main__content{
     clear: both;
 }
 .form_list ul>li.add_area input{
-    position: relative;
+    position: absolute;
     float: none;
-    border: 0.5px solid #000;
+    top:0;
+    left:21%;
+    border-bottom: 1px solid #222;
     height: 40px;
     margin: 0;
 }
+
 .form_list ul>li.add_area input#sample4_postcode{
+    top:5px;
     width: 20%;
-    left: -3.05%;
 }
 .form_list ul>li.add_area input#post_btn{
+    top:5px;
+    left:43%;
     width: 15%;
-    top: 1px;
-    left: -2.5%;
     height: 43px;
     background: #ddd;
+    border:1px solid #666;
+    color:#666;
     cursor: pointer;
 }
 .form_list ul>li.add_area input#post_btn:hover{
@@ -200,26 +241,17 @@ main .main__content{
     color: #fff;
 }
 .form_list ul>li.add_area input#sample4_roadAddress{
-    top: 44px;
-    left: -39.2%;
-    width: 35%;
+    top:53px;
+    width: 77%;
 }
 .form_list ul>li.add_area input#sample4_jibunAddress{
-    top: 1px;
-    left: 33%;
-    width: 35%;
+    top:101px;
+    width: 77%;
 }
 .form_list ul>li.add_area input#sample4_detailAddress{
-    top: 45px;
-    left: -39.05%;
-    width: 35%;
+    top:149px;
+    width: 77%;
 }
-.form_list ul>li.add_area input#sample4_extraAddress{
-    top: 2px;
-    left: 15.1%;
-    width: 35%;
-}
-
 
 .form_list ul>li.email_area{
     position: relative;
@@ -242,9 +274,15 @@ main .main__content{
 }
 .form_list ul>li.email_area #email_sel{
     position: absolute;
-    width: 15%;
+    width: 17%;
     height: 100%;
-    left: 66%;
+    padding:0 10px;
+    right:18%;
+    outline:0;
+    border:0;
+    font: 16px 'Noto Sans KR','sans-serif';
+    background-color:#444;
+    color:#fff;
 }
 
 .form_list .btn_yn{
@@ -257,21 +295,22 @@ main .main__content{
     width: 30%;
     height: 50px;
     font-size: 25px;
-    border: 2px solid #000;
+    border: 1px solid #222;
     cursor: pointer;
     color: #fff;
+    transition:all 0.5s;
 }
 .form_list .btn_yn button:nth-of-type(1){
-    float: left;
-    background: #000;
+    background: #222;
     color: #fff;
-    margin-left: 15%;
 }
 .form_list .btn_yn button:nth-of-type(2){
-    float: right;
     background: #fff;
-    color: #000;
-    margin-right: 15%;
+    color: #222;
 }
 
-
+.form_list .btn_yn button:hover{
+    background:#d32e2e;
+    color:#fff;
+    border:1px solid #d32e2e;
+}
