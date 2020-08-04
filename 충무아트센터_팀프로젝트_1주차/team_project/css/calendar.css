@@ -73,12 +73,14 @@ main .main__content{
     text-align: center;
 }
 
-.innerConts__cont{
-    width: 100%;
+.content__innerConts{
+    width: 98%;
     height: 100%;
+    margin: 0 auto;
 }
+
 .search_info{
-    width: 100%;
+    /*width: 100%;*/
     height: 70px;
     margin: 10px;
     /*border: 1px solid red;*/
@@ -93,66 +95,46 @@ main .main__content{
     width: 33.2%;
     height: 70px;
     border : 1px solid #aaa;
+    /*box-shadow: 0 0 0 1px #555 inset; */
 }
-.search_info>ul>li:nth-of-type(2){
-    border-left: none;
+.search_info>ul>.search_info_genre{
+    /*box-shadow: 0 0 0 1px #555 initial;*/
+    /*border-style: initial; */
     border-right: none;
+    border-left: none;
 }
 
 /*날짜 선택 부분*/
 .search_info_date{
     width: 100%;
     height: 100%;
-}
-.search_info_date .search_info_date_icon{
-    float: left;
-    font-size: 25px;
-    width: 15%;
-    height: 70px;
-    line-height: 70px;
-    margin: 0 auto;
-    background: url(../img/calendar.png) no-repeat;
-    background-size: 30px;
-    background-position: 50% 50%;
+    background: url(../img/input_date_bg.png);
+    background-size: cover;
 }
 .search_info_date>ul{
-    /*display: inline-block;*/
-    float: left;
-    width: 75%;
+    width: 100%;
     height: 70px;
 }
-.search_info_date>ul>li{
+.search_info_date>ul>.date_select{
     float: left;
-    width: 45%;
+    width: 50%;
     height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
-.search_info_date>ul>li:nth-of-type(2){
-    float: right;
-}
-.search_info_date>ul>li>label{
+.search_info_date>ul>.date_select>label{
     display: none;
 }
-.search_info_date>ul>li>input{
+.search_info_date>ul>.date_select>input{
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
+    text-indent: 10px;
+    color: #333;
 }
-.search_info_date>ul>i.fa-minus{
-    width: 10%;
-    height: 100%;
-    line-height: 4.5;
-    font-size: 16px;
-    color: gray;
-    box-sizing: border-box;
-}
-.search_info_date i.fa-caret-down{
-    float: right;
-    width: 10%;
-    height: 70px;
-    line-height: 70px;
-}
+
 .search_info_date .search_info_date_start .datebox_01{
     /*display: block;*/
     display: none;
@@ -250,72 +232,63 @@ html .ui-button.ui-state-disabled:active{
     width: 100%;
     height: 100%;
 }
-.search_info_genre i.fa-bars{
-    float: left;
-    font-size: 25px;
-    width: 15%;
-    height: 70px;
-    line-height: 70px;
-    margin: 0 auto;
-}
 .search_info_genre>label{
     display: none;
 }
-.search_info_genre>input#theme{
+.search_info_genre>#theme{
     float: left;
-    width: 75%;
+    width: 100%;
     height: 70px;
     line-height: 70px;
     font-size: 16px;
     cursor: pointer;
-}
-.search_info_genre i.fa-caret-down{
-    float: left;
-    width: 8%;
-    height: 70px;
-    line-height: 70px;
+    background: url(../img/input_theme_bg.png);
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 0 30px 0 50px;
+    color: #333;
 }
 .search_info_genre .pop{
     position: absolute;
     width: 100%;
     height: 300px;
-    border: 1px solid #000;
+    box-shadow: 0 0 0 1px #555; 
     background: #fff;
-    top: 100%;
+    top: 103%;
     z-index: 10;
     display: none;
 }
-.search_info_genre .pop .pop_inner{
-    position: absolute;
-    left: 10%;
+
+.pop .pop_inner{
+    /*position: absolute;*/
+    /*left: 10%;*/
     width: 80%;
     height: 200px;
     /*border: 1px solid blue;*/
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 50px;
+    display: block;
 }
-.search_info_genre .pop .pop_inner>ul{
-    width: 100%;
-    height: 100%;
-}
-.search_info_genre .pop .pop_inner>ul>li{
+.pop .pop_inner>li{
     float: left;
     width: 50%;
     height: 25%;
 }
-.search_info_genre .pop .pop_inner>ul>li>input{
+.pop .pop_inner>li>input{
     float: left;
     width: 30%;
     height: 50%;
     margin-top: 12px;
     cursor: pointer;
 }
-.search_info_genre .pop .pop_inner>ul>li>label{
+.pop .pop_inner>li>label{
     float: left;
     font-size: 18px;
     text-align: left;
     cursor: pointer;
+    color: #555;
 }
+
 
 /*체크박스 디자인*/
 .pop .pop_inner input[type=checkbox]{
@@ -347,37 +320,31 @@ html .ui-button.ui-state-disabled:active{
     vertical-align: middle;
     cursor: pointer;
 }
-.search_info_genre .pop .pop_close{
-    position: absolute;
+.pop .pop_close{
+    float: right;
     width: 30px;
     height: 30px;
-    right: 10px;
-    top: 10px;
-}
-.search_info_genre .pop .pop_close>button{
-    width: 100%;
-    height: 100%;
     background: url(../img/btn_xpop.png);
     background-size: cover;
     text-indent: -9999px;
     overflow: hidden;
     cursor: pointer;
+    margin: 10px;
 }
-.search_info_genre .pop .pop_select{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: 150px;
+
+.pop .pop_select{
+    width: 120px;
     height: 35px;
     background: #d32e2e;
-    transform: translate(-50%);
-}
-.search_info_genre .pop .pop_select>button{
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    font-size: 20px;
     cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+.pop .pop_select:hover{
+    background: #fff;
+    color: #d32e2e;
+    border: 1px solid #d32e2e;
 }
 
 
@@ -390,19 +357,20 @@ html .ui-button.ui-state-disabled:active{
     display: none;
 }
 .search_info_sr>input{
-    width: 80%;
+    width: 82%;
     height: 100%;
     font-size: 16px;
     float: left;
     margin-left: 10px;
 }
 .search_info_sr>button{
-    width: 16%;
+    width: 13%;
     height: 100%;
     cursor: pointer;
 }
 .search_info_sr>button>i.fa-search{
     font-size: 25px;
+    color: #555;
 }
 
 
@@ -425,7 +393,7 @@ html .ui-button.ui-state-disabled:active{
     border-radius: 5px;
 }
 .all_list .order_list a:hover{
-    background: purple;
+    background: #CC9966;
     color: #fff;
 }
 

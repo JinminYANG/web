@@ -170,13 +170,13 @@ $(document).ready(function(){
            		//input태그의 type이 checkbox인 태그들을 찾아서 checked옵션을 true로 정의
            		$(".pop input[type=checkbox]").prop("checked",true);
             //클릭이 안되있으면
-        }else{
+        	}else{
             	//input태그의 type이 checkbox인 태그들을 찾아서 checked옵션을 false로 정의
             	$(".pop input[type=checkbox]").prop("checked",false);
-            }
+        	}
         });
 
-		$(".pop_select>button").on("click", function(){
+		$(".pop_select").on("click", function(){
 			var test = [];
     		$(".pop input[type=checkbox]:checked").each(function() {
 				test.push($(this).siblings("label").text());
@@ -188,11 +188,11 @@ $(document).ready(function(){
 			}
 
 			$("input#theme").prop("value", (test));
-			$(this).parent().parent().slideUp();
+			$(this).parent().slideUp();
 		});
 
-		$(".pop_close>button").on("click", function(){
-			$(this).parent().parent().slideUp();
+		$(".pop_close").on("click", function(){
+			$(this).parent().slideUp();
 		});
 	});
 

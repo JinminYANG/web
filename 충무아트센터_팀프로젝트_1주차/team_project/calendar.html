@@ -97,33 +97,27 @@
             </aside>
             <main id="main">
                 <div class="main__content">
-                    <div class="content__innerConts">
-                        <div class="innerConts__cont">
-                            <div class="search_info">
+                    <section class="content__innerConts"> <!-- innerConts__cont -->
+                        <div class="search_info">
                                 <ul>
                                     <li class="search_info_date">
-                                        <div class="search_info_date_icon"></div>
                                         <ul>
-                                            <li class="search_info_date_start">
+                                            <li class="search_info_date_start date_select">
                                                 <label for="date_start">공연시작</label>
                                                 <input type="text" name="date_start" id="date_start" placeholder="2020-07-01" value="2020-07-01">
                                             </li>
-                                            <i class="fa fa-minus" aria-hidden="true"></i>
-                                            <li class="search_info_date_end">
+                                            <li class="search_info_date_end date_select">
                                                 <label for="date_end">공연끝</label>
                                                 <input type="text" name="date_end" id="date_end" placeholder="2020-07-31" value="2020-07-31">
                                             </li>
                                         </ul>
-                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
                                     </li>
                                     <li class="search_info_genre">
-                                        <i class="fa fa-bars" aria-hidden="true"></i>
                                         <label for="theme" class="hide">장르는?</label>
                                         <input type="text" id="theme" placeholder="장르를 선택하세요." readonly="" class="choiceKeyword">
-                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
                                         <div class="pop">
-                                            <div class="pop_inner">
-                                                <ul>
+                                                <button class="pop_close">닫기</button>
+                                                <ul class="pop_inner">
                                                     <li>
                                                         <input type="checkbox" name="ck1" id="ck1">
                                                         <label for="ck1">전체</label>
@@ -157,13 +151,7 @@
                                                         <label for="ck8">기타</label>
                                                     </li>
                                                 </ul>
-                                            </div>
-                                            <div class="pop_close">
-                                                <button>닫기</button>
-                                            </div>
-                                            <div class="pop_select">
-                                                <button>선택</button>
-                                            </div>
+                                                <button class="pop_select">선택</button>
                                         </div>
                                     </li>
                                     <li class="search_info_sr">
@@ -172,8 +160,8 @@
                                         <button type="button" class="submit"><i class="fa fa-search"></i></button>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="all_list">
+                        </div>
+                        <div class="all_list">
                                 <div class="order_list">
                                     <a href="#">최신순</a>
                                     <a href="#">인기순</a>
@@ -181,8 +169,8 @@
                                 <div class="all_list_count">
                                     <span>총 <strong>0</strong>건</span>
                                 </div>
-                            </div>
-                            <div class="all_view">
+                        </div>
+                        <div class="all_view">
                                 <ul>
                                     <li>
                                         <div class="all_view_wrap">
@@ -380,8 +368,8 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="pagination">
+                        </div>
+                        <div class="pagination">
                                 <a href="#" class="firstpage pbtn"><img src="img/btn_firstpage.png" alt="첫 페이지로 이동"></a>
                                 <a href="#"><span class="pagenum currentpage">1</span></a>
                                 <a href="#"><span class="pagenum">2</span></a>
@@ -389,9 +377,8 @@
                                 <a href="#"><span class="pagenum">4</span></a>
                                 <a href="#"><span class="pagenum">5</span></a>
                                 <a href="#" class="lastpage pbtn"><img src="img/btn_lastpage.png" alt="마지막 페이지로 이동"></a>
-                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </main>
             <a href="#" class="topBtn">TOP</a>
