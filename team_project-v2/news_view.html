@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -8,14 +7,11 @@
     <link rel="icon" sizes="16x16" type="image.png" href="img/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/notice_view.css">
     <script src="js/forEachPolyfill.js" defer></script>
     <script src="js/header.js" defer></script>
     <script src="js/topBtn.js" defer></script>
     <script src="js/footerSiteOpen.js" defer></script>
-    <script src="js/pagenation.js" defer></script>
-    <script src="js/jquery-1.11.3.min.js" defer></script>
-    <script src="js/notice.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +23,7 @@
                 </h1>
 
                 <div class="mobile">
-                    <a href="javascript:;" class="mobile__openBtn"><i class="far fa-newspaper"></i></a>
+                    <a href="javascript:;" class="mobile__openBtn"><i class="fas fa-bars fa-3x"></i></a>
                     <div class="right_nav">
                         <ul class="tnb cf">
                             <li><a href="./login.html">로그인</a></li>
@@ -89,7 +85,7 @@
                     </form>
                     <a href="javascript:;" class="mobile__closeBtn"><i class="fas fa-times fa-3x"></i></a>
                 </div>
-            </div>
+            </div>  
         </header>
 
         <div class="sub__tit">
@@ -97,7 +93,7 @@
         </div>
         <div class="sub__container cf">
             <aside class="container__subClass">
-                <h3 class="subClass__tit"><i class="far fa-newspaper"></i><br>뉴스&middot;소식</h3>
+                <h3 class="subClass__tit"><i class="far fa-newspaper"></i><br>공지사항</h3>
                 <nav class="subClass__list">
                     <ul>
                         <li><a href="notice.html">공지사항</a></li>
@@ -107,94 +103,41 @@
             </aside>
             <main id="main">
                 <div class="main__content">
-                    <section class="content__innerConts">
-                        <h3 class="innerConts__tit">뉴스&middot;이슈</h3>
-                        <p>충무아트센터 출입기자단으로 등록하시면 세종문화회관 뉴스& 이슈를 메일로 받아보실 수 있습니다.</p>
-                        <div class="innerConts__cont">
-                            <div class="cont__noticeContainer">
-                                <table class="noticeContainer__notice notice">
-                                    <thead>
-                                        <tr>
-                                            <th class="numTit">번호</th>
-                                            <th class="titTit">제목</th>
-                                            <th class="dateTit">작성일</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="notice__num">999999</td>
-                                            <td class="notice__tit"><a href="news_view.html">[보도자료] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vel dolorem maiores ea delectus, libero, magnam non, eum labore, animi ducimus alias eius eligendi aut quod minus fuga dolorum natus!노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">9</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">8</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">7</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">6</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">5</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">4</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">3</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">2</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notice__num">1</td>
-                                            <td class="notice__tit"><a href="#">[보도자료] 노쇼 좌석 융통성있게 활용할줄 알아야?</a></td>
-                                            <td class="notice__date">2020-07-21</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- <a href="notice_submit.html" class="writeBtn"><i class="fas fa-edit"></i>문의하기</a> -->
-                                <div class="pagenation">
-                                    <a href="javascript:;" class="pageBtn doublePrevBtn"><i class="fas fa-angle-double-left"></i></a>
-                                    <a href="javascript:;" class="pageBtn prevBtn"><i class="fas fa-angle-left"></i></a>
-                                    <a href="javascript:;" class="pageNum active">1</a>
-                                    <a href="javascript:;" class="pageNum">2</a>
-                                    <a href="javascript:;" class="pageNum">3</a>
-                                    <a href="javascript:;" class="pageNum">4</a>
-                                    <a href="javascript:;" class="pageNum">5</a>
-                                    <a href="javascript:;" class="pageBtn nextBtn"><i class="fas fa-angle-right"></i></a>
-                                    <a href="javascript:;" class="pageBtn doubleNextBtn"><i class="fas fa-angle-double-right"></i></a>
-                                </div>
-                                <form class="search_notice" action="action_page.php">
-                                    <button type="submit" class="submit"><i class="fa fa-search"></i></button>
-                                    <input type="text" name="search_nt" class="search_nt" placeholder="검색어를 입력해주세요">
-                                </form>
-                            </div>
-                        </div>
-                    </section>
+                    <article class="content__cont">
+                        <h3 class="cont__tit">노쇼 좌석 융통성있게 활용할줄 알아야?</h3>
+                        <span class="cont__tit_date">2020-07-21</span>
+                        <p class="view_text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                        </p>
+                    </article>
+                    <!-- 
+                    <article class="content__cont answer">
+                        <h3 class="cont__tit">답변</h3>
+                        <span class="cont__tit_date">2020-07-21</span>
+                        <p class="view_text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum어쩌구저쩌구 감사합니다.
+                        </p>
+                    </article> -->
+                    <div class="paging_view">
+                        <a href="#" class="paging_view_prev">
+                            <strong><i class="fas fa-caret-up"></i> 이전글</strong><span>늘어나는 캠핑 감염...코로나 무풍지대 없다(종합)</span>
+                        </a>
+                        <a href="#" class="paging_view_next">
+                            <strong><i class="fas fa-caret-down"></i> 다음글</strong><span>기자들은 전·월셋값이 안 올랐다고 써야합니다</span>
+                        </a>
+                    </div>
+                    <div class="paging_prev">
+                        <a href="news.html"><i class="fa fa-bars" aria-hidden="true"></i>목록으로</a>
+                    </div>
                 </div>
             </main>
-            <a href="javascript:;" class="topBtn">TOP</a>
+            <a href="#" class="topBtn">TOP</a>
         </div>
         <footer>
             <div class="footerinner">

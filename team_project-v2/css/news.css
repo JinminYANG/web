@@ -9,7 +9,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    background: url(../img/info_tit_bg.jpg) center -80px;
+    background: url(../img/news_bg_04.jpg) center bottom;
     background-size: cover;
 }
 .sub__tit h2{
@@ -92,7 +92,7 @@ main .main__content{
 }
 
 .content__innerConts > p{
-    /*margin-bottom:50px;*/
+    margin-bottom:50px;
     font-size: 14px;
     word-break: keep-all;
 }
@@ -124,9 +124,6 @@ main .main__content{
 .notice{
     width: 800px;
     margin-bottom: 30px;
-    display: none;
-}
-.notice.active{
     display: block;
 }
 
