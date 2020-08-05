@@ -1,0 +1,1 @@
+"use strict";var dateBox=document.getElementById("date");function writeTime(){var newDate=new Date,year=newDate.getFullYear(),month=newDate.getMonth()+1,date=newDate.getDate();dateBox.value=year+"-"+(10>month?"0"+month:month)+"-"+(10>date?"0"+date:date)}function init(){writeTime()}init();

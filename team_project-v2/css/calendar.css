@@ -68,22 +68,23 @@
 
 main{width: 1060px;}
 
-main .main__content{
-    padding: 10px 0;
-    text-align: center;
+main .main__siteLoad{
+    padding: 10px 20px;
 }
-
-.main__content{
-    width: 98%;
+.main__siteLoad a{
+    display: inline-block;
+    font-size: 13px;
+}
+main .main__content{
+    padding: 50px 20px;
+    text-align: center;
     height: 100%;
     margin: 0 auto;
 }
 
 .search_info{
-    /*width: 100%;*/
     height: 70px;
-    margin: 10px;
-    /*border: 1px solid red;*/
+    margin: 0px 10px;
 }
 .search_info>ul{
     display: inline-block;
@@ -388,12 +389,12 @@ html .ui-button.ui-state-disabled:active{
 .all_list .order_list a{
     box-sizing: border-box;
     margin-left: 10px;
-    padding: 10px 20px;
+    padding: 6px 15px;
     border: 1px solid #000;
     border-radius: 5px;
 }
 .all_list .order_list a:hover{
-    background: #CC9966;
+    background: #7191b0;
     color: #fff;
 }
 

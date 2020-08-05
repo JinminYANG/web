@@ -71,13 +71,11 @@ main{width: 1060px;}
 main .main__content{
     padding: 10px 0;
     text-align: center;
-}
-
-.main__content{
     width: 98%;
     height: 100%;
     margin: 0 auto;
 }
+
 
 .search_info{
     /*width: 100%;*/
