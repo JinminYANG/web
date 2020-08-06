@@ -10,7 +10,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    background: url(../img/news_bg_04.jpg) center bottom;
+    background: url(../img/news_bg.jpg) center -800px;
     background-size: cover;
 }
 .sub__tit h2{

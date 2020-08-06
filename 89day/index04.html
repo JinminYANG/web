@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<ul>
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+		<li>fourth</li>
+	</ul>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		var $li = $("li"),
+		length = $li.length,
+		size = 12;
+
+		for(var i=0; i<length; i++){
+			$("li").eq(i).css("fontSize",size +"px");
+			size +=10;
+		}
+	</script>
+</body>
+</html>

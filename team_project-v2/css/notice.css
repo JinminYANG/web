@@ -9,7 +9,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    background: url(../img/news_bg_04.jpg) center bottom;
+    background: url(../img/news_bg.jpg) center -800px;
     background-size: cover;
 }
 .sub__tit h2{
@@ -115,24 +115,23 @@ main .main__content{
 }
 .notice_section>li>a{
     color: #999;
+    transition: none;
+}
+.notice_section>li>a:hover{
+    font-weight: bold;
 }
 .notice_section>li>a.active{
     color: #000;
     font-weight: bold;
 }
 
-.notice{
-    width: 800px;
+.cont__noticeContainer .notice{
+    width: 100%;
     margin-bottom: 30px;
-    display: none;
-}
-.notice.active{
-    display: block;
+    table-layout: fixed;
 }
 
-thead{
-    width: 100%;
-}
+
 thead tr{
     height: 50px;
     border-top: 2px solid #000;
@@ -143,37 +142,31 @@ thead .numTit{width: 15%;}
 thead .titTit{width: 65%;}
 thead .dateTit{width: 20%;}
 
+tbody .notice__tit{
+    text-align: left;
+}
+
 
 tbody tr{
     height: 50px;
     border-bottom: 1px solid #aaa;
 }
-tbody td{
-    color: #555;
-}
+
 tbody a{
-    overflow: hidden;
     display: block;
+    width: 100%;
     height: 50px;
     line-height: 50px;
-    /*white-space: nowrap;*/
-    text-overflow: ellipsis;
     transition: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 tbody a:hover{
     color: #000;
     font-weight: bold;
 }
-tbody .notice__num{
-    width: 15%;
-}
-tbody .notice__tit{
-    text-align: left;
-    width: 65%;
-}
-tbody .notice__date{
-    width: 20%;
-}
+
 .writeBtn{
     display: block;
     width: 150px;
