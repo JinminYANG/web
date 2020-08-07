@@ -140,7 +140,18 @@
 		}
 
 		sound_btn.onclick = function(event){
+			var attr = sound_btn.getAttribute("class");
+			var bgm = document.getElementsByTagName("audio");
 
+			if(attr == 'active'){
+				sound_btn.removeAttribute("class");
+				sound_btn.setAttribute("src", "img/speaker_off.png");
+				bgm[0].pause();
+			}else{
+				sound_btn.removeAttribute("class","active");
+				sound_btn.setAttribute("src", "img/speaker_on.png");
+				bgm[0].play();
+			}
 		}
 
 		toggle.onclick = function(){

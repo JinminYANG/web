@@ -100,10 +100,14 @@ main .main__content{
     border: 1px solid #000;
     border-radius: 10px;
 }
+.result_search:hover{
+    background-color:#eee;
+}
 .result_search .t_box{
     width: 75%;
     height: 100%;
     float: left;
+    margin-left: 10px;
 }
 .result_search .submit{
     width: 20%;
@@ -112,12 +116,18 @@ main .main__content{
     cursor: pointer;
     float: right;
     border-radius: 0 9px 9px 0;
+    transition: all 0.5s;
 }
 .result_search .submit i{
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
 }
-
+.result_search .submit:hover{
+    background: #fff;
+}
+.result_search .submit:hover i{
+    color: #d32e2e;
+}
 .perf_list{
     width: 100%;
     height: 70px;
@@ -137,7 +147,7 @@ main .main__content{
     border-radius: 5px;
 }
 .perf_list .order_list a:hover{
-    background: #7191b0;
+    background: #f26b21;
     color: #fff;
 }
 .perf_list .perf_list_count{

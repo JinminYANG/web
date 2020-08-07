@@ -20,7 +20,8 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    background:url(../img/topBg/subtest.jpg);
+    background: url(../img/mypage/mypage_tit_bg.jpg) no-repeat center -1000px;
+    background-size: cover;
 }
 .sub__tit h2{
     position: absolute;
@@ -36,10 +37,53 @@
 .sub__container{
     max-width: 1260px;
     height: auto;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
-/*main{width: 1060px;}*/
+/*왼쪽 서브메뉴*/
+.sub__container{
+    max-width: 1260px;
+    height: auto;
+    margin: 0 auto;
+}
+.sub__container .container__subClass,
+.sub__container main {float: left;}
+
+.sub__container .container__subClass{
+    height: 100%;
+}
+
+.container__subClass .subClass__tit{
+    width:180px;
+    height:180px;
+    text-align: center;
+    font-size: 20px;
+    font-weight:bold;
+    background-color:#222;
+    color:#888;
+}
+.container__subClass .subClass__tit i{
+    font-size:72px;
+    margin:30px 0 10px 0;
+}
+
+.subClass__list li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.5s;
+    border-bottom:1px solid #555;
+    font-size:16px;
+    font-weight:bold;
+    color:#555;
+}
+.subClass__list li a:hover{
+    color: #eee;
+    background: #555;
+}
+
+main{width: 84.1269%;}
 
 main .main__content{
     padding: 50px 0;
@@ -47,18 +91,18 @@ main .main__content{
 }
 
 .content__innerConts .innerConts__tit{
-    font-size: 42px;
-    font-weight:bold;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 
-.main__content_tit .form_tit{
-    font-size: 40px;
-}
 .content__innerConts > p{
     margin-bottom:50px;
-    font-size: 16px;
+    font-size: 14px;
     word-break: keep-all;
+}
+.content__innerConts .innerConts__cont{
+    max-width: 800px;
+    margin: 0 auto;
 }
 .main__content_tit .form_tit{
     font-size: 40px;
@@ -119,11 +163,11 @@ main .main__content{
     height: 48px;
     border: none;
 }
+.form_list ul>li:nth-of-type(1)>input,
 .form_list ul>li:nth-of-type(2)>input,
 .form_list ul>li:nth-of-type(3)>input,
-.form_list ul>li:nth-of-type(4)>input,
-.form_list ul>li:nth-of-type(6)>input,
-.form_list ul>li:nth-of-type(7)>input
+.form_list ul>li:nth-of-type(5)>input,
+.form_list ul>li:nth-of-type(6)>input
 {
     width: 78%;
 }
@@ -157,22 +201,22 @@ main .main__content{
 }
 
 
-.form_list ul>li:nth-of-type(11){
+.form_list ul>li:nth-of-type(10){
     margin-top: 2%;
 }
-.form_list ul>li:nth-of-type(11),
-.form_list ul>li:nth-of-type(12){
+.form_list ul>li:nth-of-type(10),
+.form_list ul>li:nth-of-type(11){
     height:20px;
     border: none;
     margin-bottom:0;
 }
-.form_list ul>li:nth-of-type(11):hover,
-.form_list ul>li:nth-of-type(12):hover{
+.form_list ul>li:nth-of-type(10):hover,
+.form_list ul>li:nth-of-type(11):hover{
     background-color:#fff;
 }
 
-.form_list ul>li:nth-of-type(11)>input,
-.form_list ul>li:nth-of-type(12)>input
+.form_list ul>li:nth-of-type(10)>input,
+.form_list ul>li:nth-of-type(11)>input
 {
     width:14px;
     height:14px;
@@ -180,8 +224,8 @@ main .main__content{
     float: left;
 }
 
-.form_list ul>li:nth-of-type(11)>label,
-.form_list ul>li:nth-of-type(12)>label{
+.form_list ul>li:nth-of-type(10)>label,
+.form_list ul>li:nth-of-type(11)>label{
     width: 80%;
     float: left;
     background: none;
@@ -191,10 +235,10 @@ main .main__content{
     line-height:1;
 }
 
-.form_list ul>li:nth-of-type(5) .sex{
+.form_list ul>li:nth-of-type(4) .sex{
     margin-left: -13px;
 }
-.form_list ul>li:nth-of-type(5) label{
+.form_list ul>li:nth-of-type(4) label{
     margin-right: 20px;
 }
 
@@ -281,6 +325,8 @@ main .main__content{
     background-color:#444;
     color:#fff;
 }
+
+.form_list ul>li.email_conf_area{display: none;}
 
 .form_list .btn_yn{
     margin: 3% 0 3% 0;

@@ -158,12 +158,17 @@ main .main__content{
     background-image: url("https://cdn0.iconfinder.com/data/icons/flat-round-arrow-arrow-head/512/Red_Arrow_Right-512.png");
     background-size: contain;
     background-position: center;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
 }
 .ui-datepicker-prev span.ui-icon {
-    transform: rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
 }
 .ui-widget-header{
     background-image: none;
+    font-size: 18px;
 }
 .ui-widget-header a {
     background-image: none;
@@ -178,8 +183,10 @@ main .main__content{
     background-image: none;
 }
 .ui-widget-content{
-    background: #eee;
+    background: #fff;
     background-image: none;
+    width: 300px;
+    /*height: auto;*/
 }
 .ui-widget-content .ui-state-default{
     text-align: center;
@@ -226,7 +233,33 @@ html .ui-button.ui-state-disabled:active{
 .ui-button:hover,
 .ui-button:focus{
     background-image: none;
+    cursor: pointer;
 }
+/*.ui-datepicker-calendar tbody tr td a{
+    box-sizing: border-box;
+    padding: 3px;
+}*/
+.ui-datepicker td span, .ui-datepicker td a{
+    padding: .5em;
+    font-size: 16px;
+}
+.ui-datepicker-calendar .ui-datepicker-week-end:nth-of-type(1){
+    color: #f00;
+}
+.ui-datepicker-calendar .ui-datepicker-week-end:nth-of-type(1) a{
+    color: #f00;
+}
+.ui-datepicker-calendar .ui-datepicker-week-end:nth-of-type(7){
+    color: #00f;
+}
+.ui-datepicker-calendar .ui-datepicker-week-end:nth-of-type(7) a{
+    color: #00f;
+}
+
+/*.ui-datepicker-calendar tbody tr td:nth-of-type(1) a{
+    color: #f00;
+}*/
+
 /*장르 선택 부분*/
 .search_info_genre{
     position: relative;
@@ -394,7 +427,7 @@ html .ui-button.ui-state-disabled:active{
     border-radius: 5px;
 }
 .all_list .order_list a:hover{
-    background: #7191b0;
+    background: #f26b21;
     color: #fff;
 }
 

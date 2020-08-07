@@ -31,12 +31,6 @@ function validate() {
     return false;
   }
 
-  if(join_form.sex.value=="") {
-    alert("성별을 선택해 주세요");
-    join_form.sex_man.focus();
-    return false;
-  }
-
   if(join_form.datepicker.value=="") {
     alert("생년월일을 입력해 주세요");
     join_form.datepicker.focus();
