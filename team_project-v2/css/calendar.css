@@ -110,7 +110,7 @@ main .main__content{
     width: 100%;
     height: 100%;
     background: url(../img/input_date_bg.png);
-    background-size: cover;
+    background-size: contain;
 }
 .search_info_date>ul{
     width: 100%;
@@ -277,7 +277,7 @@ html .ui-button.ui-state-disabled:active{
     font-size: 16px;
     cursor: pointer;
     background: url(../img/input_theme_bg.png);
-    background-size: cover;
+    background-size: contain;
     box-sizing: border-box;
     padding: 0 30px 0 50px;
     color: #333;
@@ -405,8 +405,11 @@ html .ui-button.ui-state-disabled:active{
 .search_info_sr>button>i.fa-search{
     font-size: 25px;
     color: #555;
+    transition: all 0.5s;
 }
-
+.search_info_sr>button:hover i.fa-search{
+    transform: scale(1.2);
+}
 
 .all_list{
     width: 100%;

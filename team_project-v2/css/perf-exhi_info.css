@@ -94,14 +94,16 @@ main .main__content{
 
 /*여기서부터 제작*/
 .result_search{
+    position: relative;
     width: 50%;
     height: 50px;
     margin: 0 auto;
-    border: 1px solid #000;
-    border-radius: 10px;
+    /*border: 2px solid #000;*/
+    /*border-bottom: 2px solid #000;*/
+    /*border-radius: 10px;*/
 }
 .result_search:hover{
-    background-color:#eee;
+    /*background-color:#eee;*/
 }
 .result_search .t_box{
     width: 75%;
@@ -112,10 +114,11 @@ main .main__content{
 .result_search .submit{
     width: 20%;
     height: 100%;
-    background: #d32e2e;
+    background: #555;
     cursor: pointer;
     float: right;
-    border-radius: 0 9px 9px 0;
+    /*border-radius: 0 8px 8px 0;*/
+    margin-right: 3px;
     transition: all 0.5s;
 }
 .result_search .submit i{
@@ -126,8 +129,55 @@ main .main__content{
     background: #fff;
 }
 .result_search .submit:hover i{
-    color: #d32e2e;
+    color: #000;
+    transform: scale(1.2);
 }
+
+
+.result_search .bar{
+    position: absolute;
+    display: block;
+    background: #555;
+}
+.result_search .barTop{
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 2px;
+    animation: barTopBottom 1s ease-in-out 1s forwards;
+}
+.result_search .barRight{
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    animation: barRightLeft 1s ease-in-out 2s forwards;
+}
+.result_search .barBottom{
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    animation: barTopBottom 1s ease-in-out 2s forwards;
+}
+.result_search .barLeft{
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    animation: barRightLeft 1s ease-in-out 1s forwards;
+}
+@keyframes barTopBottom{
+    0%{width: 0;}
+    100%{width: 100%}
+}
+@keyframes barRightLeft{
+    0%{height: 0;}
+    100%{height: 100%}
+}
+
+
+
 .perf_list{
     width: 100%;
     height: 70px;
