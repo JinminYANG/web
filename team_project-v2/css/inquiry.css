@@ -156,7 +156,18 @@ tbody .inquiry__yesOrNo.yes{color: #0000cc;}
 
 
 
-.pagenation{font-size: 16px; text-align: center;}
-.pagenation a{display: inline-block; margin-right: 10px;}
-.pagenation > a:last-child{margin-right: 0;}
-.pagenation a.active, .pagenation a:hover{color: #ba000c; text-decoration: underline;}
+.pagenation{
+    font-size: 16px; 
+    text-align: center;
+}
+.pagenation a{
+    display: inline-block; 
+    margin-right: 10px;
+}
+.pagenation > a:last-child{
+    margin-right: 0;
+}
+.pagenation a.active, .pagenation a:hover{
+    color: #ba000c; 
+    text-decoration: underline;
+}

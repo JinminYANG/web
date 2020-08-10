@@ -9,8 +9,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    /*background: #ccc;*/
-    background: url(../img/tit_bg.jpg) 0 -250px;
+    background: url(../img/per/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
 .sub__tit h2{
@@ -96,11 +95,8 @@ main .main__content{
     width: 33.2%;
     height: 70px;
     border : 1px solid #aaa;
-    /*box-shadow: 0 0 0 1px #555 inset; */
 }
 .search_info>ul>.search_info_genre{
-    /*box-shadow: 0 0 0 1px #555 initial;*/
-    /*border-style: initial; */
     border-right: none;
     border-left: none;
 }
@@ -109,7 +105,7 @@ main .main__content{
 .search_info_date{
     width: 100%;
     height: 100%;
-    background: url(../img/input_date_bg.png);
+    background: url(../img/per/input_date_bg.png);
     background-size: contain;
 }
 .search_info_date>ul{
@@ -137,7 +133,6 @@ main .main__content{
 }
 
 .search_info_date .search_info_date_start .datebox_01{
-    /*display: block;*/
     display: none;
     width: 270px;
     height: auto;
@@ -186,7 +181,6 @@ main .main__content{
     background: #fff;
     background-image: none;
     width: 300px;
-    /*height: auto;*/
 }
 .ui-widget-content .ui-state-default{
     text-align: center;
@@ -235,10 +229,6 @@ html .ui-button.ui-state-disabled:active{
     background-image: none;
     cursor: pointer;
 }
-/*.ui-datepicker-calendar tbody tr td a{
-    box-sizing: border-box;
-    padding: 3px;
-}*/
 .ui-datepicker td span, .ui-datepicker td a{
     padding: .5em;
     font-size: 16px;
@@ -256,10 +246,6 @@ html .ui-button.ui-state-disabled:active{
     color: #00f;
 }
 
-/*.ui-datepicker-calendar tbody tr td:nth-of-type(1) a{
-    color: #f00;
-}*/
-
 /*장르 선택 부분*/
 .search_info_genre{
     position: relative;
@@ -276,7 +262,7 @@ html .ui-button.ui-state-disabled:active{
     line-height: 70px;
     font-size: 16px;
     cursor: pointer;
-    background: url(../img/input_theme_bg.png);
+    background: url(../img/per/input_theme_bg.png);
     background-size: contain;
     box-sizing: border-box;
     padding: 0 30px 0 50px;
@@ -294,11 +280,8 @@ html .ui-button.ui-state-disabled:active{
 }
 
 .pop .pop_inner{
-    /*position: absolute;*/
-    /*left: 10%;*/
     width: 80%;
     height: 200px;
-    /*border: 1px solid blue;*/
     margin: 0 auto;
     margin-top: 50px;
     display: block;
@@ -336,7 +319,7 @@ html .ui-button.ui-state-disabled:active{
     border: 0;
 }
 .pop .pop_inner label{
-    background-image:url(../img/checkbox.png);
+    background-image:url(../img/per/checkbox.png);
 }
 
 .pop .pop_inner input[type=checkbox]:checked + label {
@@ -358,7 +341,7 @@ html .ui-button.ui-state-disabled:active{
     float: right;
     width: 30px;
     height: 30px;
-    background: url(../img/btn_xpop.png);
+    background: url(../img/per/btn_xpop.png);
     background-size: cover;
     text-indent: -9999px;
     overflow: hidden;
@@ -536,33 +519,20 @@ html .ui-button.ui-state-disabled:active{
 }
 
 
-.pagination{
+.pagenation{
+    font-size: 16px; 
     text-align: center;
-    height: 50px;
-    line-height: 50px;
-    padding: 10px;
+    margin-top: 30px;
 }
-.pagination .pbtn{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+.pagenation a{
+    display: inline-block; 
+    margin-right: 10px;
 }
-.pagination a:hover{
-    opacity: 0.5;
+.pagenation > a:last-child{
+    margin-right: 0;
 }
-.pagination .pbtn img{
-    width: 100%;
-    height: 100%;
-    margin-top: 5px;
+.pagenation a.active, .pagenation a:hover{
+    color: #ba000c; 
+    text-decoration: underline;
 }
-.pagination .pagenum{
-    padding: 5px 10px;
-}
-.pagination .pagenum.currentpage{
-    background: #444;
-    border-radius: 5px;
-    color: #fff;
-}
-
-
 

@@ -14,6 +14,7 @@
     <script src="js/topBtn.js" defer></script>
     <script src="js/footerSiteOpen.js" defer></script>
     <script src="js/event_info.js" defer></script>
+    <script src="js/pagenation.js" defer></script>
 </head>
 
 <body>
@@ -55,10 +56,10 @@
                                     </ul>
                                 </li>
                                 <li class="hover">
-                                    <a href="#"><span>뉴스&middot;소식</span></a>
+                                    <a href="notice.html"><span>뉴스&middot;소식</span></a>
                                     <ul>
-                                        <li><a href="#">공지사항</a></li>
-                                        <li><a href="#">뉴스/이슈</a></li>
+                                        <li><a href="notice.html">공지사항</a></li>
+                                        <li><a href="news.html">뉴스/이슈</a></li>
                                     </ul>
                                 </li>
                                 <li class="hover">
@@ -116,7 +117,7 @@
                         <ul>
                             <li>
                                 <div class="event_view_wrap">
-                                    <img src="img/event_01.png" alt="event_01">
+                                    <img src="img/per/event_01.png" alt="event_01">
                                     <div class="event_view_wrap_des">
                                         <h3>충무로 뮤지컬 영화제</h3>
                                         <p>기간 : 20.07.05~20.07.30</p>
@@ -129,7 +130,7 @@
                             </li>
                             <li>
                                 <div class="event_view_wrap">
-                                    <img src="img/event_02.png" alt="event_01">
+                                    <img src="img/per/event_02.png" alt="event_01">
                                     <div class="event_view_wrap_des">
                                         <h3>예그린 뮤지컬 어워드</h3>
                                         <p>기간 : 20.07.05~20.07.30</p>
@@ -142,14 +143,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="pagination">
-                        <a href="javascript:;" class="firstpage pbtn"><img src="img/btn_firstpage.png" alt="첫 페이지로 이동"></a>
-                        <a href="javascript:;"><span class="pagenum currentpage">1</span></a>
-                        <a href="javascript:;"><span class="pagenum">2</span></a>
-                        <a href="javascript:;"><span class="pagenum">3</span></a>
-                        <a href="javascript:;"><span class="pagenum">4</span></a>
-                        <a href="javascript:;"><span class="pagenum">5</span></a>
-                        <a href="javascript:;" class="lastpage pbtn"><img src="img/btn_lastpage.png" alt="마지막 페이지로 이동"></a>
+                    <div class="pagenation">
+                        <a href="javascript:;" class="pageBtn doublePrevBtn"><i class="fas fa-angle-double-left"></i></a>
+                        <a href="javascript:;" class="pageBtn prevBtn"><i class="fas fa-angle-left"></i></a>
+                        <a href="javascript:;" class="pageNum active">1</a>
+                        <a href="javascript:;" class="pageNum">2</a>
+                        <a href="javascript:;" class="pageNum">3</a>
+                        <a href="javascript:;" class="pageNum">4</a>
+                        <a href="javascript:;" class="pageNum">5</a>
+                        <a href="javascript:;" class="pageBtn nextBtn"><i class="fas fa-angle-right"></i></a>
+                        <a href="javascript:;" class="pageBtn doubleNextBtn"><i class="fas fa-angle-double-right"></i></a>
                     </div>
                 </div>
             </main>

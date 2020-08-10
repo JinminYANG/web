@@ -9,7 +9,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    background: url(../img/tit_bg.jpg) 0 -250px;
+    background: url(../img/per/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
 .sub__tit h2{
@@ -81,6 +81,7 @@ main .main__content{
     background: #f8f8f8;
     box-sizing: border-box;
     padding: 30px;
+    min-height: 500px;
 }
 .perf_description .perf_description_txt{
     width: 70%;

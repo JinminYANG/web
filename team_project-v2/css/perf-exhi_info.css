@@ -10,8 +10,7 @@
 .sub__tit{
     position: relative;
     height: 350px;
-    /*background: #ccc;*/
-    background: url(../img/tit_bg.jpg) 0 -250px;
+    background: url(../img/per/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
 .sub__tit h2{
@@ -30,13 +29,6 @@
     height: auto;
     margin: 0 auto;
 }
-/*html .subClass__tit에 fontawesome을 이용해 적절한 아이콘을 넣어주세요. 
-
-<h3 class="subClass__tit">
-    <i class="fas fa-guitar"></i><br>공연&middot;전시&middot;행사
-</h3>
-
-와 같은 형식이 됩니다.*/
 
 /*왼쪽 서브메뉴*/
 .sub__container{
@@ -98,12 +90,6 @@ main .main__content{
     width: 50%;
     height: 50px;
     margin: 0 auto;
-    /*border: 2px solid #000;*/
-    /*border-bottom: 2px solid #000;*/
-    /*border-radius: 10px;*/
-}
-.result_search:hover{
-    /*background-color:#eee;*/
 }
 .result_search .t_box{
     width: 75%;
@@ -117,7 +103,6 @@ main .main__content{
     background: #555;
     cursor: pointer;
     float: right;
-    /*border-radius: 0 8px 8px 0;*/
     margin-right: 3px;
     transition: all 0.5s;
 }
@@ -253,10 +238,8 @@ main .main__content{
 }
 .perf_view ul li .perf_view_wrap_des h4{
     font-size: 14px;
-    /*font-size: 18px;*/
 }
 .perf_view ul li .perf_view_wrap_des span{
-    /*font-size: 16px*/
     font-size: 14px;
     float: left;
 }
@@ -304,31 +287,20 @@ main .main__content{
     font-weight:bold;
 }
 
-/*pagination 구현 작업중*/
-.pagination{
+
+.pagenation{
+    font-size: 16px; 
     text-align: center;
-    height: 50px;
-    line-height: 50px;
-    padding: 10px;
+    margin-top: 30px;
 }
-.pagination .pbtn{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+.pagenation a{
+    display: inline-block; 
+    margin-right: 10px;
 }
-.pagination a:hover{
-    opacity: 0.5;
+.pagenation > a:last-child{
+    margin-right: 0;
 }
-.pagination .pbtn img{
-    width: 100%;
-    height: 100%;
-    margin-top: 5px;
-}
-.pagination .pagenum{
-    padding: 5px 10px;
-}
-.pagination .pagenum.currentpage{
-    background: #444;
-    border-radius: 5px;
-    color: #fff;
+.pagenation a.active, .pagenation a:hover{
+    color: #ba000c; 
+    text-decoration: underline;
 }

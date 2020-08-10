@@ -5,12 +5,12 @@
 @import url(header.css);
 @import url(footer.css);
 @import url(topBtn.css);
+
 /*상단 타이틀*/
 .sub__tit{
     position: relative;
     height: 350px;
-    /*background: #ccc;*/
-    background: url(../img/tit_bg.jpg) 0 -250px;
+    background: url(../img/per/tit_bg.jpg) 0 -250px;
     background-size: cover;
 }
 .sub__tit h2{
@@ -29,13 +29,6 @@
     height: auto;
     margin: 0 auto;
 }
-/*html .subClass__tit에 fontawesome을 이용해 적절한 아이콘을 넣어주세요. 
-
-<h3 class="subClass__tit">
-    <i class="fas fa-guitar"></i><br>공연&middot;전시&middot;행사
-</h3>
-
-와 같은 형식이 됩니다.*/
 
 /*왼쪽 서브메뉴*/
 .sub__container{
@@ -90,9 +83,6 @@ main .main__content{
     margin: 0 auto;
 }
 
-
-/*여기서부터 제작*/
-
 .event_list{
     width: 100%;
     height: 70px;
@@ -143,21 +133,21 @@ main .main__content{
     box-sizing: border-box;
     padding: 5px 10px;
     text-align: left;
+    line-height: 1.8;
 }
 .event_view ul li .event_view_wrap_des h3{
     color:#222;
-    font-size: 18px;
+    font-size: 20px;
     font-weight:bold;
 }
 .event_view ul li .event_view_wrap_des p{
-    /*font-size: 17px;*/
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     margin-top: 5px;
 }
 .event_view ul li .event_view_wrap_des p strong{
     font-weight: normal;
-    color: #f00;
+    color: #d32e2e;
 }
 .event_view ul li .event_view_wrap:hover .event_view_wrap_mh{
     opacity: 1;
@@ -189,36 +179,27 @@ main .main__content{
     line-height: 80px;
     border-radius: 80px;
     border: 2px solid #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
     color: #fff;
     font-size: 16px;
 }
+.event_view_wrap .event_view_wrap_mh a:hover{
+    background: rgba(255,255,255,0.4);
+}
 
-/*pagination 구현 작업중*/
-.pagination{
+.pagenation{
+    font-size: 16px; 
     text-align: center;
-    height: 50px;
-    line-height: 50px;
-    padding: 10px;
+    margin-top: 30px;
 }
-.pagination .pbtn{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+.pagenation a{
+    display: inline-block; 
+    margin-right: 10px;
 }
-.pagination a:hover{
-    opacity: 0.5;
+.pagenation > a:last-child{
+    margin-right: 0;
 }
-.pagination .pbtn img{
-    width: 100%;
-    height: 100%;
-    margin-top: 5px;
-}
-.pagination .pagenum{
-    padding: 5px 10px;
-}
-.pagination .pagenum.currentpage{
-    background: #444;
-    border-radius: 5px;
-    color: #fff;
+.pagenation a.active, .pagenation a:hover{
+    color: #ba000c; 
+    text-decoration: underline;
 }
