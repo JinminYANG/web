@@ -12,6 +12,9 @@
     <script src="js/header.js" defer></script>
     <script src="js/topBtn.js" defer></script>
     <script src="js/footerSiteOpen.js" defer></script>
+    <script src="js/jquery-1.11.3.min.js" defer=""></script>
+    <script src="js/jquery.js" defer=""></script>
+    <script src="js/login_practice.js" defer=""></script>
 </head>
 
 <body>
@@ -99,24 +102,24 @@
                         <p>로그인으로 충무아트센터의 멤버십혜택을 이용하실 수 있습니다.</p>
                         <div class="innerConts__cont">
                             <div class="cont__login">
-                                <form method="post" action="#" name="loginForm" id="loginForm">
+                                <form method="post" action="member_login_ok.php" name="loginForm" id="loginForm">
                                     <fieldset>
                                         <legend>로그인</legend>
                                         <div class="form__loginInfo">
                                             <ul class="loginInfo__inputs">
                                                 <li class="cf">
-                                                    <label for="id">
+                                                    <label for="user_id">
                                                         <span class="hidden">이름</span>
                                                         <i class="fas fa-user"></i>
                                                     </label>
-                                                    <input type="text" id="id" name="id" required placeholder="아이디 / ID">
+                                                    <input type="text" id="user_id" name="user_id" required placeholder="아이디 / ID" value="korean">
                                                 </li>
                                                 <li class="cf">
-                                                    <label for="password">
+                                                    <label for="user_pw">
                                                         <span class="hidden">이메일</span>
                                                         <i class="fas fa-unlock"></i>
                                                     </label>
-                                                    <input type="password" id="password" name="password" required placeholder="비밀번호 / PASSWORD">
+                                                    <input type="password" id="user_pw" name="user_pw" required placeholder="비밀번호 / PASSWORD" value="12345">
                                                 </li>
                                             </ul>
                                         </div>
