@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@import url(reset.css);
-@import url(header.css);
-@import url(footer.css);
-@import url(topBtn.css);
+@import url('reset.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('topBtn.css');
 
 .sub__tit{
     position: relative;
@@ -144,9 +144,9 @@ form .form__joinBtn{
 }
 form .form__submit:hover,
 form .form__joinBtn:hover{
-    background:#d32e2e;
+    background-color: #d32e2e;
     color:#fff;
 }
 form .form__joinBtn:hover{
-    border:1px solid #d32e2e;
+    /*border:1px solid #d32e2e;*/
 }

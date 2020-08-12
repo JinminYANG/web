@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>충무아트센터</title>
-    <link rel="icon" sizes="16x16" type="image.png" href="img/favicon.png">
+    <link rel="icon" sizes="16x16" href="img/favicon.png" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,7 +19,10 @@
     <script src="js/footerSiteOpen.js" defer></script>
     <script src="js/sec_slide.js" defer></script>
     <script src="js/ticketingPopup.js" defer></script>
-    
+    <script src="js/jquery.js" defer=""></script>
+    <script src="js/login_practice.js" defer=""></script>
+
+
 </head>
 
 <body>
@@ -34,7 +37,7 @@
                     <a href="javascript:;" class="mobile__openBtn"><i class="fas fa-bars fa-3x"></i></a>
                     <div class="right_nav">
                         <ul class="tnb cf">
-                            <li><a href="./login.html">로그인</a></li>
+                            <li><a onclick="openNewWindow()">로그인</a></li>
                             <li><a href="./join.html">회원가입</a></li>
                             <li><a href="./mypage.html">마이페이지</a></li>
                         </ul>
@@ -131,7 +134,7 @@
                     </div>
                 </div>
                 <div class="bg3">
-                   <div class="textView">
+                    <div class="textView">
                         <span>마음을 울리는 감성뮤지컬</span>
                         <h2>뮤지컬 스토리오브마이라이프</h2>
                         <p>공연기간 : <span>2020.09.01~2020.10.25</span><br>공연장소 : <span>충무아트센터 중극장 블랙</span></p>
@@ -159,6 +162,7 @@
 
         <main id="main">
             <section class="icons">
+                <h2 class="hidden">icons</h2>
                 <div class="icons__wrap section__wrap">
                     <ul class="cf">
                         <li><a href="#"><i class="fas fa-ticket-alt fa-3x"></i>예매안내</a></li>
@@ -288,6 +292,7 @@
                 </div>
             </section>
             <section class="news cf">
+                <h2 class="hidden">news</h2>
                 <div class="news__wrap section__wrap">
                     <article class="news__notice cf">
                         <div class="text">
@@ -318,7 +323,7 @@
                                     <td><a href="#" class="notice__tit">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laudantium repellendus, hic ea. Eveniet, ipsa dolores nemo fugiat, architecto ratione esse magni ab exercitationem deserunt laborum? Natus praesentium, cupiditate blanditiis.</a></td>
                                     <td>2020-02-12</td>
                                 </tr>
-                                
+
                             </table>
                         </div>
                     </article>
@@ -395,7 +400,7 @@
             </div>
         </footer>
     </div>
-    
+
 </body>
 
 </html>
