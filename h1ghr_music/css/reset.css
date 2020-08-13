@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	background: #333;
+}
+ul,ol,li{
+	list-style: none;
+}
+body{
+	font: 2em 'Do Hyeon', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	color: #d50e13;
+}
+
+
+#wrap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+}
+.hidden{
+    display: block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+h1{
+	width: 180px;
+	height: 180px;
+	/*overflow: hidden;*/
+	position: absolute;
+	left: 2%;
+	top: 2%;
+	z-index: 10;
+}
+h1>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+h1>a>img{
+	width: 100%;
+	height: 100%;
+}
+
+
+.gnb{
+	position: absolute;
+	top: 40%;
+	left: 2%;
+	z-index: 10;
+}
+.gnb>ul>li>a{
+	color: #999;
+}
+.gnb>ul>li>a:hover{
+	transition: all 0.5s;
+	font-size: 1.6em;
+	color: #d50e13;
+
+}
+
+
+.sns{
+	position: absolute;
+	top: 5%;
+	right: 2%;
+	z-index: 10;
+}
+.sns>a{
+	margin-right: 10px;
+}
+.sns>a>.fab{
+	transition: all 0.5s;
+	color: #999;
+}
+.sns>a:hover .fab{
+	transform: scale(1.2);
+	color: #d50e13;
+}
+
+footer{
+	position: absolute;
+	right: 2%;
+	bottom: 2%;
+	font-size: 16px;
+}
