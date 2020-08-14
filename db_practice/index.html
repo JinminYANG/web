@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <meta charset="utf-8"></meter>
+        <TITLE>This is MyPage</TITLE>
+        
+    </head>
+    <body>
+ 
+        <h2>This is Http Test page</h2>
+ 
+<!--  fieldset를 쓰면 네모 박스가 나온다.-->
+        <fieldset>
+            <legend>GET METHOD TEST</legend>
+                <!-- method="get" 는 GET방식이다. -->
+            <form action="getTest.php" method="get">
+                <!-- p는 한 달락이다 (한줄) -->
+                <p>
+                    <label>Name:</label>
+                    <!--type은 내가 쓸 타입속성  name이 키 값이다.-->
+                    <input type="text" name="name">
+                </p>
+ 
+                <p>
+                    <label>Message:</label>
+                    <input type="text" name="msg">
+                </p>
+ 
+                <p>
+                    <input type="submit" name="" value="전송">
+                    <input type="reset" name="" value="취소">
+                </p>
+            </form>
+        </fieldset>
+ 
+        <fieldset>
+            <legend>POST METHOD TEST</legend>
+            <form action="postTest.php" method="post">
+                <p>
+                    <label>Name : </label>
+                    <input type="text" name="name">
+                </p>
+ 
+                <p>
+                    <label>Message : </label>
+                    <input type="text" name="msg">
+                </p>
+ 
+                <p>
+                    <input type="submit" value="전송">
+                    <input type="reset" value="취소">
+                </p>
+            </form>
+        </fieldset>
+ 
+        <fieldset>
+            <legend>Image File Upload</legend>
+            <form action="uploadFile.php" method="post" enctype="multipart/form-data">
+ 
+            <p>
+                <label>Image File : </label>
+                <input type="file" name="upload">
+ 
+            </p>
+            <p>
+                <input type="submit" value="전송">
+                <input type="reset" value="취소">
+            </p>
+            </form>
+        </fieldset>
+ 
+        <fieldset>
+            <legend>POST METHOD REQUEST Data with File</legend>
+            <form action="postDataWithFile.php" method="post" enctype="multipart/form-data">
+                <p>
+                    <label>Name : </label>
+                    <input type="text" name="name">
+                </p>
+ 
+                <p>
+                    <label>Message : </label>
+                    <input type="text" name="msg">
+                </p>
+ 
+                <p>
+                    <label>Image File : </label>
+                    <input type="file" name="upload">
+                </p>
+ 
+                <p>
+                    <input type="submit" value="submit">
+                    <input type="reset" value="cancel">
+                </p>
+            </form>
+        </fieldset>
+ 
+        <fieldset>
+            <legend>Load Data</legend>
+            <form action="loadDataFromDB.php" method="post" enctype="multipart/form-data">
+                <input type="submit" value="load">
+                
+            </form>
+        </fieldset>
+ 
+    </body>
+</html>
