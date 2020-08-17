@@ -3,7 +3,7 @@
 header("Content-Type: text/html; charset=UTF-8");
  
 //MySQL DB에 접속하기
-$conn=mysqli_connect("localhost","","aa7485","album_db");
+$conn=mysqli_connect("192.168.10.1","root","aa7485","albums");
  
 //한글깨짐 방지
 mysqli_query($conn,"set names utf8");

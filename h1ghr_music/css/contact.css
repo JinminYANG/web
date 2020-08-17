@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('reset.css');
+
+#wrap{
+	background-image: url(../img/img_22_black.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.gnb>ul>li:nth-of-type(3) a{
+	color: #f00;
+}
+
+.sub{
+	position: relative;
+	width: 70%;
+	height: 70%;
+	left: 15%;
+	top: 15%;
+	background: rgba(0,0,0,0.6);
+}
+
+.about img{
+	width: 50%;
+	height: auto;
+	margin-top: 10%;
+	float: left;
+	opacity: 0.7;
+	box-sizing: border-box;
+	padding: 0 3%;
+}
+.about .about_text{
+	width: 50%;
+	float: right;
+	display: block;
+	font-size: 22px;
+	box-sizing: border-box;
+	margin-top: 10%;
+	padding: 0 3%;
+	text-align: justify;
+	color: #aaa;
+}
+.about .about_text strong{
+	display: block;
+	text-align: right;
+	margin-top: 5%;
+	font-weight: normal;
+}
+
+
+.sub .bar{
+    position: absolute;
+    display: block;
+    background: #d50e13;
+}
+.barTop{
+	top: 0;
+	left: 0;
+	height: 4px;
+	width: 0;
+    animation: bartop 5s ease-in-out 1s infinite forwards;
+}
+.barLeft{
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 0;
+    animation: barleft 5s ease-in-out 1s infinite forwards;
+}
+.barRight{
+	top: 0;
+	right: 0;
+	width: 4px;
+	height: 0;
+    animation: barright 5s ease-in-out 1s infinite forwards;
+}
+.barBottom{
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 4px;
+    animation: barbottom 5s ease-in-out 1s infinite forwards;
+}
+
+@keyframes bartop{
+	0%{width: 0%;}
+	20%{width: 100%;}
+	40%{width: 100%;}
+	60%{width: 100%;}
+	80%{width: 100%;}
+	100%{width: 0%;}
+}
+@keyframes barleft{
+	0%{height: 0%;}
+	20%{height: 100%;}
+	40%{height: 100%;}
+	60%{height: 100%;}
+	80%{height: 100%;}
+	100%{height: 0%;}
+}
+@keyframes barright{
+	0%{height: 0%;}
+	20%{height: 0%;}
+	40%{height: 100%;}
+	60%{height: 100%;}
+	80%{height: 0%;}
+	100%{height: 0%;}
+}
+@keyframes barbottom{
+	0%{width: 0%;}
+	20%{width: 0%;}
+	40%{width: 100%;}
+	60%{width: 100%;}
+	80%{width: 0%;}
+	100%{width: 0%;}
+}
