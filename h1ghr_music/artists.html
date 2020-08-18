@@ -81,16 +81,37 @@
 				</article>
 			</section>
 			<section class="artists_view">
-				<article class="artists_view_desc">
+				<form class="artists_view_desc" action="try.php" method="post">
 					<img src="img/artists/jay_park/gang.jpg" alt="gang">
-					<ul class="about_text">
-						<il><a href="#"></a></il>
-					</ul>
+					<table class="list_table">
+						<thead>
+						<tr>
+							<th>id</th>
+							<th>아티스트</th>
+							<th>앨범</th>
+							<th>발매일</th>
+						</tr>
+						</thead>
+						<tbody>
+						<?php
+						$db_host = "localhost";
+						$db_user = "yangjinmin";
+						$db_passwd = "aa7594609*";
+						$db_name = "yangjinmin";
+						$db_conn = mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
+						$db_sql = "SELECT * FROM albums;";
+						$db_result = mysqli_query( $db_conn, $db_sql );
+						while( $db_row = mysqli_fetch_array( $db_result ) ) {
+							echo '<tr><td>' . $db_row[ 'id' ] . '</td><td>'. $db_row[ 'at_name' ] . '</td><td>' . $db_row[ 'ab_name' ] . '</td><td>' . $db_row[ 'date' ] . '</td></tr>';
+						}
+						?>
+						</tbody>
+					</table>
 					<span class="bar barTop"></span>
 					<span class="bar barLeft"></span>
 					<span class="bar barRight"></span>
 					<span class="bar barBottom"></span>
-				</article>
+				</form>
 			</section>
 		</div>
 		<footer>

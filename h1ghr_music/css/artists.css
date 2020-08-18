@@ -75,6 +75,7 @@
 	left: 15%;
 	top: 15%;
 	z-index: 10;
+	overflow-y: auto;
 }
 .artists_view_desc img{
 	width: 50%;
@@ -85,25 +86,19 @@
 	box-sizing: border-box;
 	padding: 3%;
 }
-.about .about_text{
+.list_table{
 	width: 50%;
+	height: 100%;
 	float: right;
-	display: block;
-	font-size: 22px;
-	box-sizing: border-box;
-	margin-top: 10%;
-	padding: 0 3%;
-	text-align: justify;
-	color: #aaa;
+	color: #fff;
+	font-size: 16px;
 }
-.about .about_text strong{
-	display: block;
-	text-align: right;
-	margin-top: 5%;
-	font-weight: normal;
+.list_table tr{
+	color: #fff;
 }
-
-
+.list_table tr td{
+	color: #fff;
+}
 .artists_view_desc .bar{
     position: absolute;
     display: block;
