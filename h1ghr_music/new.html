@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Employees</title>
+
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>아티스트</th>
+        <th>앨범</th>
+        <th>발매일</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+        $db_host = "localhost";
+        $db_user = "yangjinmin";
+        $db_passwd = "aa7594609*";
+        $db_name = "yangjinmin";
+        $db_conn = mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
+        $db_sql = "SELECT * FROM albums;";
+        $db_result = mysqli_query( $db_conn, $db_sql );
+        while( $db_row = mysqli_fetch_array( $db_result ) ) {
+            echo '<tr><td>' . $db_row[ 'id' ] . '</td><td>'. $db_row[ 'at_name' ] . '</td><td>' . $db_row[ 'ab_name' ] . '</td><td>' . $db_row[ 'date' ] . '</td></tr>';
+    }
+    ?>
+    </tbody>
+</table>
+</body>
+</html>
