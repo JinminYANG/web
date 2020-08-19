@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>popup</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		#notice_wrap{
+			width: 300px;
+			height: auto;
+		}
+		p{
+			background: #000;
+			height: 30px;
+			line-height: 1.8;
+		}
+		#expiresChk{
+			margin-left: 30px;
+		}
+		label{
+			color: #fff;
+		}
+		.closeBtn{
+			float: right;
+			margin-right: 10px;
+			margin-top: 4px;
+		}
+	</style>
+</head>
+<body>
+	<div id="notice_wrap">
+		<img src="img/bg.jpg" alt="bg" width="300px" height="auto">
+		<p class="closeWrap">
+			<input type="checkbox" name="expiresChk" id="expiresChk">
+			<label for="expiresChk">3일 동안 이 창을 열지않기</label>
+			<button class="closeBtn">닫기</button>
+		</p>
+	</div>
+
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script>
+		$(function(){
+			// alert("hi");
+
+			if($.cookie("popup") == "none"){
+				$("#notice_wrap").hide();
+			}
+
+			var $expChk = $("#expiresChk");
+			$(".closeBtn").on("click", closePop);
+
+			function closePop(){
+				if($expChk.is("checked")){
+					$.cookie("popup","none",{expires:3, path:"/"});
+				}
+				$("#notice_wrap").fadeOut("fast");
+			}
+		});
+	</script>
+</body>
+</html>

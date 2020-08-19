@@ -40,6 +40,7 @@
 	display: block;
 	overflow: hidden;
 	opacity: 0.8;
+    cursor: pointer;
 }
 .list:last-child{
 	margin-right: 1%;
@@ -67,6 +68,7 @@
 	/*top: 15%;*/
 	z-index: 9;
 	background: rgba(0,0,0,0.9);
+    display: none;
 }
 .artists_view_desc{
 	position: fixed;
@@ -77,28 +79,50 @@
 	z-index: 10;
 }
 .artists_view_desc img{
-	position: fixed;
+/*	position: absolute;*/
 	width: 50%;
-	height: 100%;
+	height: auto;
 	/*margin-top: 10%;*/
 	float: left;
 	opacity: 0.7;
 	box-sizing: border-box;
 	padding: 3%;
 }
+.table_wrap{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 3%;
+}
 .list_table{
-	width: 50%;
+	width: 100%;
 	height: 100%;
 	float: right;
 	color: #fff;
-	font-size: 16px;
-	overflow-y: auto;
 }
-.list_table tr{
-	color: #fff;
+.list_table tr th{
+	font-size: 28px;
 }
 .list_table tr td{
 	color: #fff;
+    font-size: 25px;
+/*    box-sizing: border-box;*/
+    padding: 5px 10px;
+}
+.list_table tr td:nth-of-type(1){
+    cursor: pointer;
+}
+.list_table tr td:nth-of-type(1).active{
+    color: #d50e13;
+}
+.list_table tr td:nth-of-type(1):hover{
+    color: #d50e13;
+}
+.list_table tr td:nth-of-type(2){
+    text-align: center;
 }
 .artists_view_desc .bar{
     position: absolute;
@@ -165,4 +189,10 @@
 	60%{width: 100%;}
 	80%{width: 0%;}
 	100%{width: 0%;}
+}
+.artists_view .close_btn{
+    cursor: pointer;
+    position: absolute;
+    right: 12%;
+    top: 15%;
 }
