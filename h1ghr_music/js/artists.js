@@ -29,11 +29,12 @@ $(document).ready(function(){
     
     //이미지클릭 기능
     $(".list").on("click", function(){
+        var at = $(this).children("h2").text();
+        console.log(at);
         $(".artists_view").fadeIn();
         $(".close_btn").on("click", function(){
             $(".artists_view").fadeOut();
         });
-        
     });
     
 });

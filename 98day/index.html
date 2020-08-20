@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div id="pivot_slider">
+		<div>
+			<h1>Lorem Ipsum</h1>
+			<img src="img/pic1.jpg" alt="pic1" width="200">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<div>
+			<h1>Lorem Ipsum</h1>
+			<img src="img/pic2.jpg" alt="pic2" width="200">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<div>
+			<h1>Lorem Ipsum</h1>
+			<img src="img/pic3.jpg" alt="pic3" width="200">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<div>
+			<h1>Lorem Ipsum</h1>
+			<img src="img/pic4.jpg" alt="pic4" width="200">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$.fn.pivot = function(options){
+			var $target = $(this);
+			var $items = $target.children();
+			var $container = $target.wrap('<div></div>').parent();
+			var option = {width:500, height:450};
+			// console.log($items);
+			// console.log($container);
+
+			//옵션처리
+			// 500*450 , 700*450
+			$.extend(option,options);
+			$target.css({
+				width: $items.length * option.width,
+				height: option.height,
+				position: 'absolute'
+			});
+
+			$items.css({
+				float: 'left',
+				width: option.width,
+				height: option.height
+			});
+			$container.css({
+				overflow: 'hidden',
+				position: 'relative',
+				width: option.width,
+				height: option.height
+			});
+
+
+			var originalLeft = 0;
+			var oldLeft = 0;
+			var nowPosition =0;
+			var isDown = false;
+
+			$target.on('mousedown', function(event){
+				event.preventDefault();
+				oldLeft = originalLeft = event.clientX;
+				isDown = true;
+			});
+			$target.on('mousemove', function(event){
+				if(isDown){
+					var distance = oldLeft - event.clientX;
+					oldLeft = event.clientX;
+
+					$target.animate({left: '-=' + distance}, 0);
+					$target.stop(true);
+				}
+			});
+			$target.on('mouseup', function(){
+				event.preventDefault();
+				isDown = false;
+			});
+		};
+	</script>
+	<script>
+		$(function(){
+			// alert("hi");
+			$("#pivot_slider").pivot({
+				width:700,
+				height:450
+			})
+		});
+	</script>
+</body>
+</html>
