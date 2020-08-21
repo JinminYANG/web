@@ -103,9 +103,18 @@
 	float: right;
 	color: #fff;
 }
+.list_table thead tr{
+    height: 50px;
+    border-top: 10px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.list_table thead tr th{
+    border-top: 10px solid #fff;
+}
 .list_table tr th{
 	font-size: 28px;
 }
+
 .list_table tr td{
 	color: #fff;
     font-size: 25px;
