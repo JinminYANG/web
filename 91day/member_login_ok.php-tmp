@@ -1,0 +1,20 @@
+
+Deprecated: The each() function is deprecated. This message will be suppressed on further calls in C:\Users\tjoeun\AppData\Roaming\Sublime Text 3\Packages\PHPTools\php.tools\codeFormatter.php on line 54
+<?php
+if (!isset($_POST['user_id']) || !isset($_POST['user_id'])) {exit;
+}
+
+$user_id = $_POST['user_id'];
+$user_pw = $_POST['user_pw'];
+$members = array(
+	'korean' => array('pw' => '12345',
+		'name'  => '박부장'),
+	'seoul'  => array('pw'  => '56789',
+		'name'  => '홍대리')
+);
+
+if (isset($members[$user_id]) && $members[$user_id]['pw'] == $user_pw) {
+	echo '{"user_id":"}'.$user_id.'","user_name": "'.$members[$user_id]['name'].'"}';
+}
+
+?>

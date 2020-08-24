@@ -7,10 +7,10 @@
     <title>h1ghr music</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/artists.css">
-    <script src="js/jquery-1.11.3.min.js" defer></script>
+    <script src="js/jquery-1.11.3.min.js" defer></script>    
     <script src="js/jquery.js" defer></script>
     <script src="js/artists.js" defer></script>
-
+    
 </head>
 
 <body>
@@ -31,11 +31,9 @@
             <a href="https://soundcloud.com/h1ghr-music" target="_blank"><i class="fab fa-soundcloud"></i></a>
         </div>
         <div class="artists">
-            <form class="artists_list" method="post" action="artists.php">
+            <section class="artists_list">
                 <article class="list artists_list_jay">
-                    <label for="user_id">이름</label>
-                    <input type="text" name="user_id" id="user_id" value="jay_park">
-                    <input type="submit" class="artists_list_title" value="jay_park"></h2>
+                    <h2 class="artists_list_title">Jay Park</h2>
                     <img src="img/artists/jay_park.jpg" alt="jay_park">
                 </article>
                 <article class="list artists_list_chacha">
@@ -86,8 +84,8 @@
                     <h2 class="artists_list_title">Trade L</h2>
                     <img src="img/artists/tradel.jpg" alt="tradel">
                 </article>
-            </form>
-            <form class="artists_view">
+            </section>
+            <form class="artists_view" action="artists.php">
                 <div class="artists_view_desc">
                     <img src="img/artists/jay_park/gang.jpg" alt="gang">
                     <div class="table_wrap">
@@ -99,8 +97,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!--                               <script>var p1 = 'cha cha malone'</script>-->
-                                <!--
+<!--                               <script>var p1 = 'cha cha malone'</script>-->
+<!--
                                 <?php
 						$db_host = "localhost";
 						$db_user = "yangjinmin";

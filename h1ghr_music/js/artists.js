@@ -26,15 +26,33 @@ $(document).ready(function(){
 	$(".sub").css({'width' : $win_width});
     
     
-    
+    var $frm = $(".artists_list");
     //이미지클릭 기능
-    $(".list").on("click", function(){
-        var at = $(this).children("h2").text();
-        console.log(at);
-        $(".artists_view").fadeIn();
-        $(".close_btn").on("click", function(){
-            $(".artists_view").fadeOut();
-        });
+    $frm.on("submit", function(e){
+        e.preventDefault();
+        var myData = $frm.serialize();
+        console.log(myData);
+//        var $at = $(this).children("h2").text();
+//        console.log($at);
+        $.ajax({
+            type: "post",
+            url: $frm.attr("action"),
+            data: myData,
+            success: function(res){
+                if(res){
+                    var jsonData = JSON.stringify(myData);
+                    console.log(jsonData);
+                    var message = '<tr><td>'+jsonData.ab+'</td>' + '<td>' + jsonData.da + '</td></tr>';
+            
+                    $(".list_table > tbody").html(message);
+                        $(".artists_view").fadeIn();
+                        $(".close_btn").on("click", function(){
+                            $(".artists_view").fadeOut();
+                    });
+                }
+             }
+        });   
     });
+    
     
 });
