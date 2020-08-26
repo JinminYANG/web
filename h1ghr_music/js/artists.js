@@ -38,16 +38,25 @@ $(document).ready(function(){
             type: "post",
             url: $frm.attr("action"),
             data: myData,
-            success: function(res){
-                if(res){
-                    var jsonData = JSON.stringify(myData);
-                    console.log(jsonData);
-                    var message = '<tr><td>'+jsonData.ab+'</td>' + '<td>' + jsonData.da + '</td></tr>';
-            
-                    $(".list_table > tbody").html(message);
-                        $(".artists_view").fadeIn();
-                        $(".close_btn").on("click", function(){
-                            $(".artists_view").fadeOut();
+            success: function(data){
+                if(data){
+                    var jsonData = JSON.stringify(data);
+                    console.log(data);
+                    
+//                    var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
+//                    var message = jsonData;
+//                    https://lovelydoll.tistory.com/63
+                    var htmls = "";
+//                    data.forEach(function(element,index,array){
+//                         htmls += "<tr><td>" ;
+//                    });
+                    
+//                    console.log(message);
+//                    $(".list_table > tbody").html(message);
+                    
+                    $(".artists_view").fadeIn();
+                    $(".close_btn").on("click", function(){
+                        $(".artists_view").fadeOut();
                     });
                 }
              }

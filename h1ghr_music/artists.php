@@ -1,6 +1,42 @@
 <?php
+//header( 'Content-Type: application/json' );
 
-$at_na = $_POST['user_id'];
+$at_name = $_POST['at_name'];
+
+//$members = array('jay_park'=>array( 'album'=>'안녕하세요 저는 양진민 입니다.',    'da'=>'2020-08-25' ));
+
+//$members = array( 'album'=>'안녕하세요 저는 양진민 입니다.', 'da'=>'2020-08-25' ));
+
+
+//$members += array( 'jay_park'+=>
+//array(
+//    'album'+=>'왜 안될까',
+//    'da'+=>'2020-08-26'. )
+//);
+
+$albums = [];
+$dates = [];
+array_push($albums, '안녕하세요.', 'Hello World!', 'Goodbye World!');
+array_push($dates, '2020-08-12', '2020-08-15', '2020-08-26');
+
+//$albums += ["안녕하세요"], ["Hello World!"], ["Goodbye World!"]; XXX
+//echo $families['Smith']['dad']; // 'Bob'
+
+for($i = 0; $i < count($albums); $i++) {
+//    echo '{"ab_name" : "'.$albums[$i].'" }';
+    echo $albums[$i];
+    echo $dates[$i];
+
+}
+
+//echo '{"ab_name" : "'.$albums[0].'" }';
+//echo '{"ab_name" : "'.$albums[1].'" }';
+
+
+//
+//echo '{ "at_name" : "'.$at_name.'" ,
+//    "ab_name" : "'.$members[$at_name]['album'].'",
+//    "date" : "'.$members[$at_name]['da'].'" }';
 
 $db_host = 'localhost';
 $db_user = 'yangjinmin';
@@ -8,25 +44,28 @@ $db_passwd = 'aa7594609*';
 $db_name = 'yangjinmin';
 $db_conn = mysqli_connect( $db_host, $db_user, $db_passwd, $db_name );
 
-mysqli_set_charset( $db_conn, 'utf8' );
-$pageDom = new DomDocument();
-$searchPage = mb_convert_encoding( $htmlUTF8Page, 'HTML-ENTITIES', 'UTF-8' );
-@$pageDom->loadHTML( $searchPage );
-mysqli_query( $db_conn, 'set session character_set_connection=utf8;' );
-mysqli_query( $db_conn, 'set session character_set_results=utf8;' );
-mysqli_query( $db_conn, 'set session character_set_client=utf8;' );
-$db_sql = 'SELECT * FROM albums;';
+$db_sql = "SELECT * FROM albums WHERE at_name = '{$at_name}';";
+
 $db_result = mysqli_query( $db_conn, $db_sql );
-while( $db_row = mysqli_fetch_array( $db_result ) ) {
-    echo '<table class="list_table"><tbody><tr><td>' . $db_row[ 'ab_name' ] . '</td><td>' . $db_row[ 'date' ] . '</td></tr></tbody></table>';
+//while( $db_row = mysqli_fetch_row( $db_result ) ) {
+    //    $members += array( 'jay_park'=>
+    //        array(
+    //            'album'=>'왜 안될까',
+    //            'da'=>'2020-08-26'. )
+    // );
     
-    $members = array(
-		'jay-park'=>array('ab'=>$db_row[ 'ab_name' ], 'da'=>$db_row[ 'date' ])
-	);
-    
-    echo '{"user_id":"}'.$user_id.'","user_ab": "'.$members[$user_id]['ab'].'"}';
+//    $list[] = array("ab_name" =>$db_row['ab_name'], "date" =>  $db_row['date']);
+//    array_push($albums,$db_row['ab_name']);
+//    array_push($dates,$db_row['date']);
+//}
+for($k=0; $k<=$db_row = mysqli_fetch_row( $db_result ); $k++ ){
+    array_push($albums, "{$db_row['ab_name']}");
+    array_push($dates,$db_row['date']);
+    echo $albums[$k];
+    echo $dates[$k];
 }
-//$members = array(
-//		'sik-k'=>array('ab'=>$db_row[ 'ab_name' ], 'da'=>$db_row[ 'date' ])
-//	);
+//echo $list;
+//echo '{ "at_name" : "'.$at_name.'" ,
+//    "ab_name" : "'.$members[$at_name]['album'].'",
+//    "date" : "'.$members[$at_name]['da'].'" }';
 ?>
