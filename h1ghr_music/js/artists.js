@@ -40,19 +40,25 @@ $(document).ready(function(){
             data: myData,
             success: function(data){
                 if(data){
-                    var jsonData = JSON.stringify(data);
                     console.log(data);
-                    
-//                    var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
-//                    var message = jsonData;
+                    var jsonData = JSON.stringify(data,['ab_name','date']);
+                    //  var jsonData = JSON.parse(data);
+                    // console.log(data);
+                    console.log(jsonData);
+                    // console.log(jsonData2);
+                    // console.log(jsonData[2]);
+
+                    // var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
+                    var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
+                   // var message = jsonData;
 //                    https://lovelydoll.tistory.com/63
                     var htmls = "";
 //                    data.forEach(function(element,index,array){
 //                         htmls += "<tr><td>" ;
 //                    });
                     
-//                    console.log(message);
-//                    $(".list_table > tbody").html(message);
+                   console.log(message);
+                   $(".list_table > tbody").html(message);
                     
                     $(".artists_view").fadeIn();
                     $(".close_btn").on("click", function(){

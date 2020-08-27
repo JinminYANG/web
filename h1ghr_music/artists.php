@@ -24,8 +24,10 @@ array_push($dates, '2020-08-12', '2020-08-15', '2020-08-26');
 
 for($i = 0; $i < count($albums); $i++) {
 //    echo '{"ab_name" : "'.$albums[$i].'" }';
-    echo $albums[$i];
-    echo $dates[$i];
+    echo '{"ab_name" : "'.$albums[$i].'", "date" : "'.$dates[$i].'"}' ;
+//    echo $dates[$i];
+//    echo '{ "date" : "'.$dates[$i].'"}';
+//    $list[] = array("abs"=>$)
 
 }
 
@@ -58,11 +60,12 @@ $db_result = mysqli_query( $db_conn, $db_sql );
 //    array_push($albums,$db_row['ab_name']);
 //    array_push($dates,$db_row['date']);
 //}
-for($k=0; $k<=$db_row = mysqli_fetch_row( $db_result ); $k++ ){
-    array_push($albums, "{$db_row['ab_name']}");
-    array_push($dates,$db_row['date']);
-    echo $albums[$k];
-    echo $dates[$k];
+for($k=0; $db_row = mysqli_fetch_row( $db_result ); $k++ ){
+//    array_push($albums, "{$db_row['ab_name']}");
+//    array_push($dates,$db_row['date']);
+ //   echo $albums[$k];
+  //  echo $dates[$k];
+//  $list[] = array("ab_name" => $db_row[ab_name], "date" => $db_row[date]);
 }
 //echo $list;
 //echo '{ "at_name" : "'.$at_name.'" ,

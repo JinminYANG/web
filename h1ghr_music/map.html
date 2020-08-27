@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
+</head>
+<body>
+<!--	<div id="map" style="width:500px;height:400px;"></div>-->
+<!--	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6fd03ed77b2d2ed79959d6cd2823c0f6"></script>-->
+<!--	<script>-->
+<!--		var container = document.getElementById('map');-->
+<!--		var options = {-->
+<!--			center: new kakao.maps.LatLng(33.450701, 126.570667),-->
+<!--			level: 3-->
+<!--		};-->
+
+<!--		var map = new kakao.maps.Map(container, options);-->
+<!--	</script>-->
+
+	<!-- * 카카오맵 - 지도퍼가기 -->
+	<!-- 1. 지도 노드 -->
+<!--	<div id="daumRoughmapContainer1598530938922" class="root_daum_roughmap root_daum_roughmap_landing"></div>-->
+
+<!--	&lt;!&ndash;-->
+<!--        2. 설치 스크립트-->
+<!--        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.-->
+<!--    &ndash;&gt;-->
+<!--	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>-->
+
+<!--	&lt;!&ndash; 3. 실행 스크립트 &ndash;&gt;-->
+<!--	<script charset="UTF-8">-->
+<!--		new daum.roughmap.Lander({-->
+<!--			"timestamp" : "1598530938922",-->
+<!--			"key" : "2zsw4",-->
+<!--			"mapWidth" : "640",-->
+<!--			"mapHeight" : "360"-->
+<!--		}).render();-->
+<!--	</script>-->
+
+	<div class="mapWrap">
+		<div id="map" style="width:100%;height:400px;"></div>
+	</div> <div id="coordXY"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6fd03ed77b2d2ed79959d6cd2823c0f6&libraries=services,clusterer,drawing"></script>
+	<script>
+		////////////////////
+		// 카카오 지도 API S
+		// /////////////////
+		var coordXY = document.getElementById("coordXY"); //위도 경도 알아내기
+		var container = document.getElementById('map'); //지도에 담을 영역의 DOM 레퍼런스
+		var options = {
+			center: new kakao.maps.LatLng(37.51757502444712 , 127.05206735672006), //위도 경도
+			level: 3 // 지도 확대축소 정도
+		};
+		var map = new kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
+
+		//지도타입 컨트롤, 줌 컨트롤 생성
+		var mapTypeControl = new kakao.maps.MapTypeControl();
+		map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+		var zoomControl = new kakao.maps.ZoomControl();
+		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+		// 주소-좌표 변환 객체 생성
+		var geocoder = new kakao.maps.services.Geocoder();
+
+		// 주소로 좌표 검색
+		geocoder.addressSearch('신 주소 입력', function(result, status) {
+
+			// 정상 검색과정
+			if (status === kakao.maps.services.Status.OK) {
+				var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+				yy = result[0].x;
+				xx = result[0].y;
+
+				//결과값으로 받은 위치를 마커로 표시
+				var marker = new kakao.maps.Marker({
+					map: map,
+					position: map.getCenter()
+					// position: coords
+				});
+				marker.setMap(map);
+				// 1419631132
+				//인포윈도우로 장소에 대한 설명을 표시
+				var iwContent = '<div style="padding:5px;">이피엔스<br>' +
+						'<a href="https://map.kakao.com/link/map/이피엔스,37.51757502444712, 127.05206735672006" style="color:blue" target="_blank">큰지도보기</a>' +
+						'<a href="https://map.kakao.com/link/to/이피엔스,37.51757502444712, 127.05206735672006" style="color:blue" target="_blank">길찾기</a>'
+						+'</div>'
+
+				var infowindow = new kakao.maps.InfoWindow({
+					content : iwContent
+				});
+
+				infowindow.open(map, marker);
+
+				//지도의 중심을 결과값으로 받은 위치로 이동
+				map.setCenter(coords);
+
+				// resize 마커 중심
+				var markerPosition = marker.getPosition();
+				$(window).on('resize', function(){
+					map.relayout();
+					map.setCenter(markerPosition);
+				});
+
+				//검색 경도위도 표시
+				coordXY.innerHTML = "<br>X좌표 : " + xx + "<br><br>Y좌표 : " + yy;
+
+
+			}else {
+				console.log('에러');
+			}
+
+		});
+	</script>
+
+</body>
+</html>
+
