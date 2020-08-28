@@ -1,79 +1,120 @@
 $(function () {
+    function map() {
+        //// ***지도*** ////
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(37.51757502444712, 127.05206735672006), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 지도에 마커를 표시합니다 
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: new kakao.maps.LatLng(37.51757502444712, 127.05206735672006)
+        });
+
+        // 커스텀 오버레이에 표시할 컨텐츠 입니다
+        // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
+        // 별도의 이벤트 메소드를 제공하지 않습니다 
+        var content = '<div class="wrap">' +
+            '    <div class="info">' +
+            '        <div class="title">' +
+            '            하이어뮤직 레코드' +
+            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+            '        </div>' +
+            '        <div class="body">' +
+            '            <div class="img">' +
+            '                <img src="../img/logo.png" alt="map_logo" width="73" height="70">' +
+            '           </div>' +
+            '            <div class="desc">' +
+            '                <div class="ellipsis">서울 강남구 삼성로126길 12 3층</div>' +
+            '                <div class="jibun ellipsis">(우) 06084 (지번) 삼성동 64-2</div>' +
+            '                <div><a href="http://yangjinmin.dothome.co.kr/index.html" target="_blank" class="link">홈페이지</a></div>' +
+            '            </div>' +
+            '        </div>' +
+            '    </div>' +
+            '</div>';
+
+        // 마커 위에 커스텀오버레이를 표시합니다
+        // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+        var overlay = new kakao.maps.CustomOverlay({
+            content: content,
+            map: map,
+            position: marker.getPosition()
+        });
+
+        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+        kakao.maps.event.addListener(marker, 'click', function () {
+            overlay.setMap(map);
+        });
+
+        // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다  //오류있어 제이쿼리문으로 대체
+        //function closeOverlay() {
+        //    overlay.setMap(null);
+        //}
+
+        $(".close").on("click", function () {
+            overlay.setMap(null);
+        });
+
+        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+        var mapTypeControl = new kakao.maps.MapTypeControl();
+
+        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+        var zoomControl = new kakao.maps.ZoomControl();
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+        // 지도에 교통정보를 표시하도록 지도타입을 추가합니다
+        map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+
+    }
+
+    map();
+    
+    $(window).resize(function () {
+        map();
+    });
 
 
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-    mapOption = {
-        center: new kakao.maps.LatLng(37.51757502444712 , 127.05206735672006), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
+    //// **시계** ////
+    // 1s 마다 시간을 가져옴
+    var timer = setInterval(function () {
+        var hNum;
+        var mNum;
+        var sNum;
 
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        var now = new Date();
+        var hr = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
 
-var iwContent = '<div class="PlaceInfoWindow InfoWindow  PlaceInfoWindow-collapsable">\n' +
-    '\t<div class="top"></div>\n' +
-    '\t<div class="body" data-id="body">\n' +
-    '        <button type="button" data-id="min" class="img_tooltip ico_min">축소하기</button>\n' +
-    '        <button type="button" data-id="close" class="img_tooltip ico_close ICON-closebox2">닫기</button>\n' +
-    '\t\t<div class="head_tooltip">\n' +
-    '\t\t\t<strong class="placename"><a href="https://place.map.kakao.com/1419631132" target="_blank" data-id="name" class="name" title="하이어뮤직레코즈">하이어뮤직레코즈</a></strong>\n' +
-    '\t\t\t<a href="#none" target="_blank" data-id="detail" class="detail">상세보기<span class="img_tooltip coach_detail"></span></a>\n' +
-    '\t\t</div>\n' +
-    '\t\t<div class="metadata">\n' +
-    '\t\t\t<strong class="screen_out">별점</strong>\n' +
-    '\t\t\t<em data-id="score">5.0</em>\n' +
-    '\t\t\t<span class="ICON-stars"><span data-id="stars" style="width: 100%;"></span></span>\n' +
-    '\t\t\t<a href="https://place.map.kakao.com/1419631132#comment" target="_blank" data-id="vote">(<span class="num">3</span>건)</a>\n' +
-    '\t\t\t<span class="sep"></span>\n' +
-    '\t\t\t<a href="https://place.map.kakao.com/1419631132#review" target="_blank" data-id="review">리뷰 <span class="num">0</span></a>\n' +
-    '\t\t</div>\n' +
-    '\t\t<div class="content">\n' +
-    '\t\t\t<a href="#none" data-id="placeimg" class="thumb_place">\n' +
-    '\t\t\t\t<span class="frame_g"></span>\n' +
-    '\t\t\t</a>\n' +
-    '\t\t\t<div class="content_place">\n' +
-    '\t\t\t\t<!-- 2018-06-07 2줄 말줄임 -->\n' +
-    '\t\t\t\t<p data-id="address" class="address" title="서울 강남구 삼성로126길 12 3층">서울 강남구 삼성로126길 12 3층</p>\n' +
-    '\t\t\t\t<p data-id="addInfoAddr" class="addInfoAddr"><span class="zipcode">(우) 06084</span>(지번) 삼성동 64-2</p>\n' +
-    '\t\t\t\t<p data-id="contact" class="contact">\n' +
-    '\t\t\t\t\t<span data-id="phone" class="phone">070-4189-7142</span> <span class="ICON-middot"></span>\n' +
-    '\t\t\t\t\t<a href="#none" target="_blank" class="detail">상세보기</a>\n' +
-    '                    <span class="ICON-middot"></span> <a href="#none" data-id="report" class="report">정보수정</a>\n' +
-    '\t\t\t\t\t<span class="ICON-middot"></span> <a href="https://www.facebook.com/H1GHRMUSICOFFICIAL" target="_blank" data-id="website" class="website">홈페이지</a>\n' +
-    '\t\t\t\t</p>\n' +
-    '\t\t\t</div>\n' +
-    '\t\t</div>\n' +
-    '        <div data-id="addition" class="addition HIDDEN"></div>\n' +
-    '        <div class="toolbar" data-id="toolbar"><div>\n' +
-    '\t<div class="InfoWindowToolbar">\n' +
-    '        <a href="#none" data-id="fav" class="fav"><span class="ico_toolbar">즐겨찾기</span><span data-id="favCount" class="num">100</span></a>\n' +
-    '        <a href="#none" data-id="rv" class="rv ICON-roadview"><span class="ico_toolbar">로드뷰</span></a>\n' +
-    '        <a href="#none" data-id="rough" class="rough"><span class="ico_toolbar">지도공유</span></a>\n' +
-    '    </div>\n' +
-    '\n' +
-    '    <div class="InfoWindowDirection">\n' +
-    '        <button type="button" class="btn_direction">길찾기</button>\n' +
-    '        <div data-id="waypoint" class="group_direction">\n' +
-    '            <button type="button" data-id="origin" class="origin">출발</button>\n' +
-    '            <button type="button" data-id="via" class="via">경유</button>\n' +
-    '            <button type="button" data-id="dest" class="dest">도착</button>\n' +
-    '        </div>\n' +
-    '    </div>\n' +
-    '</div></div>\n' +
-    '\n' +
-    '        <!--\n' +
-    '        <a data-id="intercityBtn" href="#" class="intercityBtn HIDDEN">실시간예매</a>\n' +
-    '        -->\n' +
-    '\t</div>\n' +
-    '\t<div class="bottom"></div>\n' +
-    '</div>',
-    iwPosition = new kakao.maps.LatLng(37.51757502444712 , 127.05206735672006),
-    iwRemoveable = true;
 
-var infowindow = new kakao.maps.InfoWindow({
-    map: map, // 인포윈도우가 표시될 지도
-    position : iwPosition,
-    // content : iwContent,
-    removable : iwRemoveable
-});
+        if (hr >= 10) {
+            hNum = hr;
+        } else {
+            hNum = '0' + hr;
+        }
+        // console.log(hr);
+        if (min >= 10) {
+            mNum = min;
+        } else {
+            mNum = '0' + min;
+        }
+        if (sec >= 10) {
+            sNum = sec;
+        } else {
+            sNum = '0' + sec;
+        }
 
+        $('.time span').eq(0).text(hNum);
+        $('.time span').eq(1).text(mNum);
+        $('.time span').eq(2).text(sNum);
+
+    }, 1000);
 });

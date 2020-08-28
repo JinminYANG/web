@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('reset.css');
-
+body{
+    height: 4700px;
+}
 #wrap{
 	background-image: url(../img/img_22_black.jpg);
 	-webkit-background-size: cover;
