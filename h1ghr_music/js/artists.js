@@ -11,6 +11,11 @@ function sub(){
 
 sub();
 
+function submitForm1() {
+    var form = document.forms['test_form'];
+    form.action = 'artists-v2.php';
+    form.submit();
+}
 
 $(document).ready(function(){
 	// alert('hi');
@@ -62,16 +67,16 @@ $(document).ready(function(){
                     // console.log(jsonData[2]);
 
                     // var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
-                    var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
+                    // var message = '<tr><td>'+jsonData.ab_name+'</td>' + '<td>' + jsonData.date + '</td></tr>';
                    // var message = jsonData;
 //                    https://lovelydoll.tistory.com/63
-                    var htmls = "";
+//                     var htmls = "";
 //                    data.forEach(function(element,index,array){
 //                         htmls += "<tr><td>" ;
 //                    });
                     
-                   console.log(message);
-                   $(".list_table > tbody").html(message);
+                   // console.log(message);
+                   $(".list_table > tbody").html(data1);
                     
                     $(".artists_view").fadeIn();
                     $(".close_btn").on("click", function(){
