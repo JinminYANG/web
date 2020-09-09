@@ -7,6 +7,11 @@
     $db_name = 'yangjinmin';
     $db_conn = mysqli_connect( $db_host, $db_user, $db_passwd, $db_name );
 
+    if($text1 != " ")
+    {
+
+    }
+
     mysqli_query($db_conn, "set session character_set_connection=utf8;");
     mysqli_query($db_conn, "set session character_set_results=utf8;");
     mysqli_query($db_conn, "set session character_set_client=utf8;");
