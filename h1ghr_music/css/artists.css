@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('reset.css');
 body{
-    height: 4600px;
+    height: 5500px;
 }
 #wrap{
 	background-image: url(../img/img_22_black.jpg);
@@ -25,7 +25,7 @@ body{
 }
 .artists_list{
 	position: fixed;
-	width: 6000px;
+	width: 6200px;
 	height: 70%;
 	/*left: 15%;*/
 	top: 15%;
@@ -46,7 +46,7 @@ body{
     cursor: pointer;
 }
 .list:last-child{
-	/*margin-right: 1%;*/
+	margin-right: 1%;
 }
 .list:hover{
 	opacity: 1;
@@ -63,17 +63,23 @@ body{
 	width: 100%;
 }
 .list>label{
-	display: none;
+	/*display: none;*/
+	display: block;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
 }
-.list>#at_name{
+.list>input[name=at_name]{
 	display: none;
 }
 .list>.artists_list_title{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	visibility: visible;
 	opacity: 0;
+	left: 0;
+	cursor: pointer;
 }
 .artists_view{
 	position: fixed;
@@ -118,23 +124,32 @@ body{
 	float: right;
 	color: #fff;
 }
-.list_table thead tr{
+.list_table .table_title{
+	width: 100%;
     height: 50px;
     border-top: 10px solid #fff;
     border-bottom: 1px solid #fff;
 }
-.list_table thead tr th{
+.list_table .table_title th{
     border-top: 10px solid #fff;
-}
-.list_table tr th{
 	font-size: 28px;
 }
+.list_table .table_title th:nth-of-type(1){
+	width: 70%;
+}
+.list_table .table_title th:nth-of-type(2){
+	width: 30%;
+ }
 
+.list_table tr{
+	height: 50px;
+}
 .list_table tr td{
 	color: #fff;
     font-size: 25px;
-/*    box-sizing: border-box;*/
-    padding: 5px 10px;
+    box-sizing: border-box;
+    /*padding: 5px 10px;*/
+	height: 50px;
 }
 .list_table tr td:nth-of-type(1){
     cursor: pointer;
