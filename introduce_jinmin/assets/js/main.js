@@ -83,23 +83,23 @@ let modal = function (modalClick) {
 }
 
 modalBtns.forEach((modalBtn, i) => {
-   modalBtn.addEventListener('click', () => {
-     modal(i);
-   });
+    modalBtn.addEventListener('click', () => {
+        modal(i);
+    });
 });
 
 modalCloses.forEach((modalClose) => {
-   modalClose.addEventListener('click', () => {
-       modalViews.forEach((modalView) => {
-          modalView.classList.remove('active-modal');
-       });
-   }) ;
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove('active-modal');
+        });
+    });
 });
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper(".portfolio__container", {
+let swiperPortfolio = new Swiper(".portfolio__container", {
     cssMode: true,
-    loop:true,
+    loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -111,7 +111,19 @@ let swiper = new Swiper(".portfolio__container", {
 });
 
 /*==================== TESTIMONIAL ====================*/
+let swiperTestimonial = new Swiper(".testimonial__container", {
+    loop: true,
+    grabCursor: true,
 
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
