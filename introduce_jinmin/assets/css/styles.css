@@ -515,43 +515,35 @@ img {
 }
 
 .skills__css {
-    width: 80%;
+    width: 70%;
 }
 
 .skills__js {
+    width: 70%;
+}
+
+.skills__jquery {
     width: 60%;
 }
 
-.skills__react {
-    width: 30%;
-}
-
-.skills__php {
+.skills__database {
     width: 40%;
 }
 
-.skills__node {
-    width: 50%;
-}
-
-.skills__firebase {
-    width: 60%;
-}
-
-.skills__python {
-    width: 30%;
-}
-
-.skills__figma {
-    width: 90%;
-}
-
-.skills__sketch {
+.skills__git {
     width: 50%;
 }
 
 .skills__photoshop {
     width: 80%;
+}
+
+.skills__illustrator {
+    width: 50%;
+}
+
+.skills__indesign {
+    width: 50%;
 }
 
 .skills__close .skills__list {
@@ -742,11 +734,13 @@ img {
 
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
-    overflow: initial;
+    overflow: hidden;
+    display: flex;
 }
 
 .portfolio__content {
-    padding: 0 1.5rem;
+    /*padding: 0 1.5rem;*/
+    padding: 3rem;
 }
 
 .portfolio__img {
@@ -779,15 +773,15 @@ img {
 }
 
 .swiper-button-prev {
-    left: -.5rem;
+    /*left: -.5rem;*/
 }
 
 .swiper-button-next {
-    right: -.5rem;
+    /*right: -.5rem;*/
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: -2.5rem;
+    /*bottom: -2.5rem;*/
 }
 
 .swiper-pagination-bullet-active {
@@ -1205,7 +1199,7 @@ img {
     }
 
     .about__info {
-        justify-content: space-between;
+        /*justify-content: space-between;*/
     }
 
     .about__buttons {
@@ -1320,15 +1314,15 @@ img {
     }
 
     .swiper-button-prev {
-        left: -3.5rem;
+        /*left: -3.5rem;*/
     }
 
     .swiper-button-next {
-        right: -3.5rem;
+        /*right: -3.5rem;*/
     }
 
     .swiper-container-horizontal > .swiper-pagination-bullets {
-        bottom: -4.5rem;
+        /*bottom: -4.5rem;*/
     }
 
     .contact__form {
