@@ -1,94 +1,96 @@
-import * as d3 from "https://cdn.skypack.dev/d3@7";
-// import {PieChart} from "@d3/pie-chart"
-import {population} from "@d3/pie-chart"
+// pie-chart.js
+const width = 500;
+const height = 500;
+const data = [
+    {name: 'A', value: 1000, color: '#efa86b'},
+    {name: 'B', value: 1500, color: '#c1484f'},
+    {name: 'C', value: 1300, color: '#d35d50'},
+    {name: 'D', value: 900, color: '#f4c17c'},
+    {name: 'E', value: 400, color: '#fae8a4'},
+    {name: 'F', value: 1200, color: '#df7454'},
+    {name: 'G', value: 1100, color: '#e88d5d'},
+    {name: 'H', value: 600, color: '#f8d690'}
+];
 
-// Copyright 2021 Observable, Inc.
-// Released under the ISC license.
-// https://observablehq.com/@d3/pie-chart
-function PieChart(data, {
-    name = ([x]) => x,  // given d in data, returns the (ordinal) label
-    value = ([, y]) => y, // given d in data, returns the (quantitative) value
-    title, // given d in data, returns the title text
-    width = 640, // outer width, in pixels
-    height = 400, // outer height, in pixels
-    innerRadius = 0, // inner radius of pie, in pixels (non-zero for donut)
-    outerRadius = Math.min(width, height) / 2, // outer radius of pie, in pixels
-    labelRadius = (innerRadius * 0.2 + outerRadius * 0.8), // center radius of labels
-    format = ",", // a format specifier for values (in the label)
-    names, // array of names (the domain of the color scale)
-    colors, // array of colors for names
-    stroke = innerRadius > 0 ? "none" : "white", // stroke separating widths
-    strokeWidth = 1, // width of stroke separating wedges
-    strokeLinejoin = "round", // line join of stroke separating wedges
-    padAngle = stroke === "none" ? 1 / outerRadius : 0, // angular separation between wedges
-} = {}) {
-    // Compute values.
-    const N = d3.map(data, name);
-    const V = d3.map(data, value);
-    const I = d3.range(N.length).filter(i => !isNaN(V[i]));
+const arc = d3.arc().innerRadius(150).outerRadius(Math.min(width, height) / 2);
+// .arc() 새로운 기본값의 아치(호) 생성
+// .innerRadius() 안쪽 반지름 값, 0이면 완전한 원이되고 값이 있으면 도넛 형태가 된다.
+// .outerRadius() 바깥쪽 반지름값
 
-    // Unique the names.
-    if (names === undefined) names = N;
-    names = new d3.InternSet(names);
+const arcLabel = (() => {
+    const radius = Math.min(width, height) / 2 * 0.8;
+    return d3.arc().innerRadius(radius).outerRadius(radius);
+})();
+// 라벨이 위치할 반지름 값 설정
 
-    // Chose a default color scheme based on cardinality.
-    if (colors === undefined) colors = d3.schemeSpectral[names.size];
-    if (colors === undefined) colors = d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), names.size);
+const pie = d3.pie()
+    // 새로운 기본값의 파이 모양의 생성
+    .sort((a, b) => b.value - a.value)
+    // data의 value 큰값 > 작은값 순으로 정렬합니다. ex. 반대 순서는 a.value - b.value
+    .value(d => d.value);
 
-    // Construct scales.
-    const color = d3.scaleOrdinal(names, colors);
+const arcs = pie(data);
 
-    // Compute titles.
-    if (title === undefined) {
-        const formatValue = d3.format(format);
-        title = i => `${N[i]}\n${formatValue(V[i])}`;
-    } else {
-        const O = d3.map(data, d => d);
-        const T = title;
-        title = i => T(O[i], i, data);
-    }
+const svg = d3.select('body')
+    .append('svg')
+    .style('width', width)
+    .style('height', height)
+    .style('font-size', '16px')
+    .attr('text-anchor', 'middle');
+    // text-anchor 텍스트의 정렬을 설정합니다 ( start | middle | end | inherit )
+    // .style('font-size', '20px sans-serif');
 
-    // Construct arcs.
-    const arcs = d3.pie().padAngle(padAngle).sort(null).value(i => V[i])(I);
-    const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
-    const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
+const g = svg.append('g')
+    .attr('transform', `translate(${width/2}, ${height/2})`);
+    // 우선 차트를 그릴 그룹(g) 엘리먼트를 추가한다.
+    // 위치값을 각각 2로 나누는건 반지름 값을 기준으로 한바퀴 돌며 path를 그리기 때문이다.
 
-    const svg = d3.create("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", [-width / 2, -height / 2, width, height])
-        .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+let value = '';
 
-    svg.append("g")
-        .attr("stroke", stroke)
-        .attr("stroke-width", strokeWidth)
-        .attr("stroke-linejoin", strokeLinejoin)
-        .selectAll("path")
-        .data(arcs)
-        .join("path")
-        .attr("fill", d => color(N[d.data]))
-        .attr("d", arc)
-        .append("title")
-        .text(d => title(d.data));
+g.selectAll('path')
+    // g의 요소중 이름이 'path'인 엘리먼트 전체선택
+    .data(arcs)
+    .enter().append('path')
+    // 이전과 동일하게 가상 path 요소를 만들고 그래프 데이터와 매핑하여 엘리먼트를 추가한다.
+    .attr('fill', d => d.data.color)
+    // 다른 그래프와 다르게 .data 라는 객체가 추가되어 있는데, 위에 arcs 변수를 선언할때
+    // .pie(data)가 {data, value, index, startAngle, endAngle, padAngle} 의 값을 가지고 있다.
+    .attr('stroke', 'white')
+    .attr('d', arc)
+    .append('title')
+    .text(d => `${d.data.name}: ${d.data.value}`);
+    // 각각 페스의 자식으로 title의 엘리먼트에 텍스트로 출력한다.
+    // 실제로 뷰에 출력되지는 않지만 시멘틱하게 각각의 요소의 설명 문자열을 제공한다.
+    // .text(d => value = d);
+    // console.log(value);
 
-    svg.append("g")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
-        .attr("text-anchor", "middle")
-        .selectAll("text")
-        .data(arcs)
-        .join("text")
-        .attr("transform", d => `translate(${arcLabel.centroid(d)})`)
-        .selectAll("tspan")
-        .data(d => {
-            const lines = `${title(d.data)}`.split(/\n/);
-            return (d.endAngle - d.startAngle) > 0.25 ? lines : lines.slice(0, 1);
-        })
-        .join("tspan")
-        .attr("x", 0)
-        .attr("y", (_, i) => `${i * 1.1}em`)
-        .attr("font-weight", (_, i) => i ? null : "bold")
-        .text(d => d);
+const text = g.selectAll('text')   
+    // g의 요소 중 이름이 'text'인 엘리먼트 전체선택
+    .data(arcs)
+    .enter().append('text')
+    // .enter()는 DOM에 없는 선택된 엘리먼트에 각 데이터에 대한 자리의 노드를 반환한다.
+    .attr('transform', d => `translate(${arcLabel.centroid(d)})`)
+    // .centroid()는 호 중심선의 중간점을 계산하는 데 사용된다.
+    // (startAngle+endAngle)/2 or (innerRadius+outerRadius)/2
+    .attr('dy', '0.35em');
+    // 해당 내용의 위치에서 y축을 따라 이동함
+    // date의 name이 이동하는 현상 확인
+    // 라벨을 취가하기 위한 text 엘리먼트를 만들고 위치를 지정합니다.
 
-    return Object.assign(svg.node(), {scales: {color}});
-}
+text.append('tspan')
+    .attr('x', 0)
+    .attr('y', '-0.7em')
+    .style('font-weight', 'bold')
+    .text(d => d.data.name)
+    // 해당 데이터 항목의 이름을 두꺼운 글씨로 출력한다. ex. A
+    // data의 name 속성에 대한 제어
+
+text.filter(d => (d.endAngle - d.startAngle > 0.25)).append('tspan')
+    .attr('x', 0)
+    .attr('y', '0.7em')
+    .attr('fill-opacity', 0.8)
+    .text(d => d.data.value);
+    // 해당 데이터의 수치값을 투명도를 주어 출력한다. ex. 1000
+    // date의 value 속성에 대한 제어
+
+svg.node();
