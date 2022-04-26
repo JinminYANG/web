@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>D3 svg example</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+<!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
+
+<!-- Add a svg area, empty -->
+<!--<svg id="viz_area" height=200 width=450></svg>-->
+<!--<div id="Area"></div>-->
+<div id="scatter_area"></div>
+
+<!--The coordinate system-->
+<!--<script>
+    var svg = d3.select("#dataviz_area")
+    svg.append("circle")
+        .attr("cx", 2).attr("cy", 2).attr("r", 40).style("fill", "blue");
+    svg.append("circle")
+        .attr("cx", 140).attr("cy", 70).attr("r", 40).style("fill", "red");
+    svg.append("circle")
+        .attr("cx", 300).attr("cy", 100).attr("r", 40).style("fill", "green");
+</script>-->
+
+
+<!--From data to pixel: Scales-->
+<!--<script>
+    // Select the svg area
+    var svg = d3.select("#viz_area")
+
+    // Create a scale: transform value in pixel
+    var x = d3.scaleLinear()
+        .domain([0, 100])         // html에 svg태그에 설정한 width, height 값을 어떠한 비율로 설정한 것인지!
+        // 데이터의 최소값과 최대값! 백분율인 경우 0-100
+        .range([0, 400]);       // html에 svg태그에 설정한 width, height 값을 얼만큼 사용할 것인지!
+        // 픽셀에서 원하는 값!
+    // Try console.log( x(25) ) to see what this x function does.
+
+    // Add 3 dots for 0, 50 and 100%
+    svg.append("circle")
+        .attr("cx", x(10)).attr("cy", 100).attr("r", 40).style("fill", "blue");
+    svg.append("circle")
+        .attr("cx", x(55)).attr("cy", 100).attr("r", 40).style("fill", "red");
+    svg.append("circle")
+        .attr("cx", x(100)).attr("cy", 100).attr("r", 40).style("fill", "green");
+    // y값은 높이의 절반 값이 중앙에 위치하는 듯!
+</script>-->
+
+
+<!--Add axis-->
+<!--<script>
+    // Select the svg area
+    var svg = d3.select("#viz_area")
+
+    // Create a scale: transform value in pixel
+    var x = d3.scaleLinear()
+        .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+        .range([0, 400]);       // This is the corresponding value I want in Pixel
+
+    // Show the axis that corresponds to this scale
+    svg.call(d3.axisBottom(x));
+
+    // Add 3 dots for 0, 50 and 100%
+    svg.append("circle")
+        .attr("cx", x(10)).attr("cy", 100).attr("r", 40).style("fill", "blue");
+    svg.append("circle")
+        .attr("cx", x(55)).attr("cy", 100).attr("r", 40).style("fill", "red");
+    svg.append("circle")
+        .attr("cx", x(100)).attr("cy", 100).attr("r", 40).style("fill", "green");
+</script>-->
+
+
+<!--Margin & translation-->
+<!--<script>
+    // 그래프의 치수와 여백을 설정합니다.
+    var margin = {top: 10, right: 40, bottom: 30, left: 30},
+        width = 450 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+    // svg 개체를 페이지 본문에 추가합니다.
+    var svg = d3.select("#Area")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        // 이 svg 요소를 번역하여 여백을 남깁니다.
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+        // 좌표값 (0,0)을 기준으로 svg 개체의 위치를 지정시킴.
+
+    // X scale and Axis
+    var x = d3
+        .scaleLinear()    // draw axis
+        .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+        .range([0, width]);       // This is the corresponding value I want in Pixel
+    svg
+        .append('g')
+        .attr("transform", `translate(0, ${height})`)
+        // 축의 기준 위치를 잡는다. (x, y)
+        .call(d3.axisBottom(x));
+        // 이 척도에 해당하는 축 표시
+
+    // X scale and Axis
+    var y = d3
+        .scaleLinear()    // draw axis
+        .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+        .range([height, 0]);       // This is the corresponding value I want in Pixel
+    svg
+        .append('g')
+        .call(d3.axisLeft(y));
+        // 이 척도에 해당하는 축 표시
+</script>-->
+
+
+<!--Data binding-->
+<script>
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 40, bottom: 30, left: 30},
+        width = 450 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+    // 페이지 본문에 svg 개체 추가
+    var svG = d3.select("#scatter_area")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    // Create data (temp data)
+    var data = [
+        {
+            x: 10,
+            y: 20
+        },
+        {
+            x: 40,
+            y: 90
+        },
+        {
+            x: 80,
+            y: 50
+        }
+    ];
+
+    // X scale and Axis
+    var x = d3.scaleLinear()
+        .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+        .range([0, width]);       // This is the corresponding value I want in Pixel
+    svG
+        .append('g')
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x));
+
+    // X scale and Axis
+    var y = d3.scaleLinear()
+        .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
+        .range([height, 0]);       // This is the corresponding value I want in Pixel
+    svG
+        .append('g')
+        .call(d3.axisLeft(y));
+
+    // Add 3 dots for 0, 50 and 100%
+    svG
+        .selectAll("whatever")  // 여기서 이름은 상관없는듯 하다.
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) {
+            return x(d.x)
+        })
+        .attr("cy", function (d) {
+            return y(d.y)
+        })
+        .attr("r", 10)
+</script>
+</body>
+</html>
