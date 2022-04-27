@@ -40,10 +40,13 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
             .call(d3.axisLeft(y));
 
         // Compute kernel density estimation (커널 밀도 추정 계산)
-        const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(40))
+        const kde = kernelDensityEstimator(kernelEpanechnikov(7), x.ticks(50))
+
+        // X축 눈금에 대한 Y 좌표를 제공합니다.
         const density = kde(data.map(function (d) {
             return d.price;
-        }))
+        }));
+
 
         // Plot the area
         svg.append("path")
@@ -77,6 +80,7 @@ function kernelDensityEstimator(kernel, X) {
         });
     };
 }
+
 /*
     * kernelDensityEstimator
     * 커널 밀도 추정(KDE)은 확률 변수의 확률 분포를 추정합니다.
