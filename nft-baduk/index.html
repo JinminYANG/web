@@ -24,27 +24,50 @@
 <header class="header sticky-top">
     <div class="container h-100">
         <div class="row logo h-50 align-items-end">
-            <a class="col" href="#">한국기원 NFT</a>
+            <a class="col text-white fw-bold" href="#">한국기원 NFT Project</a>
         </div>
-        <nav class="row h-50 align-items-end bookmark">
-            <a class="col active" href="#video">영상</a>
-            <a class="col" href="#introduce">소개</a>
-            <a class="col" href="#guide">구매방법</a>
+        <nav class="row h-50 align-items-end bookmark ">
+            <a class="col active" href="#video">Digital Art</a>
+            <a class="col" href="#introduce">신진서 X 이경호</a>
+            <a class="col" href="#guide">NFT 구매 방법</a>
         </nav>
     </div>
 </header>
 
-<!--
- 비디오 영역 오류
-  : container 클래스에 의해 영역이 잡히는데
-   video-wrap이 영역 설정이 되지 않음.
-   container 때문에 타이틀이나 구매하기 버튼 태그 이용시 위로 밀리는 현상이 나타남.
-
-  : 추가로 비디오 영역에 텍스트랑 날짜 카운터 계산식 들어갈 예정.
--->
 <section id="video" class="video w-100">
     <div class="container">
-        <div class="video-wrap">
+        <div class="desc mt-5 fs-4">
+            <span class="d-block">예술적인 대국의 예술 작품</span>
+            <span class="d-block">신진서 X 이경호의 첫 바둑 디지털아트</span>
+            <span class="d-block">OPENSEA 에서 NFT 거래개시</span>
+            <span class="">2022년 5월 22일 09:00 AM</span>
+            <span>거래 시작까지</span>
+            <table id="countdownContainer" class="countdownContainer d-inline-block">
+                <tr class="text fs-6">
+                    <td>DAYS</td>
+                    <td class="gap"></td>
+                    <td>HOURS</td>
+                    <td class="gap"></td>
+                    <td>MINS</td>
+                    <td class="gap"></td>
+                    <td>SECS</td>
+                </tr>
+                <tr class="info">
+                    <td id="days" class=""></td>
+                    <td class="gap px-1">:</td>
+                    <td id="hours" class=""></td>
+                    <td class="gap px-1">:</td>
+                    <td id="minutes" class=""></td>
+                    <td class="gap px-1">:</td>
+                    <td id="seconds" class=""></td>
+                </tr>
+            </table>
+            <!--<h2 class="open-text mt-5">신진서 NFT OPEN <span id="dDayCount" class="d-day-count mt-3"></span></h2>-->
+
+        </div>
+
+
+        <div class="video-wrap mt-5">
             <iframe src="https://www.youtube.com/embed/dSLaQNHH4Zo" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -52,17 +75,78 @@
                     class="video-player" id="video-player"
             ></iframe>
         </div>
-        <div class="video-title">
-            비디오 제목
+        <div class="video-title mt-5 fs-3">
+            <h2 class="fw-bold">제26회 LG배 조선일보 기왕전 우승자 신진서 기념 기보 NFT</h2>
         </div>
-
-        <button class="buy">구매하기</button>
+        <button type="button" class="btn btn-danger btn-lg mt-5 fs-3 py-2 px-4 buy">구매하기</button>
     </div>
+
 </section>
 
+<section id="introduce" class="introduce w-100">
+    <div class="container">
+        <h2 class="introduce-title mt-5 fs-1 fw-bold">Collaboration</h2>
 
-<section id="introduce">
-    introduce
+        <div class="content row mt-5">
+            <div class="profile jinseo col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="row align-items-center">
+                    <div class="col col-12 col-sm-12 col-md-6 image-container">
+                        <img src="image/jinseo.jpg" alt="신진서" class="profile-image">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-6 profile-box">
+                        <h3 class="profile-box-name fw-bold">신진서</h3>
+                        <ul class="profile-box-record list-unstyled text-start fs-5 fw-normal">
+                            <li class="profile-box-record-item">제9회 응씨배 결승 진출</li>
+                            <li class="profile-box-record-item">제22회 농심신라면배 세계바둑최강전 한국 우승 견인</li>
+                            <li class="profile-box-record-item">제13회 춘란배 우승</li>
+                            <li class="profile-box-record-item">제26회 LG배 결승 진출</li>
+                            <li class="profile-box-record-item">2021 중국 갑조리그 팀 우승 견인</li>
+                            <li class="profile-box-record-item">제26회 LG배 우승</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile kyungho col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="row align-items-center">
+                    <div class="col col-12 col-sm-12 col-md-6 image-container">
+                        <img src="image/kyungho.jpg" alt="이경호" class="profile-image">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-6 profile-box">
+                        <h3 class="profile-box-name fw-bold">이경호</h3>
+                        <ul class="profile-box-record list-unstyled text-start fs-5 fw-normal">
+                            <li class="profile-box-record-item">프랑스 디종 국립 미술학교(D.N.A.P) 졸업</li>
+                            <li class="profile-box-record-item">프랑스 파리 세르지 국립고등예술학교(D.N.S.E.P) 졸업</li>
+                            <li class="profile-box-record-item">50주년 기념 프랑스 Paris 쌀롱 죤느 뼁트르 전 Espace Paul Ricard상 수상​
+                            </li>
+                            <li class="profile-box-record-item">'Jeune Creation' Exhibition, Espace Paul Ricard Prize,
+                                France​
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description col col-12">
+                <div class="description-text-container mt-5 fs-5 fw-normal">
+                    <span class="description-text">한국기원
+
+신진서 선수는 2018년 7월부터 비공식 세계랭킹인 Go Ratings에서 세계 1위의 자리를 지켜왔으나, 그에 걸맞은 세계대회 성적을 거두지 못하여 진정한 1인자가 아니라는 평가가 있었다.
+
+그러나, 2021년부터 국제 경기에서 압도적 경기력(공식경기 전적 36승 3패)을 보여왔고, 완벽하게 ‘신진서 시대’를 열었다고 평가받는 제26회 LG배 결승 대국 기보를 새시대의 스타를 위해 Digital Art NFT 로 기념하여 남겨야 한다고 생각했다.</span>
+                </div>
+                <div class="description-text-container mt-5 fs-5 fw-normal">
+                    <span class="description-text">
+                        이경호 작가
+
+세상에 각자가 믿고 있는 신은 많다. 바둑의 신은 태어나고 만들어진다. “신진서” 희망이 보이지 않는 어려운 시기 패색이 짙어갈 때 상대의 40초 초 읽기 승률 1%에서의 역전 신의 한 수!
+
+기후 위기도 초 읽기에 들어섰다. 우리도 종교를 떠나서 동서양, 세계인이 하나가 되어 신의 한 수를 둬야 할 때이다. 기후 위기는 현실이다. 기후 위기 대처를 위한 인간의 혁명적 사고의 전환 그 신의 한 수를 기대한다. 시간이 많이 없다. 또 다른 백 불계승을 위하여!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="guide">
@@ -71,5 +155,6 @@
 
 
 <script src="js/index.js"></script>
+<script src="js/d-day-counter.js"></script>
 </body>
 </html>
