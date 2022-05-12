@@ -1,10 +1,14 @@
 const title = document.querySelector("#dDayCount");
 
 const countdownContainer = document.querySelector('#countdownContainer');
-const countdownDays = countdownContainer.querySelector('#days');
-const countdownHours = countdownContainer.querySelector('#hours');
-const countdownMinutes = countdownContainer.querySelector('#minutes');
-const countdownSeconds = countdownContainer.querySelector('#seconds');
+const countdownDaysTens = countdownContainer.querySelector('#daysTens');
+const countdownDaysOnes = countdownContainer.querySelector('#daysOnes');
+const countdownHoursTens = countdownContainer.querySelector('#hoursTens');
+const countdownHoursOnes = countdownContainer.querySelector('#hoursOnes');
+const countdownMinutesTens = countdownContainer.querySelector('#minutesTens');
+const countdownMinutesOnes = countdownContainer.querySelector('#minutesOnes');
+const countdownSecondsTens = countdownContainer.querySelector('#secondsTens');
+const countdownSecondsOnes = countdownContainer.querySelector('#secondsOnes');
 
 const getDDay = () => {
     // D-Day 날짜 지정
@@ -25,15 +29,39 @@ const getDDay = () => {
     // 밀리초 값이기 때문에 1000을 곱한다.
     // 1000*60 => 60초(1분)*60 => 60분(1시간)*24 = 24시간(하루)
     // 나머지 연산자(%)를 이용해서 시/분/초를 구한다.
-    const day = Math.floor(distance/(1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-    const seconds = Math.floor((distance % (1000*60))/1000);
+    const day = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    countdownDays.innerText = day;
-    countdownHours.innerText = hours < 10 ? `0${hours}` : hours;
-    countdownMinutes.innerText = minutes < 10 ? `0${minutes}` : minutes;
-    countdownSeconds.innerText = seconds < 10 ? `0${seconds}` : seconds;
+    // countdownDays.innerText = day;
+    countdownDaysOnes.innerText = day.toString(10).slice(-1);
+    countdownDaysTens.innerText = day.toString(10).slice(-2, -1);
+    if (!day.toString(10).slice(-2, -1)) {
+        countdownDaysTens.innerText = '0';
+    }
+
+    countdownHoursOnes.innerText = hours.toString(10).slice(-1);
+    countdownHoursTens.innerText = hours.toString(10).slice(-2, -1);
+    if (!hours.toString(10).slice(-2, -1)) {
+        countdownHoursTens.innerText = '0';
+    }
+
+    countdownMinutesOnes.innerText = minutes.toString(10).slice(-1);
+    countdownMinutesTens.innerText = minutes.toString(10).slice(-2, -1);
+    if (!minutes.toString(10).slice(-2, -1)) {
+        countdownMinutesTens.innerText = '0';
+    }
+
+    countdownSecondsOnes.innerText = seconds.toString(10).slice(-1);
+    countdownSecondsTens.innerText = seconds.toString(10).slice(-2, -1);
+    if (!seconds.toString(10).slice(-2, -1)) {
+        countdownSecondsTens.innerText = '0';
+    }
+
+    // countdownHours.innerText = hours < 10 ? `0${hours}` : hours;
+    // countdownMinutes.innerText = minutes < 10 ? `0${minutes}` : minutes;
+    // countdownSeconds.innerText = seconds < 10 ? `0${seconds}` : seconds;
 
     // D-Day 날짜를 가져오고,
     // 삼항 연산자를 사용해서 값이 10보다 작을 경우에 대해 조건부 렌더링을 해준다.
