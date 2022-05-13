@@ -482,6 +482,9 @@ section:nth-child(odd) {
         width: 100% !important;
     }
 
+    .d-day-text{
+        font-size: 1rem !important;
+    }
 
     .countdownContainer {
         /*margin-top: 50px !important;*/
@@ -545,5 +548,7 @@ section:nth-child(odd) {
     .buy {
         margin-top: 1.5rem !important;
         margin-bottom: 1.5rem;
+        width: 70% !important;
+        line-height: 3;
     }
 }
