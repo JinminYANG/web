@@ -153,7 +153,7 @@ section:nth-child(odd) {
     background-image: url("../image/section-01-day-count-bg.png");
     background-size: contain;
     background-repeat: no-repeat;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .countdownContainer .info .number {
@@ -470,8 +470,8 @@ section:nth-child(odd) {
     }
 
     .video {
-        background-size: 2000px;
-        background-position: top center;
+        /*background-size: 2000px;*/
+        /*background-position: top center;*/
     }
 
     .video-intro {
@@ -508,7 +508,6 @@ section:nth-child(odd) {
         /*font-size: 0.9rem !important;*/
     }
 
-
     .introduce-title {
         font-size: 2rem !important;
     }
@@ -542,6 +541,14 @@ section:nth-child(odd) {
         padding-top: 100px;
     }
 
+    .d-day-text {
+
+    }
+
+    .number-container {
+        min-width: 26px !important;
+    }
+
     .video {
         background-size: 1400px;
     }
@@ -562,22 +569,85 @@ section:nth-child(odd) {
         margin-top: 1.5rem !important;
     }
 
+    .collaboration-description {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
     .collaboration-description-text-container {
         width: 100% !important;
     }
 
     .collaboration-description-text {
-        font-size: 1.5rem !important;
+        font-size: 1rem !important;
     }
 
     .buy {
-        margin-top: 1rem !important;
-        margin-bottom: 1.5rem;
+        margin-top: 2rem !important;
+        margin-bottom: 2.5rem;
         width: 70% !important;
         line-height: 3;
     }
 
     .introduce .buy {
-        margin-top: 1rem !important;
+        margin-top: 3rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .bookmark a {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .video {
+        /*background-size: 1400px;*/
+        /*background-position: top center;*/
+    }
+
+    .number-container {
+        min-width: 22px !important;
+        line-height: 1.3;
+    }
+
+    .countdownContainer .text {
+        font-size: 0.7rem !important;
+    }
+
+    .countdownContainer .gap {
+        font-size: 1rem !important;
+    }
+
+    .video-title {
+        margin-top: 2rem !important;
+    }
+
+    .video-title h2 {
+        font-size: calc(1rem + .6vw) !important;
+    }
+
+    .video-description {
+        font-size: 1rem !important;
+    }
+
+    .introduce-title {
+        font-size: 1.5rem !important;
+    }
+
+    .profile-title-name {
+        font-size: 1.3rem !important;
+    }
+
+    .profile-gap-image {
+        height: 70px;
+    }
+
+    .quotes-start,
+    .quotes-end {
+        margin-bottom: 2rem !important;
+    }
+
+    .collaboration-description-text {
+        margin-bottom: 2rem !important;
     }
 }
