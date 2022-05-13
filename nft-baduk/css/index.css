@@ -482,7 +482,7 @@ section:nth-child(odd) {
         width: 100% !important;
     }
 
-    .d-day-text{
+    .d-day-text {
         font-size: 1rem !important;
     }
 
@@ -509,9 +509,26 @@ section:nth-child(odd) {
     }
 
 
-
     .introduce-title {
         font-size: 2rem !important;
+    }
+
+    .collaboration-description-text-container {
+        width: 100% !important;
+    }
+
+    .collaboration-description-text {
+        font-size: 1rem !important;
+    }
+
+    .buy {
+        width: 70% !important;
+        line-height: 3;
+    }
+
+    .introduce .buy {
+        margin-top: 3rem !important;
+        margin-bottom: 4rem !important;
     }
 
 }
@@ -545,10 +562,22 @@ section:nth-child(odd) {
         margin-top: 1.5rem !important;
     }
 
+    .collaboration-description-text-container {
+        width: 100% !important;
+    }
+
+    .collaboration-description-text {
+        font-size: 1.5rem !important;
+    }
+
     .buy {
-        margin-top: 1.5rem !important;
+        margin-top: 1rem !important;
         margin-bottom: 1.5rem;
         width: 70% !important;
         line-height: 3;
+    }
+
+    .introduce .buy {
+        margin-top: 1rem !important;
     }
 }
