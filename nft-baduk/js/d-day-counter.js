@@ -12,7 +12,7 @@ const countdownSecondsOnes = countdownContainer.querySelector('#secondsOnes');
 
 const getDDay = () => {
     // D-Day 날짜 지정
-    const setDate = new Date("2022-05-25T00:00:00+0900");
+    const setDate = new Date("2022-05-25T11:00:00+0900");
     // D-day 날짜의 연,월,일 구하기
     const setDateYear = setDate.getFullYear();
     // getMonth 메서드는 0부터 세기 때문에 +1 해준다.
