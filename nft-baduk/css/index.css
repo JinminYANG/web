@@ -285,6 +285,11 @@ section:nth-child(odd) {
     height: 100px;
 }
 
+.notation{
+    border: 25px solid #8EA0D2;
+    margin-top: 150px !important;
+}
+
 .collaboration-description {
     min-height: 80vh;
     background-image: url("../image/section-02-bg.png");
@@ -448,6 +453,11 @@ section:nth-child(odd) {
 
     .profile-box {
         margin-top: 1.5rem;
+    }
+
+    .notation{
+        /*border: 28px solid #8EA0D2;*/
+        border: none;
     }
 }
 
