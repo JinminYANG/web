@@ -344,9 +344,9 @@ section.score{
 
 .score-title{
     font-size: 4rem;
-    color: white;
+    color: #000000;
     letter-spacing: 5px;
-    /*margin-top: 150px!important;*/
+    margin-top: 150px!important;
     /*margin-bottom: 100px!important;*/
 }
 
@@ -474,6 +474,7 @@ section.score{
 
     .score-title{
         font-size: 3rem !important;
+        margin-top: 100px!important;
     }
 
     .profile-image {
@@ -553,6 +554,7 @@ section.score{
 
     .score-title{
         font-size: 2rem !important;
+        margin-top: 70px!important;
     }
 
     .collaboration-description-text-container {
@@ -679,6 +681,7 @@ section.score{
 
     .score-title{
         font-size: 1.5rem !important;
+        margin-top: 50px!important;
     }
 
     .profile-title-name {
