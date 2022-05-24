@@ -20,6 +20,7 @@
 body {
     text-align: center;
     font-family: 'LeferiPoint-BlackA';
+    background-color: #333333;
 }
 
 .wrapper {
@@ -102,6 +103,14 @@ section {
 
 section:nth-child(odd) {
     /*background: #eee;*/
+}
+
+section.score{
+    min-height: 0!important;
+    display: flex;
+    font-weight: bold;
+    background-color: #E6E6E6;
+    padding-top: 0;
 }
 
 .video {
@@ -211,18 +220,32 @@ section:nth-child(odd) {
 .buy {
     width: 350px;
     height: 78px;
-    margin-bottom: 100px;
-    background-color: black;
-    color: #ffffff;
+    margin-top: 100px !important;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    color: #000000;
     line-height: 2.5;
 }
 
 .buy:hover,
 .buy:active {
-    background-color: #ffffff;
-    color: black;
+    background-color: #000000;
+    color: #ffffff;
     font-weight: bold;
     transition: all 0.3s;
+}
+
+.video .buy {
+    margin-top: 100px !important;
+    background-color: black;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+.video .buy:hover,
+.video .buy:active {
+    background-color: #ffffff;
+    color: black;
 }
 
 
@@ -235,6 +258,10 @@ section:nth-child(odd) {
     font-size: 4rem;
     color: white;
     letter-spacing: 5px;
+}
+
+.introduce .content{
+    margin-bottom: 100px!important;
 }
 
 .profile-title-name {
@@ -286,8 +313,8 @@ section:nth-child(odd) {
 }
 
 .notation{
-    border: 25px solid #8EA0D2;
-    margin-top: 150px !important;
+    /*border: 25px solid #8EA0D2;*/
+    /*margin-top: 150px !important;*/
 }
 
 .collaboration-description {
@@ -306,24 +333,22 @@ section:nth-child(odd) {
     font-family: 'LeferiPoint-SpecialA';
 }
 
-
-.introduce .buy {
-    margin-top: 116px !important;
-    background-color: #ffffff;
-    color: black;
-}
-
-.introduce .buy:hover,
-.introduce .buy:active {
-    background-color: black;
-    color: #ffffff;
-}
-
 .quotes-start,
 .quotes-end {
     width: 30px;
 }
 
+.score{
+
+}
+
+.score-title{
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 5px;
+    /*margin-top: 150px!important;*/
+    /*margin-bottom: 100px!important;*/
+}
 
 /*** 반응형 ***/
 
@@ -447,6 +472,10 @@ section:nth-child(odd) {
         font-size: 3rem !important;
     }
 
+    .score-title{
+        font-size: 3rem !important;
+    }
+
     .profile-image {
         width: 50%;
     }
@@ -519,6 +548,10 @@ section:nth-child(odd) {
     }
 
     .introduce-title {
+        font-size: 2rem !important;
+    }
+
+    .score-title{
         font-size: 2rem !important;
     }
 
@@ -641,6 +674,10 @@ section:nth-child(odd) {
     }
 
     .introduce-title {
+        font-size: 1.5rem !important;
+    }
+
+    .score-title{
         font-size: 1.5rem !important;
     }
 
