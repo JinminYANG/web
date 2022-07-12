@@ -7,6 +7,7 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="css/work_list.css">
 
@@ -14,123 +15,168 @@
 </head>
 <body>
 
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ASYAAF Admin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">작품리스트</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">구매리스트</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
 
-<div class="row" id="ads">
-    <!-- Category Card -->
-    <div class="col-md-3">
+
+<div class="container mt-5">
+
+    <form class="d-flex search" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    </form>
+
+    <div class="works mt-5" id="ads">
         <div class="card rounded">
             <div class="card-image text-center">
-                <span class="card-notify-badge">Low KMS</span>
-                <span class="card-notify-year">2018</span>
                 <img class="img-fluid"
                      src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
                      alt="Alternate Text"/>
             </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
-            </div>
             <div class="card-body text-center">
-                <div class="ad-title m-auto">
+                <div class="card-title m-auto">
                     <h5>Honda Accord LX</h5>
                 </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-2">
-        <div class="card rounded">
-            <div class="card-image text-center">
-                <span class="card-notify-badge">Fully-Loaded</span>
-                <span class="card-notify-year">2017</span>
-                <img class="img-fluid"
-                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262"
-                     alt="Alternate Text"/>
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
             </div>
             <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda CIVIC HATCHBACK LS</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
+                <span class="card-detail-badge">001</span>
+                <span class="card-detail-badge">10</span>
+                <span class="card-detail-badge">&#8361;100,000</span>
             </div>
         </div>
-    </div>
 
-    <div class="col-md-2">
         <div class="card rounded">
             <div class="card-image text-center">
-                <span class="card-notify-badge">Price Reduced</span>
-                <span class="card-notify-year">2018</span>
                 <img class="img-fluid"
-                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
                      alt="Alternate Text"/>
             </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$22,000.00</span>
-                <span class="card-detail-badge">8000 Kms</span>
+            <div class="card-body text-center">
+                <div class="card-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
             </div>
             <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord Hybrid LT</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
+                <span class="card-detail-badge">001</span>
+                <span class="card-detail-badge">10</span>
+                <span class="card-detail-badge">&#8361;100,000</span>
             </div>
         </div>
-    </div>
 
-    <div class="col-md-2">
         <div class="card rounded">
             <div class="card-image text-center">
-                <span class="card-notify-badge">Price Reduced</span>
-                <span class="card-notify-year">2018</span>
                 <img class="img-fluid"
-                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
                      alt="Alternate Text"/>
             </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$22,000.00</span>
-                <span class="card-detail-badge">8000 Kms</span>
+            <div class="card-body text-center">
+                <div class="card-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
             </div>
             <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord Hybrid LT</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
+                <span class="card-detail-badge">001</span>
+                <span class="card-detail-badge">10</span>
+                <span class="card-detail-badge">&#8361;100,000</span>
             </div>
         </div>
-    </div>
 
-    <div class="col-md-2">
         <div class="card rounded">
             <div class="card-image text-center">
-                <span class="card-notify-badge">Price Reduced</span>
-                <span class="card-notify-year">2018</span>
                 <img class="img-fluid"
-                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
                      alt="Alternate Text"/>
             </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$22,000.00</span>
-                <span class="card-detail-badge">8000 Kms</span>
+            <div class="card-body text-center">
+                <div class="card-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
             </div>
             <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord Hybrid LT</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
+                <span class="card-detail-badge">001</span>
+                <span class="card-detail-badge">10</span>
+                <span class="card-detail-badge">&#8361;100,000</span>
             </div>
         </div>
+
+        <div class="card rounded">
+            <div class="card-image text-center">
+                <img class="img-fluid"
+                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                     alt="Alternate Text"/>
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <span class="card-detail-badge">001</span>
+                <span class="card-detail-badge">10</span>
+                <span class="card-detail-badge">&#8361;100,000</span>
+            </div>
+        </div>
+
+        <div class="card rounded">
+            <div class="card-image text-center">
+                <img class="img-fluid"
+                     src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                     alt="Alternate Text"/>
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <span class="card-detail-badge">001</span>
+                <span class="card-detail-badge">10</span>
+                <span class="card-detail-badge">&#8361;100,000</span>
+            </div>
+        </div>
+
     </div>
 
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 
 <!-- bootstrap -->

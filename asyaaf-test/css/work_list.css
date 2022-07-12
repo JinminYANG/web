@@ -6,37 +6,21 @@ body {
 
 }
 
-/* Category Ads */
+.search{
+    justify-content: center;
+}
 
+.search .form-control{
+    width: 50% !important;
+}
+
+/* Category Ads */
 #ads {
     margin: 30px 0 30px 0;
-
-}
-
-#ads .card-notify-badge {
-    position: absolute;
-    left: -10px;
-    top: -20px;
-    background: #f2d900;
-    text-align: center;
-    border-radius: 30px 30px 30px 30px;
-    color: #000;
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-#ads .card-notify-year {
-    position: absolute;
-    right: -10px;
-    top: -20px;
-    background: #ff4444;
-    border-radius: 50%;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-    width: 50px;
-    height: 50px;
-    padding: 15px 0 0 0;
+    /*margin: 0 auto;*/
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
 }
 
 
@@ -50,53 +34,25 @@ body {
 }
 
 
-
 #ads .card:hover {
     background: #fff;
-    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
-#ads .card-image-overlay {
-    font-size: 20px;
-
+#ads .card-body {
+    padding: 0.5rem !important;
 }
 
 
-#ads .card-image-overlay span {
-    display: inline-block;
-}
-
-
-#ads .ad-btn {
-    text-transform: uppercase;
-    width: 150px;
-    height: 40px;
-    border-radius: 80px;
-    font-size: 16px;
-    line-height: 35px;
-    text-align: center;
-    border: 3px solid #e6de08;
-    display: block;
-    text-decoration: none;
-    margin: 20px auto 1px auto;
-    color: #000;
-    overflow: hidden;
-    position: relative;
-    background-color: #e6de08;
-}
-
-#ads .ad-btn:hover {
-    background-color: #e6de08;
-    color: #1e1717;
-    border: 2px solid #e6de08;
-    background: transparent;
-    transition: all 0.3s ease;
-    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-}
-
-#ads .ad-title h5 {
-    text-transform: uppercase;
+#ads .card-title h5 {
     font-size: 18px;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
