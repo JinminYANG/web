@@ -64,17 +64,17 @@
 
             <div class="col-5 description">
 
-                <form class="row g-3 needs-validation " novalidate>
+                <form class="row g-3 needs-validation" novalidate>
 
                     <div class="col-md-12">
-                        <label for="validationCustom01" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="무제" required disabled
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" value="무제" required disabled
                                readonly>
                     </div>
 
                     <div class="col-md-12 mt-4">
-                        <label for="validationCustom02" class="form-label">Author</label>
-                        <input type="text" class="form-control" id="validationCustom02" value="g-dragon" required
+                        <label for="author" class="form-label">Author</label>
+                        <input type="text" class="form-control" id="author" value="g-dragon" required
                                disabled readonly>
                         <div class="valid-feedback">
                             Looks good!
@@ -82,8 +82,8 @@
                     </div>
 
                     <div class="col-md-12 mt-4">
-                        <label for="validationCustom03" class="form-label">Work ID</label>
-                        <input type="text" class="form-control" id="validationCustom03" value="001" required disabled
+                        <label for="workId" class="form-label">Work ID</label>
+                        <input type="text" class="form-control" id="workId" value="001" required disabled
                                readonly>
                     </div>
 
@@ -94,7 +94,7 @@
                     </div>
 
                     <div class="col-md-12 mt-4 count-container">
-                        <label for="validationCustom05" class="form-label">Count</label>
+                        <label for="counter" class="form-label">Count</label>
                         <div class="input-group mb-3">
 
                             <div class="input-group-prepend">
@@ -103,13 +103,18 @@
                                 </button>
                             </div>
 
-                            <input type="number" id="validationCustom05" class="form-control-sm text-center counter"
+                            <input type="number" id="counter" class="form-control-sm text-center counter"
                                    value="1" min="1" readonly/>
 
                             <div class="input-group-prepend">
-                                <button type="button" class="btn btn-dark btn-md" id="plus-btn">
+                                <button type="button" class="btn btn-dark btn-md" id="plus-btn" >
                                     <i class="bi bi-plus-lg"></i>
                                 </button>
+                            </div>
+
+                            <div class="d-inline-block mt-1 ms-5">
+                                <span>구매가능수량:</span>
+                                <span id="availableQuantity">3</span>
                             </div>
 
                         </div>
@@ -120,19 +125,27 @@
                     </div>
 
                     <div class="col-md-12 mt-4">
-                        <label for="validationCustom06" class="form-label">Payment ID</label>
-                        <input type="number" class="form-control" id="validationCustom06" value="" required/>
+                        <label for="paymentId" class="form-label">Payment ID</label>
+                        <input type="number" class="form-control" id="paymentId" value="" required/>
+
+                        <div class="invalid-feedback">
+                            올바른 결제 번호를 입력해주세요.
+                        </div>
                     </div>
 
                     <div class="col-md-12 mt-4">
                         <label for="walletAddress" class="form-label">Wallet Address</label>
                         <input type="text" class="form-control d-inline-block" id="walletAddress" value=""
-                               required />
+                               required minlength="42" maxlength="42"/>
                         <div class="input-group-prepend d-inline-block">
                             <button type="button" class="btn btn-outline-dark btn-md" id="camera-btn"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <i class="bi bi-camera"></i>
                             </button>
+                        </div>
+
+                        <div class="invalid-feedback">
+                            올바른 지갑 주소를 입력해주세요.
                         </div>
                     </div>
 
@@ -154,7 +167,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="frame">
+                    <div id="frame" class="text-center">
                         <div id="loadingMessage">
                             🎥 비디오 스트림에 액세스 할 수 없습니다
                         </div>
