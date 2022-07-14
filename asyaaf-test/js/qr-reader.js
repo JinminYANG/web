@@ -19,12 +19,13 @@ scanActiveBtn.addEventListener("click", function () {
     }
 
     // 카메라 사용시
-    navigator.mediaDevices.getUserMedia({video: {facingMode: "environment"}}).then(function (stream) {
-        video.srcObject = stream;
-        video.setAttribute("playsinline", true);      // iOS 사용시 전체 화면을 사용하지 않음을 전달
-        video.play();
-        requestAnimationFrame(tick);
-    });
+    navigator.mediaDevices.getUserMedia({video: {facingMode: "environment"}})
+        .then(function (stream) {
+            video.srcObject = stream;
+            video.setAttribute("playsinline", true);      // iOS 사용시 전체 화면을 사용하지 않음을 전달
+            video.play();
+            requestAnimationFrame(tick);
+        });
 
 
     function tick() {
@@ -57,7 +58,7 @@ scanActiveBtn.addEventListener("click", function () {
                 // outputData.parentElement.hidden = false;
 
                 // QR코드 메시지 출력
-                const walletAddressCode = code.data.replace('ethereum:','');    // code text를 형식에 맞게 치환
+                const walletAddressCode = code.data.replace('ethereum:', '');    // code text를 형식에 맞게 치환
                 // outputData.innerText = walletAddress;
                 walletAddressCode
                 const walletAddressInput = document.querySelector('#walletAddress');
