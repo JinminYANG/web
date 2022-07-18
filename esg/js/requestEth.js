@@ -3,6 +3,22 @@ let account;
 document.getElementById('connect-button').addEventListener('click', event => {
     let button = event.target;
 
+    const isMobileDevice = () => {
+        return 'ontouchstart' in window || 'onmsgesturechange' in window;
+    };
+
+    const connectDeepLink = () => {
+        const dappUrl = "jinminyang.github.io/esg";
+        const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
+        // https://metamask.app.link/dapp/jinminyang.github.io/esg
+
+        return window.open(metamaskAppDeepLink);
+    }
+
+    if (isMobileDevice()) {
+        connectDeepLink();
+    }
+
     if (window.ethereum) {
         ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
             account = accounts[0];
@@ -27,7 +43,8 @@ document.getElementById('connect-button').addEventListener('click', event => {
             });
         });
     } else {
-        alert("Intall ethereum,,,");
+        alert("Get MetaMask!");
+        window.open("https://metamask.io/download/");
     }
 
 });
