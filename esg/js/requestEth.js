@@ -15,10 +15,6 @@ document.getElementById('connect-button').addEventListener('click', event => {
         return window.open(metamaskAppDeepLink);
     }
 
-    if (isMobileDevice()) {
-        connectDeepLink();
-    }
-
     if (window.ethereum) {
         ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
             account = accounts[0];
@@ -43,6 +39,10 @@ document.getElementById('connect-button').addEventListener('click', event => {
             });
         });
     } else {
+        if (isMobileDevice()) {
+            connectDeepLink();
+        }
+
         alert("Get MetaMask!");
         window.open("https://metamask.io/download/");
     }
