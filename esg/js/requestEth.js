@@ -2,28 +2,34 @@ let account;
 
 document.getElementById('connect-button').addEventListener('click', event => {
     let button = event.target;
-    ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
-        account = accounts[0];
-        console.log(account);
-        button.textContent = 'Connected!';
-        button.style.display = 'none';
-        const connectedContainer = document.querySelector('.connected-container');
-        const sendButton = document.querySelector('#send-button');
-        const isConnected = connectedContainer.querySelector('.isConnected');
-        const address = connectedContainer.querySelector('.address');
-        sendButton.removeAttribute('hidden');
-        isConnected.innerText = 'Connected!';
-        address.innerText = `wallet address: ${account}`;
 
-        ethereum.request({method: 'eth_getBalance', params: [account, 'latest']}).then(result => {
-            console.log(result);
-            let wei = parseInt(result, 16);
-            let balance = wei / (10 ** 18);
-            console.log(balance + " ETH");
-            const balanceDiv = connectedContainer.querySelector('.balance');
-            balanceDiv.innerText = `balance: ${balance} (ETH)`;
+    if (window.ethereum) {
+        ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+            account = accounts[0];
+            console.log(account);
+            button.textContent = 'Connected!';
+            button.style.display = 'none';
+            const connectedContainer = document.querySelector('.connected-container');
+            const sendButton = document.querySelector('#send-button');
+            const isConnected = connectedContainer.querySelector('.isConnected');
+            const address = connectedContainer.querySelector('.address');
+            sendButton.removeAttribute('hidden');
+            isConnected.innerText = 'Connected!';
+            address.innerText = `wallet address: ${account}`;
+
+            ethereum.request({method: 'eth_getBalance', params: [account, 'latest']}).then(result => {
+                console.log(result);
+                let wei = parseInt(result, 16);
+                let balance = wei / (10 ** 18);
+                console.log(balance + " ETH");
+                const balanceDiv = connectedContainer.querySelector('.balance');
+                balanceDiv.innerText = `balance: ${balance} (ETH)`;
+            });
         });
-    });
+    } else {
+        alert("Intall ethereum,,,");
+    }
+
 });
 
 
