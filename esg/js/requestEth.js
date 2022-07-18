@@ -19,15 +19,15 @@ document.getElementById('connect-button').addEventListener('click', event => {
         ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
             account = accounts[0];
             console.log(account);
-            button.textContent = 'Connected!';
+            // button.textContent = '';
             button.style.display = 'none';
             const connectedContainer = document.querySelector('.connected-container');
             const sendButton = document.querySelector('#send-button');
             const isConnected = connectedContainer.querySelector('.isConnected');
             const address = connectedContainer.querySelector('.address');
             sendButton.removeAttribute('hidden');
-            isConnected.innerText = 'Connected!';
-            address.innerText = `wallet address: ${account}`;
+            isConnected.innerText = '메타마스크 지갑이 연결되었습니다!';
+            address.innerText = `지갑 주소: ${account}`;
 
             ethereum.request({method: 'eth_getBalance', params: [account, 'latest']}).then(result => {
                 console.log(result);
@@ -35,7 +35,7 @@ document.getElementById('connect-button').addEventListener('click', event => {
                 let balance = wei / (10 ** 18);
                 console.log(balance + " ETH");
                 const balanceDiv = connectedContainer.querySelector('.balance');
-                balanceDiv.innerText = `balance: ${balance} (ETH)`;
+                balanceDiv.innerText = `잔액: ${balance} (ETH)`;
             });
         });
     } else {
