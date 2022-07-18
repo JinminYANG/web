@@ -8,9 +8,9 @@ document.getElementById('connect-button').addEventListener('click', event => {
     };
 
     const connectDeepLink = () => {
-        const dappUrl = "jinminyang.github.io/esg";
+        const dappUrl = "jinminyang.github.io/esg/connectWallet";
         const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
-        // https://metamask.app.link/dapp/jinminyang.github.io/esg
+        // https://metamask.app.link/dapp/jinminyang.github.io/esg/connectWallet
 
         return window.open(metamaskAppDeepLink);
     }
