@@ -36,9 +36,12 @@
                     </ul>
                 </div>
                 <div class="user">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav lh-lg">
                         <li class="nav-item"><i class="bi bi-person-circle"></i></li>
                         <li class="nav-item ms-2">User01</li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-sm btn-secondary ms-2">Logout</button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -65,7 +68,7 @@
 
             <div class="col-5 description">
 
-                <form class="row g-3 needs-validation" novalidate>
+                <form class="row g-3 needs-validation" novalidate autocomplete="off">
 
                     <div class="col-md-12">
                         <label for="title" class="form-label">Title</label>
@@ -108,7 +111,7 @@
                                    value="1" min="1" readonly/>
 
                             <div class="input-group-prepend">
-                                <button type="button" class="btn btn-dark btn-md" id="plus-btn" >
+                                <button type="button" class="btn btn-dark btn-md" id="plus-btn">
                                     <i class="bi bi-plus-lg"></i>
                                 </button>
                             </div>
@@ -127,8 +130,14 @@
 
                     <div class="col-md-12 mt-4">
                         <label for="paymentId" class="form-label">Payment ID</label>
-                        <input type="number" class="form-control" id="paymentId" value="" required/>
-
+                        <!--                        <input type="number" class="form-control" id="paymentId" value="" required minlength="8" maxlength="8"-->
+                        <!--                               oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>-->
+                        <!--                        <input type="text" class="form-control d-inline-block" id="paymentId" value="" required minlength="8" maxlength="8"/>-->
+                        <!--                        <input type="text" minlength="8" maxlength="8" id="paymentId" class="form-control"
+                                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                />-->
+                        <input type="text" class="form-control d-inline-block" id="paymentId" value="" required
+                               minlength="8" maxlength="8" pattern="[0-9]+"/>
                         <div class="invalid-feedback">
                             올바른 결제 번호를 입력해주세요.
                         </div>
@@ -136,8 +145,8 @@
 
                     <div class="col-md-12 mt-4">
                         <label for="walletAddress" class="form-label">Wallet Address</label>
-                        <input type="text" class="form-control d-inline-block" id="walletAddress" value=""
-                               required minlength="42" maxlength="42"/>
+                        <input type="text" class="form-control d-inline-block" id="walletAddress" value="" required
+                               minlength="42" maxlength="42" pattern="^[a-zA-Z0-9]+$"/>
                         <div class="input-group-prepend d-inline-block">
                             <button type="button" class="btn btn-outline-dark btn-md" id="camera-btn"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal">

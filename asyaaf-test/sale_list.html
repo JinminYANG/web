@@ -36,9 +36,12 @@
                     </ul>
                 </div>
                 <div class="user">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav lh-lg">
                         <li class="nav-item"><i class="bi bi-person-circle"></i></li>
                         <li class="nav-item ms-2">User01</li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-sm btn-secondary ms-2">Logout</button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -61,45 +64,49 @@
         <thead class="table-dark text-center align-middle">
         <tr>
             <th>Date</th>
+            <th>Approver</th>
             <th>title</th>
             <th>Work ID</th>
             <th>Payment ID</th>
-            <th>Wallet Address</th>
+<!--            <th>Wallet Address</th>-->
             <th>Count</th>
             <th>Amount</th>
-            <th>Send</th>
+            <th>Status</th>
         </tr>
         </thead>
         <tbody class="text-center align-middle">
         <tr>
             <td>2022.07.13 15:01:02</td>
+            <td>양진민</td>
             <td>무제</td>
             <td>001</td>
             <td>123456789</td>
-            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>
+<!--            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>-->
             <td>1</td>
             <td class="amount">50000</td>
-            <td><i class="bi bi-x-circle-fill" style="color: red; font-size: 1.5rem"></i></td>
+            <td>Send</td>
         </tr>
         <tr>
             <td>2022.07.13 15:01:02</td>
+            <td>박재석</td>
             <td>늦은 아침 지각하면서 출근길에 주운 돌멩이</td>
             <td>002</td>
             <td>123456789</td>
-            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>
+<!--            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>-->
             <td>1</td>
             <td class="amount">100000</td>
-            <td><i class="bi bi-check-circle-fill" style="color: green; font-size: 1.5rem"></i></td>
+            <td>Pending</td>
         </tr>
         <tr>
             <td>2022.07.13 15:01:02</td>
+            <td>양진민</td>
             <td>2020년 11월 4일 - p.283 글 속에 몸을 숨기는 마음으로 (4th.Nov.2020 - As if hiding within the words)</td>
             <td>003</td>
             <td>123456789</td>
-            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>
+<!--            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>-->
             <td>1</td>
             <td>200000</td>
-            <td>true</td>
+            <td>Cancel</td>
         </tr>
         </tbody>
     </table>
