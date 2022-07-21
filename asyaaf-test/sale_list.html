@@ -20,7 +20,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-sm bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="work_list.html">ASYAAF Admin</a>
+                <a class="navbar-brand" href="work_list.html">ASYAAF 관리자</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,22 +56,22 @@
     <h3>판매 목록</h3>
 
     <form class="d-flex search mt-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+        <input class="form-control me-2" type="search" placeholder="검색어를 입력해주세요." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search <i class="bi bi-search"></i></button>
     </form>
 
     <table class="table table-hover mt-5">
         <thead class="table-dark text-center align-middle">
         <tr>
-            <th>Date</th>
-            <th>Approver</th>
-            <th>title</th>
-            <th>Work ID</th>
-            <th>Payment ID</th>
+            <th>날짜</th>
+            <th>결재자</th>
+            <th>작품명</th>
+            <th>작품 번호</th>
+            <th>승인 번호</th>
 <!--            <th>Wallet Address</th>-->
-            <th>Count</th>
-            <th>Amount</th>
-            <th>Status</th>
+            <th>수량</th>
+            <th>금액</th>
+            <th>전송 상태</th>
         </tr>
         </thead>
         <tbody class="text-center align-middle">
@@ -84,7 +84,7 @@
 <!--            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>-->
             <td>1</td>
             <td class="amount">50000</td>
-            <td>Send</td>
+            <td class="status send">완료</td>
         </tr>
         <tr>
             <td>2022.07.13 15:01:02</td>
@@ -95,7 +95,7 @@
 <!--            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>-->
             <td>1</td>
             <td class="amount">100000</td>
-            <td>Pending</td>
+            <td class="status pending">대기</td>
         </tr>
         <tr>
             <td>2022.07.13 15:01:02</td>
@@ -106,7 +106,7 @@
 <!--            <td>0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>-->
             <td>1</td>
             <td>200000</td>
-            <td>Cancel</td>
+            <td class="status cancel">취소</td>
         </tr>
         </tbody>
     </table>
