@@ -1,0 +1,22 @@
+.search{
+    justify-content: center;
+}
+
+.search .form-control{
+    width: 50% !important;
+}
+.status{
+    font-weight: bold;
+}
+
+.status.send{
+    color: green;
+}
+
+.status.pending{
+    color: goldenrod;
+}
+
+.status.cancel{
+    color: red;
+}

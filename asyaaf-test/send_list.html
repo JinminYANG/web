@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/send_list.css">
+
+    <title>ASYAAF admin</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="work_list.html">ASYAAF 관리자</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="work_list.html">작품 목록</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sale_list.html">판매 목록</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="send_list.html">전송 목록</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <ul class="navbar-nav lh-lg">
+                        <li class="nav-item"><i class="bi bi-person-circle"></i></li>
+                        <li class="nav-item ms-2">User01</li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-sm btn-secondary ms-2">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+
+    <h3>전송 목록</h3>
+
+    <form class="d-flex search mt-5" role="search">
+        <input class="form-control me-2" type="search" placeholder="검색어를 입력해주세요." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search <i class="bi bi-search"></i></button>
+    </form>
+
+    <table class="table table-hover mt-5 w-100">
+        <thead class="table-dark text-center align-middle">
+        <tr>
+            <th class="col-1">날짜</th>
+            <th class="col-1">결재자</th>
+            <th class="col-1">작품명</th>
+            <th class="col-1">작품 번호</th>
+            <th class="col-1">승인 번호</th>
+            <th class="col-2">지갑주소</th>
+            <th class="col-2">해시코드</th>
+            <th class="col-1">수량</th>
+            <th class="col-1">금액</th>
+            <th class="col-1">전송 상태</th>
+        </tr>
+        </thead>
+        <tbody class="text-center align-middle">
+        <tr>
+            <td class="col-1">2022.07.13 15:01:02</td>
+            <td class="col-1">양진민</td>
+            <td class="col-1 text-break">미학적이거나 도덕적인 모든 배려에서 벗어난 사고의 받아쓰기</td>
+            <td class="col-1">003</td>
+            <td class="col-1">123456789</td>
+            <td class="col-2 text-break">0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>
+            <td class="col-2 text-break">bd78f179a67cfc7d8d43d59a299abb9e98cd2db2674509c824684c8bff178e9312</td>
+            <td class="col-1">1</td>
+            <td class="col-1">200000</td>
+            <td class="col-1 status pending">대기</td>
+        </tr>
+        <tr>
+            <td class="col-1">2022.07.13 15:01:02</td>
+            <td class="col-1">양진민</td>
+            <td class="col-1 text-break">미학적이거나 도덕적인 모든 배려에서 벗어난 사고의 받아쓰기</td>
+            <td class="col-1">003</td>
+            <td class="col-1">123456789</td>
+            <td class="col-2 text-break">0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>
+            <td class="col-2 text-break">bd78f179a67cfc7d8d43d59a299abb9e98cd2db2674509c824684c8bff178e9312</td>
+            <td class="col-1">1</td>
+            <td class="col-1">200000</td>
+            <td class="col-1 status send">완료</td>
+        </tr>
+        <tr>
+            <td class="col-1">2022.07.13 15:01:02</td>
+            <td class="col-1">양진민</td>
+            <td class="col-1 text-break">미학적이거나 도덕적인 모든 배려에서 벗어난 사고의 받아쓰기</td>
+            <td class="col-1">003</td>
+            <td class="col-1">123456789</td>
+            <td class="col-2 text-break">0x144d21a09E4EfCe04f45080bF1ddAcd3C269C97f</td>
+            <td class="col-2 text-break">bd78f179a67cfc7d8d43d59a299abb9e98cd2db2674509c824684c8bff178e9312</td>
+            <td class="col-1">1</td>
+            <td class="col-1">200000</td>
+            <td class="col-1 status cancel">취소</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <nav aria-label="Page navigation example" class="mt-5">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+<script src="js/sale_list.js"></script>
+</body>
+</html>
