@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/work_detail.css">
+    <link rel="stylesheet" href="css/admin_update.css">
 
     <title>ASYAAF admin</title>
+
+    <style>
+        body {
+            background: gray;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
@@ -71,7 +78,7 @@
 
             <div class="col-5 description">
 
-                <form class="row g-3 needs-validation" novalidate autocomplete="off">
+                <form class="row g-3 needs-validation" autocomplete="off">
 
                     <div class="col-md-12">
                         <label for="title" class="form-label">작품명</label>
@@ -96,51 +103,20 @@
 
                     <div class="col-md-12 mt-4">
                         <label for="amount" class="form-label">가격 (&#8361;)</label>
-                        <input type="text" class="form-control" id="amount" value="50000" required
+                        <input type="number" class="form-control" id="amount" value="50000" required
                                disabled>
                     </div>
 
                     <div class="col-md-12 mt-4 count-container">
                         <label for="counter" class="form-label">수량</label>
-                        <div class="input-group mb-3">
-
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-dark btn-md" id="minus-btn" disabled>
-                                    <i class="bi bi-dash-lg"></i>
-                                </button>
-                            </div>
-
-                            <input type="number" id="counter" class="form-control-sm text-center counter"
-                                   value="1" min="1" readonly/>
-
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-dark btn-md" id="plus-btn">
-                                    <i class="bi bi-plus-lg"></i>
-                                </button>
-                            </div>
-
-                            <div class="d-inline-block mt-1 ms-5">
-                                <span>구매가능수량:</span>
-                                <span id="availableQuantity">3</span>
-                            </div>
-
-                        </div>
-
-                        <div class="invalid-feedback">
-                            Please provide a valid zip.
-                        </div>
+                        <input type="number" id="counter" class="form-control text-center counter"
+                               value="" readonly/>
                     </div>
 
                     <div class="col-md-12 mt-4">
                         <label for="paymentId" class="form-label">승인번호</label>
-                        <!--                        <input type="number" class="form-control" id="paymentId" value="" required minlength="8" maxlength="8"-->
-                        <!--                               oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>-->
-                        <!--                        <input type="text" class="form-control d-inline-block" id="paymentId" value="" required minlength="8" maxlength="8"/>-->
-                        <!--                        <input type="text" minlength="8" maxlength="8" id="paymentId" class="form-control"
-                                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-                                                />-->
                         <input type="text" class="form-control d-inline-block" id="paymentId" value="" required
-                               minlength="8" maxlength="8" pattern="[0-9]+"/>
+                               readonly/>
                         <div class="invalid-feedback">
                             올바른 결제 번호를 입력해주세요.
                         </div>
@@ -149,22 +125,26 @@
                     <div class="col-md-12 mt-4">
                         <label for="walletAddress" class="form-label">지갑 주소</label>
                         <input type="text" class="form-control d-inline-block" id="walletAddress" value="" required
-                               minlength="42" maxlength="42" pattern="^[a-zA-Z0-9]+$"/>
-                        <div class="input-group-prepend d-inline-block">
-                            <button type="button" class="btn btn-outline-dark btn-md" id="camera-btn"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="bi bi-camera"></i>
-                            </button>
-                        </div>
-
+                               readonly/>
                         <div class="invalid-feedback">
                             올바른 지갑 주소를 입력해주세요.
                         </div>
                     </div>
 
+                    <div class="col-md-12 mt-4">
+                        <label for="hash" class="form-label">해시코드</label>
+                        <input type="text" class="form-control d-inline-block" id="hash" value="" required
+                               minlength="66" maxlength="66"/>
+                        <div class="invalid-feedback">
+                            올바른 결제 번호를 입력해주세요.
+                        </div>
+                    </div>
+
                     <div class="col-md-12 mt-5">
-                        <button class="btn btn-primary btn-lg" type="submit">판매하기</button>
-                        <button class="btn btn-secondary btn-lg ms-3" type="reset" onclick="location.href='work_list.html'">취소</button>
+                        <button class="btn btn-primary btn-lg" type="submit">전송완료</button>
+                        <button class="btn btn-secondary btn-lg ms-3" type="reset"
+                                onclick="location.href='work_list.html'">취소
+                        </button>
                     </div>
                 </form>
 
@@ -201,8 +181,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-<script src="js/workDetail.js"></script>
-<script type="text/javascript" src="js/jsQR.js"></script>
-<script src="js/qr-reader.js"></script>
 </body>
 </html>
