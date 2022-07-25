@@ -66,6 +66,7 @@ minusBtn.addEventListener("click", function () {
 
     counter.value--;
     amount.value = (defaultAmount * counter.value);
+    amount.value = Number(amount.value).toLocaleString('ko-KR');
 
     if (counter.value == 1) {
         setDisabled(this);
@@ -88,6 +89,7 @@ plusBtn.addEventListener("click", function () {
 
     counter.value++;
     amount.value = (defaultAmount * counter.value);
+    amount.value = Number(amount.value).toLocaleString('ko-KR');
 
     if (availableQuantity == counter.value) {
         setDisabled(this);
